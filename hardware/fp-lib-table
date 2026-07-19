@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "QuadPreRecorder")(type "KiCad")(uri "${KIPRJMOD}/QuadPreRecorder.pretty")(options "")(descr "Project-local module footprints"))
+)
