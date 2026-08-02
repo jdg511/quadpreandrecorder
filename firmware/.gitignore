@@ -1,0 +1,7 @@
+.pio/
+__pycache__/
+*.pyc
+*.wav
+*.bin
+*.png
+test/host/build/

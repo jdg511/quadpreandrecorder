@@ -1,0 +1,1683 @@
+--- Page 1 ---
+INR+
+INR-
+INL+
+INL-
+PGND
+SGND
+OUTR
+HPVSS
+CPP CPN
+VDD
+HPVDD
+OUTL
+TPA6132A2
+VBAT
+CODEC
+OUTR+
+OUTR-
+OUTL+
+OUTL-
+G0
+ENABLE EN
+G1GAIN1
+GAIN0
+Product
+Folder
+Order
+Now
+T echnical
+Documents
+Tools &
+Software
+Support &
+Community
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+TPA6132A225-mWDirectPath™ StereoHeadphoneAmplifierWithPopSuppression
+1
+1 Features
+1• Patented DirectPath™ Technology Eliminates
+Need for DC-Blocking Capacitors
+– Outputs Biased at 0 V
+– Excellent Low Frequency Fidelity
+• Active Click and Pop Suppression
+• 2.1 mA Typical Supply Current
+• Fully Differential or Single-Ended Inputs
+– Built-In Resistors Reduces Component Count
+– Improves System Noise Performance
+• Constant Maximum Output Power from 2.3 V to
+5.5 V Supply
+– Simplifies Design to Prevent Acoustic Shock
+• Improved RF Noise Immunity
+• MicrosoftTM Windows VistaTM Compliant
+• High Power Supply Noise Rejection
+– 100 dB PSRR at 217 Hz
+– 90 dB PSRR at 10 kHz
+• Wide Power Supply Range: 2.3 V to 5.5 V
+• Gain Settings: –6 dB, 0 dB, 3 dB, and 6 dB
+• Short-Circuit and Thermal-Overload Protection
+• ±8 kV HBM ESD Protected Outputs
+• Small Package Available
+– 16-Pin, 3 mm × 3 mm Thin QFN
+2 Applications
+• Smart Phones / Cellular Phones
+• Notebook Computers
+• CD / MP3 Players
+• Portable Gaming
+3 Description
+The TPA6132A2 (sometimes referred to as TPA6132)
+is a DirectPath™ stereo headphone amplifier that
+eliminates the need for external dc-blocking output
+capacitors. Differential stereo inputs and built-in
+resistors set the device gain, further reducing external
+component count. Gain is selectable at –6 dB, 0 dB,
+3 dB or 6 dB. The amplifier drives 25 mW into 16 Ω
+speakers from a single 2.3 V supply. The TPA6132A2
+(TPA6132) provides a constant maximum output
+power independent of the supply voltage, thus
+facilitating the design for prevention of acoustic
+shock.
+The TPA6132A2 features fully differential inputs to
+reduce system noise pickup between the audio
+source and the headphone amplifier. The high power
+supply noise rejection performance and differential
+architecture provides increased RF noise immunity.
+For single-ended input signals, connect INL+ and
+INR+ to ground.
+The device has built-in pop suppression circuitry to
+completely eliminate disturbing pop noise during turn-
+on and turn-off. The amplifier outputs have short-
+circuit and thermal-overload protection along with
+±8 kV HBM ESD protection, simplifying end
+equipment compliance to the IEC 61000-4-2 ESD
+standard.
+The TPA6132A2 operates from a single 2.3 V to
+5.5 V supply with 2.1 mA of typical supply current.
+Shutdown mode reduces supply current to less than
+1 μA.
+Device Information(1)
+PART NUMBER PACKAGE BODY SIZE (NOM)
+TPA6132A2 WQFN (16) 3.00 mm x 3.00 mm
+(1) For all available packages, see the orderable addendum at
+the end of the datasheet.
+Simplified Schematic
+
+--- Page 2 ---
+2
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+Table of Contents
+1 Features .................................................................. 1
+2 Applications ........................................................... 1
+3 Description ............................................................. 1
+4 Revision History..................................................... 2
+5 Pin Configuration and Functions ......................... 3
+6 Specifications......................................................... 4
+6.1 Absolute Maximum Ratings ...................................... 4
+6.2 ESD Ratings ............................................................ 4
+6.3 Recommended Operating Condtions........................ 4
+6.4 Thermal Information .................................................. 4
+6.5 Electrical Characteristics........................................... 5
+6.6 Operating Characteristics.......................................... 5
+6.7 Typical Characteristics .............................................. 6
+7 Detailed Description ............................................ 10
+7.1 Overview ................................................................. 10
+7.2 Functional Block Diagram ....................................... 10
+7.3 Feature Description................................................. 11
+7.4 Device Functional Modes........................................ 13
+8 Application and Implementation ........................ 14
+8.1 Application Information............................................ 14
+8.2 Typical Applications ................................................ 14
+9 Power Supply Recommendations ...................... 17
+9.1 Power Supply and HPVDD Decoupling Capacitors 17
+10 Layout................................................................... 18
+10.1 Layout Guidelines ................................................. 18
+10.2 Layout Example .................................................... 18
+10.3 GND Connections ................................................. 18
+11 Device and Documentation Support ................. 19
+11.1 Receiving Notification of Documentation Updates 19
+11.2 Community Resources.......................................... 19
+11.3 Trademarks ........................................................... 19
+11.4 Electrostatic Discharge Caution ............................ 19
+11.5 Glossary ................................................................ 19
+12 Mechanical, Packaging, and Orderable
+Information ........................................................... 19
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision A (December 2008) to Revision B Page
+• Corrected the I/O/P column of the Pin Functions table .......................................................................................................... 3
+• Changed the Input voltage for EN, G0, G1 MAX value From: HVDD + 0.3 To: VDD + 0.3 in the Absolute Maximum
+Ratings ................................................................................................................................................................................... 4
+• Changed Handling Ratings to ESD Ratings and moved the Storage temperature range to the Absolute Maximum
+Ratings ................................................................................................................................................................................... 4
+Changes from Original (December 2008) to Revision A Page
+• Added Handling Rating table, Feature Description section, Device Functional Modes, Application and
+Implementation section, Power Supply Recommendations section, Layout section, Device and Documentation
+Support section, and Mechanical, Packaging sections. ........................................................................................................ 1
+• Added Input voltage: EN, G0, G1 to the Absolute Maximum Ratings table........................................................................... 4
+• Added Input voltage: INR+, INR-, INL+, INL- to the Recommended Operating Condtions table........................................... 4
+• Changed Output impedance in shutdown From: TYP = 50 Ω To: TYP = 20 Ω in the Operating Characteristics table......... 5
+
+--- Page 3 ---
+1 HPVDD
+CPP
+INL-
+INL+
+INR+
+INR-
+PGND
+CPN
+2
+3
+4
+12
+11
+10
+9
+16 15 14 13
+5 6 7 8
+OUTR
+G0 G1
+HPVSS
+OUTLSGNDVDD EN
+3
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+5 Pin Configuration and Functions
+RTE (WQFN) Package
+(Top View)
+Pin Functions
+PIN
+I/O/P DESCRIPTION
+NAME NO.
+INL- 1 I Inverting left input for differential signals; left input for single-ended signals
+INL+ 2 I Non-inverting left input for differential signals. Connect to ground for single-ended input
+applications
+INR+ 3 I Non-inverting right input for differential signals. Connect to ground for single-ended input
+applications
+INR- 4 I Inverting right input for differential signals; right input for single-ended signals
+OUTR 5 O Right headphone amplifier output. Connect to right terminal of headphone jack
+G0 6 I
+Gain select
+GAIN0 I
+G1 7 I
+Gain select
+GAIN1 I
+HPVSS 8 P Charge pump output and negative power supply for output amplifiers; connect 1μF
+capacitor to GND
+CPN 9 P Charge pump negative flying cap. Connect to negative side of 1μF capacitor between
+CPP and CPN
+PGND 10 P Ground
+CPP 11 P Charge pump positive flying cap. Connect to positive side of 1μF capacitor between CPP
+and CPN
+HPVDD 12 P Positive power supply for headphone amplifiers. Connect to a 2.2μF capacitor. Do not
+connect to VDD
+EN 13 I Amplifier enable. Connect to logic low to shutdown; connect to logic high to activate
+VDD 14 P Positive power supply for TPA6132A2
+SGND 15 P Amplifier reference voltage. Connect to ground terminal of headphone jack
+OUTL 16 O Left headphone amplifier output. Connect to left terminal of headphone jack
+Thermal Pad –
+Solder the exposed metal pad on the TPA6132A2RTE QFN package to the landing pad
+on the PCB. Connect the landing pad to ground or leave it electrically unconnected
+(floating).
+
+--- Page 4 ---
+4
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range, TA = 25°C (unless otherwise noted)
+MIN MAX UNIT
+Supply voltage VDD –0.3 6 V
+Headphone amplifier supply voltage HPVDD (do not connect to external supply) –0.3 1.9 V
+Input voltage, VI
+INR+, INR-, INL+, INL- HPVSS
+–0.3
+HPVDD +
+0.3
+V
+EN, G0, G1 –0.3 VDD + 0.3 V
+Output continuous total power dissipation See Thermal Information
+Operating free-air temperature range, TA –40 85 °C
+Operating junction temperature range, TJ –40 150 °C
+Storage temperature range, Tstg –65 85 °C
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+6.2 ESD Ratings
+VALUE UNIT
+V(ESD)
+Electrostatic
+discharge
+Human body model (HBM), per ANSI/ESDA/JEDEC JS-
+001, all pins (1)
+OUTL, OUTR ±8000
+V
+All Other Pins ±2000
+Charged device model (CDM), per JEDEC specification JESD22-C101, all pins (2) ±1500 V
+6.3 Recommended Operating Condtions
+MIN MAX UNIT
+Supply voltage, VDD 2.3 5.5 V
+VIH High-level input voltage; EN, G0, G1 1.3 V
+VIL Low-level input voltage; EN, G0, G1 0.6 V
+VI Input voltage; INR+, INR-, INL+, INL- 0 HPVDD +
+0.3
+V
+Voltage applied to Output; OUTR, OUTL (when EN = 0 V) –0.3 3.6 V
+TA Operating free-air temperature –40 85 °C
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+report.
+6.4 Thermal Information
+THERMAL METRIC (1) RTE
+UNIT
+16 PINS
+RθJA Junction-to-ambient thermal resistance 51.1
+°C/W
+RθJC(top) Junction-to-case (top) thermal resistance 53.9
+RθJB Junction-to-board thermal resistance 24.3
+ψJT Junction-to-top characterization parameter 0.9
+ψJB Junction-to-board characterization parameter 24.3
+RθJC(bot) Junction-to-case (bottom) thermal resistance 9.0
+
+--- Page 5 ---
+5
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+6.5 Electrical Characteristics
+TA = 25°C (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Output offset voltage –0.5 0.5 mV
+Power supply rejection ratio VDD = 2.3 V to 5.5 V 100 dB
+High-level output current (EN, G0, G1) 1 µA
+Low-level output current (EN, G0, G1) 1 µA
+Supply Current
+VDD = 2.3 V, No load, EN = VDD 2.1 3.1
+mAVDD = 3.6 V, No load, EN = VDD 2.1 3.1
+VDD = 5.5 V, No load, EN = VDD 2.2 3.2
+EN = 0 V, VDD = 2.3 V to 5.5 V 0.7 1.2 µA
+(1) Per output channel
+(2) A-weighted
+6.6 Operating Characteristics
+VDD = 3.6 V , TA = 25°C, RL = 16 Ω (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+PO Output power (1) (Outputs in phase)
+THD = 1%, f = 1 kHz 25
+mW
+THD = 1%, f = 1 kHz, RL = 32 Ω 22
+VO Output voltage (1) (Outputs in phase) THD = 1%, VDD = 3.6 V, f = 1 kHz, RL = 100 Ω 1.1 VRMS
+AV Closed-loop voltage gain (OUT / IN–)
+G0 = 0 V, G1 = 0 V, (–6 dB) –0.45 –0.5 –0.55
+V/V
+G0 ≥ 1.3 V, G1 = 0 V, (0 dB) –0.95 –1.0 –1.05
+G0 = 0 V, G1 ≥ 1.3 V, (3 dB) –1.36 –1.41 –1.46
+G0 ≥ 1.3 V, G1 ≥ 1.3 V, (6 dB) –1.95 –2.0 –2.05
+ΔAv Gain matching Between Left and Right channels 1%
+RIN
+Input impedance (per input pin)
+G0 = 0 V, G1 = 0 V, (–6 dB) 26.4
+kΩ
+G0 ≥ 1.3 V, G1 = 0 V, (0 dB) 19.8
+G0 = 0 V, G1 ≥ 1.3 V, (3 dB) 16.5
+G0 ≥ 1.3 V, G1 ≥ 1.3 V, (6 dB) 13.2
+Input impedance in shutdown
+(per input pin) EN = 0 V 10
+VCM Input common-mode voltage range –0.5 1.5 V
+Output impedance in shutdown 20 Ω
+Input-to-output attenuation in shutdown EN = 0 V 80 dB
+kSVR AC-power supply rejection ratio
+200 mVpp ripple, f = 217 Hz -100
+dB
+200 mVpp ripple, f = 10 kHz -90
+THD+N Total harmonic distortion plus noise (2) PO = 20 mW, f = 1 kHz 0.02%
+PO = 25 mW into 32 Ω, VDD = 5.5 V, f = 1 kHz 0.01%
+SNR Signal-to-noise ratio PO = 20 mW; G0 ≥ 1.3 V, G1 = 0 V, (AV = 0 dB) 100 dB
+En Noise output voltage A-weighted 5.5 μVRMS
+fosc Charge pump switching frequency 1200 1275 1350 kHz
+tON Start-up time from shutdown 5 ms
+Crosstallk PO = 20 mW, f = 1 kHz –80 dB
+Thermal shutdown
+Threshold 150 °C
+Hysteresis 20 °C
+
+--- Page 6 ---
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+0.001
+0.01
+0.1
+1
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+P =□4□mW□per□ChannelO
+P =□10□mW□per□ChannelO
+R =□32 ,
+V =□2.5□V
+L
+DD
+/c87
+P =□1□mW□per□ChannelO
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+0.001
+0.01
+0.1
+1
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+P =□20□mW□per□ChannelO
+P =□10□mW□per□ChannelO
+P =□1□mW□per□ChannelO
+R =□16 ,
+V =□5□V
+L
+DD
+/c87
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+0.001
+0.01
+0.1
+1
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+P =□4□mW□per□ChannelO
+P =□10□mW□per□ChannelO
+P =□1□mW□per□ChannelO
+R =□16 ,
+V =□2.5□V
+L
+DD
+/c87
+0.001
+0.01
+0.1
+1
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+P =□10□mW□per□ChannelO
+R =□16 ,
+V =□3.6□V
+L
+DD
+/c87
+P =□1□mW□per□ChannelO
+P =□20□mW□per□ChannelO
+0.1 1 10 50
+P -□Output□Power□per□Channel□-□mWO
+0.01
+0.1
+1
+10
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+V =□2.5□V,□In□PhaseDD
+V =□2.5□V,□Out□of□PhaseDD
+V =□3.6□V,□Out□of□PhaseDD
+V =□3.6□V,□In□PhaseDD
+R =□16 ,
+f□=□1kHz
+L /c87
+0.01
+0.1
+1
+10
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+0.1 1 10 50
+P -□Output□Power□per□Channel□-□mWO
+V =□2.5□V,□In□PhaseDD
+V =□3.6□V,□In□PhaseDD
+V =□2.5□V,□Out□of□PhaseDD
+V =□3.6□V,□Out□of□PhaseDD
+R =□32 ,
+f□=□1kHz
+L /c87
+6
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+6.7 Typical Characteristics
+TA = 25°C, VDD = 3.6 V, Gain = 0 dB, EN = 3.6 V, CHPVDD = CHPVSS = 2.2 μF, CINPUT = CFLYING = 1 μF, Outputs in
+Phase
+Figure 1. Total Harmonic Distortion + Noise vs
+Output Power
+Figure 2. Total Harmonic Distortion + Noise vs
+Output Power
+Figure 3. Total Harmonic Distortion + Noise vs Frequency Figure 4. Total Harmonic Distortion + Noise vs Frequency
+Figure 5. Total Harmonic Distortion + Noise vs Frequency Figure 6. Total Harmonic Distortion + Noise vs Frequency
+
+--- Page 7 ---
+1
+10
+40
+10 100 1000
+R -□Load□Resistance□-L /c87
+V =□2.5□V,□1% THD+NDD
+V =□3.6□V,□10% THD+NDD
+P -□Output□Power□per□Channel□-□mW
+O
+f□=□1□kHz
+V =□2.5□V,□10% THD+NDD
+V =□3.6□V,□1% THD+NDD
+0
+5
+10
+15
+20
+25
+30
+10 100 200
+R -□Load□Resistance□-L /c87
+P -□Output□Power□per□Channel□-□mW
+O
+THD+N□=□1%,
+V =□3.6□VDD
+HPVSS□and□Flying□Cap□=□2.2 F/c109
+HPVSS□and□Flying□Cap□=□1 F/c109
+HPVSS□and□Flying□Cap□=□0.47 F/c109
+2.5 3 3.5 4 4.5 5 5.5
+V -□Supply□Voltage□-□VDD
+THD+N□=□1%
+THD+N□=□10%
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+P -□Output□Power□per□Channel□-□mW
+O
+R =□16L /c87
+THD+N□=□1%
+THD+N□=□10%
+2.5 3 3.5 4 4.5 5 5.5
+V -□Supply□Voltage□-□VDD
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+P -□Output□Power□per□Channel□-□mW
+O
+R =□32L /c87
+0.001
+0.01
+0.1
+1
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+P =□20□mW□per□ChannelO
+P =□10□mW□per□ChannelO
+P =□1□mW□per□ChannelO
+R =□32 ,
+V =□3.6□V
+L
+DD
+/c87
+0.001
+0.01
+0.1
+1
+THD+N□-□Total□Harmonic□Distortion□+□Noise□-□%
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+P =□20□mW□per□ChannelO
+P =□1□mW□per□ChannelO
+R =□32 ,
+V =□5□V
+L
+DD
+/c87
+P =□10□mW□per□ChannelO
+7
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+Typical Characteristics (continued)
+Figure 7. Total Harmonic Distortion + Noise vs Frequency Figure 8. Total Harmonic Distortion + Noise vs Frequency
+Figure 9. Output Power vs Supply Voltage Figure 10. Output Power vs Supply Voltage
+Figure 11. Output Power vs Load Resistance Figure 12. Output Power vs Load Resistance
+
+--- Page 8 ---
+1
+10
+100
+I -□Supply□Current□-□mADD
+0.001 0.01 0.1 1 10 50
+P -□Total□Output□Power□-□mWO
+V =□2.5□VDD
+R =□32 ,
+f□=□1kHz
+L /c87
+V =□3.6□VDD
+V =□5□VDD
+V =□3□VDD
+0.001 0.01 0.1 1 10 50
+P -□Total□Output□Power□-□mWO
+1
+10
+100
+I -□Supply□Current□-□mADD
+V =□3.6□VDD
+V =□5□VDD
+V =□3□VDD
+V =□2.5□VDD
+R =□16 ,
+f□=□1kHz
+L /c87
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+2.5 3 3.5 4 4.5 5 5.5
+V -□Supply□Voltage□-□VDD
+EN□=□1.3□V,
+No□Load
+Quiescent□Supply□Current□-□mA
+-110
+-90
+-70
+-50
+-30
+-10
+Ksvr□-□Supply□Voltage□Rejection□Ratio□-□dB
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+V =□2.5□VDD
+V =□3.6□VDD V =□5□VDD
+R =□32L /c87
+V =□2.5□VDD
+V =□3.6□VDD
+V =□5□VDD
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+R =□16L /c87
+-110
+-90
+-70
+-50
+-30
+-10
+Ksvr□-□Supply□Voltage□Rejection□Ratio□-□dB
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+2
+2.5 3 3.5 4 4.5 5 5.5
+V -□Supply□Voltage□-□VDD
+Load□=□16 /c87
+Load□=□32 /c87
+Load□=□600 /c87
+V -□Output□Voltage□-□V
+O rms
+f□=□1□kHz,
+THD+N□=□1%
+8
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+Typical Characteristics (continued)
+Figure 13. Output Voltage vs Supply Voltage Figure 14. Supply Voltage Rejection Ratio vs Frequency
+Figure 15. Supply Voltage Rejection Ratio vs Frequency Figure 16. Quiescent Supply Current vs Supply Voltage
+Figure 17. Supply Current vs Total Output Power Figure 18. Supply Current vs Total Output Power
+
+--- Page 9 ---
+-3
+-2
+-1
+0
+1
+2
+3
+4
+5
+0 50 100 150 200
+t□-□Time□- s/c109
+EN
+VOUT
+V□-□Voltage□-□V
+Load□=□16 ,
+V =□3.6□V,
+V =□0.5
+/c87
+DD
+I V at□20□kHzRMS
+-3
+-2
+-1
+0
+1
+2
+3
+4
+5
+0 2 4 6 8 10
+t□-□Time□-□ms
+EN
+VOUT
+V□-□Voltage□-□V
+Load□=□16 ,
+V =□3.6□V,
+V =□0.5□V at□1□kHz
+/c87
+DD
+I RMS
+-140
+-120
+-100
+-80
+-60
+-40
+-20
+0
+20 100 1k 10k 20k
+f□-□Frequency□-□Hz
+Crosstalk□-□dB
+R =□16 ,
+Power□=□15□mW,
+V =□3.6□V
+L
+DD
+/c87
+-150
+-130
+-110
+-90
+-70
+-50
+-30
+-10
+0 5000 10000 15000 20000
+f□-□Frequency□-□Hz
+V -□Output Amplitude□-□dBV
+O
+Single□Channel,
+Load□=□16 ,
+V =□3.6□V
+/c87
+DD
+9
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+Typical Characteristics (continued)
+Figure 19. Crosstalk vs Frequency Figure 20. Output Spectrum vs Frequency
+Figure 21. Startup Waveforms vs Time Figure 22. Shutdown Waveforms vs Time
+
+--- Page 10 ---
+Click-and-Pop
+Suppression
++
+–
+HPVDD
+HPVSS
++
+–
+HPVDD
+HPVSS
+Charge
+Pump
+INR+
+INR-
+INL+
+INL-
+OUTL
+OUTR
+CPP
+CPN
+HPVSS
+G0
+EN
+Thermal
+Protection
+Gain
+SelectG1
+VDD
+Supply
+Control
+PGND
+SGND
+HPVDD
+Resistor
+Array
+1 F/c109
+1 F/c109
+2.2 F/c109
+Short-Circuit
+Protection
+Resistor
+Array
+HPVDD
+10
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+7 Detailed Description
+7.1 Overview
+The TPA6132A2 is a DirectPath™ stereo headphone amplifier that requires no output DC blocking capacitors
+and is capable of delivering 25m-W/Ch into16-Ω speakers. The device has built-in pop suppression circuitry to
+completely eliminate pop noise during turn- on and turn-off. The amplifier outputs have short- circuit and thermal-
+overload protection.
+The TPA6132A2 features fully differential inputs to reduce system noise pickup between the audio source and
+the headphone amplifier. The high power supply noise rejection performance and differential architecture
+provides increased RF noise immunity.
+Differential stereo inputs and built-in resistors set the device gain, reducing external component count. The
+TPA6132A2 has four gain settings which are controlled with pins G0 and G1. The combination of these pins set
+the device to –6-dB, 0-dB, 3-dB or 6-dB gain.
+The TPA6132A2 operates from a single 2.3-V to 5.5-V supply with 2.1 mA of typical supply current, as it uses a
+built-in charge pump to generate a negative voltage supply for the headphone amplifiers. Shutdown mode
+reduces supply current to less than 1 μA
+7.2 Functional Block Diagram
+
+--- Page 11 ---
+O
+C L
+1C = 2 R/c166 /c112
+f =c
+1
+2 R C/c112L O
+11
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+7.3 Feature Description
+7.3.1 Headphone Amplifiers
+Single-supply headphone amplifiers typically require dc-blocking capacitors to remove dc bias from their output
+voltage. The top drawing in Figure 23 illustrates this connection. If dc bias is not removed, large dc current will
+flow through the headphones which wastes power, clip the output signal, and potentially damage the
+headphones.
+These dc-blocking capacitors are often large in value and size. Headphone speakers have a typical resistance
+between 16 Ω and 32 Ω. This combination creates a high-pass filter with a cutoff frequency as shown in
+Equation 1, where RL is the load impedance, CO is the dc-block capacitor, and fC is the cutoff frequency.
+(1)
+For a given high-pass cutoff frequency and load impedance, the required dc-blocking capacitor is found as:
+(2)
+Reducing fC improves low frequency fidelity and requires a larger dc-blocking capacitor. To achieve a 20 Hz
+cutoff with 16 Ω headphones, CO must be at least 500 μF. Large capacitor values require large packages,
+consuming PCB area, increasing height, and increasing cost of assembly. During start-up or shutdown the dc-
+blocking capacitor has to be charged or discharged. This causes an audible pop on start-up and power-down.
+Large dc-blocking capacitors also reduce audio output signal fidelity.
+Two different headphone amplifier architectures are available to eliminate the need for dc-blocking capacitors.
+The Capless amplifier architecture is similar provides a reference voltage to the headphone connector shield pin
+as shown in the middle drawing of Figure 23. The audio output signals are centered around this reference
+voltage, which is typically half of the supply voltage to allow symmetrical output voltage swing.
+When using a Capless amplifier do not connect the headphone jack shield to any ground reference or large
+currents will result. This makes Capless amplifiers ineffective for plugging non-headphone accessories into the
+headphone connector. Capless amplifiers are useful only with floating GND headphones.
+
+--- Page 12 ---
+CO
+CO
+Conventional
+VOUT
+GND
+VOUT
+GND
+VBIAS
+Capless
+DirectPath™
+GND
+VDD
+VSS
+12
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+Feature Description (continued)
+Figure 23. Amplifier Applications
+The DirectPath™ amplifier architecture operates from a single supply voltage and uses an internal charge pump
+to generate a negative supply rail for the headphone amplifier. The output voltages are centered around 0 V and
+are capable of positive and negative voltage swings as shown in the bottom drawing of Figure 23. DirectPath
+amplifiers require no output dc-blocking capacitors. The headphone connector shield pin connects to ground and
+will interface will headphones and non-headphone accessories. The TPA6132A2 is a DirectPath amplifier.
+7.3.2 Eliminating Turn-on Pop and Power Supply Sequencing
+The TPA6132A2 has excellent noise and turn-on / turn-off pop performance. It uses an integrated click-and-pop
+suppression circuit to allow fast start-up and shutdown without generating any voltage transients at the output
+pins. Typical start-up time from shutdown is 5 ms.
+DirectPath technology keeps the output dc voltage at 0 V even when the amplifier is powered up. The DirectPath
+technology together with the active pop-and-click suppression circuit eliminates audible transients during start up
+and shutdown.
+Use input coupling capacitors to ensure inaudible turn-on pop. Activate the TPA6132A2 after all audio sources
+have been activated and their output voltages have settled. On power-down, deactivate the TPA6132A2 before
+deactivating the audio input source. The EN pin controls device shutdown: Set to 0.6 V or lower to deactivate the
+TPA6132A2; set to 1.3 V or higher to activate.
+
+--- Page 13 ---
+13
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+Feature Description (continued)
+7.3.3 RF and Power Supply Noise Immunity
+The TPA6132A2 employs a new differential amplifier architecture to achieve high power supply noise rejection
+and RF noise rejection. RF and power supply noise are common in modern electronics. Although RF frequencies
+are much higher than the 20 kHz audio band, signal modulation often falls in-band. This, in turn, modulates the
+supply voltage, allowing a coupling path into the audio amplifier. A common example is the 217 Hz GSM frame-
+rate buzz often heard from an active speaker when a cell phone is placed nearby during a phone call.
+The TPA6132A2 has excellent rejection of power supply and RF noise, preventing audio signal degradation.
+7.3.4 Constant Maximum Output Power and Acoustic Shock Prevention
+Typically the output power increases with increasing supply voltage on an unregulated headphone amplifier. The
+TPA6132A2 maintains a constant output power independent of the supply voltage. Thus the design for
+prevention of acoustic shock (hearing damage due to exposure to a loud sound) is simplified since the output
+power will remain constant, independent of the supply voltage. This feature allows maximizing the audio signal at
+the lowest supply voltage.
+7.4 Device Functional Modes
+7.4.1 Gain Control
+The TPA6132A2 has four gain settings which are controlled with pins G0 and G1. Table 1 gives an overview of
+the gain function.
+G0 VOLTAGE G1 VOLTAGE AMPLIFIER GAIN
+≤ 0.5 V ≤ 0.5 V –6 dB
+≥ 1.3 V ≤ 0.5 V 0 dB
+≤ 0.5 V ≥ 1.3 V 3 dB
+≥ 1.3 V ≥ 1.3 V 6 dB
+Table 1. Windows Vista™ Premium Mobile Mode Specifications
+Device Type Requirement Windows Premium Mobile Vista
+Specifications TPA6132A2 Typical Performance
+Analog Speaker Line Jack
+(RL = 10 kΩ, FS = 0.707
+Vrms)
+THD+N ≤ –65 dB FS [20 Hz, 20 kHz] –75 dB FS[20 Hz, 20 kHz]
+Dynamic Range with Signal
+Present ≤ –80 dB FS A-Weight –100 dB FS A-Weight
+Line Output Crosstalk ≤ –60 dB [20 Hz, 20 kHz] –90 dB [20 Hz, 20 kHz]
+Analog Headphone Out Jack
+(RL = 32Ω, FS = 0.300
+Vrms)
+THD+N ≤ –45 dB FS [20 Hz, 20 kHz] –65 dB FS [20 Hz, 20 kHz]
+Dynamic Range with Signal
+Present ≤ –80 dB FS A-Weight –94 dB FS A-Weight
+Headphone Output Crosstalk ≤ –60 dB [20 Hz, 20 kHz] –90 dB [20 Hz, 20 kHz]
+
+--- Page 14 ---
+INR+
+INR-
+INL+
+INL-
+PGND
+SGND
+OUTR
+HPVSS
+CPP CPN
+PVDD
+HPVDD
+OUTLTPA6132A2
+VBAT
+RIGHT IN+
+LEFT IN+
+ENENABLE
+G0
+G1GAIN1
+GAIN0
+2.2 µF
+2.2 µF
+1 µF
+1 µF
+RIGHT IN-
+LEFT IN-
+14
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+8 Application and Implementation
+NOTE
+Information in the following applications sections is not part of the TI component
+specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+8.1 Application Information
+The TPA6132A2 starts its operation by asserting the EN pin to logic 1. The device enters in shutdown mode
+when pulling low EN pin. The charge pump generates a negative supply voltage. The charge pump flying
+capacitor connected between CPP and CPN transfers charge to generate the negative supply voltage. The
+output voltages are capable of positive and negative voltage swings and are centered close to 0 V, eliminating
+the need for output capacitors. Input coupling capacitors block any dc bias from the audio source and ensure
+maximum dynamic range. The device has built-in pop suppression circuitry to completely eliminate pop noise
+during turn- on, turn-off and enter or exit shutdown mode.
+8.2 Typical Applications
+8.2.1 Configuration with Differential Input Signals
+Figure 24 shows a typical application circuit for the TPA6132A2 with a stereo headphone jack output and
+differential input signals. Also supports charge pump flying capacitor and power supply decoupling capacitors.
+Figure 24. Typical Application Configuration with Differential Input Signals
+8.2.1.1 Design Requirements
+For this design example, use the parameters shown in Table 2.
+Table 2. Design Parameters
+PARAMETERS VALUES
+Input voltage range 2.2 V to 5.3 V
+Output voltage 1.1-VRMS
+Current 2 mA to 3.2 mA
+
+--- Page 15 ---
+Time (s)
+Voltage (V)
+0 2m 4m 6m 8m 10m
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+D001
+1m 3m 5m 7m 9m
+Output
+EN Enabled
+Time (s)
+Volatge (V)
+-1
+-0.75
+-0.5
+-0.25
+0
+0.25
+0.5
+0.75
+1
+0 1.2m 1.6m 2m200/c109 1m 1.4m 1.8m600/c109400/c109 800/c109
+EN Disabled
+Output
+IN
+C IN
+1C =
+2 R/c166 /c112
+C
+IN IN
+1=
+2 R C
+f
+/c112
+15
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+8.2.1.2 Detailed Design Procedure
+8.2.1.2.1 Input Coupling Capacitors
+Input coupling capacitors block any dc bias from the audio source and ensure maximum dynamic range. Input
+coupling capacitors also minimize TPA6132A2 turn-on pop to an inaudible level.
+The input capacitors are in series with TPA6132A2 internal input resistors, creating a high-pass filter. Equation 3
+calculates the high-pass filter corner frequency. The input impedance, RIN, is dependent on device gain. Larger
+input capacitors decrease the corner frequency. See the Operating Characteristics table for input impedance
+values.
+(3)
+For a given high-pass cutoff frequency, the minimum input coupling capacitor is found as:
+(4)
+Example: Design for a 20 Hz corner frequency with a TPA6132A2 gain of +6 dB. The Operating Characteristics
+table gives RIN as 13.2 kΩ. Equation 4 shows the input coupling capacitors must be at least 0.6 μF to achieve a
+20 Hz high-pass corner frequency. Choose a 0.68 μF standard value capacitor for each TPA6132A2 input (X5R
+material or better is required for best performance).
+Input capacitors can be removed provided the TPA6132A2 inputs are driven differentially with less than ±1 V and
+the common-mode voltage is within the input common-mode range of the amplifier. Without input capacitors turn-
+on pop performance may be degraded and should be evaluated in the system.
+8.2.1.2.2 Charge Pump Flying Capacitor and HPVSS Capacitor
+The TPA6132A2 uses a built-in charge pump to generate a negative voltage supply for the headphone
+amplifiers. The charge pump flying capacitor connects between CPP and CPN. It transfers charge to generate
+the negative supply voltage. The HPVSS capacitor must be at least equal in value to the flying capacitor to allow
+maximum charge transfer. Use low equivalent-series-resistance (ESR) ceramic capacitors (X5R material or
+better is required for best performance) to maximize charge pump efficiency. Typical values are 1 μF to 2.2 μF
+for the HPVSS and flying capacitors. Although values down to 0.47 μF can be used, total harmonic distortion
+(THD) will increase.
+8.2.1.3 Application Curves
+Figure 25. Start-Up Time Figure 26. Shutdown
+
+--- Page 16 ---
+Time (s)
+Voltage (V)
+0 2m 4m 6m 8m 10m
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+D001
+1m 3m 5m 7m 9m
+Output
+EN Enabled
+Time (s)
+Volatge (V)
+-1
+-0.75
+-0.5
+-0.25
+0
+0.25
+0.5
+0.75
+1
+0 1.2m 1.6m 2m200/c109 1m 1.4m 1.8m600/c109400/c109 800/c109
+EN Disabled
+Output
+INR-
+INR+
+INL-
+INL+
+PGND
+SGND
+OUTR
+HPVSS
+CPP CPN
+PVDD
+HPVDD
+OUTLTPA6132A2
+VBAT
+RIGHT IN
+LEFT IN
+ENENABLE
+G0
+G1GAIN1
+GAIN0
+1 µF
+2.2 µF
+2.2 µF
+1 µF
+1 µF
+1 µF
+16
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+8.2.2 Configuration with Single-Ended Input Signals
+Figure 27 shows a typical application circuit for the TPA6132A2 with a stereo headphone jack output and single-
+ended input signals. Also supports charge pump flying capacitor and power supply decoupling capacitors.
+Figure 27. Typical Application Configuration with Single-Ended Input Signals
+8.2.2.1 Design Requirements
+Refer to the Configuration with Differential Input Signals design requirements
+8.2.2.2 Detailed Design Procedure
+Refer to the Configuration with Differential Input Signals detailed design procedures.
+8.2.2.3 Application Curves
+Figure 28. Start-Up Time Figure 29. Shutdown
+
+--- Page 17 ---
+17
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+9 Power Supply Recommendations
+Connect the supply voltage to the VDD pin and decouple it with an X5R or better capacitor. Connect the HPVDD
+pin only to a 2.2 μF, X5R or better, capacitor. Do not connect HPVDD to an external voltage supply. Place both
+capacitors within 5 mm of their associated pins on the TPA6132A2. Ensure that the ground connection of each of
+the capacitors has a minimum length return path to the device. Failure to properly decouple the TPA6132A2 may
+degrade audio or EMC performance.
+9.1 Power Supply and HPVDD Decoupling Capacitors
+The TPA6132A2 DirectPath headphone amplifier requires adequate power supply decoupling to ensure that
+output noise and total harmonic distortion (THD) remain low. Use good low equivalent-series-resistance (ESR)
+ceramic capacitors (X5R material or better is required for best performance). Place a 2.2 μF capacitor within
+5 mm of the VDD pin. Reducing the distance between the decoupling capacitor and VDD minimizes parasitic
+inductance and resistance, improving TPA6132A2 supply rejection performance. Use 0402 or smaller size
+capacitors if possible.
+For additional supply rejection, connect an additional 10 μF or higher value capacitor between VDD and ground.
+This will help filter lower frequency power supply noise. The high power supply rejection ratio (PSRR) of the
+TPA6132A2 makes the 10 μF capacitor unnecessary in most applications.
+Connect a 2.2 μF capacitor between HPVDD and ground. This ensures the amplifier internal bias supply remains
+stable and maximizes headphone amplifier performance.
+WARNING
+DO NOT connect HPVDD directly to VDD or an external supply voltage. The
+voltage at HPVDD is generated internally. Connecting HPVDD to an external
+voltage can damage the device.
+
+--- Page 18 ---
+5
+1
+2
+3
+4
+12
+11
+10
+9
+6 7 8
+16 15 14 13
+Matched□Board□Layout□for
+Differential□Input□Signals
+Paddle
+Soldered□/
+Electrical□Float
+To□Battery
+Enable
+Control
+2.2 F/c109 2.2 F/c109
+1 F/c109
+1 F/c109Gain
+Control
+18
+TPA6132A2
+SLOS597B – DECEMBER 2008 – REVISED JULY 2017 www.ti.com
+Product Folder Links: TPA6132A2
+Submit Documentation Feedback Copyright © 2008–2017, Texas Instruments Incorporated
+10 Layout
+10.1 Layout Guidelines
+• Solder the exposed metal pad on the TPA6132A2RTE QFN package to the landing pad on the PCB.
+• Connect the landing pad to ground or leave it electrically unconnected (floating). Do not connect the landing
+pad to VDD or to any other power supply voltage.
+• If the pad is grounded, it must be connected to the same ground as the PGND pin (10).
+• See the layout and mechanical drawings at the end of the data sheet for proper sizing.
+• Soldering the thermal pad is required for mechanical reliability and enhances thermal conductivity of the
+package.
+WARNING
+DO NOT connect the TPA6132A2RTE exposed metal pad to VDD or any other
+power supply voltage.
+10.2 Layout Example
+Figure 30. Board Layout Concept
+10.3 GND Connections
+The SGND pin is an input reference and must be connected to the headphone ground connector pin. This
+ensures no turn-on pop and minimizes output offset voltage. Do not connect more than ±0.3 V to SGND.
+PGND is a power ground. Connect supply decoupling capacitors for VDD, HPVDD, and HPVSS to PGND.
+
+--- Page 19 ---
+19
+TPA6132A2
+www.ti.com SLOS597B – DECEMBER 2008 – REVISED JULY 2017
+Product Folder Links: TPA6132A2
+Submit Documentation FeedbackCopyright © 2008–2017, Texas Instruments Incorporated
+11 Device and Documentation Support
+11.1 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. In the upper
+right corner, click on Alert me to register and receive a weekly digest of any product information that has
+changed. For change details, review the revision history included in any revised document.
+11.2 Community Resources
+The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective
+contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of
+Use.
+TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration
+among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help
+solve problems with fellow engineers.
+Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and
+contact information for technical support.
+11.3 Trademarks
+DirectPath, E2E are trademarks of Texas Instruments.
+Windows Vista is a trademark of Microsoft Corporation.
+All other trademarks are the property of their respective owners.
+11.4 Electrostatic Discharge Caution
+These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+during storage or handling to prevent electrostatic damage to the MOS gates.
+11.5 Glossary
+SLYZ022 — TI Glossary.
+This glossary lists and explains terms, acronyms, and definitions.
+12 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+--- Page 20 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 7-Jul-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPA6132A2RTER Active Production WQFN (RTE) | 16 3000 | LARGE T&R Yes NIPDAU | SN Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTER.A Active Production WQFN (RTE) | 16 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTER.B Active Production WQFN (RTE) | 16 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTERG4 Active Production WQFN (RTE) | 16 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTERG4.A Active Production WQFN (RTE) | 16 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTERG4.B Active Production WQFN (RTE) | 16 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTET Active Production WQFN (RTE) | 16 250 | SMALL T&R Yes NIPDAU | SN Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTET.A Active Production WQFN (RTE) | 16 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 AIWI
+TPA6132A2RTET.B Active Production WQFN (RTE) | 16 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 AIWI
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+Addendum-Page 1
+
+--- Page 21 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 7-Jul-2026
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+Addendum-Page 2
+
+--- Page 22 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 18-Jun-2025
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TPA6132A2RTER WQFN RTE 16 3000 330.0 12.4 3.3 3.3 1.1 8.0 12.0 Q2
+TPA6132A2RTERG4 WQFN RTE 16 3000 330.0 12.4 3.3 3.3 1.1 8.0 12.0 Q2
+TPA6132A2RTET WQFN RTE 16 250 180.0 12.4 3.3 3.3 1.1 8.0 12.0 Q2
+Pack Materials-Page 1
+
+--- Page 23 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 18-Jun-2025
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TPA6132A2RTER WQFN RTE 16 3000 346.0 346.0 33.0
+TPA6132A2RTERG4 WQFN RTE 16 3000 346.0 346.0 33.0
+TPA6132A2RTET WQFN RTE 16 250 210.0 185.0 35.0
+Pack Materials-Page 2
+
+--- Page 24 ---
+www.ti.com
+GENERIC PACKAGE VIEW
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+WQFN - 0.8 mm max heightRTE 16
+PLASTIC QUAD FLATPACK - NO LEAD3 x 3, 0.5 mm pitch
+4225944/A
+
+--- Page 25 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+16X 0.30
+0.18
+1.68 0.07
+16X 0.5
+0.3
+0.8 MAX
+(DIM A) TYP
+0.05
+0.00
+12X 0.5
+4X
+1.5
+A 3.1
+2.9
+B
+3.1
+2.9
+WQFN - 0.8 mm max heightRTE0016C
+PLASTIC QUAD FLATPACK - NO LEAD
+4219117/B   04/2022
+SIDE WALL 
+METAL THICKNESS
+DIM A
+OPTION 1
+OPTION 2
+0.1 0.2
+PIN 1 INDEX AREA
+0.08
+SEATING PLANE
+1
+4 9
+12
+5 8
+16 13
+(OPTIONAL)
+PIN 1 ID 0.1 C A B
+0.05
+EXPOSED
+THERMAL PAD
+17 SYMM
+SYMM
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. The package thermal pad must be soldered to the printed circuit board for thermal and mechanical performance.
+SCALE  3.600
+
+--- Page 26 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND
+0.07 MAX
+ALL AROUND
+16X (0.24)
+16X (0.6)
+( 0.2) TYP
+VIA
+12X (0.5)
+(2.8)
+(2.8)
+(0.58)
+TYP
+( 1.68)
+(R0.05)
+ALL PAD CORNERS (0.58) TYP
+WQFN - 0.8 mm max heightRTE0016C
+PLASTIC QUAD FLATPACK - NO LEAD
+4219117/B   04/2022
+SYMM
+1
+4
+5 8
+9
+12
+1316
+SYMM
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:20X
+17
+NOTES: (continued)
+ 
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+    number SLUA271 (www.ti.com/lit/slua271).
+5. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+    on this view. It is recommended that vias under paste be filled, plugged or tented. 
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+METAL
+SOLDER MASK
+OPENINGSOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+EXPOSED
+METAL
+
+--- Page 27 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+16X (0.6)
+16X (0.24)
+12X (0.5)
+(2.8)
+(2.8)
+( 1.55)
+(R0.05) TYP
+WQFN - 0.8 mm max heightRTE0016C
+PLASTIC QUAD FLATPACK - NO LEAD
+4219117/B   04/2022
+NOTES: (continued)
+ 
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+   design recommendations. 
+ 
+SYMM
+ALL AROUND
+METAL
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+ 
+EXPOSED PAD 17:
+85% PRINTED SOLDER COVERAGE BY AREA UNDER PACKAGE
+SCALE:25X
+SYMM
+1
+4
+5 8
+9
+12
+1316
+17
+
+--- Page 28 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+16X 0.30
+0.18
+1.6 0.1
+16X 0.5
+0.3
+0.8
+0.7
+(0.1) TYP
+0.05
+0.00
+12X 0.5
+4X
+1.5
+A 3.15
+2.85
+B
+3.15
+2.85
+WQFN - 0.8 mm max heightRTE0016B
+PLASTIC QUAD FLATPACK - NO LEAD
+4230836/A   07/2025
+PIN 1 INDEX AREA
+0.08
+SEATING PLANE
+1
+4 9
+12
+5 8
+16 13
+(OPTIONAL)
+PIN 1 ID 0.1 C A B
+0.05
+EXPOSED
+THERMAL PAD
+17 SYMM
+SYMM
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. The package thermal pad must be soldered to the printed circuit board for thermal and mechanical performance.
+SCALE  3.600
+
+--- Page 29 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND
+0.07 MAX
+ALL AROUND
+16X (0.24)
+16X (0.6)
+( 0.2) TYP
+VIA
+12X (0.5)
+(2.8)
+(2.8)
+(0.58)
+TYP
+( 1.6)
+(R0.05)
+ALL PAD CORNERS (0.58) TYP
+WQFN - 0.8 mm max heightRTE0016B
+PLASTIC QUAD FLATPACK - NO LEAD
+4230836/A   07/2025
+SYMM
+1
+4
+5 8
+9
+12
+1316
+SYMM
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:20X
+17
+NOTES: (continued)
+ 
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+    number SLUA271 (www.ti.com/lit/slua271).
+5. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+    on this view. It is recommended that vias under paste be filled, plugged or tented. 
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+METAL
+SOLDER MASK
+OPENINGSOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+EXPOSED
+METAL
+
+--- Page 30 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+16X (0.6)
+16X (0.24)
+12X (0.5)
+(2.8)
+(2.8)
+( 1.51)
+(R0.05) TYP
+WQFN - 0.8 mm max heightRTE0016B
+PLASTIC QUAD FLATPACK - NO LEAD
+4230836/A   07/2025
+NOTES: (continued)
+ 
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+   design recommendations. 
+ 
+SYMM
+ALL AROUND
+METAL
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+ 
+EXPOSED PAD 17:
+84% PRINTED SOLDER COVERAGE BY AREA UNDER PACKAGE
+SCALE:25X
+SYMM
+1
+4
+5 8
+9
+12
+1316
+17
+
+--- Page 31 ---
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

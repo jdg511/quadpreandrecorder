@@ -1,0 +1,163 @@
+2026-08-01T13:10:43.464Z [kicad] [info] Initializing server... { metadata: undefined }
+2026-08-01T13:10:43.586Z [kicad] [info] Using MCP server command: C:\nvm4w\nodejs\node.exe with path: {
+  metadata: {
+    paths: [
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Python\\Python313',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Python\\Python310',
+      'C:\\Program Files\\Python314',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Program Files\\Git\\mingw64\\bin',
+      'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath',
+      'C:\\Program Files\\Eclipse Adoptium\\jre-25.0.4.7-hotspot\\bin',
+      'C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.7-hotspot\\bin',
+      'C:\\nvm4w\\nodejs',
+      'C:\\Ruby40-x64\\bin',
+      'C:\\Program Files\\Python314\\Scripts\\',
+      'C:\\Program Files\\Python314\\',
+      'C:\\VulkanSDK\\1.4.350.0\\Bin',
+      'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path',
+      'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath',
+      'C:\\Program Files (x86)\\Embarcadero\\Studio\\23.0\\bin',
+      'C:\\Users\\Public\\Documents\\Embarcadero\\Studio\\23.0\\Bpl',
+      'C:\\Program Files (x86)\\Embarcadero\\Studio\\23.0\\bin64',
+      'C:\\Users\\Public\\Documents\\Embarcadero\\Studio\\23.0\\Bpl\\Win64',
+      'C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin\\x64',
+      'C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Microsoft VS Code\\bin',
+      'C:\\Program Files\\cursor\\resources\\app\\bin',
+      'C:\\Program Files\\dotnet\\',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\ProgramData\\chocolatey\\bin',
+      'C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\',
+      'C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\',
+      'C:\\Program Files\\buildkit',
+      'C:\\Program Files\\Git-Xet\\',
+      'C:\\Program Files\\Rust stable LLVM 1.94\\bin',
+      'C:\\Program Files\\Rust stable GNU 1.94\\bin',
+      'C:\\lianja\\bin',
+      'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\',
+      'C:\\Program Files (x86)\\Windows Kits\\10\\Microsoft Application Virtualization\\Sequencer\\',
+      'C:\\Program Files\\MATLAB\\R2025b\\runtime\\win64',
+      'C:\\Program Files\\MATLAB\\R2025b\\bin',
+      'C:\\Strawberry\\c\\bin',
+      'C:\\Strawberry\\perl\\site\\bin',
+      'C:\\Strawberry\\perl\\bin',
+      'C:\\Program Files\\Tailscale\\',
+      'C:\\Program Files\\PuTTY\\',
+      'C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2026.2.1\\',
+      'C:\\Program Files\\Rust stable LLVM 1.96\\bin',
+      'C:\\Program Files\\Process Lasso\\',
+      'C:\\Program Files\\Go\\bin',
+      'C:\\Program Files\\Rust stable LLVM 1.97\\bin',
+      'C:\\Program Files\\Rust stable GNU 1.97\\bin',
+      'C:\\P',
+      'C:\\Program Files (x86)\\OpenCTM 1.0.3\\bin',
+      'C:\\Program Files\\CMake\\bin',
+      'C:\\Program Files\\Docker\\Docker\\resources\\bin',
+      'C:\\Program Files\\GitHub CLI\\',
+      'C:\\Users\\Jason\\.pcb\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\agy\\bin',
+      'C:\\Users\\Jason\\.cargo\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts',
+      'C:\\Users\\Jason\\AppData\\Local\\hermes\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Jan\\resources\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Python\\Python310\\',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\Jason\\.local\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Microsoft VS Code\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Ollama',
+      'C:\\Users\\Jason\\.lmstudio\\bin',
+      'C:\\Users\\Jason\\.dotnet\\tools',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Kiro\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Zed\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Microsoft\\WinGet\\Links',
+      'C:\\Users\\Jason\\go\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Python\\bin',
+      'C:\\Users\\Jason\\AppData\\Roaming\\Testcontainers Desktop\\',
+      'C:\\Users\\Jason\\AppData\\Local\\XPipe\\cli\\bin',
+      'C:\\Users\\Jason\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\XPipe\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\GitHubDesktop\\bin',
+      'C:\\Users\\Jason\\AppData\\Roaming\\npm',
+      'C:\\Users\\Jason\\AppData\\Local\\Microsoft\\WinGet\\Packages\\ggml.llamacpp_Microsoft.Winget.Source_8wekyb3d8bbwe',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\',
+      'C:\\Users\\Jason\\AppData\\Local\\PowerToys\\DSCModules\\',
+      'C:\\Users\\Jason\\AppData\\Local\\Microsoft\\WinGet\\Packages\\pnpm.pnpm_Microsoft.Winget.Source_8wekyb3d8bbwe',
+      'C:\\Program Files\\JetBrains\\CLion 2026.1.4\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Swift\\Toolchains\\6.3.3+Asserts\\usr\\bin\\',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Swift\\Runtimes\\6.3.3\\usr\\bin\\',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Antigravity IDE\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\nvm',
+      'C:\\Users\\Jason\\.bun\\bin',
+      'C:\\Users\\Jason\\ngspice-46_64\\Spice64\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\Programs\\Cua\\cua-driver\\bin',
+      'C:\\Users\\Jason\\AppData\\Local\\DockerSandboxes\\bin\\',
+      [length]: 99
+    ]
+  }
+} %o
+2026-08-01T13:10:43.601Z [kicad] [info] Server started and connected successfully { metadata: undefined }
+2026-08-01T13:10:43.855Z [kicad] [info] Message from client: method="initialize" id=0 params { metadata: undefined }
+[2026-08-01 08:10:44,339] [INFO] Using STDIO transport for local communication
+[2026-08-01 08:10:44,347] [INFO] Registering KiCAD tools, resources, and prompts...
+[2026-08-01 08:10:44,348] [INFO] Registering router tools
+[2026-08-01 08:10:44,349] [INFO] Router tools registered successfully
+[2026-08-01 08:10:44,351] [INFO] Registering board management tools
+[2026-08-01 08:10:44,353] [INFO] Board management tools registered
+[2026-08-01 08:10:44,354] [INFO] Registering component management tools
+[2026-08-01 08:10:44,356] [INFO] Component management tools registered
+[2026-08-01 08:10:44,359] [INFO] Registering design rule tools
+[2026-08-01 08:10:44,360] [INFO] Design rule tools registered
+[2026-08-01 08:10:44,362] [INFO] Registering export tools
+[2026-08-01 08:10:44,367] [INFO] Export tools registered
+[2026-08-01 08:10:44,379] [INFO] UI management tools registered
+[2026-08-01 08:10:44,387] [INFO] Registering project resources
+[2026-08-01 08:10:44,388] [INFO] Project resources registered
+[2026-08-01 08:10:44,389] [INFO] Registering board resources
+[2026-08-01 08:10:44,390] [INFO] Board resources registered
+[2026-08-01 08:10:44,391] [INFO] Registering component resources
+[2026-08-01 08:10:44,392] [INFO] Component resources registered
+[2026-08-01 08:10:44,392] [INFO] Registering library resources
+[2026-08-01 08:10:44,393] [INFO] Library resources registered
+[2026-08-01 08:10:44,394] [INFO] Registering component prompts
+[2026-08-01 08:10:44,395] [INFO] Component prompts registered
+[2026-08-01 08:10:44,396] [INFO] Registering routing prompts
+[2026-08-01 08:10:44,396] [INFO] Routing prompts registered
+[2026-08-01 08:10:44,397] [INFO] Registering design prompts
+[2026-08-01 08:10:44,398] [INFO] Design prompts registered
+[2026-08-01 08:10:44,399] [INFO] Registering footprint prompts
+[2026-08-01 08:10:44,399] [INFO] All KiCAD tools, resources, and prompts registered
+[2026-08-01 08:10:44,400] [INFO] Starting KiCAD MCP server...
+[2026-08-01 08:10:44,401] [INFO] Starting Python process with script: C:\Users\Jason\KiCAD-MCP-Server\python\kicad_interface.py
+[2026-08-01 08:10:44,405] [INFO] Found KiCAD bundled Python at: C:\Users\Jason\AppData\Local\Programs\KiCad\10.0\bin\python.exe
+[2026-08-01 08:10:44,405] [INFO] Using Python executable: C:\Users\Jason\AppData\Local\Programs\KiCad\10.0\bin\python.exe
+[2026-08-01 08:10:44,407] [INFO] Validating pcbnew module access...
+[2026-08-01 08:10:45,043] [INFO] ✓ pcbnew module validated successfully
+[2026-08-01 08:10:45,047] [INFO] Waiting for Python process to be ready...
+[2026-08-01 08:10:52,205] [INFO] Python process READY — stdin loop is live
+[2026-08-01 08:10:52,206] [INFO] Python process is ready.
+[2026-08-01 08:10:52,207] [INFO] Connecting MCP server to STDIO transport...
+[2026-08-01 08:10:52,207] [INFO] Successfully connected to STDIO transport
+[2026-08-01 08:10:52,208] [INFO] Sending warm-up command (background)...
+2026-08-01T13:10:52.218Z [kicad] [info] Message from server: id=0 result { metadata: undefined }
+2026-08-01T13:10:52.219Z [kicad] [info] Message from client: method="notifications/initialized" { metadata: undefined }
+2026-08-01T13:10:52.229Z [kicad] [info] Message from client: method="tools/list" id=1 params { metadata: undefined }
+2026-08-01T13:10:52.229Z [kicad] [info] Message from client: method="prompts/list" id=2 params { metadata: undefined }
+2026-08-01T13:10:52.229Z [kicad] [info] Message from client: method="resources/list" id=3 { metadata: undefined }
+2026-08-01T13:10:52.248Z [kicad] [info] Message from server: id=1 result { metadata: undefined }
+2026-08-01T13:10:52.249Z [kicad] [info] Message from server: id=2 result { metadata: undefined }
+2026-08-01T13:10:52.249Z [kicad] [info] Message from server: id=3 result { metadata: undefined }
+[2026-08-01 08:10:52,299] [INFO] Warm-up succeeded: pcbnew 10.0.4 (0s)
+[2026-08-01 08:10:52,299] [INFO] Warm-up complete — pcbnew/wxApp initialised
+KiCAD MCP SERVER READY
+[2026-08-01 08:10:52,300] [INFO] KiCAD MCP server started and ready
+[2026-08-01 08:10:52,300] [INFO] KiCAD MCP server started with STDIO transport

@@ -1,0 +1,67 @@
+=============================================================
+PCBWAY ORDER - PASTE-READY NOTES
+=============================================================
+
+Upload file:
+  hardware\manufacturing\QuadPreRecorder-Rev3-4Layer-PCBWay.zip
+
+Use the ORANGE "Quick Order  (Upload files & checkout)" button on
+the PCB Instant Quote page. Uploading the zip auto-detects
+4 layers, 138 x 114 mm, and 5/5 mil track/spacing correctly.
+
+-------------------------------------------------------------
+AFTER UPLOAD, ONLY THESE NEED CHANGING FROM THE DEFAULTS
+-------------------------------------------------------------
+  Quantity ................ 5   (or whatever you want)
+  Surface finish .......... HASL lead free      (defaults to leaded)
+  Assembly Service ........ tick the checkbox
+     - Turnkey (PCBWay supply parts)   <- already the default
+     - Board type: Single pieces       <- already the default
+     - Assembly side(s): BOTH SIDES    <- defaults to Top only!
+     - Quantity: 5
+     - "Accept alternatives/substitutes made in China?" -> leave NO
+
+Everything else (FR-4, 1.6 mm, 1 oz outer + 1 oz inner, 0.3 mm
+min hole, tenting vias, green mask, white silkscreen) is already
+correct by default or auto-detected.
+
+-------------------------------------------------------------
+LAYER ORDER POPUP (appears when 4 layers is detected)
+-------------------------------------------------------------
+  L1:  F_Cu (top)
+  L2:  In1_Cu (solid GND plane)
+  L3:  In2_Cu (signal + GND pour)
+  L4:  B_Cu (bottom)
+
+-------------------------------------------------------------
+PASTE INTO "Detailed information of assembly"
+-------------------------------------------------------------
+Two-sided SMT assembly: 180 placements (113 top, 67 bottom). BOM and centroid files are inside the uploaded zip: QuadPreRecorder-Rev3-4L-BOM.csv and QuadPreRecorder-Rev3-4L-CPL.csv.
+
+SUBSTITUTIONS: This is an audio product - please do NOT substitute any part without checking with me first. ONE exception: the gain encoder EC11E15244G1 was showing zero stock at Mouser, so any EC11E-family rotary encoder with the same footprint and shaft is acceptable. All op-amps, the PCM1864 ADC and audio-path passives must be the exact parts specified.
+
+STACKUP: 4-layer. L1 = F_Cu, L2 = In1_Cu (solid ground plane), L3 = In2_Cu (signal + ground pour), L4 = B_Cu.
+
+-------------------------------------------------------------
+PRICE SEEN DURING THE QUOTE (2026-08-01)
+-------------------------------------------------------------
+  Bare PCB, 5 pcs, 4-5 day build ....... $89.50
+  DHL shipping to USA .................. $25.71
+  ------------------------------------------------
+  PCB subtotal ......................... $115.21
+
+  Faster build options were offered at:
+     72 hours  $137.36 | 48 hours  $174.92 | 24 hours  $405.75
+
+  ASSEMBLY IS NOT IN THAT NUMBER. Turnkey assembly + parts is
+  quoted manually by PCBWay after their engineers review the BOM.
+  Expect that to be the larger line item.
+
+-------------------------------------------------------------
+NOTE ON THE SITE
+-------------------------------------------------------------
+The PCBWay quote page froze twice (renderer stopped responding)
+on "Calculate" and on "Save to Cart". The uploaded files were
+fine - it parsed them and rendered the board preview correctly.
+If it hangs, reload and redo; nothing gets ordered until you
+actually check out.

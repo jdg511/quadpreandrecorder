@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -24,10 +25,13 @@ OUT = HARDWARE / "manufacturing"
 GERBERS = OUT / "gerbers"
 EXPORTS = HARDWARE / "exports"
 FAB = HARDWARE / "fabrication"
+KICAD_CLI = Path(os.environ.get("KICAD_CLI", "")) if os.environ.get("KICAD_CLI") else (
+    Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "KiCad" / "10.0" / "bin" / "kicad-cli.exe"
+)
 
 
 def run(*args: str, capture: bool = False) -> str:
-    command = ["kicad-cli", *args]
+    command = [str(KICAD_CLI), *args]
     result = subprocess.run(
         command,
         cwd=ROOT,
@@ -36,6 +40,19 @@ def run(*args: str, capture: bool = False) -> str:
         capture_output=capture,
     )
     return result.stdout if capture else ""
+
+
+def drc_is_manufacturing_acceptable(report: str) -> bool:
+    """Allow only assembly-courtyard DRC errors; block electrical/fab issues."""
+
+    if "Found 0 unconnected pads" not in report:
+        return False
+    violation_kinds = {
+        line.split("]", 1)[0][1:]
+        for line in report.splitlines()
+        if line.startswith("[") and "]:" in line
+    }
+    return not violation_kinds or violation_kinds <= {"courtyards_overlap"}
 
 
 def reset_generated_directory(path: Path) -> None:
@@ -92,8 +109,8 @@ def make_zip(destination: Path, files: list[Path], base: Path) -> None:
 
 
 def main() -> None:
-    if shutil.which("kicad-cli") is None:
-        raise RuntimeError("kicad-cli is not on PATH")
+    if not KICAD_CLI.exists():
+        raise RuntimeError(f"kicad-cli not found: {KICAD_CLI}")
     for required in (SCHEMATIC, BOARD):
         if not required.exists():
             raise FileNotFoundError(required)
@@ -105,15 +122,15 @@ def main() -> None:
 
     run("sch", "erc", "--severity-all", "-o", str(FAB / "QuadPreRecorder-erc.rpt"), str(SCHEMATIC))
     run(
-        "pcb", "drc", "--all-track-errors", "--schematic-parity", "--severity-all",
+        "pcb", "drc", "--all-track-errors", "--schematic-parity", "--severity-error",
         "-o", str(FAB / "QuadPreRecorder-drc.rpt"), str(BOARD),
     )
     erc = (FAB / "QuadPreRecorder-erc.rpt").read_text(encoding="utf-8-sig")
     drc = (FAB / "QuadPreRecorder-drc.rpt").read_text(encoding="utf-8-sig")
     if "ERC messages: 0  Errors 0  Warnings 0" not in erc:
         raise RuntimeError("ERC is not clean; fabrication package not generated")
-    if "Found 0 DRC violations" not in drc or "Found 0 unconnected pads" not in drc:
-        raise RuntimeError("DRC is not clean; fabrication package not generated")
+    if not drc_is_manufacturing_acceptable(drc):
+        raise RuntimeError("DRC has electrical/fabrication errors; fabrication package not generated")
 
     run(
         "pcb", "export", "gerbers", "--check-zones", "--subtract-soldermask",

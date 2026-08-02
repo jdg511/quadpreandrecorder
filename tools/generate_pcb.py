@@ -26,12 +26,18 @@ DSN = HARDWARE / "review_outputs" / "QuadPreRecorder-unrouted.dsn"
 FP_ROOT = Path(r"C:\Program Files\KiCad\10.0\share\kicad\footprints")
 LOCAL_FP_ROOT = HARDWARE / "QuadPreRecorder.pretty"
 
-BOARD_W = 110.0
-BOARD_H = 84.5
-TFT_LEFT = 5.0
-TFT_TOP = 17.25
-TFT_W = 86.0
-TFT_H = 50.0
+# Rev B (2026-07-25): Hammond 1590XX, pedal-style. Board = Hammond's max PCB
+# 138 x 114; y=0 edge faces the REAR wall (SD/USB), y=114 the FRONT wall
+# (line out + 9V), x=0 the LEFT wall (RJ45 mic + pad toggle), x=138 the
+# RIGHT wall (volume + phones). Corners are chamfered 9mm for the lid-screw
+# posts. Display: LCDWiki MSP3520 3.5in (module 98.3 x 56.34).
+BOARD_W = 138.0
+BOARD_H = 114.0
+CORNER = 9.0
+TFT_LEFT = 23.0
+TFT_TOP = 8.0
+TFT_W = 98.3
+TFT_H = 56.34
 
 
 def mm(value: float) -> int:
@@ -77,214 +83,420 @@ def schematic_paths() -> dict[str, str]:
 
 
 def schematic_pad_nets() -> dict[tuple[str, str], str]:
-    """Read KiCad's exported netlist as the board's pin-to-net authority."""
+    """Return pin-to-net mapping from the same source model as the schematic.
 
-    netlist_path = HARDWARE / "review_outputs" / "QuadPreRecorder.net"
-    text = netlist_path.read_text(encoding="utf-8")
+    KiCad's CLI netlist exporter is useful as an independent audit, but the PCB
+    generator should not depend on a possibly stale exported netlist.  The
+    schematic generator already carries every explicit pin assignment, so use it
+    directly here and let the later schematic-parity/DRC checks audit the result.
+    """
+
     mapping: dict[tuple[str, str], str] = {}
-    cursor = text.find("\n\t(nets")
-    while True:
-        start = text.find("\n\t\t(net", cursor)
-        if start < 0:
-            break
-        depth = 0
-        in_string = False
-        escaped = False
-        end = None
-        for index in range(start + 1, len(text)):
-            char = text[index]
-            if in_string:
-                if escaped:
-                    escaped = False
-                elif char == "\\":
-                    escaped = True
-                elif char == '"':
-                    in_string = False
-                continue
-            if char == '"':
-                in_string = True
-            elif char == "(":
-                depth += 1
-            elif char == ")":
-                depth -= 1
-                if depth == 0:
-                    end = index + 1
-                    break
-        if end is None:
-            raise RuntimeError("Unbalanced netlist net block")
-        block = text[start + 1:end]
-        name_match = re.search(r'\(name "([^"]+)"\)', block)
-        if name_match:
-            netname = name_match.group(1)
-            for reference, pin in re.findall(
-                r'\(node\s+\(ref "([^"]+)"\)\s+\(pin "([^"]+)"\)',
-                block,
-                re.DOTALL,
-            ):
-                mapping[(reference, pin)] = netname
-        cursor = end
+    for ref, item in load_design_parts().items():
+        for pin, netname in item.pins.items():
+            if netname is not None:
+                mapping[(ref, pin)] = netname
     if not mapping:
-        raise RuntimeError("No pin nets parsed from exported KiCad netlist")
+        raise RuntimeError("No schematic pin nets available from design model")
     return mapping
 
 
-def placements() -> dict[str, tuple[float, float, float, bool]]:
-    """Return reference -> x, y, rotation, bottom-side placement."""
+def placements_rev_a() -> dict[str, tuple[float, float, float, bool]]:
+    """Rev A (1590F) table, kept for reference. Superseded by placements()."""
 
     place: dict[str, tuple[float, float, float, bool]] = {
         # Board-mounted enclosure interfaces.
-        "J2": (1.8, 37.4, 90.0, False),
-        "J1": (108.0, 77.0, 270.0, False),
-        "J4": (83.5, 56.5, 0.0, True),
-        "J5": (104.2, 66.5, 270.0, False),
-        "SW1": (12.0, 8.0, 0.0, False),
-        "SW2": (27.0, 7.0, 0.0, False),
-        "SW3": (46.0, 7.0, 0.0, False),
-        "RV1": (102.0, 5.0, 90.0, False),
-        "J3": (75.0, 19.0, 270.0, False),
+        # Reworked 2026-07-25: J1 moved to the bottom wall away from the mic
+        # input; SW1 (now a right-angle wall toggle) takes J1's left-wall spot;
+        # J4 and RV1 rotated so bushing/shaft actually exit their walls.
+        # Run tools/check_panel_orientation.py after regeneration to confirm.
+        "J2": (5.2, 60.0, 270.0, False),
+        "J1": (22.0, 165.8, 0.0, False),
+        # J4 flipped-side rotation corrected 270 (was 90: body pointed north,
+        # bushing 9.6mm short of the south wall). SW1 shifted 1mm inboard so
+        # its bracket-pin pads clear the 0.5mm board-edge rule; SW2 up 0.5mm
+        # to clear TFT hole H5's courtyard.
+        "J4": (125.0, 157.05, 270.0, True),
+        "J5": (4.5, 124.0, 90.0, False),
+        "SW1": (2.2, 96.0, 0.0, False),
+        # Control row moved below the TFT (Jason, 2026-07-25): record button,
+        # gain encoder, and the new SW4 5-way nav sit in a row south of the J3
+        # display header. Actuator centers (plunger/shaft/stem, NOT anchors)
+        # all line up at board Y 88.5: SW2 plunger = anchor+(6.25, 2.5),
+        # SW3 shaft = anchor+(7.5, 2.5), SW4 stem = its pattern center.
+        "SW2": (50.0, 86.0, 0.0, False),
+        "SW3": (68.0, 86.0, 0.0, False),
+        "SW4": (107.0, 88.5, 0.0, False),
+        "RV1": (6.0, 155.0, 0.0, False),
+        "J3": (87.0, 76.0, 270.0, False),
+        "J6": (167.7, 26.0, 90.0, False),
+        "J7": (167.7, 116.0, 90.0, False),
         # Teensy is socketed on the bottom so the TFT can occupy the lid side.
-        "U8": (24.0, 63.0, 270.0, True),
+        "U8": (39.0, 144.0, 270.0, True),
 
-        # Power entry and conversion, kept in the lower-left power region.
-        "F1": (7.0, 78.0, 0.0, False),
-        "D1": (14.0, 78.0, 0.0, False),
-        "D2": (21.5, 78.0, 0.0, False),
-        "C1": (34.0, 76.0, 0.0, False),
-        "C2": (20.5, 73.5, 0.0, False),
-        "C3": (26.0, 72.5, 0.0, False),
-        "U1": (8.0, 68.5, 0.0, False),
-        "L1": (14.5, 68.5, 0.0, False),
-        "R1": (7.0, 73.0, 0.0, False),
-        "R2": (10.0, 73.0, 0.0, False),
-        "C4": (13.0, 73.0, 0.0, False),
-        "C5": (20.0, 68.5, 0.0, False),
-        "C6": (25.0, 68.5, 0.0, False),
-        "R3": (16.5, 73.0, 0.0, False),
+        # Power entry and conversion. The input chain follows J1 down the
+        # left side of the bottom-wall power entry.
+        "F1": (22.0, 158.0, 90.0, False),
+        "D1": (22.0, 151.0, 90.0, False),
+        "D2": (22.0, 143.5, 90.0, False),
+        # Buck converter cluster moved 27mm south (2026-07-25, Jason's noise
+        # concern): the switcher now sits ~49mm from the mic input
+        # conditioning row (was ~22mm), closer to the power entry chain and
+        # the Teensy +5V feed. Internal move only - no wall/template impact.
+        # Feedback row also stays clear of SW1's catalog-sized courtyard.
+        "C1": (55.0, 120.0, 0.0, False),
+        "C2": (35.0, 115.5, 0.0, False),
+        "C3": (42.0, 115.5, 0.0, False),
+        "U1": (21.0, 112.5, 0.0, False),
+        "L1": (27.5, 112.5, 0.0, False),
+        "R1": (26.0, 116.5, 0.0, False),
+        "R2": (30.0, 116.5, 0.0, False),
+        "C4": (30.0, 118.5, 0.0, False),
+        "C5": (33.0, 112.5, 0.0, False),
+        "C6": (38.0, 112.5, 0.0, False),
+        "R3": (33.5, 118.5, 0.0, False),
+        # Filtered electret-bias rail (near the mic input conditioning).
+        "R67": (28.0, 68.0, 0.0, False),
+        "C66": (36.0, 68.0, 0.0, False),
 
-        # Bias reference and quiet analog regulator.
-        "U3": (35.0, 51.0, 0.0, False),
-        "C9": (32.5, 56.0, 0.0, False),
-        "C10": (37.0, 56.0, 0.0, False),
-        "C11": (41.5, 56.0, 0.0, False),
-        "U2": (70.0, 52.0, 0.0, False),
-        "C7": (66.5, 55.0, 0.0, False),
-        "C8": (72.5, 55.0, 0.0, False),
+        # Bias reference and quiet analog regulator. Moved west 2026-07-25 to
+        # clear the relocated control row under the TFT.
+        "U3": (32.0, 79.0, 0.0, False),
+        "C9": (29.5, 83.5, 0.0, False),
+        "C10": (34.0, 83.5, 0.0, False),
+        "C11": (38.5, 83.5, 0.0, False),
+        "U2": (83.0, 69.0, 0.0, False),
+        "C7": (79.5, 72.0, 0.0, False),
+        "C8": (85.5, 72.0, 0.0, False),
 
         # Chassis coupling and four input ESD parts beside the DE-9.
-        "R4": (24.0, 52.0, 90.0, False),
-        "C12": (27.0, 52.0, 90.0, False),
-        "R5": (30.0, 52.0, 90.0, False),
-        "D6": (23.5, 22.5, 90.0, False),
-        "D7": (23.5, 28.5, 90.0, False),
-        "D8": (23.5, 34.5, 90.0, False),
-        "D9": (23.5, 40.5, 90.0, False),
+        "R4": (24.0, 63.5, 90.0, False),
+        "C12": (27.0, 63.5, 90.0, False),
+        "R5": (30.0, 63.5, 90.0, False),
+        "D6": (23.5, 34.0, 90.0, False),
+        "D7": (23.5, 40.0, 90.0, False),
+        "D8": (23.5, 46.0, 90.0, False),
+        "D9": (23.5, 52.0, 90.0, False),
 
         # Shared pad mux, JFET preamp, and ADC.
-        "U4": (54.0, 25.5, 0.0, False),
-        "U5": (54.0, 37.5, 0.0, False),
-        "U6": (63.0, 31.5, 0.0, False),
-        "U7": (90.0, 31.5, 0.0, False),
-        "C34": (54.0, 21.5, 0.0, True),
-        "C35": (54.0, 42.0, 0.0, True),
-        "C36": (61.0, 24.5, 0.0, True),
-        "C37": (65.0, 24.5, 0.0, True),
+        "U4": (67.0, 42.5, 0.0, False),
+        "U5": (67.0, 54.5, 0.0, False),
+        "U6": (76.0, 48.5, 0.0, False),
+        "U7": (112.0, 48.5, 0.0, False),
+        "C34": (67.0, 38.5, 0.0, True),
+        "C35": (67.0, 59.0, 0.0, True),
+        "C36": (74.0, 41.5, 0.0, True),
+        "C37": (78.0, 41.5, 0.0, True),
 
-        # Pad sense near its panel switch.
-        "R42": (17.0, 17.0, 0.0, False),
-        "R43": (20.0, 17.0, 0.0, False),
-        "C33": (23.0, 17.0, 0.0, False),
+        # Pad sense filtering plus the J7 debug series protection.
+        "R42": (140.0, 87.5, 0.0, False),
+        "R43": (144.0, 87.5, 0.0, False),
+        "C33": (148.0, 87.5, 0.0, False),
+        "R68": (152.0, 87.5, 0.0, False),
 
         # ADC decoupling and clock/control damping.
-        "C38": (80.0, 18.0, 0.0, True),
-        "C39": (80.0, 22.0, 0.0, True),
-        "C40": (80.0, 26.0, 0.0, True),
-        "C41": (96.0, 20.0, 0.0, True),
-        "C42": (96.0, 24.0, 0.0, True),
-        "C43": (96.0, 32.0, 0.0, True),
-        "C44": (96.0, 36.0, 0.0, True),
-        "C45": (96.0, 40.0, 0.0, True),
-        "C62": (100.0, 34.0, 0.0, True),
-        "C63": (100.0, 40.0, 0.0, True),
-        "R44": (80.5, 14.0, 0.0, True),
-        "R45": (83.5, 14.0, 0.0, True),
-        "R46": (86.5, 14.0, 0.0, True),
-        "R47": (89.5, 14.0, 0.0, True),
-        "R48": (92.5, 14.0, 0.0, True),
-        "R49": (95.5, 14.0, 0.0, True),
+        "C38": (102.0, 35.0, 0.0, True),
+        "C39": (102.0, 39.0, 0.0, True),
+        "C40": (102.0, 43.0, 0.0, True),
+        "C41": (118.0, 37.0, 0.0, True),
+        "C42": (118.0, 41.0, 0.0, True),
+        "C43": (118.0, 49.0, 0.0, True),
+        "C44": (118.0, 53.0, 0.0, True),
+        "C45": (118.0, 57.0, 0.0, True),
+        "C62": (122.0, 51.0, 0.0, True),
+        "C63": (122.0, 57.0, 0.0, True),
+        "R44": (102.0, 31.0, 0.0, True),
+        "R45": (105.8, 31.0, 0.0, True),
+        "R46": (109.6, 31.0, 0.0, True),
+        "R47": (113.4, 31.0, 0.0, True),
+        "R48": (117.2, 31.0, 0.0, True),
+        "R49": (121.0, 31.0, 0.0, True),
+        "R69": (124.8, 31.0, 0.0, True),
 
         # Teensy power feed and recorder/user-interface conditioning.
-        "D3": (32.0, 68.0, 0.0, False),
-        "C46": (39.0, 68.0, 0.0, False),
-        "R50": (28.0, 18.0, 0.0, True),
-        "C47": (31.0, 18.0, 0.0, True),
-        "R51": (45.0, 26.0, 0.0, True),
-        "R52": (48.0, 26.0, 0.0, True),
-        "R53": (51.0, 26.0, 0.0, True),
-        "C48": (45.0, 30.0, 0.0, True),
-        "C49": (48.0, 30.0, 0.0, True),
-        "C50": (51.0, 30.0, 0.0, True),
-        "D4": (66.0, 8.0, 0.0, False),
-        "R54": (69.0, 8.0, 0.0, False),
-        "D5": (73.0, 8.0, 0.0, False),
-        "R55": (76.0, 8.0, 0.0, False),
-        "R56": (79.0, 16.0, 0.0, False),
+        "D3": (45.0, 136.0, 0.0, False),
+        "C46": (52.0, 136.0, 0.0, False),
+        "R50": (44.0, 21.0, 0.0, True),
+        # C47 moved 1.5mm south: its pad broke into TFT mounting hole H5.
+        "C47": (48.0, 19.5, 0.0, True),
+        "R51": (64.0, 22.0, 0.0, True),
+        "R52": (64.0, 26.0, 0.0, True),
+        "R53": (64.0, 30.0, 0.0, True),
+        "C48": (70.0, 22.0, 0.0, True),
+        "C49": (70.0, 26.0, 0.0, True),
+        "C50": (70.0, 30.0, 0.0, True),
+        "D4": (93.0, 11.0, 0.0, False),
+        "R54": (97.0, 11.0, 0.0, False),
+        "D5": (102.0, 11.0, 0.0, False),
+        "R55": (106.0, 11.0, 0.0, False),
+        "R56": (106.0, 76.0, 0.0, False),
+        # SW4 nav-switch pullups and debounce caps, bottom side under the row.
+        "R70": (96.0, 97.0, 0.0, True),
+        "R71": (100.0, 97.0, 0.0, True),
+        "R72": (104.0, 97.0, 0.0, True),
+        "R73": (108.0, 97.0, 0.0, True),
+        "R74": (112.0, 97.0, 0.0, True),
+        "C69": (96.0, 100.5, 0.0, True),
+        "C70": (100.0, 100.5, 0.0, True),
+        "C71": (104.0, 100.5, 0.0, True),
+        "C72": (108.0, 100.5, 0.0, True),
+        "C73": (112.0, 100.5, 0.0, True),
 
         # DAC and headphone circuitry above the right-edge jacks.
-        "U9": (53.0, 55.0, 0.0, False),
-        "C51": (47.0, 49.0, 0.0, False),
-        "C52": (50.5, 48.0, 0.0, False),
-        "C53": (54.0, 48.0, 0.0, False),
-        "C54": (57.5, 48.0, 0.0, False),
-        "C55": (61.5, 48.0, 0.0, False),
-        "C56": (47.0, 59.5, 0.0, False),
-        "C64": (51.0, 59.5, 0.0, False),
-        "R57": (57.0, 60.0, 0.0, True),
-        "R58": (60.0, 60.0, 0.0, True),
-        "R59": (63.0, 60.0, 0.0, True),
-        "R60": (66.0, 60.0, 0.0, True),
-        "R61": (69.0, 60.0, 0.0, True),
-        "R62": (72.0, 60.0, 0.0, True),
-        "R63": (75.0, 58.5, 0.0, False),
-        "C57": (83.5, 69.0, 0.0, False),
-        "C58": (87.0, 69.0, 0.0, False),
-        "U10": (88.0, 75.0, 0.0, False),
-        "C59": (83.5, 73.0, 90.0, False),
-        "C60": (83.5, 77.0, 90.0, False),
-        "C61": (92.0, 73.0, 90.0, False),
-        "C65": (92.0, 77.0, 90.0, False),
-        "R64": (80.0, 68.0, 0.0, False),
-        "R65": (87.5, 80.0, 0.0, False),
-        "R66": (91.0, 80.0, 0.0, False),
+        "U9": (82.0, 109.0, 0.0, False),
+        "C51": (76.0, 103.0, 0.0, False),
+        "C52": (79.5, 102.0, 0.0, False),
+        "C53": (83.0, 102.0, 0.0, False),
+        "C54": (86.5, 102.0, 0.0, False),
+        "C55": (90.5, 102.0, 0.0, False),
+        "C56": (76.0, 113.5, 0.0, False),
+        "C64": (80.0, 113.5, 0.0, False),
+        "R57": (84.0, 114.0, 0.0, True),
+        "R58": (88.0, 114.0, 0.0, True),
+        "R59": (92.0, 114.0, 0.0, True),
+        "R60": (96.0, 114.0, 0.0, True),
+        "R61": (100.0, 114.0, 0.0, True),
+        "R62": (104.0, 114.0, 0.0, True),
+        "R63": (104.0, 113.0, 0.0, False),
+        "C67": (96.0, 110.0, 0.0, True),
+        "C68": (100.0, 110.0, 0.0, True),
+        "C57": (112.5, 123.5, 0.0, False),
+        "C58": (111.0, 126.5, 0.0, False),
+        "U10": (117.0, 129.5, 0.0, False),
+        "C59": (124.0, 129.5, 270.0, False),
+        "C60": (110.0, 136.0, 90.0, False),
+        "C61": (124.0, 124.5, 90.0, False),
+        "C65": (124.0, 134.5, 90.0, False),
+        "R64": (109.0, 122.5, 0.0, False),
+        "R65": (115.0, 138.0, 0.0, False),
+        "R66": (121.0, 138.0, 0.0, False),
     }
 
     # Four matched signal rows.  Values are kept in identical X positions to
     # make the physical channel symmetry visible and reviewable.
-    channel_rows = (22.5, 28.5, 34.5, 40.5)
+    channel_rows = (34.0, 40.0, 46.0, 52.0)
     for index, y in enumerate(channel_rows):
         channel = index + 1
         input_refs = (
-            (f"R{5 + channel}", 27.0),
-            (f"R{9 + channel}", 30.0),
-            (f"C{12 + channel}", 33.0),
-            (f"C{16 + channel}", 37.0),
-            (f"R{13 + channel}", 41.0),
-            (f"R{18 + 2 * index}", 45.0),
-            (f"R{19 + 2 * index}", 49.0),
+            (f"R{5 + channel}", 32.0),
+            (f"R{9 + channel}", 35.0),
+            (f"C{12 + channel}", 38.0),
+            (f"C{16 + channel}", 42.0),
+            (f"R{13 + channel}", 46.0),
+            (f"R{18 + 2 * index}", 50.0),
+            (f"R{19 + 2 * index}", 54.0),
         )
         output_refs = (
-            (f"R{26 + index}", 58.5),
-            (f"R{30 + index}", 68.5),
-            (f"C{21 + index}", 71.5),
-            (f"C{25 + index}", 75.0),
-            (f"R{34 + index}", 79.0),
-            (f"C{29 + index}", 82.0),
-            (f"R{38 + index}", 85.0),
+            (f"R{26 + index}", 71.5),
+            (f"R{30 + index}", 81.5),
+            (f"C{21 + index}", 84.5),
+            (f"C{25 + index}", 88.0),
+            (f"R{34 + index}", 92.0),
+            (f"C{29 + index}", 95.0),
+            (f"R{38 + index}", 98.0),
         )
         for ref, x in input_refs + output_refs:
             bottom = bool(re.fullmatch(r"R(?:2[6-9]|3[0-3]|3[8-9]|4[0-1])|C2[1-4]", ref))
             place[ref] = (x, y, 90.0, bottom)
-    place["R38"] = (82.0, 30.0, 90.0, True)
-    place["C25"] = (75.0, 24.0, 90.0, True)
+    place["R38"] = (95.0, 47.5, 90.0, True)
+    place["C25"] = (88.0, 41.5, 90.0, True)
+    return place
+
+
+def placements() -> dict[str, tuple[float, float, float, bool]]:
+    """Rev B placement: 138 x 114 board in the Hammond 1590XX.
+
+    Frame: y=0 REAR (SD), y=114 FRONT (line out + 9V), x=0 LEFT (RJ45 + pad
+    toggle), x=138 RIGHT (volume + phones). MSP3520 module zone x 23..121.3,
+    y 8..64.34: only low-profile (<10.6mm) SMD parts allowed under it.
+    Control-row actuators (SW2 plunger / SW3 shaft / SW4 stem) line up at
+    y=73.5, x = 47 / 69 / 91. Wall-part rotations verified by
+    tools/check_panel_orientation.py after generation.
+    """
+
+    place: dict[str, tuple[float, float, float, bool]] = {
+        # --- Enclosure interfaces ---
+        "J2": (4.0, 74.0, 270.0, False),      # RJ45 mic in, LEFT wall (port ~flush)
+        "SW1": (2.2, 40.0, 0.0, False),       # pad toggle, LEFT wall
+        "RV1": (132.0, 82.0, 180.0, False),   # volume, RIGHT wall (shaft +x)
+        "J5": (133.5, 41.0, 270.0, False),    # phones, RIGHT wall
+        "J1": (108.0, 105.8, 0.0, False),     # 9V barrel, FRONT wall
+        "J4": (22.0, 97.0, 270.0, False),     # 1/4in line out, FRONT wall, TOP side
+        "U8": (60.0, 62.5, 0.0, True),        # Teensy BOTTOM rear-center (between the TFT holes), SD at REAR wall x~69
+        # Control row under the display.
+        "SW2": (40.75, 71.0, 0.0, False),     # record (plunger at 47, 73.5)
+        "SW3": (61.5, 71.0, 0.0, False),      # gain encoder (shaft at 69, 73.5)
+        "SW4": (91.0, 73.5, 0.0, False),      # 5-way nav (stem at 91, 73.5)
+        # Display header along the module's front edge. NOTE: at rot 270 the
+        # pin row runs WESTWARD from the anchor - anchor at the east end so
+        # pins span x 79.98..113, clear of the Teensy pad columns (x 60 and
+        # 77.78) and of TFT hole H8 (VERIFY vs module).
+        "J3": (113.35, 63.0, 270.0, False),  # split the window between U8 VIN's pad (west) and H8 (east)
+        # Internal test headers (replace the Rev A DB-25s): horizontal along
+        # the rear edge east of the Teensy, clear of the NE corner chamfer.
+        "J6": (82.0, 6.0, 90.0, False),
+        "J7": (82.0, 12.5, 90.0, False),
+
+        # --- Power entry chain (front-right, behind J1) + buck ---
+        "F1": (96.0, 107.0, 90.0, False),
+        "D1": (96.0, 100.0, 90.0, False),
+        "D2": (96.0, 92.5, 90.0, False),
+        "U1": (105.0, 88.0, 0.0, False),
+        "L1": (111.5, 88.0, 0.0, False),
+        "C5": (117.0, 88.0, 0.0, False),
+        "C6": (123.0, 88.0, 0.0, False),
+        "C2": (108.0, 92.5, 0.0, False),
+        "C3": (114.0, 92.5, 0.0, False),
+        "R1": (105.0, 84.0, 0.0, False),
+        "R2": (109.0, 84.0, 0.0, False),
+        "C4": (113.0, 84.0, 0.0, False),
+        "R3": (117.0, 84.0, 0.0, False),
+        "C1": (127.0, 96.0, 0.0, False),
+
+        # --- Chassis coupling + input ESD + bias filter ---
+        "R4": (6.0, 64.0, 0.0, False),
+        "C12": (10.5, 64.0, 0.0, False),
+        "R5": (15.0, 64.0, 0.0, False),
+        "D6": (24.0, 68.0, 90.0, False),
+        "D7": (24.0, 72.0, 90.0, False),
+        "D8": (24.0, 76.0, 90.0, False),
+        "D9": (24.0, 80.0, 90.0, False),
+        "R67": (28.0, 80.0, 0.0, False),
+        "C66": (34.0, 74.0, 0.0, True),
+
+        # --- Pad sense + debug protection, by the toggle ---
+        "R42": (6.0, 52.0, 0.0, False),
+        "R43": (10.5, 52.0, 0.0, False),
+        "C33": (15.0, 52.0, 0.0, False),
+        "R68": (19.5, 52.0, 0.0, False),
+
+        # --- Bias reference + analog LDO (low profile, under the module) ---
+        "U3": (34.0, 26.0, 0.0, False),
+        "C9": (30.0, 31.0, 0.0, False),
+        "C10": (35.0, 31.0, 0.0, False),
+        "C11": (39.5, 31.0, 0.0, False),
+        # LDO + its caps live on the BOTTOM, east of the Teensy, tucked north
+        # into the low-profile module zone to clear J3's courtyard band
+        # (y 61.23..64.77) and stay well short of SW4's (y >= 67.0).
+        "U2": (88.0, 55.0, 0.0, True),   # nudged north off C45's silkscreen/fab bbox corner
+        "C7": (92.5, 55.0, 0.0, True),   # east flank, clear of the C41-45 column at x=84
+        "C8": (92.5, 59.0, 0.0, True),
+
+        # --- Mux + preamp + ADC (low profile, under the module) ---
+        "U4": (40.0, 44.0, 0.0, False),
+        "U5": (40.0, 56.0, 0.0, False),
+        "U6": (52.0, 50.0, 0.0, False),
+        "U7": (68.0, 50.0, 0.0, False),
+        "C34": (40.0, 40.0, 0.0, True),
+        "C35": (40.0, 60.5, 0.0, True),
+        "C36": (47.0, 42.0, 0.0, True),
+        "C37": (51.0, 42.0, 0.0, True),
+        "C38": (56.0, 46.0, 0.0, True),
+        "C39": (56.0, 50.0, 0.0, True),
+        "C40": (56.0, 54.0, 0.0, True),
+        "C41": (84.0, 44.0, 0.0, True),
+        "C42": (84.0, 48.0, 0.0, True),
+        "C43": (84.0, 52.0, 0.0, True),
+        "C44": (84.0, 56.0, 0.0, True),
+        "C45": (84.0, 60.0, 0.0, True),
+        "C62": (93.0, 48.0, 0.0, True),
+        "C63": (93.0, 52.0, 0.0, True),
+        "R44": (96.0, 40.0, 0.0, True),
+        "R45": (100.0, 40.0, 0.0, True),
+        "R46": (104.0, 40.0, 0.0, True),
+        "R47": (108.0, 40.0, 0.0, True),
+        "R48": (112.0, 40.0, 0.0, True),
+        "R49": (116.0, 40.0, 0.0, True),
+        "R69": (120.0, 40.0, 0.0, True),
+
+        # --- Teensy feed: BOTTOM side, next to the Teensy's VIN corner ---
+        "D3": (48.0, 60.0, 0.0, True),
+        "C46": (48.0, 56.0, 0.0, True),
+
+        # --- Control-row pullups/debounce, BOTTOM under the module zone ---
+        "R50": (102.0, 16.0, 0.0, True),
+        "C47": (106.0, 16.0, 0.0, True),
+        "R51": (102.0, 20.0, 0.0, True),
+        "R52": (106.0, 20.0, 0.0, True),
+        "R53": (110.0, 20.0, 0.0, True),
+        "C48": (102.0, 24.0, 0.0, True),
+        "C49": (106.0, 24.0, 0.0, True),
+        "C50": (110.0, 24.0, 0.0, True),
+        "R70": (102.0, 28.0, 0.0, True),
+        "R71": (106.0, 28.0, 0.0, True),
+        "R72": (110.0, 28.0, 0.0, True),
+        "R73": (114.0, 28.0, 0.0, True),
+        "R74": (118.0, 28.0, 0.0, True),
+        "C69": (102.0, 32.0, 0.0, True),
+        "C70": (106.0, 32.0, 0.0, True),
+        "C71": (110.0, 32.0, 0.0, True),
+        "C72": (114.0, 32.0, 0.0, True),
+        "C73": (118.0, 32.0, 0.0, True),
+
+        # --- LEDs on the front strip ---
+        "D4": (66.0, 108.0, 0.0, False),
+        "R54": (70.0, 108.0, 0.0, False),
+        "D5": (74.0, 108.0, 0.0, False),
+        "R55": (78.0, 108.0, 0.0, False),
+        "R56": (88.0, 57.0, 0.0, False),
+
+        # --- DAC + headphone amp (low profile, under the module edge) ---
+        "U9": (100.0, 50.0, 0.0, False),
+        "C51": (91.0, 46.0, 0.0, False),
+        "C52": (95.0, 43.0, 0.0, False),
+        "C53": (98.5, 43.0, 0.0, False),
+        "C54": (102.0, 43.0, 0.0, False),
+        "C55": (109.5, 43.0, 0.0, False),
+        "C56": (91.0, 53.0, 0.0, False),
+        "C64": (91.0, 49.5, 0.0, False),
+        "R57": (86.0, 46.0, 0.0, True),
+        "R58": (90.0, 46.0, 0.0, True),
+        "R59": (94.0, 46.0, 0.0, True),
+        "R60": (98.0, 46.0, 0.0, True),
+        "R61": (102.0, 46.0, 0.0, True),
+        # Line-out reconstruction filter lives by the DAC; LINE_L/R then run
+        # to J4 (front-left) and RV1 (right wall).
+        "R62": (95.0, 58.0, 0.0, False),
+        "R63": (98.5, 58.0, 0.0, False),
+        "C67": (95.0, 55.0, 0.0, False),
+        "C68": (98.5, 55.0, 0.0, False),
+        "U10": (112.0, 56.0, 0.0, False),
+        "C57": (123.0, 76.0, 0.0, False),
+        "C58": (123.0, 79.5, 0.0, False),
+        "C59": (106.0, 52.0, 0.0, False),
+        "C60": (106.0, 58.5, 0.0, False),
+        "C61": (105.0, 67.5, 0.0, False),
+        "C65": (117.0, 52.0, 0.0, False),
+        "R64": (108.0, 48.0, 0.0, False),
+        "R65": (125.0, 64.0, 0.0, False),
+        "R66": (125.0, 67.5, 0.0, False),
+    }
+
+    # Four matched channel rows across the front-left field, y = 86..104.
+    channel_rows = (86.0, 92.0, 98.0, 104.0)
+    for index, y in enumerate(channel_rows):
+        channel = index + 1
+        input_refs = (
+            (f"R{5 + channel}", 30.0),
+            (f"R{9 + channel}", 34.0),
+            (f"C{12 + channel}", 38.0),
+            (f"C{16 + channel}", 42.0),
+            (f"R{13 + channel}", 46.0),
+            (f"R{18 + 2 * index}", 50.0),
+            (f"R{19 + 2 * index}", 54.0),
+        )
+        output_refs = (
+            (f"R{26 + index}", 60.0),
+            (f"R{30 + index}", 66.0),
+            (f"C{21 + index}", 70.0),
+            (f"C{25 + index}", 74.0),
+            (f"R{34 + index}", 78.0),
+            (f"C{29 + index}", 82.0),
+            (f"R{38 + index}", 86.0),
+        )
+        for ref, x in input_refs + output_refs:
+            bottom = bool(re.fullmatch(r"R(?:2[6-9]|3[0-3]|3[8-9]|4[0-1])|C2[1-4]", ref))
+            place[ref] = (x, y, 90.0, bottom)
     return place
 
 
@@ -356,6 +568,43 @@ def add_fiducial(board: pcbnew.BOARD, ref: str, x: float, y: float, bottom: bool
         fp.Flip(fp.GetPosition(), False)
 
 
+def add_edge_keepouts(board: pcbnew.BOARD) -> None:
+    """Rule areas keeping tracks/vias 0.65mm off every board edge.
+
+    Freerouting's internal edge clearance is looser than the 0.5mm KiCad
+    rule, so without these it routes long tracks ~0.47mm from the outline.
+    Four edge strips plus four corner triangles hugging the 9mm chamfers.
+    """
+
+    layers = pcbnew.LSET()
+    layers.AddLayer(pcbnew.F_Cu)
+    layers.AddLayer(pcbnew.B_Cu)
+    w, h, c = BOARD_W, BOARD_H, CORNER
+    m = 0.65
+    shapes: list[list[tuple[float, float]]] = [
+        [(8.0, 0.0), (w - 8.0, 0.0), (w - 8.0, m), (8.0, m)],
+        [(8.0, h - m), (w - 8.0, h - m), (w - 8.0, h), (8.0, h)],
+        [(0.0, 8.0), (m, 8.0), (m, h - 8.0), (0.0, h - 8.0)],
+        [(w - m, 8.0), (w, 8.0), (w, h - 8.0), (w - m, h - 8.0)],
+        [(0.0, 0.0), (c + m, 0.0), (0.0, c + m)],
+        [(w - c - m, 0.0), (w, 0.0), (w, c + m)],
+        [(w, h - c - m), (w, h), (w - c - m, h)],
+        [(0.0, h - c - m), (c + m, h), (0.0, h)],
+    ]
+    for points in shapes:
+        zone = pcbnew.ZONE(board)
+        zone.SetIsRuleArea(True)
+        zone.SetDoNotAllowTracks(True)
+        zone.SetDoNotAllowVias(True)
+        zone.SetDoNotAllowZoneFills(False)
+        zone.SetLayerSet(layers)
+        outline = zone.Outline()
+        contour = outline.NewOutline()
+        for x, y in points:
+            outline.Append(mm(x), mm(y), contour)
+        board.Add(zone)
+
+
 def build_board() -> pcbnew.BOARD:
     parts = load_design_parts()
     paths = schematic_paths()
@@ -372,8 +621,8 @@ def build_board() -> pcbnew.BOARD:
     title.SetTitle("Quad Preamp and 4-Channel Ambisonic Recorder")
     title.SetCompany("jdg511")
     title.SetComment(0, "https://github.com/jdg511/quadpreandrecorder")
-    title.SetComment(1, "Hammond 1590BB2 / two copper layers / Rev A prototype")
-    title.SetRevision("A")
+    title.SetComment(1, "Hammond 1590XX / two copper layers / Rev B pedal-style build")
+    title.SetRevision("B")
     title.SetDate("2026-07-19")
 
     settings = board.GetDesignSettings()
@@ -389,9 +638,15 @@ def build_board() -> pcbnew.BOARD:
     default_class.SetViaDiameter(mm(0.80))
     default_class.SetViaDrill(mm(0.40))
 
-    add_rect(board, pcbnew.Edge_Cuts, 0.0, 0.0, BOARD_W, BOARD_H)
+    # Rev B outline: rectangle with 9mm corner chamfers clearing the 1590XX
+    # lid-screw posts (post centers 4.21mm in from the enclosure corners).
+    c, w, h = CORNER, BOARD_W, BOARD_H
+    outline = ((c, 0.0), (w - c, 0.0), (w, c), (w, h - c), (w - c, h), (c, h), (0.0, h - c), (0.0, c))
+    for start, end in zip(outline, outline[1:] + outline[:1]):
+        add_segment(board, pcbnew.Edge_Cuts, start, end)
+    add_edge_keepouts(board)
     add_rect(board, pcbnew.Dwgs_User, TFT_LEFT, TFT_TOP, TFT_LEFT + TFT_W, TFT_TOP + TFT_H, 0.20)
-    add_text(board, "2.8in TFT MODULE ENVELOPE - VERIFY MODULE", 48.0, 65.0, 0.8, pcbnew.Dwgs_User)
+    add_text(board, "3.5in MSP3520 MODULE ENVELOPE - VERIFY MODULE", 72.0, 36.0, 0.8, pcbnew.Dwgs_User)
 
     net_names = sorted({net for (ref, _), net in pad_nets.items() if ref in parts})
     nets = {}
@@ -434,32 +689,45 @@ def build_board() -> pcbnew.BOARD:
             if netname is not None:
                 pad.SetNet(nets[netname])
 
-    # Main-PCB and generic 78 x 42 mm TFT mounting patterns.
+    # MSP3520 module pattern center (module envelope center).
+    tft_cx, tft_cy = TFT_LEFT + TFT_W / 2, TFT_TOP + TFT_H / 2
+    # Rev B: no H1-H4 - the board is carried entirely by its wall hardware
+    # (RJ45, toggle, pot, phone/line jacks, 9V). H5-H8 are the MSP3520
+    # module standoffs at a PROVISIONAL corner pattern (holes inset 2.5mm
+    # from the module outline) - the MSP3520 drawing does not publish them,
+    # so VERIFY against the physical module before ordering.
     for ref, x, y in (
-        ("H1", 4.0, 4.0), ("H2", 92.0, 4.0),
-        ("H5", 9.0, 21.25), ("H6", 87.0, 21.25),
-        ("H7", 9.0, 63.25), ("H8", 87.0, 63.25),
+        ("H5", tft_cx - 46.65, tft_cy - 25.67),
+        ("H6", tft_cx + 46.65, tft_cy - 25.67),
+        ("H7", tft_cx - 46.65, tft_cy + 25.67),
+        ("H8", tft_cx + 46.65, tft_cy + 25.67),
     ):
-        add_mounting_hole(board, ref, x, y, "M3 PCB" if ref < "H5" else "M3 TFT 78x42")
+        add_mounting_hole(board, ref, x, y, "M3 TFT MSP3520 PROVISIONAL-VERIFY")
 
-    for index, (x, y) in enumerate(((80.0, 5.0), (106.0, 34.0), (98.0, 50.0)), start=1):
+    # Rev B fiducials inside the 138 x 114 chamfered outline.
+    for index, (x, y) in enumerate(((10.0, 8.0), (130.0, 60.0), (50.0, 110.0)), start=1):
         add_fiducial(board, f"FID{index}", x, y, False)
-    for index, (x, y) in enumerate(((80.0, 5.0), (10.0, 78.0), (96.0, 80.0)), start=4):
+    for index, (x, y) in enumerate(((12.0, 8.0), (126.0, 66.0), (60.0, 110.0)), start=4):
         add_fiducial(board, f"FID{index}", x, y, True)
 
-    # Enclosure-facing labels and setup warnings.
-    add_text(board, "PAD", 14.0, 13.0, 0.75)
-    add_text(board, "REC", 33.0, 13.0, 0.75)
-    add_text(board, "GAIN", 53.0, 13.0, 0.75)
-    add_text(board, "PWR", 67.5, 11.0, 0.65)
-    add_text(board, "REC", 74.5, 11.0, 0.65)
-    add_text(board, "TFT 1..14", 60.0, 13.0, 0.65)
-    add_text(board, "MIC DE-9", 8.0, 46.0, 0.75)
-    add_text(board, "LINE", 105.0, 47.0, 0.70)
-    add_text(board, "HP", 105.0, 61.0, 0.70)
-    add_text(board, "9VDC", 104.0, 73.0, 0.70)
-    add_text(board, "jdg511  QUAD PRE RECORDER  REV A", 55.0, 82.0, 0.75)
-    add_text(board, "TEENSY 4.1 ON BOTTOM - CUT VIN/VUSB FOR DUAL POWER", 56.0, 76.0, 0.65, pcbnew.B_SilkS)
+    # Enclosure-facing labels and setup warnings (Rev B frame).
+    add_text(board, "PAD", 11.0, 47.0, 0.70)
+    add_text(board, "REC", 47.0, 83.5, 0.70)
+    add_text(board, "GAIN", 69.0, 83.5, 0.70)
+    add_text(board, "NAV", 91.0, 83.5, 0.70)
+    add_text(board, "PWR", 66.0, 111.5, 0.60)
+    add_text(board, "REC", 74.0, 111.5, 0.60)
+    add_text(board, "MSP3520 TFT 1..14", 97.0, 64.5, 0.60)
+    add_text(board, "MIC RJ45", 11.0, 71.0, 0.70)
+    add_text(board, "9VDC", 108.0, 101.5, 0.70)
+    add_text(board, "HP", 128.0, 47.5, 0.70)
+    add_text(board, "VOL", 128.0, 88.5, 0.70)
+    add_text(board, "LINE", 27.0, 91.0, 0.70)
+    add_text(board, "TP ANALOG", 119.0, 6.0, 0.55)
+    add_text(board, "TP DIGITAL", 119.0, 12.5, 0.55)
+    add_text(board, "jdg511  QUAD PRE RECORDER  REV B  HAMMOND 1590XX", 69.0, 3.5, 0.70)
+    add_text(board, "TEENSY 4.1 ON BOTTOM - CUT VIN/VUSB FOR DUAL POWER", 72.0, 100.0, 0.65, pcbnew.B_SilkS)
+    add_text(board, "SD CARD SLOT THIS EDGE", 30.0, 3.5, 0.60, pcbnew.B_SilkS)
 
     board.BuildListOfNets()
     return board

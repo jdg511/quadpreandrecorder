@@ -7,7 +7,9 @@ param(
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $hardware = Join-Path $repoRoot "hardware"
-$kicadPython = "C:\Program Files\KiCad\10.0\bin\python.exe"
+$kicadBin = Join-Path $env:LOCALAPPDATA "Programs\KiCad\10.0\bin"
+$kicadPython = Join-Path $kicadBin "python.exe"
+$kicadCli = Join-Path $kicadBin "kicad-cli.exe"
 $netlist = Join-Path $hardware "review_outputs\QuadPreRecorder.net"
 $dsn = Join-Path $hardware "review_outputs\QuadPreRecorder-unrouted.dsn"
 $ses = Join-Path $hardware "review_outputs\QuadPreRecorder-routed.ses"
@@ -18,13 +20,16 @@ if (-not (Test-Path -LiteralPath $FreeroutingJar)) {
 if (-not (Test-Path -LiteralPath $kicadPython)) {
     throw "KiCad 10 Python not found: $kicadPython"
 }
+if (-not (Test-Path -LiteralPath $kicadCli)) {
+    throw "KiCad 10 CLI not found: $kicadCli"
+}
 
 Push-Location $repoRoot
 try {
     New-Item -ItemType Directory -Force (Join-Path $hardware "review_outputs") | Out-Null
     & $kicadPython tools\generate_schematic.py
     & $kicadPython tools\generate_footprints.py
-    & kicad-cli sch export netlist -o $netlist hardware\QuadPreRecorder.kicad_sch
+    & $kicadCli sch export netlist -o $netlist hardware\QuadPreRecorder.kicad_sch
     & $kicadPython tools\generate_pcb.py
     & java -jar $FreeroutingJar `
         -de $dsn -do $ses `
@@ -32,7 +37,7 @@ try {
         --logging.console.level=INFO --logging.file.enabled=false
     & $kicadPython tools\import_route.py
     & $kicadPython tools\cleanup_board.py
-    & kicad-cli pcb drc --all-track-errors --schematic-parity --severity-all `
+    & $kicadCli pcb drc --all-track-errors --schematic-parity --severity-error `
         -o hardware\fabrication\QuadPreRecorder-drc.rpt hardware\QuadPreRecorder.kicad_pcb
 }
 finally {

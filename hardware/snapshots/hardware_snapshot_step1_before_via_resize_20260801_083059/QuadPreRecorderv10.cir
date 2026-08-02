@@ -1,0 +1,297 @@
+.title KiCad schematic
+.save all
+.probe alli
+.probe p(C1)
+.probe p(R10)
+.probe p(R6)
+.probe p(R25)
+.probe p(R23)
+.probe p(R22)
+.probe p(R17)
+.probe p(R24)
+.probe p(C20)
+.probe p(R4)
+.probe p(R5)
+.probe p(C12)
+.probe p(C2)
+.probe p(C3)
+.probe p(L1)
+.probe p(R18)
+.probe p(R19)
+.probe p(R14)
+.probe p(C13)
+.probe p(C17)
+.probe p(R20)
+.probe p(R21)
+.probe p(C18)
+.probe p(R15)
+.probe p(C14)
+.probe p(C15)
+.probe p(R16)
+.probe p(C19)
+.probe p(R7)
+.probe p(R11)
+.probe p(R12)
+.probe p(R8)
+.probe p(R9)
+.probe p(C16)
+.probe p(R13)
+.probe p(R53)
+.probe p(R54)
+.probe p(R56)
+.probe p(C50)
+.probe p(C56)
+.probe p(C64)
+.probe p(C54)
+.probe p(C55)
+.probe p(R55)
+.probe p(C52)
+.probe p(C51)
+.probe p(C48)
+.probe p(R51)
+.probe p(R52)
+.probe p(C49)
+.probe p(C53)
+.probe p(R50)
+.probe p(C47)
+.probe p(R58)
+.probe p(R59)
+.probe p(R60)
+.probe p(R61)
+.probe p(R57)
+.probe p(R62)
+.probe p(R63)
+.probe p(C57)
+.probe p(C58)
+.probe p(C59)
+.probe p(C60)
+.probe p(C61)
+.probe p(C65)
+.probe p(R66)
+.probe p(R64)
+.probe p(R65)
+.probe p(R2)
+.probe p(R1)
+.probe p(C7)
+.probe p(C8)
+.probe p(C4)
+.probe p(C5)
+.probe p(C6)
+.probe p(R3)
+.probe p(C34)
+.probe p(R26)
+.probe p(R30)
+.probe p(R29)
+.probe p(R33)
+.probe p(C22)
+.probe p(R28)
+.probe p(R32)
+.probe p(C35)
+.probe p(R27)
+.probe p(R31)
+.probe p(C23)
+.probe p(C27)
+.probe p(R36)
+.probe p(C36)
+.probe p(C24)
+.probe p(C28)
+.probe p(R37)
+.probe p(C37)
+.probe p(C21)
+.probe p(R42)
+.probe p(C25)
+.probe p(R34)
+.probe p(C26)
+.probe p(R35)
+.probe p(C33)
+.probe p(R43)
+.probe p(C32)
+.probe p(R41)
+.probe p(C46)
+.probe p(R46)
+.probe p(R45)
+.probe p(R47)
+.probe p(R44)
+.probe p(C31)
+.probe p(R40)
+.probe p(C30)
+.probe p(R39)
+.probe p(R48)
+.probe p(R49)
+.probe p(C10)
+.probe p(C9)
+.probe p(C11)
+.probe p(C29)
+.probe p(R38)
+.probe p(C38)
+.probe p(C39)
+.probe p(C40)
+.probe p(C41)
+.probe p(C45)
+.probe p(C44)
+.probe p(C42)
+.probe p(C43)
+.probe p(C62)
+.probe p(C63)
+D1 __D1
+C1 /+9V GND 100uF 16V
+J1 __J1
+F1 __F1
+D2 __D2
+J2 __J2
+R10 /FLU_RAW /FLU_MIC 100R RF
+R6 /+9V /FLU_MIC 4.7k ELECTRET BIAS
+R25 /BRU_ATT /VREF 33k 0.1%
+R23 /BLD_ATT /VREF 33k 0.1%
+R22 /BLD_AC /BLD_ATT 68k 0.1%
+R17 /BRU_AC /VREF 1Meg
+R24 /BRU_AC /BRU_ATT 68k 0.1%
+C20 /BRU_MIC /BRU_AC 4.7uF 16V
+D9 __D9
+R4 /CHASSIS GND 1Meg
+D6 __D6
+R5 /CHASSIS GND 0R CHASSIS LINK
+C12 /CHASSIS GND 1nF 1kV C0G
+D7 __D7
+D8 __D8
+C2 /+9V GND 100nF 25V
+C3 /+9V GND 10uF 25V
+U1 __U1
+L1 /BUCK_SW /+5V 2.2uH 1.5A
+R18 /FLU_AC /FLU_ATT 68k 0.1%
+R19 /FLU_ATT /VREF 33k 0.1%
+R14 /FLU_AC /VREF 1Meg
+C13 /FLU_MIC /CHASSIS 100pF C0G
+C17 /FLU_MIC /FLU_AC 4.7uF 16V
+R20 /FRD_AC /FRD_ATT 68k 0.1%
+R21 /FRD_ATT /VREF 33k 0.1%
+C18 /FRD_MIC /FRD_AC 4.7uF 16V
+R15 /FRD_AC /VREF 1Meg
+C14 /FRD_MIC /CHASSIS 100pF C0G
+C15 /BLD_MIC /CHASSIS 100pF C0G
+R16 /BLD_AC /VREF 1Meg
+C19 /BLD_MIC /BLD_AC 4.7uF 16V
+R7 /+9V /FRD_MIC 4.7k ELECTRET BIAS
+R11 /FRD_RAW /FRD_MIC 100R RF
+R12 /BLD_RAW /BLD_MIC 100R RF
+R8 /+9V /BLD_MIC 4.7k ELECTRET BIAS
+R9 /+9V /BRU_MIC 4.7k ELECTRET BIAS
+C16 /BRU_MIC /CHASSIS 100pF C0G
+R13 /BRU_RAW /BRU_MIC 100R RF
+R53 /+3V3_D /GAIN_PUSH 10k
+R54 /+5V /PWR_LED_A 2.2k
+R56 /+5V /TFT_LED 100R TFT BACKLIGHT
+C50 /GAIN_PUSH GND 100n
+D4 __D4
+D5 __D5
+C56 /+3V3_D GND 100n
+C64 /+3V3_A GND 100n
+C54 /+3V3_A GND 100n
+C55 /+3V3_A GND 10u
+R55 /REC_LED /REC_LED_A 1k
+C52 /DAC_VNEG GND 2.2u
+C51 /DAC_CAPP /DAC_CAPM 2.2u
+SW3 __SW3
+C48 /GAIN_A GND 10n
+R51 /+3V3_D /GAIN_A 10k
+R52 /+3V3_D /GAIN_B 10k
+C49 /GAIN_B GND 10n
+C53 /DAC_LDO GND 1u
+R50 /+3V3_D /REC_BUTTON 10k
+C47 /REC_BUTTON GND 100n
+U9 __U9
+R58 /DAC_DIN /DAC_DIN_IC 33
+R59 /DAC_LRCLK /DAC_LRCLK_IC 33
+J4 __J4
+R60 /+3V3_D /DAC_MUTE_IC 10k
+R61 /DAC_MUTE /DAC_MUTE_IC 100
+R57 /DAC_BCLK /DAC_BCLK_IC 33
+R62 /DAC_L /LINE_L 100
+R63 /DAC_R /LINE_R 100
+RV1 __RV1
+C57 /HP_VOL_L /HP_IN_L 680nF X7R
+C58 /HP_VOL_R /HP_IN_R 680nF X7R
+U10 __U10
+C59 /HP_CPP /HP_CPN 1u
+C60 /HP_VSS GND 2.2u
+C61 /HPVDD GND 2.2u
+C65 /+5V GND 2.2u
+R66 /HP_OUT_R /HP_JACK_R 10
+J5 __J5
+R64 /HP_ENABLE GND 100k
+R65 /HP_OUT_L /HP_JACK_L 10
+R2 /BUCK_FB GND 130k
+R1 /+5V /BUCK_FB 680k
+C7 /+5V GND 1uF 10V
+C8 /+3V3_A GND 4.7uF 10V
+C4 /+5V /BUCK_FB 22pF C0G
+C5 /+5V GND 22uF 10V
+C6 /+5V GND 22uF 10V
+R3 /+5V /BUCK_PG 100k
+U2 __U2
+U6 __U6
+C34 /+9V GND 100n
+R26 /FLU_FB /VREF 10k 0.1%
+U4 __U4
+SW1 __SW1
+R30 /FLU_PRE /FLU_FB 90.9k 0.1%
+R29 /BRU_FB /VREF 10k 0.1%
+R33 /BRU_PRE /BRU_FB 90.9k 0.1%
+C22 /FRD_PRE /FRD_FB 22pF C0G
+R28 /BLD_FB /VREF 10k 0.1%
+R32 /BLD_PRE /BLD_FB 90.9k 0.1%
+C35 /+9V GND 100n
+U5 __U5
+R27 /FRD_FB /VREF 10k 0.1%
+R31 /FRD_PRE /FRD_FB 90.9k 0.1%
+C23 /BLD_PRE /BLD_FB 22pF C0G
+C27 /BLD_PRE /BLD_ADC_SRC 4.7uF 16V
+R36 /BLD_ADC_SRC /BLD_ADC 100
+C36 /+9V GND 100n
+C24 /BRU_PRE /BRU_FB 22pF C0G
+C28 /BRU_PRE /BRU_ADC_SRC 4.7uF 16V
+R37 /BRU_ADC_SRC /BRU_ADC 100
+C37 /+9V GND 10uF 16V
+C21 /FLU_PRE /FLU_FB 22pF C0G
+R42 /PAD_SELECT /PAD_SENSE 100k
+C25 /FLU_PRE /FLU_ADC_SRC 4.7uF 16V
+R34 /FLU_ADC_SRC /FLU_ADC 100
+C26 /FRD_PRE /FRD_ADC_SRC 4.7uF 16V
+R35 /FRD_ADC_SRC /FRD_ADC 100
+C33 /PAD_SENSE GND 100n
+R43 /PAD_SENSE GND 47k
+C32 /BRU_ADC GND 10nF C0G
+R41 /BRU_ADC GND 100k
+SW2 __SW2
+D3 __D3
+C46 /TEENSY_VIN GND 10u
+R46 /ADC_MCLK /ADC_MCLK_IC 33
+R45 /+3V3_D /I2C_SCL 4.7k
+R47 /ADC_LRCLK /ADC_LRCLK_IC 33
+R44 /+3V3_D /I2C_SDA 4.7k
+C31 /BLD_ADC GND 10nF C0G
+R40 /BLD_ADC GND 100k
+U8 __U8
+J3 __J3
+C30 /FRD_ADC GND 10nF C0G
+R39 /FRD_ADC GND 100k
+R48 /ADC_BCLK /ADC_BCLK_IC 33
+R49 /ADC_TDM_IC /ADC_TDM 33
+U7 __U7
+U3 __U3
+C10 /VREF GND 47uF 10V
+C9 /VREF_NR GND 1uF 10V
+C11 /VREF GND 100n
+C29 /FLU_ADC GND 10nF C0G
+R38 /FLU_ADC GND 100k
+C38 /ADC_MICBIAS GND 1u
+C39 /ADC_VREF GND 1u
+C40 /ADC_VREF GND 100n
+C41 /+3V3_A GND 100n
+C45 /+3V3_D GND 10u
+C44 /+3V3_D GND 100n
+C42 /+3V3_A GND 10u
+C43 /ADC_LDO GND 100n
+C62 /ADC_LDO GND 10u
+C63 /+3V3_D GND 100n
+.end

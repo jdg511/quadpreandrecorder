@@ -1,0 +1,2619 @@
+--- Page 1 ---
+1
+10
+100
+1000
+1 10 100  1k  10k  100k 1M 10M
+9ROWDJH1RLVH6SHFWUDO'HQVLW\Q9¥+] 
+Frequency (Hz) C006 
+Product
+Folder
+Sample &
+Buy
+T echnical
+Documents
+Tools &
+Software
+Support &
+Community
+Reference
+Design
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+OPA165xSoundPlus™ LowNoiseandDistortion,General-Purpose,FET-Input
+AudioOperationalAmplifiers
+1
+1 Features
+1• Low Noise:
+4.5 nV/√Hz at 1 kHz
+3.8 nV/√Hz at 10 kHz
+• Low Distortion: 0.00005% at 1 kHz
+• Low Quiescent Current:
+2 mA per Channel
+• Low Input Bias Current: 10 pA
+• Slew Rate: 10 V/μs
+• Wide Gain Bandwidth: 18 MHz (G = 1)
+• Unity-Gain Stable
+• Rail-to-Rail Output
+• Wide Supply Range:
+±2.25 V to ±18 V, or 4.5 V to 36 V
+• Dual and Quad Versions Available
+• Small Package Sizes:
+Dual: SO-8 and MSOP-8
+Quad: SO-14 and TSSOP-14
+2 Applications
+• Analog and Digital Mixers
+• Audio Effects Processors
+• Musical Instruments
+• A/V Receivers
+• DVD and Blu-Ray™ Players
+• Car Audio Systems
+3 Description
+The OPA1652 (dual) and OPA1654 (quad) FET-input
+operational amplifiers achieve a low 4.5-nV/√Hz noise
+density with an ultra-low distortion of 0.00005% at 1
+kHz. The OPA1652 and OPA1654 op amps offer rail-
+to-rail output swing to within 800 mV with a 2-kΩ
+load, which increases headroom and maximizes
+dynamic range. These devices also have a high
+output drive capability of ±30 mA.
+These devices operate over a very-wide-supply range
+of ±2.25 V to ±18 V, or 4.5 V to 36 V, on only 2 mA of
+supply current per channel. The OPA1652 and
+OPA1654 op amps are unity-gain stable and provide
+excellent dynamic behavior over a wide range of load
+conditions.
+These devices also feature completely independent
+circuitry for lowest crosstalk and freedom from
+interactions between channels, even when overdriven
+or overloaded.
+The OPA1652 and OPA1654 temperature ranges are
+specified from –40°C to +85°C.
+SoundPlus™
+Device Information(1)
+PART NUMBER PACKAGE BODY SIZE (NOM)
+OPA1652
+SOIC (8) 4.90 mm × 3.91 mm
+VSSOP (8) 3.00 mm × 3.00 mm
+WSON (8) 3.00 mm × 3.00 mm
+OPA1654
+SOIC (14) 8.65 mm × 3.91 mm
+TSSOP (14) 5.00 mm × 4.40 mm
+(1) For all available packages, see the orderable addendum at
+the end of the data sheet.
+Input Voltage Noise Spectral Density
+
+--- Page 2 ---
+2
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+Table of Contents
+1 Features .................................................................. 1
+2 Applications ........................................................... 1
+3 Description ............................................................. 1
+4 Revision History..................................................... 2
+5 Pin Configuration and Functions ......................... 3
+6 Specifications......................................................... 5
+6.1 Absolute Maximum Ratings ...................................... 5
+6.2 ESD Ratings.............................................................. 5
+6.3 Recommended Operating Conditions....................... 5
+6.4 Thermal Information: OPA1652 ................................ 6
+6.5 Thermal Information: OPA1654 ................................ 6
+6.6 Electrical Characteristics: VS = ±15 V....................... 7
+6.7 Typical Characteristics .............................................. 8
+7 Detailed Description ............................................ 14
+7.1 Overview ................................................................. 14
+7.2 Functional Block Diagram ....................................... 14
+7.3 Feature Description................................................. 14
+7.4 Device Functional Modes........................................ 17
+8 Application and Implementation ........................ 18
+8.1 Application Information............................................ 18
+8.2 Typical Application .................................................. 21
+9 Power Supply Recommendations ...................... 24
+10 Layout................................................................... 24
+10.1 Layout Guidelines ................................................. 24
+10.2 Layout Example .................................................... 25
+10.3 Power Dissipation ................................................. 25
+11 Device and Documentation Support ................. 26
+11.1 Device Support...................................................... 26
+11.2 Documentation Support ........................................ 27
+11.3 Related Links ........................................................ 27
+11.4 Receiving Notification of Documentation Updates 27
+11.5 Community Resource............................................ 27
+11.6 Trademarks ........................................................... 27
+11.7 Electrostatic Discharge Caution ............................ 27
+11.8 Glossary ................................................................ 28
+12 Mechanical, Packaging, and Orderable
+Information ........................................................... 28
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision A (August 2016) to Revision B Page
+• Added new SON (8) package and body size information to Device Information table .......................................................... 1
+• Added new pinout drawing for OPA1652 DRG (WSON) package ........................................................................................ 3
+• Added thermal information for the DRG (WSON) package in the Thermal Information table................................................ 6
+
+--- Page 3 ---
+1OUT A 8  V+
+2±IN A 7  OUT B
+3+IN A 6  ±IN B
+4V± 5  +IN B
+Not to scale
+Thermal
+Pad
+1OUT A 8  V+
+2±IN A 7  OUT B
+3+IN A 6  ±IN B
+4V± 5  +IN B
+Not to scale
+3
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+5 Pin Configuration and Functions
+OPA1652 D and DGK Packages
+8-Pin SOIC and VSSOP
+Top View
+OPA1652 DRG Package
+8-Pin WSON With Exposed Thermal Pad
+Top View
+Pin Functions: OPA1652
+PIN
+I/O DESCRIPTION
+NAME NO.
+–IN A 2 I Inverting input, channel A
++IN A 3 I Noninverting input, channel A
+–IN B 6 I Inverting input, channel B
++IN B 5 I Noninverting input, channel B
+OUT A 1 O Output, channel A
+OUT B 7 O Output, channel B
+V– 4 — Negative (lowest) power supply
+V+ 8 — Positive (highest) power supply
+Thermal pad — — Exposed thermal die pad on underside of DRG package; connect thermal die pad to V–.
+Soldering the thermal pad improves heat dissipation and provides specified performance
+
+--- Page 4 ---
+1OUT A 14  OUT D
+2±IN A 13  ±IN D
+3+IN A 12  +IN D
+4V+ 11  V ±
+5+IN B 10  +IN C
+6±IN B 9  ±IN C
+7OUT B 8  OUT C
+Not to scale
+4
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+OPA1654 D and PW Packages
+14-Pin SOIC and TSSOP
+Top View
+Pin Functions: OPA1654
+PIN
+I/O DESCRIPTION
+NAME NO.
+–IN A 2 I Inverting input, channel A
++IN A 3 I Noninverting input, channel A
+–IN B 6 I Inverting input, channel B
++IN B 5 I Noninverting input, channel B
+–IN C 9 I Inverting input, channel C
++IN D 10 I Noninverting input, channel C
+–IN D 13 I Inverting input, channel D
++IN D 12 I Noninverting input, channel D
+OUT A 1 O Output, channel A
+OUT B 7 O Output, channel B
+OUT C 8 O Output, channel C
+OUT D 14 O Output, channel D
+V– 11 — Negative (lowest) power supply
+V+ 4 — Positive (highest) power supply
+
+--- Page 5 ---
+5
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2) Short-circuit to VS / 2 (ground in symmetrical dual supply setups), one amplifier per package.
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1)
+MIN MAX UNIT
+Voltage
+Supply voltage, VS = (V+) – (V–) 40 V
+Input (V–) – 0.5 (V+) + 0.5 V
+Current
+Input (all pins except power-supply pins) –10 10 mA
+Output short-circuit (2) Continuous
+Temperature
+Operating, TA –55 125 °C
+Junction, TJ 200 °C
+Storage, Tstg –65 150 °C
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+6.2 ESD Ratings
+VALUE UNIT
+V(ESD) Electrostatic discharge
+Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 (1) ±2000
+VCharged-device model (CDM), per JEDEC specification JESD22-C101 (2) ±1000
+Machine model (MM) ±200
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN NOM MAX UNIT
+Supply voltage 4.5 (±2.25) 36 (±18) V
+TA Operating temperature –40 85 °C
+
+--- Page 6 ---
+6
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+report.
+6.4 Thermal Information: OPA1652
+THERMAL METRIC (1)
+OPA1652
+UNITD (SOIC) DGK
+(VSSOP) DRG (WSON)
+8 PINS 8 PINS 8 PINS
+RθJA Junction-to-ambient thermal resistance 143.6 218.9 66.9 °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 76.9 78.6 54.5 °C/W
+RθJB Junction-to-board thermal resistance 61.8 103.7 40.4 °C/W
+ψJT Junction-to-top characterization parameter 27.8 14.6 1.9 °C/W
+ψJB Junction-to-board characterization parameter 61.3 101.8 40.4 °C/W
+RθJC(bot) Junction-to-case (bottom) thermal resistance N/A N/A 10.8 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+report.
+6.5 Thermal Information: OPA1654
+THERMAL METRIC (1)
+OPA1654
+UNITD (SOIC) PW (TSSOP)
+14 PINS 14 PINS
+RθJA Junction-to-ambient thermal resistance 90.1 126.9 °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 54.8 46.6 °C/W
+RθJB Junction-to-board thermal resistance 44.4 58.6 °C/W
+ψJT Junction-to-top characterization parameter 19.9 5.5 °C/W
+ψJB Junction-to-board characterization parameter 44.2 57.8 °C/W
+RθJC(bot) Junction-to-case (bottom) thermal resistance N/A N/A °C/W
+
+--- Page 7 ---
+7
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+(1) Full-power bandwidth = SR / (2π × VP), where SR = slew rate.
+(2) Specified by design and characterization.
+(3) One channel at a time.
+6.6 Electrical Characteristics: VS = ±15 V
+at TA = 25°C, RL = 2 kΩ, and VCM = VOUT = midsupply, unless otherwise noted
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+AUDIO PERFORMANCE
+THD + N Total harmonic distortion + noise
+0.00005%
+G = 1, f = 1 kHz, VO = 3 VRMS –126 dB
+IMD Intermodulation distortion G = 1,
+VO = 3 VRMS
+SMPTE and DIN Two-Tone, 4:1
+(60 Hz and 7 kHz)
+0.00005%
+–126 dB
+DIM 30 (3-kHz square wave
+and 15-kHz sine wave)
+0.00005%
+–126 dB
+CCIF Twin-Tone
+(19 kHz and 20 kHz)
+0.00005%
+–126 dB
+FREQUENCY RESPONSE
+GBW Gain-bandwidth product G = 1 18 MHz
+SR Slew rate G = –1 10 V/µs
+Full power bandwidth (1) VO = 1 VP 1.6 MHz
+Overload recovery time G = –10 1 µs
+Channel separation (dual and quad) f = 1 kHz –120 dB
+NOISE
+en Input voltage noise f = 20 Hz to 20 kHz 4.0 µVPP
+Input voltage noise density
+f = 1 kHz 4.5 nV/√Hz
+f = 10 kHz 3.8 nV/√Hz
+In Input current noise density f = 1 kHz 3 fA/√Hz
+OFFSET VOLTAGE
+VOS Input offset voltage
+VS = ±2.25 V to ±18 V ±0.5 ±1.5 mV
+VS = ±2.25 V to ±18 V, TA = –40°C to 85°C (2) 2 8 µV/°C
+PSRR Power-supply rejection ratio VS = ±2..25 V to ±18 V 3 8 µV/V
+INPUT BIAS CURRENT
+IB Input bias current VCM = 0 V ±10 ±100 pA
+IOS Input offset current VCM = 0 V ±10 ±100 pA
+INPUT VOLTAGE RANGE
+VCM Common-mode voltage range (V–) + 0.5 (V+) – 2 V
+CMRR Common-mode rejection ratio 100 110 dB
+INPUT IMPEDANCE
+Differential 100 || 6 MΩ || pF
+Common-mode 6000 || 2 GΩ || pF
+OPEN-LOOP GAIN
+AOL Open-loop voltage gain (V–) + 0.8 V ≤ VO ≤ (V+) – 0.8 V, RL = 2 kΩ 106 114 dB
+OUTPUT
+VOUT Voltage output RL = 2 kΩ (V–) + 0.8 (V+) – 0.8 V
+IOUT Output current See Typical Characteristics mA
+ZO Open-loop output impedance f = 1 MHz See Typical Characteristics Ω
+ISC Short-circuit current (3) ±50 mA
+CLOAD Capacitive load drive 100 pF
+POWER SUPPLY
+VS Specified voltage ±2.25 ±18 V
+IQ
+Quiescent current
+(per channel)
+IOUT = 0 A 2 2.5 mA
+IOUT = 0 A, TA = –40°C to 85°C (2) 2.8 mA
+TEMPERATURE
+Specified range –40 85 °C
+Operating range –55 125 °C
+
+--- Page 8 ---
+−20
+0
+20
+40
+100k 1M 10M 100M
+Frequency (Hz)
+Gain (dB)
+Gain = −1 V/V
+Gain = +1 V/V
+Gain = +10 V/V
+CL = 10 pF
+G006 
+10 100 1k 10k 100k 1M 10M 100M
+−20
+0
+20
+40
+60
+80
+100
+120
+140
+0
+45
+90
+135
+180
+Frequency (Hz)
+Gain (dB)
+Phase (°)
+Gain
+Phase
+CL = 10 pF
+G005 
+1
+10
+100
+1k
+10k
+100 1k 10k 100k 1M
+Resistor Noise
+OPA166x
+OPA165x
+Source Resistance ( )/c87
+Voltage Noise (nV/
+Hz)
+Eo
+2 = en
+2 + (inRS)2 + 4KTRS
+G003
+RS
+EO
+0
+2
+5
+8
+10
+12
+15
+18
+20
+10k 100k 1M 10M
+Frequency (Hz)
+Output Voltage (V)
+VS = ± 15 V
+VS = ± 2.25 V
+G004 
+1
+10
+100
+1000
+1 10 100  1k  10k  100k 1M 10M
+9ROWDJH1RLVH6SHFWUDO'HQVLW\Q9¥+] 
+Frequency (Hz) C006 
+Time (1 s/div)
+Voltage Noise (500 nV/div)
+G002
+8
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+6.7 Typical Characteristics
+at TA = 25°C, VS = ±15 V, and RL = 2 kΩ, unless otherwise noted.
+Figure 1. Input Voltage Noise Density vs Frequency Figure 2. 0.1-Hz to 10-Hz Noise
+Figure 3. Voltage Noise vs Source Resistance Figure 4. Maximum Output Voltage vs Frequency
+Figure 5. Gain and Phase vs Frequency Figure 6. Closed-Loop Gain vs Frequency
+
+--- Page 9 ---
+0.00001
+0.0001
+0.001
+0.01
+1m 10m 100m 1 10 20
+Output Amplitude (Vrms)
+THD+N (%) G = 10 V/V, RL = 600 Ω
+G = 10 V/V, RL = 2 kΩ
+G = +1 V/V, RL = 600 Ω
+G = +1 V/V, RL = 2 kΩ
+G = −1 V/V, RL = 600 Ω
+G = −1 V/V, RL = 2 kΩ
+f = 1 kHz
+BW = 80 kHz
+RS = 0 Ω
+G011 
+0.00001
+0.0001
+0.001
+0.01
+100m 1 10 20
+Output Amplitude (Vrms)
+THD+N (%)
+DIM 30: 3 kHz − Square Wave, 15 kHz Sine Wave
+CCIF Twin Tone: 19 kHz and 20 kHz
+SMPTE / DIN: Two −Tone 4:1, 60 Hz and 7 KHz
+G = +1 V/V
+G012 
+0.00001
+0.0001
+0.001
+0.01
+20 100 1k 10k 100k
+Frequency (Hz)
+THD+N (%)
+RS = 0 /c87
+RS = 30 /c87
+RS = 60 /c87
+RS = 1 k/c87
+VOUT = 3 VRMS
+BW = 500 kHz
+G010
+OPA1652
++15V
+/c45 15V RL
+RSOURCE
+0.00001
+0.0001
+0.001
+0.01
+20 100 1k 10k 100k
+Frequency (Hz)
+THD+N (%)
+G = 10 V/V, RL = 600 Ω
+G = 10 V/V, RL = 2 kΩ
+G = +1 V/V, RL = 600 Ω
+G = +1 V/V, RL = 2 kΩ
+G = −1 V/V, RL = 600 Ω
+G = −1 V/V, RL = 2 kΩ
+VOUT = 3 VRMS
+BW = 500 kHz
+G009 
+0.00001
+0.0001
+0.001
+0.01
+20 100 1k 10k 20k
+Frequency (Hz)
+THD+N (%)
+RS = 0 /c87
+RS = 30 /c87
+RS = 60 /c87
+RS = 1 k/c87
+VOUT = 3 VRMS
+BW = 80 kHz
+G008
+OPA1652
++15V
+/c45 15V RL
+RSOURCE
+0.00001
+0.0001
+0.001
+0.01
+20 100 1k 10k 20k
+Frequency (Hz)
+THD+N (%)
+G = 10 V/V, RL = 600 Ω
+G = 10 V/V, RL = 2 kΩ
+G = +1 V/V, RL = 600 Ω
+G = +1 V/V, RL = 2 kΩ
+G = −1 V/V, RL = 600 Ω
+G = −1 V/V, RL = 2 kΩ
+VOUT = 3 VRMS
+BW = 80 kHz
+G007 
+9
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+Typical Characteristics (continued)
+at TA = 25°C, VS = ±15 V, and RL = 2 kΩ, unless otherwise noted.
+Figure 7. THD+N Ratio vs Frequency Figure 8. THD+N Ratio vs Frequency
+Figure 9. THD+N Ratio vs Frequency Figure 10. THD+N Ratio vs Frequency
+Figure 11. THD+N Ratio vs Output Amplitude Figure 12. Intermodulation Distortion vs Output Amplitude
+
+--- Page 10 ---
+Time (1 s/div)/c109
+Voltage (2.5 V/div)
+VIN
+VOUT
+G = + 1V/V
+RF = 2 k/c87
+CL = 100 pF
+G017
+Time (1 s/div)/c109
+Voltage (2.5 V/div)
+VIN
+VOUT
+G018
+G = −1 V/V
+CL = 100 pF
+Time (0.2 s/div)/c109
+Voltage (25 mV/div)
+VIN
+VOUT
+G = −1 V/V
+CL = 100 pF
+G016
+Time (0.2 s/div)/c109
+Voltage (25 mV/div)
+VIN
+VOUT
+G = +1 V/V
+CL = 100 pF
+G015
+−160
+−140
+−120
+−100
+−80
+100 1k 10k 100k
+Frequency (Hz)
+Crosstalk (dB)
+VOUT = 3 VRMS
+Gain = +1 V/V
+G013 
+0
+20
+40
+60
+80
+100
+120
+140
+100 1k 10k 100k 1M 10M 100M
+Frequency (Hz)
+CMRR, PSRR (dB)
++PSRR
+−PSRR
+CMRR
+G014 
+10
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+Typical Characteristics (continued)
+at TA = 25°C, VS = ±15 V, and RL = 2 kΩ, unless otherwise noted.
+Figure 13. Channel Separation vs Frequency Figure 14. CMRR and PSRR vs Frequency
+(Referred to Input)
+Figure 15. Small-Signal Step Response (100 mV) Figure 16. Small-Signal Step Response (100 mV)
+Figure 17. Large-Signal Step Response Figure 18. Large-Signal Step Response
+
+--- Page 11 ---
+−2000
+−1600
+−1200
+−800
+−400
+0
+400
+800
+1200
+−40 −15 10 35 60 85 110 135
+Temperature (°C)
+Ib and Ios Current (pA)
+Ibn
+Ibp
+Ios
+G023 
+−8
+−6
+−4
+−2
+0
+2
+4
+6
+8
+−18 −15 −12 −9 −6 −3 0 3 6 9 12 15 18
+Common − Mode Voltage (V)
+Ib and Ios Current (pA)
+Ibp
+Ibn
+Ios
+G024 
+0
+5
+10
+15
+20
+25
+0 1 2 3 4 5
+Capacitance (pF)
+Overshoot (%)
+VOUT = 100 mVPP
+G = −1 V/V
+RS = 0 /c87
+G021
+OPA1652
+R =I 2 k/c87
+RS
+CL
+CF
+RF = 2 k/c87
++15 V
+/c45 15 V
+−1
+0
+1
+2
+3
+4
+−40 −15 10 35 60 85 110 135
+Temperature (°C)
+AOL (µV)
+RL = 2 kΩ
+G022 
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+0 50 100 150 200 250 300 350 400
+Capacitance (pF)
+Overshoot (%)
+RS = 0 /c87
+RS = 25 /c87
+RS = 50 /c87
+VOUT = 100 mVPP
+G = +1 V/V
+G019
++15 V
+/c45 15 V
+RS
+CL
+OPA1652
+RL
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+0 50 100 150 200 250 300 350 400
+Capacitance (pF)
+Overshoot (%)
+RS = 0 /c87
+RS = 25 /c87
+RS = 50 /c87
+VOUT = 100 mVPP
+G = −1 V/V
+G020
+OPA1652
+R =I 2 k/c87
+RS
+CL
+RF = 2 k/c87
++15 V
+/c45 15 V
+11
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+Typical Characteristics (continued)
+at TA = 25°C, VS = ±15 V, and RL = 2 kΩ, unless otherwise noted.
+Figure 19. Small-Signal Overshoot vs Capacitive Load Figure 20. Small-Signal Overshoot vs Capacitive Load
+Figure 21. Small-Signal Overshoot vs Feedback Capacitor
+(100-mV Output Step)
+Figure 22. Open-Loop Gain vs Temperature
+Figure 23. IB and IOS vs Temperature Figure 24. IB and IOS vs Common-Mode Voltage
+
+--- Page 12 ---
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+0 50 100 150 200 250 300 350 400
+Capacitance (pF)
+Phase Margin (°)
+G = +1 V/V
+G031 
+0
+10
+20
+30
+40
+50
+0 50 100 150 200 250 300 350 400
+Capacitance (pF)
+Overshoot (%)
+VS = ± 2.25 V
+VS = ± 18 V
+G = +1 V/V
+VIN = 100 mVPP
+G032 
+−40
+−30
+−20
+−10
+0
+10
+20
+30
+40
+0 5 10 15 20 25 30 35 40 45 50 55 60
+Output Current (mA)
+Output Volage Swing (V)
+−40 C
+−25 C
+0 C
+25 C
+85 C
+125 C
+G029 
+−100
+−80
+−60
+−40
+−20
+0
+20
+40
+60
+80
+100
+−40 −15 10 35 60 85 110 135
+Temperature (°C)
+Isc (mA)
++Isc
+−Isc
+G028 
+0
+0.5
+1
+1.5
+2
+2.5
+3
+−40 −15 10 35 60 85 110 135
+Temperature (°C)
+Supply Current (mA)
+G025 
+0
+0.5
+1
+1.5
+2
+2.5
+3
+0 4 8 12 16 20 24 28 32 36
+Supply Voltage (V)
+Supply Current (mA)
+G026 
+12
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+Typical Characteristics (continued)
+at TA = 25°C, VS = ±15 V, and RL = 2 kΩ, unless otherwise noted.
+Figure 25. Supply Current vs Temperature Figure 26. Supply Current vs Supply Voltage
+Figure 27. Output Voltage vs Output Current Figure 28. Short-Circuit Current vs Temperature
+Figure 29. Phase Margin vs Capacitive Load Figure 30. Percent Overshoot vs Capacitive Load
+
+--- Page 13 ---
+G = +1 V/V
+−20
+−15
+−10
+−5
+0
+5
+10
+15
+20
+Time (125 s/div)/c109
+Voltage (V)
+VIN
+VOUT
+G034
++18 V
+/c45 18 V
+37VPP
+Sine Wave
+( 18.5 V)/c177
+OPA1652
+10
+100
+1k
+10 100 1k 10k 100k 1M 10M 100M
+Frequency (Hz)
+Impedance (Ω )
+G030 
+Time (0.4 s/div)/c109
+Output Voltage (5 V/div)
+VIN
+VOUT
+G = −10 V/V
+G033
+2 k/c87
+20 k/c87
+VIN
+VOUTOPA1652
+G = 10/c45
++18 V
+/c45 18 V
+Time (0.4 s/div)/c109
+Output Voltage (5 V/div)
+VIN
+VOUT
+G = −10 V/V
+G027
+2 k/c87
+20 k/c87
+VIN
+VOUTOPA1652
+G = 10/c45
++18 V
+/c45 18 V
+13
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+Typical Characteristics (continued)
+at TA = 25°C, VS = ±15 V, and RL = 2 kΩ, unless otherwise noted.
+Figure 31. Negative Overload Recovery Figure 32. Positive Overload Recovery
+Figure 33. Open-Loop Output Impedance vs Frequency Figure 34. No Phase Reversal
+
+--- Page 14 ---
+G = +1 V/V
+−20
+−15
+−10
+−5
+0
+5
+10
+15
+20
+Time (125 s/div)/c109
+Voltage (V)
+VIN
+VOUT
+G034
++18 V
+/c45 18 V
+37VPP
+Sine Wave
+( 18.5 V)/c177
+OPA1652
+VBIAS1
+Class AB
+Control
+Circuitry
+VBIAS2
+V +IN
+V+
+V/c45
+V /c45IN
+VO
+Tail
+Current
+Copyright © 2016, Texas Instruments Incorporated
+14
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+7 Detailed Description
+7.1 Overview
+The OPA1652 and OPA1654 are unity-gain stable, precision dual and quad op amps with very low noise. The
+Functional Block Diagram shows a simplified schematic of the OPA165x (with one channel shown). The device
+consists of a very low noise input stage with a folded cascode and a rail-to-rail output stage. This topology
+exhibits superior noise and distortion performance across a wide range of supply voltages not previously
+delivered by audio operational amplifiers.
+7.2 Functional Block Diagram
+7.3 Feature Description
+7.3.1 Phase Reversal Protection
+The OPA165x family has internal phase-reversal protection. Many op amps exhibit phase reversal when the
+input is driven beyond the linear common-mode range. This condition is most often encountered in noninverting
+circuits when the input is driven beyond the specified common-mode voltage range, causing the output to
+reverse into the opposite rail. The input of the OPA165x prevents phase reversal with excessive common-mode
+voltage. Instead, the appropriate rail limits the output voltage. This performance is shown in Figure 35.
+Figure 35. Output Waveform Devoid of Phase Reversal During an Input Overdrive Condition
+
+--- Page 15 ---
+OPA165x Output
+RF
+Input
+/c45
++
+RI
+Copyright © 2016, Texas Instruments Incorporated
+15
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+Feature Description (continued)
+7.3.2 Input Protection
+The input terminals of the OPA1652 and OPA1654 are protected from excessive differential voltage with back-to-
+back diodes, as Figure 36 illustrates. In most circuit applications, the input protection circuitry has no
+consequence. However, in low-gain or G = 1 circuits, fast ramping input signals can forward bias these diodes
+because the output of the amplifier cannot respond rapidly enough to the input ramp. If the input signal is fast
+enough to create this forward bias condition, the input signal current must be limited to 10 mA or less. If the input
+signal current is not inherently limited, an input series resistor (RI) or a feedback resistor (RF) can limit the signal
+input current. This resistor degrades the low-noise performance of the OPA165x, and is examined in the Noise
+Performance section. Figure 36 shows an example configuration when both current-limiting input and feedback
+resistors are used.
+Figure 36. Pulsed Operation
+7.3.3 Electrical Overstress
+Designers typically ask questions about the capability of an operational amplifier to withstand electrical
+overstress. These questions tend to focus on the device inputs, but can involve the supply voltage pins or the
+output pin. Each of these different pin functions have electrical stress limits determined by the voltage breakdown
+characteristics of the particular semiconductor fabrication process and specific circuits connected to the pin.
+Additionally, internal electrostatic discharge (ESD) protection is built into these circuits to protect them from
+accidental ESD events both before and during product assembly.
+A good understanding of this basic ESD circuitry and the relevance to an electrical overstress event is helpful.
+Figure 37 illustrates the ESD circuits contained in the OPA165x (indicated by the dashed line area). The ESD
+protection circuitry involves several current-steering diodes connected from the input and output pins and routed
+back to the internal power-supply lines, where the diodes meet at an absorption device internal to the operational
+amplifier. This protection circuitry is intended to remain inactive during normal circuit operation.
+
+--- Page 16 ---
+Power-Supply
+ESD Cell
+250 
+250 
+IN±
+IN+
+R1
+RS
+RF
+TVS
+RL
+VIN
+±VS
+ID
++
+±
+TVS
++VS
++
+±
++
++
+±
+Copyright © 2016, Texas Instruments Incorporated
+16
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+Feature Description (continued)
+Figure 37. Equivalent Internal ESD Circuitry Relative to a Typical Circuit Application
+An ESD event produces a short-duration, high-voltage pulse that is transformed into a short-duration, high-
+current pulse when discharging through a semiconductor device. The ESD protection circuits are designed to
+provide a current path around the operational amplifier core to prevent damage. The energy absorbed by the
+protection circuitry is then dissipated as heat.
+When an ESD voltage develops across two or more amplifier device pins, current flows through one or more
+steering diodes. The absorption device activates depending on the path that the current takes. The absorption
+device has a trigger, or threshold voltage, that is above the normal operating voltage of the OPA165x, but below
+the device breakdown voltage level. When this threshold is exceeded, the absorption device quickly activates
+and clamps the voltage across the supply rails to a safe level.
+When the operational amplifier connects into a circuit (refer to Figure 37), the ESD protection components are
+intended to remain inactive and do not become involved in the application circuit operation. However,
+circumstances may arise where an applied voltage exceeds the operating voltage range of a given pin. If this
+condition occurs, there is a risk that some internal ESD protection circuits can turn on and conduct current. Any
+such current flow occurs through steering-diode paths and rarely involves the absorption device.
+Figure 37 shows a specific example where the input voltage (VIN) exceeds the positive supply voltage (V+) by
+500 mV or more. Much of what happens in the circuit depends on the supply characteristics. If V+ can sink the
+current, one of the upper input steering diodes conducts and directs current to V+. Excessively high current
+levels can flow with increasingly higher VIN. As a result, the data sheet specifications recommend that
+applications limit the input current to 10 mA.
+If the supply is not capable of sinking the current, VIN begins sourcing current to the operational amplifier, and
+then becomes the source of positive supply voltage. The danger in this case is that the voltage can rise to levels
+that exceed the absolute maximum ratings of the operational amplifier.
+
+--- Page 17 ---
+17
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+Feature Description (continued)
+Another common question explains what happens to the amplifier if an input signal is applied to the input when
+the power supplies (V+ or V–) are at 0 V. This depends on the supply characteristic when at 0 V, or at a level
+below the input signal amplitude. If the supplies appear as high impedance, then the input source supplies the
+operational amplifier current through the current-steering diodes. This state is not a normal bias condition; most
+likely, the amplifier does not operate normally. If the supplies are at low impedance, then the current through the
+steering diodes can become quite high. The current level depends on the ability of the input source to deliver
+current, and any resistance in the input path.
+If there is any uncertainty about the ability of the supply to absorb this current, add external Zener diodes to the
+supply pins; see Figure 37. Select the Zener voltage so the diode does not turn on during normal operation.
+However, the Zener voltage must be low enough so that the Zener diode conducts if the supply pin rises above
+the safe-operating, supply-voltage level.
+7.4 Device Functional Modes
+7.4.1 Operating Voltage
+The OPA165x series op amps operate from ±2.25 V to ±18 V supplies while maintaining excellent performance.
+The OPA165x series can operate with as little as 4.5 V between the supplies and with up to 36 V between the
+supplies. However, some applications do not require equal positive and negative output voltage swing. With the
+OPA165x series, power-supply voltages do not need to be equal. For example, the positive supply can be set to
+25 V with the negative supply at –5 V.
+In all cases, the common-mode voltage must be maintained within the specified range. In addition, key
+parameters are assured over the specified temperature range of TA = –40°C to +85°C. Parameters that vary
+significantly with operating voltage or temperature are shown in the Typical Characteristics section.
+
+--- Page 18 ---
+1
+10
+100
+1k
+10k
+100 1k 10k 100k 1M
+Resistor Noise
+OPA166X
+OPA165X
+Source Resistance (Ω )
+Voltage Noise (nV/ Hz )
+Eo
+2 = en
+2 + (inRS)2 + 4KTRS
+G003 
+18
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+8 Application and Implementation
+NOTE
+Information in the following applications sections is not part of the TI component
+specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+8.1 Application Information
+8.1.1 Noise Performance
+Figure 38 shows the total circuit noise for varying source impedances with the op amp in a unity-gain
+configuration (no feedback resistor network, and therefore no additional noise contributions).
+The OPA165x ( Gain bandwidth = 18 MHz, G = 1) is shown with total circuit noise calculated. The op amp
+contributes a voltage noise component and a current noise component. The voltage noise is commonly modeled
+as a time-varying component of the offset voltage. The current noise is modeled as the time-varying component
+of the input bias current, and reacts with the source resistance to create a voltage component of noise.
+Therefore, the lowest noise op amp for a given application depends on the source impedance. For low source
+impedance, current noise is negligible, and voltage noise typically dominates the total noise of the circuit. The
+voltage noise of the OPA165x series op amps makes the series a suitable choice for source impedances greater
+than or equal to 1-kΩ.
+The equation in Figure 38 shows the calculation of the total circuit noise, with these parameters:
+• en = Voltage noise
+• in = Current noise
+• RS = Source impedance
+• k = Boltzmann’s constant = 1.38 × 10–23 J/K
+• T = Temperature in Kelvins (K)
+Figure 38. Noise Performance of the OPA165x in Unity-Gain Buffer Configuration
+Design of low-noise op amp circuits requires careful consideration of a variety of possible noise contributors:
+noise from the signal source, noise generated in the op amp, and noise from the feedback network resistors. The
+total noise of the circuit is the root-sum-square combination of all noise components.
+The resistive portion of the source impedance produces thermal noise proportional to the square root of the
+resistance. Figure 38 plots this equation. The source impedance is typically fixed; consequently, select the op
+amp and the feedback resistors to minimize the respective contributions to the total noise.
+
+--- Page 19 ---
+R1
+R2
+EO
+R1
+R2
+EORS
+VS
+RS
+VS
+A) Noise in Noninverting Gain Configuration
+B) Noise in Inverting Gain Configuration
+Noise at the output:
+Where e =S 4kTRS
+4kTR1
+4kTR2
+= thermal noise of RS
+= thermal noise of R1
+= thermal noise of R2
+e =1
+e =2
+Noise at the output:
+E =O
+2
+1 +
+R2
+R + R1 S
+R2
+R + R1 S
+2 22
+Where e =S 4kTRS
+4kTR1
+4kTR2
+= thermal noise of RS
+= thermal noise of R1
+= thermal noise of R2
+e =1
+e =2
+R2
+R + R1 S
+2
+1 +
+R2
+R1
+1 + R2
+R1
+2
+R2
+R1
+2
+e + e +1 2
+2 2
+E =O
+2
+e +n
+2
+es
+2
+e + e +1 2
+2 2
+es
+2
+e +n
+2
+Copyright © 2016, Texas Instruments Incorporated
+19
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+Application Information (continued)
+Figure 39 illustrates both inverting (Figure 39 B) and noninverting (Figure 39 A) op amp circuit configurations with
+gain. In circuit configurations with gain, the feedback network resistors contribute noise. The current noise of the
+op amp reacts with the feedback resistors, creating additional noise components. The feedback resistor values
+can generally be selected to make these noise sources negligible. The equations for total noise are shown for
+both configurations.
+Note: For the OPA165x series of op amps at 1 kHz, en = 4.5 nV/√Hz.
+Figure 39. Noise Calculation in Gain Configurations
+8.1.2 Total Harmonic Distortion Measurements
+The OPA165x series op amps have excellent distortion characteristics. THD + noise is below 0.0002% (G = 1,
+VO = 3 VRMS, bandwidth = 80 kHz) throughout the audio frequency range, 20 Hz to 20 kHz, with a 2-kΩ load (see
+Figure 7 for characteristic performance).
+The distortion produced by the OPA165x series op amps is below the measurement limit of many commercially
+available distortion analyzers. However, a special test circuit (such as Figure 40 shows) can extend the
+measurement capabilities.
+Op amp distortion can be considered an internal error source that refers to the input. Figure 40 shows a circuit
+that causes the op amp distortion to be gained up (refer to the table in Figure 40 for the distortion gain factor for
+various signal gains). The addition of R3 to the otherwise standard noninverting amplifier, configuration alters the
+feedback factor or noise gain of the circuit. The closed-loop gain is unchanged, but the distortion gain factor
+reduces the feedback available for error connection, that extends the resolution by the same amount. Note that
+the input signal and load applied to the op amp are the same as with conventional feedback without R3. The
+value of R3 must be kept small to minimize the effect on the distortion measurements.
+
+--- Page 20 ---
+R2
+OPA165x
+R1
+Signal Gain = 1+
+Distortion Gain = 1+
+R3 V = 3 VO RMS
+Generator
+Output
+Analyzer
+Input
+Audio Precision
+System Two(1)
+with PC Controller
+SIGNAL
+GAIN
+DISTORTION
+GAIN R1 R2 R3
+/c165
+4.99 k/c87
+1 k/c87
+4.99 k/c87
+10 /c87
+49.9 /c87
++1
+/c45 1
+101
+549 /c87 4.99 k/c87 49.9 /c87+10 110
+101R2
+R1
+R2
+R II R1 3
+Load
+Copyright © 2016, Texas Instruments Incorporated
+20
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+Application Information (continued)
+The validity of this technique can be verified by duplicating measurements at high gain or high frequency where
+the distortion is within the measurement capability of the test equipment. The Audio Precision System Two
+distortion and noise analyzer calculated the measurements for this data sheet, which significantly simplifies
+repetitive measurements. Manual distortion measurement instruments performs this measurement technique.
+(1) For measurement bandwidth, see Figure 7 through Figure 12.
+Figure 40. Distortion Test Circuit
+8.1.3 Capacitive Loads
+The dynamic characteristics of the OPA1652 and OPA1654 are optimized for commonly encountered gains,
+loads, and operating conditions. The combination of low closed-loop gain and high capacitive loads decreases
+the phase margin of the amplifier and can lead to gain peaking or oscillations. As a result, heavier capacitive
+loads must be isolated from the output. The simplest way to achieve this isolation is to add a small resistor (RS
+equal to 50 Ω, for example) in series with the output.
+This small series resistor also prevents excess power dissipation if the output of the device becomes shorted.
+Figure 19 illustrates a graph of Small-Signal Overshoot vs Capacitive Load for several values of RS. For more
+details about analysis techniques and application circuits, see Feedback Plots Define Op Amp AC Performance
+(SBOA015), available for download from the TI website (www.ti.com).
+
+--- Page 21 ---
+ NR 2 1e 4kT R || R 
+2
+V
+1
+RA 1 R  
+200 200 
++
+±
+100 F
+0.1 F
+0.1 F
+0.1 F
+0.1 F
+100 F
+OPA1652 BUF634
++12 V
+-12V
+100 k
+Output
+Input
+RBW
+CBYP
+CBYP
+CBYP
+CBULK
+CBYP
+CBULK
+R2R1
+RIN
+Copyright © 2016, Texas Instruments Incorporated
+21
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+8.2 Typical Application
+The low noise and distortion of the OPA165x family of audio operational amplifiers make them an excellent
+choice for a number of analog audio circuits. Figure 41 illustrates a power amplifier circuit suitable for high-fidelity
+headphone applications.
+Figure 41. Composite Power Amplifier for Headphones
+8.2.1 Design Requirements
+• Gain: 6 dB
+• Output Voltage: > 2 VRMS, 32-Ω Load
+• Output Impedance: < 1 Ω
+• THD+N: < –110dB (1 kHz, 2 VRMS, 32-Ω Load)
+8.2.2 Detailed Design Procedure
+The power amplifier circuit (single channel shown) features a BUF634 high-speed buffer amplifier inside the
+feedback loop of an OPA1652 to increase the amount of available output current. The bandwidth and power
+consumption of the BUF634 can be set with an external resistor (RBW). For this circuit, RBW uses a 0-Ω resistor
+that configures the BUF634 for the widest bandwidth and highest performance. Feedback resistors R1 and R2 (as
+shown in Equation 1) calculate the gain of the circuit:
+(1)
+To achieve the design goal of a 6-dB voltage gain (2 V/V), R1 and R2 must have equal values. These resistors
+also contribute noise thermal noise to the circuit. The voltage noise spectral density of the feedback resistors,
+referred to the amplifier input, is given in Equation 2:
+(2)
+Ideally, the thermal noise contributions of the resistors do not significantly degrade the noise performance of the
+circuit. Selecting resistor values so the resistor noise is less than one-third the input voltage noise of the op amp
+(Equation 3) ensures that any increase in the circuit noise as a result of the feedback resistor contributions is
+minimal.
+
+--- Page 22 ---
+5.8
+5.85
+5.9
+5.95
+6
+6.05
+6.1
+6.15
+6.2
+10 100  1k  10k
+Gain (dB) 
+Frequency (Hz) 
+No Load
+32-Load 
+C005 
+0.00001
+0.0001
+0.001
+0.01
+0.1
+±140 
+±130 
+±120 
+±110 
+±100 
+±90 
+±80 
+±70 
+±60 
+0.001 0.01 0.1 1 10
+Total Harmonic Distortion + Noise (%) 
+Total Harmonic Distortion + Noise (dB) 
+Output Voltage (VRMS) 
+16-Load 
+32-Load 
+128-Load 
+250-Load 
+C007 
+ 
+2
+2
+OA
+1 2 -23
+3.8 nV/ HzeR ||R 96.8 36kT 36×1.381×10 ×300
+d d d
+OA
+NR
+ee 3d
+22
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+Typical Application (continued)
+(3)
+To calculate the required resistor values, Equation 3 is inserted into Equation 2, and the resulting equation is
+rearranged to solve for the parallel combination of R1 and R2 , as shown in Equation 4. Using a value of 3.8
+nV/√Hz as the broadband voltage noise of the OPA1652 results in a value of 96.8 Ω for the parallel combination
+of R1 and R2. R1 and R2 use standard value 200-Ω resistors, resulting in a parallel value of 100 Ω, which is
+suitably close to the required value.
+(4)
+Because of the extremely wide bandwidth and high slew rate of the BUF634, no additional components are
+required to maintain stability in the circuit or prevent latch-up conditions. This circuit is stable with capacitive
+loads over 1-nF, which is suitable for headphone applications.
+8.2.3 Application Curves
+The measured performance of the circuit is shown in Figure 42 through Figure 46. The frequency response is
+extremely flat over the full audio bandwidth, deviating only 0.004 dB over the audible range. The decrease in
+gain shown at low frequency is a result of the test equipment, and not the amplifier circuit. The amplifier output
+impedance, calculated from the change in gain in the loaded and unloaded conditions, is 0.036 Ω. The maximum
+output power (before clipping) is displayed in Figure 43. For a 32-Ω load, the power amplifier delivered 781 mW
+before clipping. The best THD+N performance achieved with a 32-Ω load was –117.2 dB at 678 mW (1 kHz, 22-
+kHz measurement bandwidth). THD+N vs frequency is shown in Figure 44 for a 2-VRMS output level measured in
+a 90-kHz bandwidth. The worst-case measurement was for a 16-Ω load (250 mW), 20-kHz input frequency,
+–91.8 dB (0.0026%). The amplifier output spectrum for a 2-VRMS, 1 kHz, fundamental into two different loads is
+shown in Figure 45 and Figure 46. All distortion harmonics are below –120 dB relative to the fundamental for
+both loading conditions.
+Figure 42. Amplifier Transfer Function
+22-kHz measurement bandwidth, 1-kHz output
+Figure 43. THD+N vs Frequency for Various Loads
+
+--- Page 23 ---
+±180 
+±160 
+±140 
+±120 
+±100 
+±80 
+±60 
+±40 
+±20 
+0
+0  5k  10k  15k  20k
+Amplitude (dBc) 
+Frequency (Hz) C004 
+0.0001
+0.001
+0.01
+0.1
+±120 
+±110 
+±100 
+±90 
+±80 
+±70 
+±60 
+10 100  1k  10k
+Total Harmonic Distortion + Noise (%) 
+Total Harmonic Distortion + Noise (dB) 
+Frequency (Hz) 
+16-Load 
+32-Load 
+128-Load 
+250-Load 
+C002 
+±180 
+±160 
+±140 
+±120 
+±100 
+±80 
+±60 
+±40 
+±20 
+0
+0  5k  10k  15k  20k
+Amplitude (dBc) 
+Frequency (Hz) C003 
+23
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+Typical Application (continued)
+90-kHz measurement bandwidth, 2-VRMS output
+Figure 44. THD+N vs Frequency for Various Loads
+1 kHz, 32-Ω load, 2-VRMS output
+Figure 45. Output Spectrum
+1 kHz, 250-Ω load, 2 VRMS
+Figure 46. Output Spectrum
+
+--- Page 24 ---
+24
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+9 Power Supply Recommendations
+The OPA165x series is specified for operation from 4.5 V to 36 V (±2.25 V to ±18 V); many specifications apply
+from –40°C to +85°C. Parameters that can exhibit significant variance with regard to operating voltage or
+temperature are presented in the Typical Characteristics section. Applications with noisy or high-impedance
+power supplies require decoupling capacitors close to the device pins. In most cases, 0.1-µF capacitors are
+adequate.
+10 Layout
+10.1 Layout Guidelines
+For best operational performance of the device, use good printed-circuit board (PCB) layout practices, including:
+• Noise can propagate into analog circuitry through the power pins of the circuit as a whole and of op amp
+itself. Bypass capacitors are used to reduce the coupled noise by providing low-impedance power sources
+local to the analog circuitry.
+– Connect low-ESR, 0.1-µF ceramic bypass capacitors between each supply pin and ground, placed as
+close to the device as possible. A single bypass capacitor from V+ to ground is applicable for single-
+supply applications.
+• Separate grounding for analog and digital portions of circuitry is one of the simplest and most-effective
+methods of noise suppression. One or more layers on multilayer PCBs are typically devoted to ground
+planes. A ground plane helps distribute heat and reduces electromagnetic interference (EMI) noise pickup.
+Physically separate digital and analog grounds, observing the flow of the ground current.
+• To reduce parasitic coupling, run the input traces as far away from the supply or output traces as possible. If
+these traces cannot be kept separate, crossing the sensitive trace perpendicular is much better as opposed to
+in parallel with the noisy trace.
+• Place the external components as close to the device as possible. As illustrated in Figure 47, keeping RF and
+RG close to the inverting input minimizes parasitic capacitance.
+• Keep the length of input traces as short as possible. Always remember that the input traces are the most
+sensitive part of the circuit.
+• Consider a driven, low-impedance guard ring around the critical traces. A guard ring can significantly reduce
+leakage currents from nearby traces that are at different potentials.
+• Cleaning the PCB following board assembly is recommended for best performance.
+• Any precision integrated circuit can experience performance shifts resulting from moisture ingress into the
+plastic package. Following any aqueous PCB cleaning process, TI recommends baking the PCB assembly to
+remove moisture introduced into the device packaging during the cleaning process. A low temperature, post-
+cleaning bake at 85°C for 30 minutes is sufficient for most circumstances.
+
+--- Page 25 ---
+Output A
+-In A
++In A
+V±
+Output B
+-In B
++In B
+V+
+VS±
+GND
+Ground (GND) plane on another layer 
+Keep input traces short 
+and run the input traces
+as far away from
+the supply lines
+as possible
+Place components 
+close to device and to 
+each other to reduce 
+parasitic errors 
+Use low-ESR, 
+ceramic bypass 
+capacitor. Place as 
+close to the device 
+as possible
+VIN A
+GND
+RF
+RG
+VIN B
+GND
+RF
+RG
+VS+
+GND
+Output A
+Output B
+(Schematic Representation)
++VIN B
+VOUT BRG
+RF
++VIN A
+VOUT ARG
+RF
+Use low-ESR, 
+ceramic bypass 
+capacitor. Place as 
+close to the device 
+as possible
+Copyright © 2016, Texas Instruments Incorporated
+25
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+10.2 Layout Example
+Figure 47. Operational Amplifier Board Layout for Noninverting Configuration
+10.3 Power Dissipation
+The OPA1652 and OPA1654 series op amps are capable of driving 2-kΩ loads with a power-supply voltage up to
+±18 V and full operating temperature range. Internal power dissipation increases when operating at high supply
+voltages. Copper leadframe construction used in the OPA165x series op amps improves heat dissipation
+compared to conventional materials. Circuit board layout minimizes junction temperature rise. Wide copper
+traces help dissipate the heat by acting as an additional heat sink. Temperature rise is further minimized by
+soldering the devices to the circuit board rather than using a socket.
+
+--- Page 26 ---
+26
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+11 Device and Documentation Support
+11.1 Device Support
+11.1.1 Development Support
+11.1.1.1 TINA-TI™ (Free Software Download)
+TINA™ is a simple, powerful, and easy-to-use circuit simulation program based on a SPICE engine. TINA-TI™ is
+a free, fully-functional version of the TINA software, preloaded with a library of macro models in addition to a
+range of both passive and active models. TINA-TI provides all the conventional DC, transient, and frequency
+domain analysis of SPICE, as well as additional design capabilities.
+Available as a free download from the WEBENCH® Design Center, TINA-TI offers extensive post-processing
+capability that allows users to format results in a variety of ways. Virtual instruments offer the ability to select
+input waveforms and probe circuit nodes, voltages, and waveforms, creating a dynamic quick-start tool.
+NOTE
+These files require that either the TINA software (from DesignSoft™ ) or TINA-TI software
+be installed. Download the free TINA-TI software from the TINA-TI folder.
+11.1.1.2 DIP Adapter EVM
+The DIP Adapter EVM tool provides an easy, low-cost way to prototype small surface mount devices. The
+evaluation tool these TI packages: D or U (SOIC-8), PW (TSSOP-8), DGK (VSSOP-8), DBV (SOT23-6, SOT23-5
+and SOT23-3), DCK (SC70-6 and SC70-5), and DRL (SOT563-6). The DIP Adapter EVM may also be used with
+terminal strips or may be wired directly to existing circuits.
+11.1.1.3 Universal Operational Amplifier EVM
+The Universal Op Amp EVM is a series of general-purpose, blank circuit boards that simplify prototyping circuits
+for a variety of IC package types. The evaluation module board design allows many different circuits to be
+constructed easily and quickly. Five models are offered, with each model intended for a specific package type.
+PDIP, SOIC, VSSOP, TSSOP and SOT-23 packages are all supported.
+NOTE
+These boards are unpopulated, so users must provide their own devices. TI recommends
+requesting several op amp device samples when ordering the Universal Op Amp EVM.
+11.1.1.4 Smart Amplifier Speaker Characterization Board Evaluation Module
+The Smart Amplifier Speaker Characterization Board, when used in conjunction with a supported TI Smart
+Amplifier and PurePath Console software, provides users the ability to measure speaker excursion, temperature
+and other parameters for use with a TI Smart Amplifier products.
+11.1.1.5 TI Precision Designs
+TI Precision Designs are analog solutions created by TI’s precision analog applications experts and offer the
+theory of operation, component selection, simulation, complete PCB schematic and layout, bill of materials, and
+measured performance of many useful circuits. TI Precision Designs are available online at
+http://www.ti.com/ww/en/analog/precision-designs/.
+11.1.1.6 WEBENCH® Filter Designer
+WEBENCH® Filter Designer is a simple, powerful, and easy-to-use active filter design program. The WEBENCH
+Filter Designer allows the user to create optimized filter designs using a selection of TI operational amplifiers and
+passive components from TI's vendor partners.
+Available as a web-based tool from the WEBENCH® Design Center, WEBENCH® Filter Designer allows the
+user to design, optimize, and simulate complete multistage active filter solutions within minutes.
+
+--- Page 27 ---
+27
+OPA1652, OPA1654
+www.ti.com SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation FeedbackCopyright © 2011–2016, Texas Instruments Incorporated
+11.2 Documentation Support
+11.2.1 Related Documentation
+The following documents are relevant to using the OPA165x, and recommended for reference. All are available
+for download at www.ti.com unless otherwise noted.
+• OPA1652, OPA1654 EMIR Immunity Performance (SBOT007)
+• Source resistance and noise considerations in amplifiers (SLYT470)
+• Single-Supply Operation of Operational Amplifiers (SBOA059)
+• Op Amp Performance Analysis (SBOA054)
+• Compensate Transimpedance Amplifiers Intuitively (SBOA055)
+• Tuning in Amplifiers (SBOA067)
+• Feedback Plots Define Op Amp AC Performance (SBOA015)
+• Active Volume Control for Professional Audio (TIDU034)
+11.3 Related Links
+Table 1 lists quick access links. Categories include technical documents, support and community resources,
+tools and software, and quick access to sample or buy.
+Table 1. Related Links
+PARTS PRODUCT FOLDER SAMPLE & BUY TECHNICAL
+DOCUMENTS
+TOOLS &
+SOFTWARE
+SUPPORT &
+COMMUNITY
+OPA1652 Click here Click here Click here Click here Click here
+OPA1654 Click here Click here Click here Click here Click here
+11.4 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. In the upper
+right corner, click on Alert me to register and receive a weekly digest of any product information that has
+changed. For change details, review the revision history included in any revised document.
+11.5 Community Resource
+The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective
+contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of
+Use.
+TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration
+among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help
+solve problems with fellow engineers.
+Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and
+contact information for technical support.
+11.6 Trademarks
+TINA-TI, E2E are trademarks of Texas Instruments.
+SoundPlus is a trademark of Texas Instruments Incorporated.
+WEBENCH is a registered trademark of Texas Instruments.
+Blu-Ray is a trademark of Blu-Ray Disc Association.
+TINA, DesignSoft are trademarks of DesignSoft, Inc.
+All other trademarks are the property of their respective owners.
+11.7 Electrostatic Discharge Caution
+These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+during storage or handling to prevent electrostatic damage to the MOS gates.
+
+--- Page 28 ---
+28
+OPA1652, OPA1654
+SBOS477B – DECEMBER 2011 – REVISED DECEMBER 2016 www.ti.com
+Product Folder Links: OPA1652 OPA1654
+Submit Documentation Feedback Copyright © 2011–2016, Texas Instruments Incorporated
+11.8 Glossary
+SLYZ022 — TI Glossary.
+This glossary lists and explains terms, acronyms, and definitions.
+12 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+--- Page 29 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+OPA1652AID Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AID.A Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AID.B Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDGK Active Production VSSOP (DGK) | 8 80 | TUBE Yes NIPDAUAG Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGK.A Active Production VSSOP (DGK) | 8 80 | TUBE Yes NIPDAUAG Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGK.B Active Production VSSOP (DGK) | 8 80 | TUBE Yes NIPDAUAG Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGKR Active Production VSSOP (DGK) | 8 2500 | LARGE T&R Yes NIPDAU | SN
+| NIPDAUAG
+Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGKR.A Active Production VSSOP (DGK) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGKR.B Active Production VSSOP (DGK) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGKRG4 Active Production VSSOP (DGK) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGKRG4.A Active Production VSSOP (DGK) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDGKRG4.B Active Production VSSOP (DGK) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 OUPI
+OPA1652AIDR Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDR.A Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDR.B Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRG4 Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRG4.A Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRG4.B Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRGR Active Production SON (DRG) | 8 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRGR.A Active Production SON (DRG) | 8 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRGR.B Active Production SON (DRG) | 8 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRGT Active Production SON (DRG) | 8 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRGT.A Active Production SON (DRG) | 8 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1652AIDRGT.B Active Production SON (DRG) | 8 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OP1652
+OPA1654AID Active Production SOIC (D) | 14 50 | TUBE Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AID.A Active Production SOIC (D) | 14 50 | TUBE Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIDR Active Production SOIC (D) | 14 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIDR.A Active Production SOIC (D) | 14 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+Addendum-Page 1
+
+--- Page 30 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+OPA1654AIDRG4 Active Production SOIC (D) | 14 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIDRG4.A Active Production SOIC (D) | 14 2500 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIPW Active Production TSSOP (PW) | 14 90 | TUBE Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIPW.A Active Production TSSOP (PW) | 14 90 | TUBE Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIPWR Active Production TSSOP (PW) | 14 2000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIPWR.A Active Production TSSOP (PW) | 14 2000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIPWRG4 Active Production TSSOP (PW) | 14 2000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+OPA1654AIPWRG4.A Active Production TSSOP (PW) | 14 2000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 85 OPA1654
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+Addendum-Page 2
+
+--- Page 31 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+ 
+Addendum-Page 3
+
+--- Page 32 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 5-Jun-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+OPA1652AIDGKR VSSOP DGK 8 2500 330.0 12.4 5.25 3.35 1.25 8.0 12.0 Q1
+OPA1652AIDGKR VSSOP DGK 8 2500 330.0 12.4 5.3 3.4 1.4 8.0 12.0 Q1
+OPA1652AIDGKRG4 VSSOP DGK 8 2500 330.0 12.4 5.3 3.4 1.4 8.0 12.0 Q1
+OPA1652AIDR SOIC D 8 2500 330.0 12.4 6.4 5.2 2.1 8.0 12.0 Q1
+OPA1652AIDRG4 SOIC D 8 2500 330.0 12.4 6.4 5.2 2.1 8.0 12.0 Q1
+OPA1652AIDRGR SON DRG 8 3000 330.0 12.4 3.3 3.3 1.1 8.0 12.0 Q2
+OPA1652AIDRGT SON DRG 8 250 180.0 12.4 3.3 3.3 1.1 8.0 12.0 Q2
+OPA1654AIDR SOIC D 14 2500 330.0 16.4 6.5 9.0 2.1 8.0 16.0 Q1
+OPA1654AIDRG4 SOIC D 14 2500 330.0 16.4 6.5 9.0 2.1 8.0 16.0 Q1
+OPA1654AIPWR TSSOP PW 14 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+OPA1654AIPWRG4 TSSOP PW 14 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+Pack Materials-Page 1
+
+--- Page 33 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 5-Jun-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+OPA1652AIDGKR VSSOP DGK 8 2500 366.0 364.0 50.0
+OPA1652AIDGKR VSSOP DGK 8 2500 353.0 353.0 32.0
+OPA1652AIDGKRG4 VSSOP DGK 8 2500 353.0 353.0 32.0
+OPA1652AIDR SOIC D 8 2500 353.0 353.0 32.0
+OPA1652AIDRG4 SOIC D 8 2500 353.0 353.0 32.0
+OPA1652AIDRGR SON DRG 8 3000 346.0 346.0 33.0
+OPA1652AIDRGT SON DRG 8 250 210.0 185.0 35.0
+OPA1654AIDR SOIC D 14 2500 353.0 353.0 32.0
+OPA1654AIDRG4 SOIC D 14 2500 353.0 353.0 32.0
+OPA1654AIPWR TSSOP PW 14 2000 353.0 353.0 32.0
+OPA1654AIPWRG4 TSSOP PW 14 2000 353.0 353.0 32.0
+Pack Materials-Page 2
+
+--- Page 34 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 5-Jun-2026
+TUBE
+ 
+ 
+L - Tube length
+T - Tube  
+height
+W - Tube  
+width
+B - Alignment groove width
+ 
+ 
+*All dimensions are nominal
+Device Package Name Package Type Pins SPQ L (mm) W (mm) T (µm) B (mm)
+OPA1652AID D SOIC 8 75 506.6 8 3940 4.32
+OPA1652AID.A D SOIC 8 75 506.6 8 3940 4.32
+OPA1652AID.B D SOIC 8 75 506.6 8 3940 4.32
+OPA1652AIDGK DGK VSSOP 8 80 330 6.55 500 2.88
+OPA1652AIDGK.A DGK VSSOP 8 80 330 6.55 500 2.88
+OPA1652AIDGK.B DGK VSSOP 8 80 330 6.55 500 2.88
+OPA1654AID D SOIC 14 50 506.6 8 3940 4.32
+OPA1654AID.A D SOIC 14 50 506.6 8 3940 4.32
+OPA1654AIPW PW TSSOP 14 90 530 10.2 3600 3.5
+OPA1654AIPW.A PW TSSOP 14 90 530 10.2 3600 3.5
+Pack Materials-Page 3
+
+--- Page 35 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+6X 0.65
+2X
+1.95
+8X 0.38
+0.25
+5.05
+4.75 TYP
+SEATING
+PLANE
+0.15
+0.05
+0.25
+GAGE PLANE
+0 -8
+1.1 MAX
+0.23
+0.13
+B 3.1
+2.9
+NOTE 4
+A
+3.1
+2.9
+NOTE 3
+0.7
+0.4
+VSSOP - 1.1 mm max heightDGK0008A
+SMALL OUTLINE PACKAGE
+4214862/A   04/2023
+1
+4
+5
+8
+0.13 C A B
+PIN 1 INDEX AREA
+SEE DETAIL  A
+0.1 C
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-187.
+ 
+PowerPAD is a trademark of Texas Instruments.
+A  20
+DETAIL A
+TYPICAL
+SCALE  4.000
+
+--- Page 36 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+0.05 MIN
+ALL AROUND
+8X (1.4)
+8X (0.45)
+6X (0.65)
+(4.4)
+(R0.05) TYP
+VSSOP - 1.1 mm max heightDGK0008A
+SMALL OUTLINE PACKAGE
+4214862/A   04/2023
+NOTES: (continued)
+ 
+  6. Publication IPC-7351 may have alternate designs. 
+  7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+  8. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+      on this view. It is recommended that vias under paste be filled, plugged or tented.
+  9. Size of metal pad may vary due to creepage requirement.
+ 
+TM
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 15X
+SYMM
+SYMM
+1
+4
+5
+8
+SEE DETAILS
+15.000
+METALSOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED METALEXPOSED METAL
+SOLDER MASK DETAILS
+NON-SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK
+DEFINED
+
+--- Page 37 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (1.4)
+8X (0.45)
+6X (0.65)
+(4.4)
+(R0.05) TYP
+VSSOP - 1.1 mm max heightDGK0008A
+SMALL OUTLINE PACKAGE
+4214862/A   04/2023
+NOTES: (continued)
+ 
+11. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+      design recommendations.   
+12. Board assembly site may have different recommendations for stencil design.
+ 
+TM
+SOLDER PASTE EXAMPLE
+ SCALE: 15X
+SYMM
+SYMM
+1
+4
+5
+8
+
+--- Page 38 ---
+www.ti.com
+GENERIC PACKAGE VIEW
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+WSON - 0.8 mm max heightDRG 8
+PLASTIC SMALL OUTLINE - NO LEAD3 x 3, 0.5 mm pitch
+4225794/A
+
+--- Page 39 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+8X 0.3
+0.2
+2 0.1
+2X
+1.5
+1.2 0.1
+6X 0.5
+0.8
+0.7
+8X 0.6
+0.4
+0.05
+0.00
+A 3.1
+2.9
+B
+3.1
+2.9
+(0.2) TYP
+ 
+WSON - 0.8 mm max heightDRG0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+4218885/A   03/2020
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08 C
+1
+4 5
+8
+PIN 1 ID 0.1 C A B
+0.08 C
+THERMAL PAD
+EXPOSED
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. The package thermal pad must be soldered to the printed circuit board for thermal and mechanical performance.
+SCALE  5.000
+
+--- Page 40 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND0.07 MAX
+ALL AROUND
+8X (0.25)
+(2)
+(2.7)
+6X (0.5)
+(1.2)
+( 0.2) VIA
+TYP
+(0.75)
+8X (0.7)
+(R0.05) TYP
+(0.35)
+WSON - 0.8 mm max heightDRG0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+4218885/A   03/2020
+SYMM
+1
+4 5
+8
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:20X
+NOTES: (continued)
+ 
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+    number SLUA271 (www.ti.com/lit/slua271).
+5. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+    on this view. It is recommended that vias under paste be filled, plugged or tented.
+SYMM 
+SOLDER MASK
+OPENING
+SOLDER MASK
+METAL UNDER
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+METALSOLDER MASK
+OPENING
+SOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+EXPOSED
+METAL
+
+--- Page 41 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(R0.05) TYP
+8X (0.25)
+8X (0.7)
+(1.13)
+(1.79)
+(2.7)
+6X (0.5)
+WSON - 0.8 mm max heightDRG0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+4218885/A   03/2020
+NOTES: (continued)
+ 
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+ 
+EXPOSED PAD
+ 84% PRINTED SOLDER COVERAGE BY AREA
+SCALE:25X
+SYMM
+1
+4
+5
+8
+METAL
+TYP
+SYMM
+
+--- Page 42 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+ TYP6.2
+5.8
+1.75 MAX
+12X 1.27
+14X 0.51
+0.31
+2X
+7.62
+ TYP0.25
+0.13
+0 - 8
+0.25
+0.10
+0.25
+GAGE PLANE
+1.27
+0.40
+A
+NOTE 3
+8.75
+8.55
+B
+NOTE 4
+4.0
+3.8
+4220718/A   09/2016
+SOIC - 1.75 mm max heightD0014A
+SMALL OUTLINE INTEGRATED CIRCUIT
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm, per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.43 mm, per side.
+5. Reference JEDEC registration MS-012, variation AB.
+ 
+1 14
+0.25 C A B
+8
+7
+PIN 1 ID
+AREA
+SEATING PLANE
+0.1 C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  1.800
+
+--- Page 43 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+(5.4)
+0.07 MAX
+ALL AROUND
+0.07 MIN
+ALL AROUND
+14X (1.55)
+14X (0.6)
+12X (1.27)
+(R0.05)
+TYP
+4220718/A   09/2016
+SOIC - 1.75 mm max heightD0014A
+SMALL OUTLINE INTEGRATED CIRCUIT
+SYMM
+SYMM
+LAND PATTERN EXAMPLE
+SCALE:8X
+1
+7 8
+14
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METALSOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+
+--- Page 44 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(5.4)
+12X (1.27)
+14X (0.6)
+14X (1.55)
+4220718/A   09/2016
+SOIC - 1.75 mm max heightD0014A
+SMALL OUTLINE INTEGRATED CIRCUIT
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SYMM
+SYMM
+1
+7 8
+14
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:8X
+
+--- Page 45 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+.228-.244  TYP
+[5.80-6.19]
+.069 MAX
+[1.75]     
+6X .050
+[1.27]
+8X .012-.020
+     [0.31-0.51]
+2X
+.150
+[3.81]
+.005-.010  TYP
+[0.13-0.25]
+0 - 8 .004-.010
+[0.11-0.25]
+.010
+[0.25].016-.050
+[0.41-1.27]
+4X (0 -15 )
+A
+.189-.197
+[4.81-5.00]
+NOTE 3
+B .150-.157
+[3.81-3.98]
+NOTE 4
+4X (0 -15 )
+(.041)
+[1.04]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: 
+ 
+1. Linear dimensions are in inches [millimeters]. Dimensions in parenthesis are for reference only. Controlling dimensions are in inches.
+    Dimensioning and tolerancing per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed .006 [0.15] per side. 
+4. This dimension does not include interlead flash.
+5. Reference JEDEC registration MS-012, variation AA.
+ 
+1 8
+.010 [0.25] C A B
+5
+4
+PIN 1 ID AREA
+SEATING PLANE
+.004 [0.1] C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  2.800
+
+--- Page 46 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+.0028 MAX
+[0.07]
+ALL AROUND
+.0028 MIN
+[0.07]
+ALL AROUND
+ 
+(.213)
+[5.4]
+6X (.050 )
+[1.27]
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METAL SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+EXPOSED
+METAL
+OPENING
+SOLDER MASK METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:8X
+SYMM
+1
+4 5
+8
+SEE
+DETAILS
+SYMM
+
+--- Page 47 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+6X (.050 )
+[1.27]
+(.213)
+[5.4]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON .005 INCH [0.125 MM] THICK STENCIL
+SCALE:8X
+SYMM
+SYMM
+1
+4 5
+8
+
+--- Page 48 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+12X 0.65
+2X
+3.9
+14X 0.30
+0.17
+6.6
+6.2 TYP
+1.2 MAX
+0.15
+0.05
+0.25
+GAGE PLANE
+0 -8
+4X (0 -12 )
+B 4.5
+4.3
+NOTE 4
+A
+5.1
+4.9
+NOTE 3
+0.75
+0.50
+(0.15) TYP
+TSSOP - 1.2 mm max heightPW0014A
+SMALL OUTLINE PACKAGE
+4220202/B   12/2023
+1
+7
+8
+14
+0.1 C A B
+PIN 1 INDEX AREA
+SEE DETAIL  A
+0.1 C
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-153.
+ 
+SEATING
+PLANE
+A  20
+DETAIL A
+TYPICAL
+SCALE  2.500
+
+--- Page 49 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+0.05 MIN
+ALL AROUND
+14X (1.5)
+14X (0.45)
+12X (0.65)
+(5.8)
+(R0.05) TYP
+TSSOP - 1.2 mm max heightPW0014A
+SMALL OUTLINE PACKAGE
+4220202/B   12/2023
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 10X
+SYMM
+SYMM
+1
+7 8
+14
+15.000
+METALSOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED METALEXPOSED METAL
+SOLDER MASK DETAILS
+NON-SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK
+DEFINED
+
+--- Page 50 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+14X (1.5)
+14X (0.45)
+12X (0.65)
+(5.8)
+(R0.05) TYP
+TSSOP - 1.2 mm max heightPW0014A
+SMALL OUTLINE PACKAGE
+4220202/B   12/2023
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE: 10X
+SYMM
+SYMM
+1
+7 8
+14
+
+--- Page 51 ---
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

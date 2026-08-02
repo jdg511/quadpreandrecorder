@@ -1,0 +1,1689 @@
+--- Page 1 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+1POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+/C00681/2 VI Virtual Ground for Analog Systems
+/C0068Self-Contained 3-terminal TO-226AA
+Package
+/C0068Micropower Operation . . . 170 µA Typ, 
+VI = 5 V
+/C0068Wide VI Range ...4  V  t o  4 0  V
+/C0068High Output-Current Capability
+−  Source . . . 20 mA Typ
+−  Sink . . . 20 mA Typ
+/C0068Excellent Output Regulation
+−  −45 µV Typ at IO = 0 to −10 mA
+−  +15 µV Typ at IO = 0 to +10 mA
+/C0068Low-Impedance Output . . . 0.0075 Ω Typ
+/C0068Noise Reduction Pin (D, JG, and P
+Packages Only)
+     
+description
+In signal-conditioning applications utilizing a
+single power source, a reference voltage equal to
+one-half the supply voltage is required for
+termination of all analog signal grounds. Texas
+Instruments presents a precision virtual ground
+whose output voltage is always equal to one-half
+the input voltage, the TLE2426 “rail splitter.”
+The unique combination of a high-performance,
+micropower operational amplifier and a precision-
+trimmed divider on a single silicon chip results in
+a precise V
+O/VI ratio of 0.5 while sinking and
+sourcing current. The TLE2426 provides a low-
+impedance output with 20 mA of sink and source
+capability while drawing less than 280 µA
+of supply current over the full input range of 4 V to 40 V. A designer need not pay the price in terms of board
+space for a conventional signal ground consisting of resistors, capacitors, operational amplifiers, and voltage
+references. The performance and precision of the TLE2426 is available in an easy-to-use, space saving,
+3-terminal LP package. For increased performance, the optional 8-pin packages provide a noise-reduction pin.
+With the addition of an external capacitor (C
+NR), peak-to-peak noise is reduced while line ripple rejection is
+improved.
+Initial output tolerance for a single 5-V or 12-V system is better than 1% with 3.6% over the full 40-V input range.
+Ripple rejection exceeds 12 bits of accuracy. Whether the application is for a data acquisition front end, analog
+signal termination, or simply a precision voltage reference, the TLE2426 eliminates a major source of system
+error.
+AVAILABLE OPTIONS
+PACKAGED DEVICES
+CHIP
+TA
+SMALL
+OUTLINE
+(D)
+CERAMIC
+DIP
+(JG)
+PLASTIC 
+(LP)
+PLASTIC
+DIP
+(P)
+CHIP
+FORM
+ (Y)
+0°C  to 70°C TLE2426CD — TLE2426CLP TLE2426CP
+Please be aware that an important notice concerning avail ability, standard warranty, and use in critical applications o f
+Texas Instruments semiconductor products and disclaimers thereto appears at the end of this data sheet.
+/C0261
+/C0080/C0082/C0079/C0068/C0085/C0067/C0084/C0073/C0079/C0078 /C0068/C0065/C0084/C0065 /C0105/C0110/C0102/C0111/C0114/C0109/C0097/C0116/C0105/C0111/C0110 /C0105/C0115 /C0099/C0117/C0114/C0114/C0101/C0110/C0116 /C0097/C0115 /C0111/C0102 /C0112/C0117/C0098/C0108/C0105/C0099/C0097/C0116/C0105/C0111/C0110 /C0100/C0097/C0116/C0101/C0046
+/C0080/C0114/C0111/C0100/C0117/C0099/C0116/C0115 /C0099/C0111/C0110/C0102/C0111/C0114/C0109 /C0116/C0111 /C0115/C0112/C0101/C0099/C0105/C0102/C0105/C0099/C0097/C0116/C0105/C0111/C0110/C0115 /C0112/C0101/C0114 /C0116/C0104/C0101 /C0116/C0101/C0114/C0109/C0115 /C0111/C0102 /C0084/C0101/C0120/C0097/C0115 /C0073/C0110/C0115/C0116/C0114/C0117/C0109/C0101/C0110/C0116/C0115
+/C0115/C0116/C0097/C0110/C0100/C0097/C0114/C0100 /C0119/C0097/C0114/C0114/C0097/C0110/C0116/C0121/C0046 /C0080/C0114/C0111/C0100/C0117/C0099/C0116/C0105/C0111/C0110 /C0112/C0114/C0111/C0099/C0101/C0115/C0115/C0105/C0110/C0103 /C0100/C0111/C0101/C0115 /C0110/C0111/C0116 /C0110/C0101/C0099/C0101/C0115/C0115/C0097/C0114/C0105/C0108/C0121 /C0105/C0110/C0099/C0108/C0117/C0100/C0101
+/C0116/C0101/C0115/C0116/C0105/C0110/C0103 /C0111/C0102 /C0097/C0108/C0108 /C0112/C0097/C0114/C0097/C0109/C0101/C0116/C0101/C0114/C0115/C0046
+Copyright  1998, Texas Instruments Incorporated
+VO
+VI
+4
+2
+0
+8
+6
+0 0.25 0.5 0.75 1
+Voltage − V
+t − Time − s
+INPUT/OUTPUT TRANSFER CHARACTERISTICS
+10
+VO /C0043
+VI
+2
+VI VO
+
+--- Page 2 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+2 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+−40°C to  85°C TLE2426ID — TLE2426ILP TLE2426IP TLE2426Y
+−55°C to 125°C TLE2426MD TLE2426MJG TLE2426MLP TLE2426MP
+The D and LP packages are available taped and reeled in the commercial temperature range only. Add R suffix
+to the device type (e. g., TLC2426CDR). Chips are tested at 25°C.
+
+--- Page 3 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+3POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+description (continued)
+The C-suffix devices are characterized for operation from 0°C to 70°C. The I suffix devices are characterized
+for operation from −40°C to 85°C. The M suffix devices are characterized over the full military temperature range
+of −55°C to 125°C.
+OUT
+IN
+COMMON
+1
+2
+3
+4
+8
+7
+6
+5
+OUT
+COMMON
+IN
+NC
+NOISE REDUCTION
+NC
+NC
+NC
+D, JG, OR P PACKAGE
+(TOP VIEW)
+NC − No internal connection
+LP PACKAGE
+(TOP VIEW)
+TLE2426Y chip information
+This chip, properly assembled, displays characteristics similar to the TLE2426C. Thermal compression or
+ultrasonic bonding may be used on the doped aluminum bonding pads. The chips may be mounted with
+conductive epoxy or a gold-silicon preform.
+BONDING PAD ASSIGNMENTS
+CHIP THICKNESS:
+15 MILS TYPICAL
+BONDING PADS:
+4 × 4 MILS MINIMUM
+TJmax = 150°C
+TOLERANCES ARE ±10%.
+ALL DIMENSIONS ARE IN
+MILS.
+60
+88
+OUT(1)
+(2)
+(8)
+(3)
+NOISE
+REDUCTION
+IN
+COMMON
++1
+NOTE A:  Both bonding pads numbered 1, both numbered 2,
+and both numbered 3, must be bonded out to the
+corresponding functions pin.
+(3) (3) (2) (2) (1) (1)
+(8)
+
+--- Page 4 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+4 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+absolute maximum ratings over operating free-air temperature (unless otherwise noted)†
+Continuous input voltage, VI 40 V. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Continuous filter trap voltage 40 V. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Output current, IO ±80 mA. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Duration of short-circuit current at (or below) 25°C (see Note 1) unlimited. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Continuous total power dissipation See Dissipation Rating Table. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Operating free-air temperature range, TA: C suffix 0 °C to 70°C. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+I suffix −40 °C to 85°C. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+M suffix −55 °C to 125°C. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Storage temperature range, Tstg −65 °C to 150°C. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+Lead temperature 1,6 mm (1/16 inch) from case for 10 seconds: D or P package 260 °C. . . . . . . . . . . . . . . . . 
+Lead temperature 1,6 mm (1/16 inch) from case for 60 seconds: JG or LP package 300 °C. . . . . . . . . . . . . . 
+† Stresses beyond those listed under “absolute maximum ratings” may cause permanent damage to the device. These are stress ratings only, and
+functional operation of the device at these or any other conditions beyond those indicated under “recommended operating conditi ons” is not
+implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+NOTE 1: The output may be shorted to either supply. Temperature and/or supply voltages must be limited to ensure that the maximum dissipation
+rating is not exceeded.
+DISSIPATION RATING TABLE
+PACKAGE TA ≤ 25°C DERATING FACTOR TA = 70°C TA = 85°C TA = 125°CPACKAGE TA ≤ 25 C
+POWER RATING
+DERATING FACTOR
+ABOVE TA = 25°C
+TA = 70 C
+POWER RATING
+TA = 85 C
+POWER RATING
+TA = 125 C
+POWER RATING
+D 725 mV 5.8 mW/°C 464 mW 377 mW 145 mW
+JG 1050 mV 8.4 mW/ °C 672 mW 546 mW 210 mW
+LP 775 mV 6.2 mW/ °C 496 mW 403 mW 155 mW
+P 1000 mV 8.0 mW/°C 640 mW 520 mW 200 mW
+recommended operating conditions
+C SUFFIX I SUFFIX M SUFFIX
+UNITMIN MAX MIN MAX MIN MAX UNIT
+Input voltage, VI 4 40 4 40 4 40 V
+Operating free-air temperature, TA 0 70 −40 85 −55 125 °C
+
+--- Page 5 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+5POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+electrical characteristics at specified free-air temperature, VI = 5 V, IO = 0 (unless otherwise noted)
+PARAMETER TEST CONDITIONS TA† TLE2426C
+UNITPARAMETER TEST CONDITIONS TA†
+MIN TYP MAX UNIT
+VI = 4 V 1.98 2 2.02
+Output voltage
+VI = 5 V 25°C 2.48 2.5 2.52
+VOutput voltage VI = 40 V
+25 C
+19.8 20 20.2 V
+VI = 5 V Full range 2.475 2.525
+Temperature coefficient of output voltage Full range 25 ppm/°CTemperature coefficient of output voltage Full range 25 ppm/ °C
+Supply current No load
+VI = 5 V 25°C 170 300
+ASupply current No load VI = 4 to 40 V Full range 400 µA
+Output voltage regulation IO = 0 to −10 mA
+25°C −45 ±160
+Output voltage regulation 
+(sourcing current)‡
+IO = 0 to −10 mA Full range ±250 µV(sourcing current)‡
+IO = 0 to −20 mA 25°C −150 ±450
+µV
+Output voltage regulation IO = 0 to 10 mA
+25°C 15 ±160
+Output voltage regulation 
+(sinking current)‡
+IO = 0 to 10 mA Full range ±250 µV(sinking current)‡
+IO = 0 to 20 mA 25°C 65 ±235
+µV
+Output impedance 25°C 7.5 22.5 mΩ
+Noise-reduction impedance 25°C 110 kΩ
+Short-circuit current
+Sinking current, V O = 5 V
+25°C
+26
+mAShort-circuit current Sourcing current, V O = 0 25°C −47 mA
+Output noise voltage, rms f = 10 Hz to 10 kHz
+CNR = 0
+25°C
+120
+VOutput noise voltage, rms f = 10 Hz to 10 kHz CNR = 1 µF 25°C 30 µV
+VO to 0.1%,  I O = ±10 mA
+CL = 0
+25°C
+290
+Output voltage current step response
+VO to 0.1%,  I O = ±10 mA CL = 100 pF 25°C 275
+sOutput voltage current step response
+VO to 0.01%, I O = ±10 mA
+CL = 0
+25°C
+400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 25°C 390
+Step response
+VI = 0 to 5 V, V O to 0.1%
+CL = 100 pF 25°C
+20
+µsStep response
+VI = 0 to 5 V, V O to 0.01%
+CL = 100 pF 25°C
+160
+µs
+† Full range is 0°C to 70°C.
+‡ The listed values are not production tested.
+
+--- Page 6 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+6 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+electrical characteristics at specified free-air temperature, VI = 12 V, IO = 0 (unless otherwise noted)
+PARAMETER TEST CONDITIONS TA† TLE2426C
+UNITPARAMETER TEST CONDITIONS TA†
+MIN TYP MAX UNIT
+VI = 4 V 1.98 2 2.02
+Output voltage
+VI = 12 V 25°C 5.95 6 6.05
+VOutput voltage VI = 40 V
+25 C
+19.8 20 20.2 V
+VI = 12 V Full range 5.945 6.055
+Temperature coefficient of output voltage Full range 35 ppm/°CTemperature coefficient of output voltage Full range 35 ppm/ °C
+Supply current No load
+VI = 12 V 25°C 195 300
+ASupply current No load VI = 4 to 40 V Full range 400 µA
+Output voltage regulation IO = 0 to −10 mA
+25°C −45 ±160
+Output voltage regulation 
+(sourcing current)‡
+IO = 0 to −10 mA Full range ±250 µV(sourcing current)‡
+IO = 0 to −20 mA 25°C −150 ±450
+µV
+Output voltage regulation IO = 0 to 10 mA
+25°C 15 ±160
+Output voltage regulation 
+(sinking current)‡
+IO = 0 to 10 mA Full range ±250 µV(sinking current)‡
+IO = 0 to 20 mA 25°C 65 ±235
+µV
+Output impedance 25°C 7.5 22.5 mΩ
+Noise-reduction impedance 25°C 110 kΩ
+Short-circuit current
+Sinking current, V O = 12 V
+25°C
+31
+mAShort-circuit current Sourcing current, V O = 0 25°C −70 mA
+Output noise voltage, rms f = 10 Hz to 10 kHz
+CNR = 0
+25°C
+120
+VOutput noise voltage, rms f = 10 Hz to 10 kHz CNR = 1 µF 25°C 30 µV
+VO to 0.1%, I O = ±10 mA
+CL = 0
+25°C
+290
+Output voltage current step response
+VO to 0.1%, I O = ±10 mA CL = 100 pF 25°C 275
+sOutput voltage current step response
+VO to 0.01%, I O = ±10 mA
+CL = 0
+25°C
+400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 25°C 390
+Step response
+VI = 0 to 12 V, VO to 0.1%
+CL = 100 pF 25°C
+20
+µsStep response
+VI = 0 to 12 V, VO to 0.01%
+CL = 100 pF 25°C
+120
+µs
+† Full range is 0°C to 70°C.
+‡ The listed values are not production tested.
+
+--- Page 7 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+7POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+electrical characteristics at specified free-air temperature, VI = 5 V, IO = 0 (unless otherwise noted)
+PARAMETER TEST CONDITIONS TA† TLE2426I
+UNITPARAMETER TEST CONDITIONS TA†
+MIN TYP MAX UNIT
+VI = 4 V 1.98 2 2.02
+Output voltage
+VI = 5 V 25°C 2.48 2.5 2.52
+VOutput voltage VI = 40 V
+25 C
+19.8 20 20.2 V
+VI = 5 V Full range 2.47 2.53
+Temperature coefficient of output volt- Full range 25 ppm/°CTemperature coefficient of output volt-
+age Full range 25 ppm/ °C
+Supply current No load
+VI = 5 V 25°C 170 300
+ASupply current No load VI = 4 to 40 V Full range 400 µA
+Output voltage regulation IO = 0 to −10 mA
+25°C −45 ±160
+Output voltage regulation 
+(sourcing current)‡
+IO = 0 to −10 mA Full range ±250 µV(sourcing current)‡
+IO = 0 to −20 mA 25°C −150 ±450
+µV
+Output voltage regulation 
+IO = 0 to 10 mA 25°C 15 ±160
+Output voltage regulation 
+(sinking current)‡ IO = 0 to 8 mA Full range ±250 µV(sinking current)‡
+IO = 0 to 20 mA 25°C 65 ±235
+µV
+Output impedance 25°C 7.5 22.5 mΩ
+Noise-reduction impedance 25°C 110 kΩ
+Short-circuit current
+Sinking current, V O = 5 V
+25°C
+26
+mAShort-circuit current Sourcing current, V O = 0 25°C −47 mA
+Output noise voltage, rms f = 10 Hz to 10 kHz
+CNR = 0
+25°C
+120
+VOutput noise voltage, rms f = 10 Hz to 10 kHz CNR = 1 µF 25°C 30 µV
+VO to 0.1%, I O = ±10 mA
+CL = 0
+25°C
+290
+Output voltage current step response
+VO to 0.1%, I O = ±10 mA CL = 100 pF 25°C 275
+sOutput voltage current step response
+VO to 0.01%, I O = ±10 mA
+CL = 0
+25°C
+400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 25°C 390
+Step response
+VI = 0 to 5 V, V O to 0.1%
+CL = 100 pF 25°C
+20
+µsStep response
+VI = 0 to 5 V, V O to 0.01%
+CL = 100 pF 25°C
+160
+µs
+† Full range is −40°C to 85°C.
+‡ The listed values are not production tested.
+
+--- Page 8 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+8 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+electrical characteristics at specified free-air temperature, VI = 12 V, IO = 0 (unless otherwise noted)
+PARAMETER TEST CONDITIONS TA† TLE2426I
+UNITPARAMETER TEST CONDITIONS TA†
+MIN TYP MAX UNIT
+VI = 4 V 1.98 2 2.02
+Output voltage
+VI = 12 V 25°C 5.95 6 6.05
+VOutput voltage VI = 40 V
+25 C
+19.8 20 20.2 V
+VI = 12 V Full range 5.935 6.065
+Temperature coefficient of output voltage Full range 35 ppm/°CTemperature coefficient of output voltage Full range 35 ppm/ °C
+Supply current No load
+VI = 12 V 25°C 195 300
+ASupply current No load VI = 4 to 40 V Full range 400 µA
+Output voltage regulation IO = 0 to −10 mA
+25°C −45 ±160
+Output voltage regulation 
+(sourcing current)‡
+IO = 0 to −10 mA Full range ±250 µV(sourcing current)‡
+IO = 0 to −20 mA 25°C −150 ±450
+µV
+Output voltage regulation 
+IO = 0 to 10 mA 25°C 15 ±160
+Output voltage regulation 
+(sinking current)‡ IO = 0 to 8 mA Full range ±250 µV(sinking current)‡
+IO = 0 to 20 mA 25°C 65 ±235
+µV
+Output impedance 25°C 7.5 22.5 mΩ
+Noise-reduction impedance 25°C 110 kΩ
+Short-circuit current
+Sinking current, V O = 12 V
+25°C
+31
+mAShort-circuit current Sourcing current, V O = 0 25°C −70 mA
+Output noise voltage, rms f = 10 Hz to 10 kHz
+CNR = 0
+25°C
+120
+VOutput noise voltage, rms f = 10 Hz to 10 kHz CNR = 1 µF 25°C 30 µV
+VO to 0.1%,  I O = ±10 mA
+CL = 0
+25°C
+290
+Output voltage current step response
+VO to 0.1%,  I O = ±10 mA CL = 100 pF 25°C 275
+sOutput voltage current step response
+VO to 0.01%, I O = ±10 mA
+CL = 0
+25°C
+400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 25°C 390
+Step response
+VI = 0 to 12 V, VO to 0.1%
+CL = 100 pF 25°C
+20
+µsStep response
+VI = 0 to 12 V, VO to 0.01%
+CL = 100 pF 25°C
+120
+µs
+† Full range is −40°C to 85°C.
+‡ The listed values are not production tested.
+
+--- Page 9 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+9POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+electrical characteristics at specified free-air temperature, VI = 5 V, IO = 0 (unless otherwise noted)
+PARAMETER TEST CONDITIONS TA† TLE2426M
+UNITPARAMETER TEST CONDITIONS TA†
+MIN TYP MAX UNIT
+VI = 4 V 1.98 2 2.02
+Output voltage
+VI = 5 V 25°C 2.48 2.5 2.52
+VOutput voltage VI = 40 V
+25 C
+19.8 20 20.2 V
+VI = 5 V Full range 2.465 2.535
+Temperature coefficient of output voltage Full range 25 ppm/°CTemperature coefficient of output voltage Full range 25 ppm/ °C
+Supply current No load
+VI = 5 V 25°C 170 300
+ASupply current No load VI = 4 to 40 V Full range 400 µA
+Output voltage regulation IO = 0 to −10 mA
+25°C −45 ±160
+Output voltage regulation 
+(sourcing current)‡
+IO = 0 to −10 mA Full range ±250 µV(sourcing current)‡
+IO = 0 to −20 mA 25°C −150 ±450
+µV
+Output voltage regulation 
+IO = 0 to 10 mA 25°C 15 ±160
+Output voltage regulation 
+(sinking current)‡ IO = 0 to 3 mA Full range ±250 µV(sinking current)‡
+IO = 0 to 20 mA 25°C 65 ±235
+µV
+Output impedance 25°C 7.5 22.5 mΩ
+Noise-reduction impedance 25°C 110 kΩ
+Short-circuit current
+Sinking current, V O = 5 V
+25°C
+26
+mAShort-circuit current Sourcing current, V O = 0 25°C −47 mA
+Output noise voltage, rms f = 10 Hz to 10 kHz
+CNR = 0
+25°C
+120
+VOutput noise voltage, rms f = 10 Hz to 10 kHz CNR = 1 µF 25°C 30 µV
+VO to 0.1%, I O = ±10 mA
+CL = 0
+25°C
+290
+Output voltage current step response
+VO to 0.1%, I O = ±10 mA CL = 100 pF 25°C 275
+sOutput voltage current step response
+VO to 0.01%, I O = ±10 mA
+CL = 0
+25°C
+400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 25°C 390
+Step response
+VI = 0 to 5 V, V O to 0.1%
+CL = 100 pF 25°C
+20
+µsStep response
+VI = 0 to 5 V, V O to 0.01%
+CL = 100 pF 25°C
+120
+µs
+† Full range is −55°C to 125°C.
+‡ The listed values are not production tested.
+
+--- Page 10 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+10 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+electrical characteristics at specified free-air temperature, VI = 12 V, IO = 0 (unless otherwise noted)
+PARAMETER TEST CONDITIONS TA† TLE2426M
+UNITPARAMETER TEST CONDITIONS TA†
+MIN TYP MAX UNIT
+VI = 4 V 1.98 2 2.02
+Output voltage
+VI = 12 V 25°C 5.95 6 6.05
+VOutput voltage VI = 40 V
+25 C
+19.8 20 20.2 V
+VI = 12 V Full range 5.925 6.075
+Temperature coefficient of output voltage Full range 35 ppm/°CTemperature coefficient of output voltage Full range 35 ppm/ °C
+Supply current No load
+VI = 12 V 25°C 195 250
+ASupply current No load VI = 4 to 40 V Full range 350 µA
+Output voltage regulation IO = 0 to −10 mA
+25°C −45 ±160
+Output voltage regulation 
+(sourcing current)‡
+IO = 0 to −10 mA Full range ±250 µV(sourcing current)‡
+IO = 0 to −20 mA 25°C −150 ±450
+µV
+Output voltage regulation 
+IO = 0 to 10 mA 25°C 15 ±160
+Output voltage regulation 
+(sinking current)‡ IO = 0 to 8 mA Full range ±250 µV(sinking current)‡
+IO = 0 to 20 mA 25°C 65 ±235
+µV
+Output impedance 25°C 7.5 22.5 mΩ
+Noise-reduction impedance 25°C 110 kΩ
+Short-circuit current
+Sinking current, V O = 12 V
+25°C
+31
+mAShort-circuit current Sourcing current, V O = 0 25°C −70 mA
+Output noise voltage, rms f = 10 Hz to 10 kHz
+CNR = 0
+25°C
+120
+VOutput noise voltage, rms f = 10 Hz to 10 kHz CNR = 1 µF 25°C 30 µV
+VO to 0.1%,  I O = ±10 mA
+CL = 0
+25°C
+290
+Output voltage current step response
+VO to 0.1%,  I O = ±10 mA CL = 100 pF 25°C 275
+sOutput voltage current step response
+VO to 0.01%, I O = ±10 mA
+CL = 0
+25°C
+400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 25°C 390
+Step response
+VI = 0 to 12 V, VO to 0.1%
+CL = 100 pF 25°C
+12
+µsStep response
+VI = 0 to 12 V, VO to 0.01%
+CL = 100 pF 25°C
+120
+µs
+† Full range is −55°C to 125°C.
+‡ The listed values are not production tested.
+
+--- Page 11 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+11POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+electrical characteristics at specified free-air temperature, V I = 5 V, I O = 0, T A = 25 °C (unless
+otherwise noted)
+PARAMETER TEST CONDITIONS
+TLE2426Y
+UNITPARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Output voltage VI = 5 V 2.5 V
+Supply current No load 170 µA
+Output voltage regulation (sourcing current)† IO = 0 to −10 mA −45
+µVOutput voltage regulation (sourcing current)†
+IO = 0 to −20 mA −150 µV
+Output voltage regulation (sinking current)† IO = 0 to 10 mA 15
+µVOutput voltage regulation (sinking current)†
+IO = 0 to 20 mA 65 µV
+Output impedance 7.5 mΩ
+Noise-reduction impedance 110 kΩ
+Short-circuit current
+Sinking current, V O = 5 V 26
+mAShort-circuit current Sourcing current, V O = 0 −47 mA
+Output noise voltage, rms f = 10 Hz to 10 kHz
+CNR = 0 120
+µVOutput noise voltage, rms f = 10 Hz to 10 kHz CNR = 1 µF 30 µV
+VO to 0.1%, I O = ±10 mA
+CL = 0 290
+Output voltage current step response
+VO to 0.1%, I O = ±10 mA CL = 100 pF 275
+µsOutput voltage current step response
+VO to 0.01%, I O = ±10 mA
+CL = 0 400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 390
+Step response
+VI = 0 to 5 V, V O to 0.1%
+CL = 100 pF
+20
+sStep response VI = 0 to 5 V, V O to 0.01% CL = 100 pF 160 µs
+† The listed values are not production tested.
+electrical characteristics at specified free-air temperature, V I = 12 V, I O = 0, T A = 25 °C (unless
+otherwise noted)
+PARAMETER TEST CONDITIONS
+TLE2426Y
+UNITPARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Output voltage VI = 12 V 6 V
+Supply current No load 195 µA
+Output voltage regulation (sourcing current)† IO = 0 to −10 mA −45
+µVOutput voltage regulation (sourcing current)†
+IO = 0 to −20 mA −150 µV
+Output voltage regulation (sinking current)† IO = 0 to 3 mA 15
+µVOutput voltage regulation (sinking current)†
+IO = 0 to 20 mA 65 µV
+Output impedance 7.5 mΩ
+Noise-reduction impedance 110 kΩ
+Short-circuit current
+Sinking current, V O = 12 V 31
+mAShort-circuit current Sourcing current, V O = 0 −70 mA
+Output noise voltage, rms f = 10 Hz to 10 kHZ
+CNR = 0 120
+µVOutput noise voltage, rms f = 10 Hz to 10 kHZ CNR = 1 µF 30 µV
+VO to 0.1%, I O = ±10 mA
+CL = 0 290
+Output voltage current, step response
+VO to 0.1%, I O = ±10 mA CL = 100 pF 275
+µsOutput voltage current, step response
+VO to 0.01%, I O = ±10 mA
+CL = 0 400 µs
+VO to 0.01%, I O = ±10 mA CL = 100 pF 390
+Step response
+VI = 0 to 12 V, V O to 0.1%
+CL = 100 pF
+12
+sStep response VI = 0 to 12 V, V O to 0.01% CL = 100 pF 120 µs
+† The listed values are not production tested.
+
+--- Page 12 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+12 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+TYPICAL CHARACTERISTICS
+Table Of Graphs
+FIGURE
+Output voltage Distribution 1,2
+Output voltage change vs Free-air temperature 3
+Output voltage error vs Input voltage 4
+Input bias current
+vs Input voltage 5
+Input bias current vs Free-air temperature 6
+Output voltage regulation vs Output current 7
+Output impedance vs Frequency 8
+Short-circuit output current
+vs Input voltage 9,10
+Short-circuit output current vs Free-air temperature 11,12
+Ripple rejection vs Frequency 13
+Spectral noise voltage density vs Frequency 14
+Output voltage response to output current step vs Time 15
+Output voltage power-up response vs Time 16
+Output current vs Load capacitance 17
+
+--- Page 13 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+13POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+TYPICAL CHARACTERISTICS†
+Figure 1
+DISTRIBUTION
+OF
+OUTPUT VOLTAGE
+2
+1
+0.5
+0
+3
+1.5
+2.48 2.49 2.5 2.51 2.52
+Percentage of Units − %
+2.5
+VO − Output Voltage − V
+98 Units Tested
+From 2 Wafer Lots
+VI = 5 V
+TA = 25°C
+Figure 2
+6.05 6.075
+VO − Output Voltage − V
+20
+10
+0
+40
+30
+6 6.025 6.1
+Percentage of Units − %
+DISTRIBUTION
+OF
+OUTPUT VOLTAGE
+VI = 12 V
+TA = 25°C
+98 Units Tested
+From 2 Wafer Lots
+Figure 3
+VO − Output Voltage Change − mV
+0
+02 55 0
+75
+OUTPUT VOLTAGE CHANGE
+vs
+FREE-AIR TEMPERATURE
+150
+75 100 125
+∆VO
+TA − Free-Air Temperature − °C
+VI = 40 V IO = 0
+VI = 12 V
+VI = 4 V, 5 V
+−75
+−150
+−75 −50 −25
+Figure 4
+2
+1
+0
+−1
+048 1 2 1 6 2 0
+Output Voltage Error − %
+3
+OUTPUT VOLTAGE ERROR
+vs
+INPUT VOLTAGE
+4
+24 36 40
+VI − Input Voltage − V
+28 32
+IO = 0
+TA = 25°C
+Error Equals VO/VI Deviation From 50%
+† Data at high and low temperatures are applicable within the rated operating free-air temperature ranges of the various devices.
+
+--- Page 14 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+14 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+TYPICAL CHARACTERISTICS†
+Figure 5
+150
+100
+50
+0
+0 5 10 15 20 25
+200
+250
+INPUT BIAS CURRENT
+vs
+INPUT VOLTAGE
+300
+30 35 40
+VI − Input Voltage − V
+IO = 0
+TA = −55°C
+TA = 125°C
+TA = 25°C
+IIB − Input Bias Current − IIB Aµ
+Figure 6
+150
+100
+50
+0
+02 5 5 0
+200
+250
+INPUT BIAS CURRENT
+vs
+FREE-AIR TEMPERATURE
+300
+75 100 125
+ 
+VI = 40 V
+VI = 12 V
+VI = 5 V
+VI = 4 V
+IO = 0
+TA − Free-Air Temperature − °C
+−50−75 −20
+IIB − Input Bias Current − IIB Aµ
+Figure 7
+Min
+IO − Output Current − mA
+OUTPUT VOLTAGE REGULATION
+vs
+OUTPUT CURRENT
+0
+500
+250
+01 0 2 0
+Max
+Typ
+Min
+Max
+Typ
+VI = 5 V or 12 V
+TA = 25°C
+−250
+−500
+−20 −10
+Output Voltage Regulation − µV
+Figure 8
+1
+0.1
+0.01
+0.001
+10 100 1 k
+10
+f − Frequency − Hz
+100
+10 k 100 k 1 M
+OUTPUT IMPEDANCE
+vs
+FREQUENCY
+VI = 5 V or 12 V
+IO = 0
+TA = 25°C
+− Output Impedance − Ωzo
+† Data at high and low temperatures are applicable within the rated operating free-air temperature ranges of the various devices.
+
+--- Page 15 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+15POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+TYPICAL CHARACTERISTICS†
+Figure 9
+0 5 10 15 20 25
+SHORT-CIRCUIT OUTPUT CURRENT
+vs
+INPUT VOLTAGE
+0
+30 35 40
+IOS − Short-Circuit Output Current − mAIOS
+VI − Input Voltage − V
+VO = GND
+(Output Sourcing)
+TA = 25°C
+TA = −55°C
+TA = 125°C
+−20
+−40
+−60
+−80
+Figure 10
+VI − Input Voltage − V
+20
+10
+0
+0 5 10 15 20 25
+30
+SHORT-CIRCUIT OUTPUT CURRENT
+vs
+INPUT VOLTAGE
+40
+30 35 40
+IOS − Short-Circuit Output Current − mAIOS
+VO = VI
+(Output Sinking)
+TA = −55°C
+TA = 125°C
+TA = 25°C
+Figure 11
+125
+0
+IOS − Short-Circuit Output Current − mAIOS
+TA − Free-Air Temperature − °C
+SHORT-CIRCUIT OUTPUT CURRENT
+vs
+FREE-AIR TEMPERATURE
+0 25 50 75 100
+VI = 12 V
+VI = 4 V
+VO = GND
+(Output Sourcing)−10
+−20
+−30
+−40
+−50
+−60
+−70
+−80
+−75 −50 −25
+VI = 5 V
+VI = 40 V
+Figure 12
+SHORT-CIRCUIT OUTPUT CURRENT
+vs
+FREE-AIR TEMPERATURE
+20
+10
+0
+02 55 0
+30
+40
+75 100 125
+IOS − Short-Circuit Output Current − mAIOS
+TA − Free-Air Temperature − °C
+VI = 4 V
+VI = 5 V
+VI = 12 V
+VI = 40 V
+VO = VI
+(Output Sinking)
+−75 −50 −25
+† Data at high and low temperatures are applicable within the rated operating free-air temperature ranges of the various devices.
+
+--- Page 16 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+16 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+TYPICAL CHARACTERISTICS
+Figure 13
+50
+40
+20
+10
+0
+90
+30
+10 100 1 k 10 k
+Ripple Rejection − dB
+70
+60
+80
+RIPPLE REJECTION
+vs
+FREQUENCY
+100
+100 k 1 M
+f − Frequency − Hz
+VI = 5 V or 12 V
+∆VI(PP) = 1 V
+IO = 0
+TA = 25°C
+CNR = 1 µF
+CNR = 0
+Figure 14
+100 k
+200
+100
+0
+400
+300
+1
+SPECTRAL NOISE VOLTAGE DENSITY
+vs
+FREQUENCY
+f − Frequency − Hz
+10 100 1 k 10 k
+CNR = 1 µF
+VI = 5 V or 12 V
+TA = 25°C
+CNR = 0
+− Spectral Noise Voltage Density −Vn nV/ Hz
+Figure 15
+IO Step
+0
+−1
+−1.5 V
+4
+−2
+0 1000 2000
+VO − Change In Output Voltage − mV
+2
+1
+3
+OUTPUT VOLTAGE RESPONSE
+TO OUTPUT CURRENT STEP
+1.5 V
+3000 4000
+∆V O
+Time − µs
+0.1%
+0.01%
+10 mA
+0.01%
+0.1%
+−10 mA−4
+−3
+VI = 5 V
+CL = 100 pF
+TA = 25°C
+Figure 16
+0.1%
+OUTPUT VOLTAGE POWER-UP RESPONSE
+1
+0
+0
+3
+2
+0 50 100 200
+V) − Output Voltage − VVO
+Time − µs
+2.5
+1.5
+0.5
+5
+Output Voltage Response
+Input Voltage Step
+0.01%
+150
+IO = 0
+CL = 100 pF
+TA = 25°C
+
+--- Page 17 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+17POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+TYPICAL CHARACTERISTICS
+10−6
+−20
+5
+0
+−10
+−15
+−5
+20
+10
+15
+STABILITY RANGE
+OUTPUT CURRENT
+vs
+LOAD CAPACITANCE
+IO− Output Current − mA
+CL− Load Capacitance − /C0109F
+VI = 5 V
+TA = 25°C Unstable
+Stable
+10−5 10−4 10−3 10−2 10−1 100 101 102
+Figure 17
+
+--- Page 18 ---
+/C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0044 /C0084/C0076/C0069/C0050/C0052/C0050/C0054/C0089
+/C0084/C0072/C0069 /C0127/C0082/C0065/C0073/C0076 /C0083/C0080/C0076/C0073/C0084/C0084/C0069/C0082/C0034
+/C0080/C0082/C0069/C0067/C0073/C0083/C0073/C0079/C0078 /C0086/C0073/C0082/C0084/C0085/C0065/C0076 /C0071/C0082/C0079/C0085/C0078/C0068
+/C0261
+SLOS098D − AUGUST 1991 − REVISED MAY 1998
+18 POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+MACROMODEL INFORMATION
+* TLE2426 OPERATIONAL AMPLIFIER “MACROMODEL” SUBCIRCUIT
+* CREATED USING PARTS RELEASE 4.03 0N 08/21/90 AT 13:51
+* REV (N/A) SUPPLY VOLTAGE: 5 V
+* CONNECTIONS: FILTER
+| INPUT
+* | | COMMON
+* | | | OUTPUT
+*| | | |
+.SUBCKT TLE2426 1 3 4 5
+C1 11 12 21.66E−12
+C2  6  7 30.00E−12
+C3 87  0 10.64E−9
+CPSR 85 86 15.9E−9
+DCM+ 81 82 DX
+DCM− 83 81 DX
+DC  5 53 DX
+DE 54  5 DX
+DLP 90 91 DX
+DLN 92 90 DX
+DP  4  3 DX
+ECMR 84 99 (2,99) 1
+EGND 99  0 POLY(2) (3,0) (4,0) 0 .5 .5
+EPSR 85  0 POLY(1) (3,4) −16.22E−6 3.24E−6
+ENSE 89  2 POLY(1) (88,0) 120E−61
+FB  7 99 POLY(6) VB VC VE VLPVLNVPSR 0 74.8E6 −10E6 10E6 10E6 −10E6 74E6
+GA  6  0 11 12 320.4E−6
+GCM  0  6 10 99 1.013E−9
+GPSR 85 86 (85,86) 100E−6
+GRC1  4 11 (4,11) 3.204E−4
+GRC2  4 12 (4,12) 3.204E−4
+GRE1 13 10 (13,10) 1.038E−3
+GRE2 14 10 (14,10) 1.038E−3
+HLIM 90  0 VLIM 1K
+HCMR 80  1 POLY(2) VCM+ VCM− 0 1E2 1E2
+IRP  3  4 146E−6
+IEE  3 10 DC 24.05E−6
+IIO  2  0 .2E−9
+I1 88  0 1E−21
+Q1 11 89 13 QX
+Q2 12 80 14 QX
+R2  6  9 100.0E3
+RCM 84 81 1K
+REE 10 99  8.316E6
+RN1 87  0  2.55E8
+RN2 87 88 11.67E3
+RO1  8  5 63
+RO2  7 99 62
+VCM+ 82 99 1.0
+VCM− 83 99 −2.3
+VB  9  0 DC 0
+VC  3 53 DC 1.400
+VE 54  4 DC 1.400
+VLIM  7  8 DC 0
+VLP 91  0 DC 30
+V L N  09 2D C3 0
+VPSR  0 86 DC 0
+RFB  5  2 1K
+RIN1  3  1 220K
+RIN2  1  4 220K
+.MODEL DX D(IS=800.OE−18)
+.MODEL QX PNP(IS=800.OE−18BF=480)
+.ENDS
+
+--- Page 19 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TLE2426CD Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM - 2426C
+TLE2426CD.A Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 2426C
+TLE2426CDG4 Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM See TLE2426CD 2426C
+TLE2426CDR Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM - 2426C
+TLE2426CDR.A Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 2426C
+TLE2426CLP Active Production TO-92 (LP) | 3 1000 | BULK Yes SN N/A for Pkg Type - 2426C
+TLE2426CLP.A Active Production TO-92 (LP) | 3 1000 | BULK Yes SN N/A for Pkg Type -55 to 125 2426C
+TLE2426CLPE3 Active Production TO-92 (LP) | 3 1000 | BULK Yes SN N/A for Pkg Type See TLE2426CLP 2426C
+TLE2426CLPR Active Production TO-92 (LP) | 3 2000 | LARGE T&R Yes SN N/A for Pkg Type - 2426C
+TLE2426CLPR.A Active Production TO-92 (LP) | 3 2000 | LARGE T&R Yes SN N/A for Pkg Type -55 to 125 2426C
+TLE2426CP Active Production PDIP (P) | 8 50 | TUBE Yes NIPDAU N/A for Pkg Type - TLE2426CP
+TLE2426CP.A Active Production PDIP (P) | 8 50 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 TLE2426CP
+TLE2426ID Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM - 2426I
+TLE2426ID.A Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 2426I
+TLE2426IDG4 Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM See TLE2426ID 2426I
+TLE2426IDR Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM - 2426I
+TLE2426IDR.A Active Production SOIC (D) | 8 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 2426I
+TLE2426ILP Active Production TO-92 (LP) | 3 1000 | BULK Yes SN N/A for Pkg Type - 2426I
+TLE2426ILP.A Active Production TO-92 (LP) | 3 1000 | BULK Yes SN N/A for Pkg Type -55 to 125 2426I
+TLE2426ILPR Active Production TO-92 (LP) | 3 2000 | LARGE T&R Yes SN N/A for Pkg Type - 2426I
+TLE2426ILPR.A Active Production TO-92 (LP) | 3 2000 | LARGE T&R Yes SN N/A for Pkg Type -55 to 125 2426I
+TLE2426IP Active Production PDIP (P) | 8 50 | TUBE Yes NIPDAU N/A for Pkg Type - TLE2426IP
+TLE2426IP.A Active Production PDIP (P) | 8 50 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 TLE2426IP
+TLE2426IPE4 Active Production PDIP (P) | 8 50 | TUBE Yes NIPDAU N/A for Pkg Type See TLE2426IP TLE2426IP
+TLE2426MD Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 2426M
+TLE2426MD.A Active Production SOIC (D) | 8 75 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 2426M
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+Addendum-Page 1
+
+--- Page 20 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+ OTHER QUALIFIED VERSIONS OF TLE2426 :
+•Automotive : TLE2426-Q1
+•Enhanced Product : TLE2426-EP
+ NOTE: Qualified Version Definitions:
+•Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+•Enhanced Product - Supports Defense, Aerospace and Medical Applications
+Addendum-Page 2
+
+--- Page 21 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 23-May-2025
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TLE2426CDR SOIC D 8 2500 330.0 12.4 6.4 5.2 2.1 8.0 12.0 Q1
+TLE2426IDR SOIC D 8 2500 330.0 12.4 6.4 5.2 2.1 8.0 12.0 Q1
+Pack Materials-Page 1
+
+--- Page 22 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 23-May-2025
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TLE2426CDR SOIC D 8 2500 350.0 350.0 43.0
+TLE2426IDR SOIC D 8 2500 350.0 350.0 43.0
+Pack Materials-Page 2
+
+--- Page 23 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 23-May-2025
+TUBE
+ 
+ 
+L - Tube length
+T - Tube  
+height
+W - Tube  
+width
+B - Alignment groove width
+ 
+ 
+*All dimensions are nominal
+Device Package Name Package Type Pins SPQ L (mm) W (mm) T (µm) B (mm)
+TLE2426CD D SOIC 8 75 505.46 6.76 3810 4
+TLE2426CD.A D SOIC 8 75 505.46 6.76 3810 4
+TLE2426CDG4 D SOIC 8 75 505.46 6.76 3810 4
+TLE2426CP P PDIP 8 50 506 13.97 11230 4.32
+TLE2426CP.A P PDIP 8 50 506 13.97 11230 4.32
+TLE2426ID D SOIC 8 75 505.46 6.76 3810 4
+TLE2426ID.A D SOIC 8 75 505.46 6.76 3810 4
+TLE2426IDG4 D SOIC 8 75 505.46 6.76 3810 4
+TLE2426IP P PDIP 8 50 506 13.97 11230 4.32
+TLE2426IP.A P PDIP 8 50 506 13.97 11230 4.32
+TLE2426IPE4 P PDIP 8 50 506 13.97 11230 4.32
+TLE2426MD D SOIC 8 75 505.46 6.76 3810 4
+TLE2426MD.A D SOIC 8 75 505.46 6.76 3810 4
+Pack Materials-Page 3
+
+--- Page 24 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+.228-.244  TYP
+[5.80-6.19]
+.069 MAX
+[1.75]     
+6X .050
+[1.27]
+8X .012-.020
+     [0.31-0.51]
+2X
+.150
+[3.81]
+.005-.010  TYP
+[0.13-0.25]
+0 - 8 .004-.010
+[0.11-0.25]
+.010
+[0.25].016-.050
+[0.41-1.27]
+4X (0 -15 )
+A
+.189-.197
+[4.81-5.00]
+NOTE 3
+B .150-.157
+[3.81-3.98]
+NOTE 4
+4X (0 -15 )
+(.041)
+[1.04]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: 
+ 
+1. Linear dimensions are in inches [millimeters]. Dimensions in parenthesis are for reference only. Controlling dimensions are in inches.
+    Dimensioning and tolerancing per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed .006 [0.15] per side. 
+4. This dimension does not include interlead flash.
+5. Reference JEDEC registration MS-012, variation AA.
+ 
+1 8
+.010 [0.25] C A B
+5
+4
+PIN 1 ID AREA
+SEATING PLANE
+.004 [0.1] C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  2.800
+
+--- Page 25 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+.0028 MAX
+[0.07]
+ALL AROUND
+.0028 MIN
+[0.07]
+ALL AROUND
+ 
+(.213)
+[5.4]
+6X (.050 )
+[1.27]
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METAL SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+EXPOSED
+METAL
+OPENING
+SOLDER MASK METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:8X
+SYMM
+1
+4 5
+8
+SEE
+DETAILS
+SYMM
+
+--- Page 26 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+6X (.050 )
+[1.27]
+(.213)
+[5.4]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON .005 INCH [0.125 MM] THICK STENCIL
+SCALE:8X
+SYMM
+SYMM
+1
+4 5
+8
+
+--- Page 27 ---
+www.ti.com
+PACKAGE OUTLINE
+3X 2.67
+2.03
+5.21
+4.44
+5.34
+4.32
+3X
+12.7 MIN
+2X 1.27 0.13
+3X 0.55
+0.38
+4.19
+3.17
+3.43 MIN
+3X 0.43
+0.35
+(2.54)
+NOTE 3
+2X 2.9
+2.4
+2X
+4 MAX
+SEATING
+PLANE
+6X
+0.076 MAX
+(0.51) TYP
+(1.5) TYP
+TO-92 -  5.34 mm max heightLP0003A
+TO-92
+4215214/C   04/2025
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. Lead dimensions are not controlled within this area.
+4. Reference JEDEC TO-226, variation AA.
+5. Shipping method:
+    a. Straight lead option available in bulk pack only.
+    b. Formed lead option available in tape and reel or ammo pack.
+    c. Specific products can be offered in limited combinations of shipping medium and lead options.
+    d. Consult product folder for more information on available options.
+EJECTOR PIN
+OPTIONAL
+PLANE
+SEATING
+STRAIGHT LEAD OPTION
+3 2 1
+SCALE  1.200
+FORMED LEAD OPTION
+OTHER DIMENSIONS IDENTICAL
+TO STRAIGHT LEAD OPTION
+SCALE  1.200
+
+--- Page 28 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+TYP
+(1.07)
+(1.5) 2X (1.5)
+2X (1.07)
+(1.27)
+(2.54)
+FULL R
+TYP
+( 1.4)0.05 MAX
+ALL AROUND
+TYP
+(2.6)
+(5.2)
+(R0.05) TYP
+3X ( 0.9) HOLE
+2X ( 1.4)
+METAL
+3X ( 0.85) HOLE
+(R0.05) TYP
+4215214/C   04/2025
+TO-92 -  5.34 mm max heightLP0003A
+TO-92
+LAND PATTERN EXAMPLE
+FORMED LEAD OPTION
+NON-SOLDER MASK DEFINED
+SCALE:15X
+SOLDER MASK
+OPENING
+METAL
+2X
+SOLDER MASK
+OPENING
+1 2 3
+LAND PATTERN EXAMPLE
+STRAIGHT LEAD OPTION
+NON-SOLDER MASK DEFINED
+SCALE:15X
+METAL
+TYP
+SOLDER MASK
+OPENING
+2X
+SOLDER MASK
+OPENING
+2X
+METAL
+1 2 3
+
+--- Page 29 ---
+www.ti.com
+TAPE SPECIFICATIONS
+19.0
+17.5
+13.7
+11.7
+11.0
+8.5
+0.5 MIN
+3.7-4.3 TYP
+9.75
+8.50
+2.9
+2.4 TYP
+6.75
+5.95
+13.0
+12.4
+(2.5) TYP
+16.5
+15.5
+32
+23
+4215214/C   04/2025
+TO-92 -  5.34 mm max heightLP0003A
+TO-92
+FOR FORMED LEAD OPTION PACKAGE
+
+--- Page 30 ---
+
+
+--- Page 31 ---
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

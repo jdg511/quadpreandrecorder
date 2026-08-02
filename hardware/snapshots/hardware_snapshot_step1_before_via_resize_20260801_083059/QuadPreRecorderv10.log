@@ -1,0 +1,717 @@
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(2): syntax error
+.save all
+      ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(3): Expected device instantiation or directive here.
+.probe alli
+^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(4): Expected device instantiation or directive here.
+.probe p(C1)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(5): Expected device instantiation or directive here.
+.probe p(R10)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(6): Expected device instantiation or directive here.
+.probe p(R6)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(7): Expected device instantiation or directive here.
+.probe p(R25)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(8): Expected device instantiation or directive here.
+.probe p(R23)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(9): Expected device instantiation or directive here.
+.probe p(R22)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(10): Expected device instantiation or directive here.
+.probe p(R17)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(11): Expected device instantiation or directive here.
+.probe p(R24)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(12): Expected device instantiation or directive here.
+.probe p(C20)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(13): Expected device instantiation or directive here.
+.probe p(R4)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(14): Expected device instantiation or directive here.
+.probe p(R5)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(15): Expected device instantiation or directive here.
+.probe p(C12)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(16): Expected device instantiation or directive here.
+.probe p(C2)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(17): Expected device instantiation or directive here.
+.probe p(C3)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(18): Expected device instantiation or directive here.
+.probe p(L1)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(19): Expected device instantiation or directive here.
+.probe p(R18)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(20): Expected device instantiation or directive here.
+.probe p(R19)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(21): Expected device instantiation or directive here.
+.probe p(R14)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(22): Expected device instantiation or directive here.
+.probe p(C13)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(23): Expected device instantiation or directive here.
+.probe p(C17)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(24): Expected device instantiation or directive here.
+.probe p(R20)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(25): Expected device instantiation or directive here.
+.probe p(R21)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(26): Expected device instantiation or directive here.
+.probe p(C18)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(27): Expected device instantiation or directive here.
+.probe p(R15)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(28): Expected device instantiation or directive here.
+.probe p(C14)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(29): Expected device instantiation or directive here.
+.probe p(C15)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(30): Expected device instantiation or directive here.
+.probe p(R16)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(31): Expected device instantiation or directive here.
+.probe p(C19)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(32): Expected device instantiation or directive here.
+.probe p(R7)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(33): Expected device instantiation or directive here.
+.probe p(R11)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(34): Expected device instantiation or directive here.
+.probe p(R12)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(35): Expected device instantiation or directive here.
+.probe p(R8)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(36): Expected device instantiation or directive here.
+.probe p(R9)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(37): Expected device instantiation or directive here.
+.probe p(C16)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(38): Expected device instantiation or directive here.
+.probe p(R13)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(39): Expected device instantiation or directive here.
+.probe p(R53)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(40): Expected device instantiation or directive here.
+.probe p(R54)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(41): Expected device instantiation or directive here.
+.probe p(R56)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(42): Expected device instantiation or directive here.
+.probe p(C50)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(43): Expected device instantiation or directive here.
+.probe p(C56)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(44): Expected device instantiation or directive here.
+.probe p(C64)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(45): Expected device instantiation or directive here.
+.probe p(C54)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(46): Expected device instantiation or directive here.
+.probe p(C55)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(47): Expected device instantiation or directive here.
+.probe p(R55)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(48): Expected device instantiation or directive here.
+.probe p(C52)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(49): Expected device instantiation or directive here.
+.probe p(C51)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(50): Expected device instantiation or directive here.
+.probe p(C48)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(51): Expected device instantiation or directive here.
+.probe p(R51)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(52): Expected device instantiation or directive here.
+.probe p(R52)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(53): Expected device instantiation or directive here.
+.probe p(C49)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(54): Expected device instantiation or directive here.
+.probe p(C53)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(55): Expected device instantiation or directive here.
+.probe p(R50)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(56): Expected device instantiation or directive here.
+.probe p(C47)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(57): Expected device instantiation or directive here.
+.probe p(R58)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(58): Expected device instantiation or directive here.
+.probe p(R59)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(59): Expected device instantiation or directive here.
+.probe p(R60)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(60): Expected device instantiation or directive here.
+.probe p(R61)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(61): Expected device instantiation or directive here.
+.probe p(R57)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(62): Expected device instantiation or directive here.
+.probe p(R62)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(63): Expected device instantiation or directive here.
+.probe p(R63)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(64): Expected device instantiation or directive here.
+.probe p(C57)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(65): Expected device instantiation or directive here.
+.probe p(C58)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(66): Expected device instantiation or directive here.
+.probe p(C59)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(67): Expected device instantiation or directive here.
+.probe p(C60)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(68): Expected device instantiation or directive here.
+.probe p(C61)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(69): Expected device instantiation or directive here.
+.probe p(C65)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(70): Expected device instantiation or directive here.
+.probe p(R66)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(71): Expected device instantiation or directive here.
+.probe p(R64)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(72): Expected device instantiation or directive here.
+.probe p(R65)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(73): Expected device instantiation or directive here.
+.probe p(R2)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(74): Expected device instantiation or directive here.
+.probe p(R1)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(75): Expected device instantiation or directive here.
+.probe p(C7)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(76): Expected device instantiation or directive here.
+.probe p(C8)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(77): Expected device instantiation or directive here.
+.probe p(C4)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(78): Expected device instantiation or directive here.
+.probe p(C5)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(79): Expected device instantiation or directive here.
+.probe p(C6)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(80): Expected device instantiation or directive here.
+.probe p(R3)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(81): Expected device instantiation or directive here.
+.probe p(C34)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(82): Expected device instantiation or directive here.
+.probe p(R26)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(83): Expected device instantiation or directive here.
+.probe p(R30)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(84): Expected device instantiation or directive here.
+.probe p(R29)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(85): Expected device instantiation or directive here.
+.probe p(R33)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(86): Expected device instantiation or directive here.
+.probe p(C22)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(87): Expected device instantiation or directive here.
+.probe p(R28)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(88): Expected device instantiation or directive here.
+.probe p(R32)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(89): Expected device instantiation or directive here.
+.probe p(C35)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(90): Expected device instantiation or directive here.
+.probe p(R27)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(91): Expected device instantiation or directive here.
+.probe p(R31)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(92): Expected device instantiation or directive here.
+.probe p(C23)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(93): Expected device instantiation or directive here.
+.probe p(C27)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(94): Expected device instantiation or directive here.
+.probe p(R36)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(95): Expected device instantiation or directive here.
+.probe p(C36)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(96): Expected device instantiation or directive here.
+.probe p(C24)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(97): Expected device instantiation or directive here.
+.probe p(C28)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(98): Expected device instantiation or directive here.
+.probe p(R37)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(99): Expected device instantiation or directive here.
+.probe p(C37)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(100): Expected device instantiation or directive here.
+.probe p(C21)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(101): Expected device instantiation or directive here.
+.probe p(R42)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(102): Expected device instantiation or directive here.
+.probe p(C25)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(103): Expected device instantiation or directive here.
+.probe p(R34)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(104): Expected device instantiation or directive here.
+.probe p(C26)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(105): Expected device instantiation or directive here.
+.probe p(R35)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(106): Expected device instantiation or directive here.
+.probe p(C33)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(107): Expected device instantiation or directive here.
+.probe p(R43)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(108): Expected device instantiation or directive here.
+.probe p(C32)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(109): Expected device instantiation or directive here.
+.probe p(R41)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(110): Expected device instantiation or directive here.
+.probe p(C46)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(111): Expected device instantiation or directive here.
+.probe p(R46)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(112): Expected device instantiation or directive here.
+.probe p(R45)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(113): Expected device instantiation or directive here.
+.probe p(R47)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(114): Expected device instantiation or directive here.
+.probe p(R44)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(115): Expected device instantiation or directive here.
+.probe p(C31)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(116): Expected device instantiation or directive here.
+.probe p(R40)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(117): Expected device instantiation or directive here.
+.probe p(C30)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(118): Expected device instantiation or directive here.
+.probe p(R39)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(119): Expected device instantiation or directive here.
+.probe p(R48)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(120): Expected device instantiation or directive here.
+.probe p(R49)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(121): Expected device instantiation or directive here.
+.probe p(C10)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(122): Expected device instantiation or directive here.
+.probe p(C9)
+^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(123): Expected device instantiation or directive here.
+.probe p(C11)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(124): Expected device instantiation or directive here.
+.probe p(C29)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(125): Expected device instantiation or directive here.
+.probe p(R38)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(126): Expected device instantiation or directive here.
+.probe p(C38)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(127): Expected device instantiation or directive here.
+.probe p(C39)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(128): Expected device instantiation or directive here.
+.probe p(C40)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(129): Expected device instantiation or directive here.
+.probe p(C41)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(130): Expected device instantiation or directive here.
+.probe p(C45)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(131): Expected device instantiation or directive here.
+.probe p(C44)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(132): Expected device instantiation or directive here.
+.probe p(C42)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(133): Expected device instantiation or directive here.
+.probe p(C43)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(134): Expected device instantiation or directive here.
+.probe p(C62)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(135): Expected device instantiation or directive here.
+.probe p(C63)
+^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(136): Expected node name here.
+D1 __D1
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(136): Expected device instantiation or directive here.
+D1 __D1
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(137): Unknown parameter
+C1 /+9V GND 100uF 16V
+                  ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(138): Expected nodes here.
+J1 __J1
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(139): Expected node name here.
+F1 __F1
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(139): Expected device instantiation or directive here.
+F1 __F1
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(140): Expected node name here.
+D2 __D2
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(140): Expected device instantiation or directive here.
+D2 __D2
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(141): Expected nodes here.
+J2 __J2
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(142): Unknown parameter
+R10 /FLU_RAW /FLU_MIC 100R RF
+                           ^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(143): Unknown parameter
+R6 /+9V /FLU_MIC 4.7k ELECTRET BIAS
+                      ^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(144): Unknown parameter
+R25 /BRU_ATT /VREF 33k 0.1%
+                       ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(145): Unknown parameter
+R23 /BLD_ATT /VREF 33k 0.1%
+                       ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(146): Unknown parameter
+R22 /BLD_AC /BLD_ATT 68k 0.1%
+                         ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(148): Unknown parameter
+R24 /BRU_AC /BRU_ATT 68k 0.1%
+                         ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(149): Unknown parameter
+C20 /BRU_MIC /BRU_AC 4.7uF 16V
+                           ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(150): Expected node name here.
+D9 __D9
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(150): Expected device instantiation or directive here.
+D9 __D9
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(152): Expected node name here.
+D6 __D6
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(152): Expected device instantiation or directive here.
+D6 __D6
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(153): Unknown parameter
+R5 /CHASSIS GND 0R CHASSIS LINK
+                   ^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(153): Unknown parameter
+R5 /CHASSIS GND 0R CHASSIS LINK
+                           ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(154): Unknown parameter
+C12 /CHASSIS GND 1nF 1kV C0G
+                     ^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(155): Expected node name here.
+D7 __D7
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(155): Expected device instantiation or directive here.
+D7 __D7
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(156): Expected node name here.
+D8 __D8
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(156): Expected device instantiation or directive here.
+D8 __D8
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(157): Unknown parameter
+C2 /+9V GND 100nF 25V
+                  ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(158): Unknown parameter
+C3 /+9V GND 10uF 25V
+                 ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(159): Expected nodes here.
+U1 __U1
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(160): Unknown parameter
+L1 /BUCK_SW /+5V 2.2uH 1.5A
+                       ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(161): Unknown parameter
+R18 /FLU_AC /FLU_ATT 68k 0.1%
+                         ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(162): Unknown parameter
+R19 /FLU_ATT /VREF 33k 0.1%
+                       ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(164): Unknown parameter
+C13 /FLU_MIC /CHASSIS 100pF C0G
+                            ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(165): Unknown parameter
+C17 /FLU_MIC /FLU_AC 4.7uF 16V
+                           ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(166): Unknown parameter
+R20 /FRD_AC /FRD_ATT 68k 0.1%
+                         ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(167): Unknown parameter
+R21 /FRD_ATT /VREF 33k 0.1%
+                       ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(168): Unknown parameter
+C18 /FRD_MIC /FRD_AC 4.7uF 16V
+                           ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(170): Unknown parameter
+C14 /FRD_MIC /CHASSIS 100pF C0G
+                            ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(171): Unknown parameter
+C15 /BLD_MIC /CHASSIS 100pF C0G
+                            ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(173): Unknown parameter
+C19 /BLD_MIC /BLD_AC 4.7uF 16V
+                           ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(174): Unknown parameter
+R7 /+9V /FRD_MIC 4.7k ELECTRET BIAS
+                      ^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(175): Unknown parameter
+R11 /FRD_RAW /FRD_MIC 100R RF
+                           ^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(176): Unknown parameter
+R12 /BLD_RAW /BLD_MIC 100R RF
+                           ^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(177): Unknown parameter
+R8 /+9V /BLD_MIC 4.7k ELECTRET BIAS
+                      ^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(178): Unknown parameter
+R9 /+9V /BRU_MIC 4.7k ELECTRET BIAS
+                      ^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(179): Unknown parameter
+C16 /BRU_MIC /CHASSIS 100pF C0G
+                            ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(180): Unknown parameter
+R13 /BRU_RAW /BRU_MIC 100R RF
+                           ^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(183): Unknown parameter
+R56 /+5V /TFT_LED 100R TFT BACKLIGHT
+                       ^^^^^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(185): Expected node name here.
+D4 __D4
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(185): Expected device instantiation or directive here.
+D4 __D4
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(186): Expected node name here.
+D5 __D5
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(186): Expected device instantiation or directive here.
+D5 __D5
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(194): Expected node name here.
+SW3 __SW3
+         ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(194): Expected device instantiation or directive here.
+SW3 __SW3
+^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(202): Expected nodes here.
+U9 __U9
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(205): Expected nodes here.
+J4 __J4
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(211): Expected node name here.
+RV1 __RV1
+         ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(211): Expected device instantiation or directive here.
+RV1 __RV1
+^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(212): Unknown parameter
+C57 /HP_VOL_L /HP_IN_L 680nF X7R
+                               ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(213): Unknown parameter
+C58 /HP_VOL_R /HP_IN_R 680nF X7R
+                               ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(214): Expected nodes here.
+U10 __U10
+    ^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(220): Expected nodes here.
+J5 __J5
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(225): Unknown parameter
+C7 /+5V GND 1uF 10V
+                ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(226): Unknown parameter
+C8 /+3V3_A GND 4.7uF 10V
+                     ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(227): Unknown parameter
+C4 /+5V /BUCK_FB 22pF C0G
+                      ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(228): Unknown parameter
+C5 /+5V GND 22uF 10V
+                 ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(229): Unknown parameter
+C6 /+5V GND 22uF 10V
+                 ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(231): Expected nodes here.
+U2 __U2
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(232): Expected nodes here.
+U6 __U6
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(234): Unknown parameter
+R26 /FLU_FB /VREF 10k 0.1%
+                      ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(235): Expected nodes here.
+U4 __U4
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(236): Expected node name here.
+SW1 __SW1
+         ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(236): Expected device instantiation or directive here.
+SW1 __SW1
+^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(237): Unknown parameter
+R30 /FLU_PRE /FLU_FB 90.9k 0.1%
+                           ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(238): Unknown parameter
+R29 /BRU_FB /VREF 10k 0.1%
+                      ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(239): Unknown parameter
+R33 /BRU_PRE /BRU_FB 90.9k 0.1%
+                           ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(240): Unknown parameter
+C22 /FRD_PRE /FRD_FB 22pF C0G
+                          ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(241): Unknown parameter
+R28 /BLD_FB /VREF 10k 0.1%
+                      ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(242): Unknown parameter
+R32 /BLD_PRE /BLD_FB 90.9k 0.1%
+                           ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(244): Expected nodes here.
+U5 __U5
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(245): Unknown parameter
+R27 /FRD_FB /VREF 10k 0.1%
+                      ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(246): Unknown parameter
+R31 /FRD_PRE /FRD_FB 90.9k 0.1%
+                           ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(247): Unknown parameter
+C23 /BLD_PRE /BLD_FB 22pF C0G
+                          ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(248): Unknown parameter
+C27 /BLD_PRE /BLD_ADC_SRC 4.7uF 16V
+                                ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(251): Unknown parameter
+C24 /BRU_PRE /BRU_FB 22pF C0G
+                          ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(252): Unknown parameter
+C28 /BRU_PRE /BRU_ADC_SRC 4.7uF 16V
+                                ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(254): Unknown parameter
+C37 /+9V GND 10uF 16V
+                  ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(255): Unknown parameter
+C21 /FLU_PRE /FLU_FB 22pF C0G
+                          ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(257): Unknown parameter
+C25 /FLU_PRE /FLU_ADC_SRC 4.7uF 16V
+                                ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(259): Unknown parameter
+C26 /FRD_PRE /FRD_ADC_SRC 4.7uF 16V
+                                ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(263): Unknown parameter
+C32 /BRU_ADC GND 10nF C0G
+                      ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(265): Expected node name here.
+SW2 __SW2
+         ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(265): Expected device instantiation or directive here.
+SW2 __SW2
+^^^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(266): Expected node name here.
+D3 __D3
+       ^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(266): Expected device instantiation or directive here.
+D3 __D3
+^^^^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(272): Unknown parameter
+C31 /BLD_ADC GND 10nF C0G
+                      ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(274): Expected nodes here.
+U8 __U8
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(275): Expected nodes here.
+J3 __J3
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(276): Unknown parameter
+C30 /FRD_ADC GND 10nF C0G
+                      ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(280): Expected nodes here.
+U7 __U7
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(281): Expected nodes here.
+U3 __U3
+   ^^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(282): Unknown parameter
+C10 /VREF GND 47uF 10V
+                   ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(283): Unknown parameter
+C9 /VREF_NR GND 1uF 10V
+                    ^^^
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorderv10.cir(285): Unknown parameter
+C29 /FLU_ADC GND 10nF C0G
+                      ^^^

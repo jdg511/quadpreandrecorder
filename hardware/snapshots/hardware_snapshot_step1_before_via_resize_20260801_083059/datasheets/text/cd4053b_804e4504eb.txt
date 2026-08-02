@@ -1,0 +1,2470 @@
+--- Page 1 ---
+CD405xB CMOS Single 8-Channel Analog Multiplexer or Demultiplexer
+With Logic-Level Conversion
+1 Features
+• Wide range of digital and analog signal levels:
+– Digital: 3V to 20V
+– Analog: ≤ 20VP-P
+• Single supply range : 3V to 20V (performance 
+degrades for VDD < 3V)
+• Dual Supply range: ± 3V to ± 10V
+• Low ON resistance, 125Ω (typical) over input 
+range for VDD = 15V
+• Low channel leakage of ±10pA (typical) at VDD = 
+15V
+• Low quiescent power dissipation : 0.2µW (typical)
+• Bidirectional signal path
+• ESD protection HBM: 3000V, CDM: 2000V
+• Pin compatible with industry standard 4051
+2 Applications
+• Analog and digital multiplexing and demultiplexing
+• Analog to digital and digital to analog conversion
+• Signal gating
+• Factory automation
+• Televisions
+• Appliances
+• Consumer audio
+• Programmable logic circuits
+• Sensors
+3 Description
+The CD405xB analog multiplexers and demultiplexers 
+are digitally-controlled analog switches having low ON 
+impedance and very low OFF leakage current. These 
+multiplexer circuits dissipate extremely low quiescent 
+power over the full V DD – V SS and V DD – V EE supply-
+voltage ranges, independent of the logic state of the 
+control signals.
+Package Information
+PART NUMBER PACKAGE (1) PACKAGE SIZE(2)
+CD405xB
+J (CDIP, 16) 19.50mm × 6.92mm
+N (PDIP, 16) 19.3mm × 9.4mm
+D (SOIC, 16) 9.9mm × 3.9mm
+NS (SOP, 16) 10.2mm × 7.8mm
+PW (TSSOP, 16) 5mm × 6.4mm
+(1) For all available packages, see the orderable addendum at 
+the end of the data sheet.
+(2) The package size (length × width) is a nominal value and 
+includes pins, where applicable.
+INH
+C B A
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+Ch 0
+Ch 1
+Ch 2
+Ch 3
+Ch 4
+Ch 5
+Ch 6
+Ch 7
+C B A
+COM
+ax
+ay
+bx
+by
+cx
+cy
+ax OR ay
+bx OR by
+cx OR cy
+A
+B
+C
+A
+B
+C
+INHINH
+X COM
+Y COM
+B A
+0 0
+0 1
+1 0
+1 1
+Ch X0
+Ch Y0
+Ch X1
+Ch Y1
+Ch X2
+Ch Y2
+Ch X3
+Ch Y3
+AB
+CD4051B
+CD4052B CD4053B
+Functional Diagrams of CD4051B
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+--- Page 2 ---
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................3
+5 Specifications.................................................................. 5
+5.1 Absolute Maximum Ratings........................................ 5
+5.2 ESD Ratings............................................................... 5
+5.3 Recommended Operating Conditions.........................5
+5.4 Thermal Information....................................................5
+5.5 Electrical Characteristics.............................................6
+5.6 AC Performance Characteristics.................................9
+5.7 Typical Characteristics..............................................10
+6 Parameter Measurement Information..........................10
+7 Detailed Description......................................................14
+7.1 Overview...................................................................14
+7.2 Functional Block Diagrams....................................... 15
+7.3 Feature Description...................................................16
+7.4 Device Functional Modes..........................................17
+8 Application and Implementation..................................18
+8.1 Application Information............................................. 18
+8.2 Typical Application.................................................... 18
+8.3 Power Supply Recommendations.............................19
+8.4 Layout....................................................................... 20
+9 Device and Documentation Support............................21
+9.1 Documentation Support............................................ 21
+9.2 Receiving Notification of Documentation Updates....21
+9.3 Support Resources................................................... 21
+9.4 Trademarks...............................................................21
+9.5 Electrostatic Discharge Caution................................21
+9.6 Glossary....................................................................21
+10 Revision History.......................................................... 22
+11 Mechanical, Packaging, and Orderable 
+Information.................................................................... 22
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+2 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 3 ---
+4 Pin Configuration and Functions
+14
+15
+16
+9
+13
+12
+11
+10
+1
+2
+3
+4
+5
+7
+6
+8
+4
+6
+COM OUT/IN
+7
+5
+INH
+V
+V
+V
+1
+SS
+EE
+DD
+0
+3
+A
+B
+C
+2
+CHANNELS IN/OUT
+CHANNELS
+IN/OUT
+CHANNELS
+IN/OUT
+Figure 4-1. CD4051B E, M, NS, and PW Package, 
+16-Pin PDIP, CDIP, SOIC, SOP, and TSSOP (Top 
+View) 
+14
+15
+16
+9
+13
+12
+11
+10
+1
+2
+3
+4
+5
+7
+6
+8
+0
+2
+COMMON “Y” OUT/IN
+3
+1
+INH
+V
+V
+V
+1
+SS
+EE
+DD
+COMMON “X” OUT/IN
+0
+3
+A
+B
+2
+Y CHANNELS
+IN/OUT
+Y CHANNELS
+IN/OUT
+X CHANNELS
+IN/OUT
+X CHANNELS
+IN/OUT
+Figure 4-2. CD4052B E, M, NS, and PW Package, 
+16-Pin PDIP, CDIP, SOIC, SOP, and TSSOP (Top 
+View) 
+14
+15
+16
+9
+13
+12
+11
+10
+1
+2
+3
+4
+5
+7
+6
+8
+by
+bx
+cy
+OUT/IN CX OR CY
+IN/OUT CX
+INH
+V
+V
+V
+OUT/IN ax OR ay
+SS
+EE
+DD
+ay
+ax
+A
+B
+C
+OUT/IN bx OR by
+IN/OUT
+Figure 4-3. CD4053B E, M, NS, and PW Package, 16-Pin PDIP, CDIP, SOIC, SOP, and TSSOP (Top View) 
+Table 4-1. Pin Functions CD4051B
+PIN
+TYPE(1) DESCRIPTION
+NO. NAME
+1 CH 4 IN/OUT I/O Channel 4 in/out
+2 CH 6 IN/OUT I/O Channel 6 in/out
+3 COM OUT/IN I/O Common out/in
+4 CH 7 IN/OUT I/O Channel 7 in/out
+5 CH 5 IN/OUT I/O Channel 5 in/out
+6 INH I Disables all channels. See Table 7-1.
+7 VEE — Negative power input
+8 VSS — Ground
+9 C I Channel select C. See Table 7-1.
+10 B I Channel select B. See Table 7-1.
+11 A I Channel select A. See Table 7-1.
+12 CH 3 IN/OUT I/O Channel 3 in/out
+13 CH 0 IN/OUT I/O Channel 0 in/out
+14 CH 1 IN/OUT I/O Channel 1 in/out
+15 CH 2 IN/OUT I/O Channel 2 in/out
+16 VDD — Positive power input
+(1) I = input, O = output
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 4 ---
+Table 4-2. Pin Functions CD4052B
+PIN
+TYPE(1) DESCRIPTION
+NO. NAME
+1 Y CH 0 IN/OUT I/O Channel Y0 in/out
+2 Y CH 2 IN/OUT I/O Channel Y2 in/out
+3 Y COM OUT/IN I/O Y common out/in
+4 Y CH 3 IN/OUT I/O Channel Y3 in/out
+5 Y CH 1 IN/OUT I/O Channel Y1 in/out
+6 INH I Disables all channels. See Table 7-1.
+7 VEE — Negative power input
+8 VSS — Ground
+9 B I Channel select B. See Table 7-1.
+10 A I Channel select A. See Table 7-1.
+11 X CH 3 IN/OUT I/O Channel X3 in/out
+12 X CH 0 IN/OUT I/O Channel X0 in/out
+13 X COM IN/OUT I/O X common out/in
+14 X CH 1 IN/OUT I/O Channel in/out
+15 X CH 2 IN/OUT I/O Channel in/out
+16 VDD — Positive power input
+(1) I = input, O = output
+Table 4-3. Pin Functions CD4053B
+PIN
+TYPE(1) DESCRIPTION
+NO. NAME
+1 BY IN/OUT I/O B channel Y in/out
+2 BX IN/OUT I/O B channel X in/out
+3 CY IN/OUT I/O C channel Y in/out
+4 CX OR CY 
+OUT/IN I/O C common out/in
+5 CX IN/OUT I/O C channel X in/out
+6 INH I Disables all channels. See Table 7-1.
+7 VEE — Negative power input
+8 VSS — Ground
+9 C I Channel select C. See Table 7-1.
+10 B I Channel select B. See Table 7-1.
+11 A I Channel select A. See Table 7-1.
+12 AX IN/OUT I/O A channel X in/out
+13 AY IN/OUT I/O A channel Y in/out
+14 AX OR AY OUT/IN I/O A common out/in
+15 BX OR BY OUT/IN I/O B common out/in
+16 VDD — Positive power input
+(1) I = input, O = output
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+4 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 5 ---
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1) (2)
+MIN MAX UNIT
+Supply Voltage V+ to V-, Voltages Referenced to 
+VSS Terminal –0.5 20 V
+DC Input Voltage –0.5 VDD+0.5 V
+DC Input Current Any One Input –10 10 mA
+TJMAX1 Maximum junction temperature, ceramic package 175 °C
+TJMAX2 Maximum junction temperature, plastic package 150 °C
+Tstg Storage temperature –65 150 °C
+(1) Stresses beyond those listed under Absolute Maximum Rating may cause permanent damage to the device. These are stress 
+ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated 
+under Recommended Operating Condition. Exposure to absolute-maximum-rated conditions for extended periods may affect device 
+reliability.
+(2) All voltages are with respect to ground, unless otherwise specified.
+5.2 ESD Ratings
+VALUE UNIT
+V(ESD) Electrostatic discharge
+Human body model (HBM), per ANSI/ESDA/
+JEDEC JS-001, all pins(1) ±3000
+V
+Charged device model (CDM), per JEDEC 
+specification JESD22-C101, all pins(2) ±2000
+(1) JEDEC document JEP155 states that 500V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250V CDM allows safe manufacturing with a standard ESD control process.
+5.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN NOM MAX UNIT
+Temperature Range –55 125 °C
+5.4 Thermal Information
+THERMAL METRIC(1)
+CD405x
+UNITE (PDIP) M (SOIC) NS (SOP) PW (TSSOP)
+16 PINS 16 PINS 16 PINS 16 PINS
+RθJA Junction-to-ambient thermal resistance 67 73 64 116.5 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+note.
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 6 ---
+5.5 Electrical Characteristics
+Over operating free-air temperature range, VSUPPLY = ±5V, and RL = 100Ω, (unless otherwise noted)(1) 
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+SIGNAL INPUTS (VIS) AND OUTPUTS (VOS)
+VIS (V) VEE (V) VSS (V) VDD (V) TEMP
+Quiescent Device Current, IDD Max
+ 
+0V 0V 5V
+–55°C 60
+µA
+–40°C 60
+25°C 17 60
+85°C 150
+125°C 150
+0V 0V 10V
+–55°C 60
+–40°C 60
+25°C 18 60
+85°C 300
+125°C 300
+0V 0V 15V 
+–55°C 60
+–40°C 60
+25°C 18 60
+85°C 600
+125°C 600
+0V 0V 20V
+–55°C 100
+–40°C 100
+25°C 18 100
+85°C 3000
+125°C 3000
+Drain to Source ON Resistance rON 
+Max
+0 ≤ VIS ≤ VDD
+0V 0V 5V
+–55°C 800
+Ω
+–40°C 850
+25°C 470 1050
+85°C 1200
+125°C 1300
+0V 0V 10V
+–55°C 310
+–40°C 300
+25°C 180 400
+85°C 520
+125°C 550
+0V 0 15V
+–55°C 200
+–40°C 210
+25°C 125 240
+85°C 300
+125°C 300
+Change in ON Resistance
+(Between Any Two Channels),
+ΔRON
+0V 0V 5V
+25°C
+15
+Ω0V 0V 10V 10
+0V 0V 15V 5
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+6 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 7 ---
+5.5 Electrical Characteristics (continued)
+Over operating free-air temperature range, VSUPPLY = ±5V, and RL = 100Ω, (unless otherwise noted)(1) 
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+OFF Channel Leakage Current: Any 
+Channel OFF (Max)
+or ALL Channels OFF (COMMON 
+OUT/IN) (Max)
+0V 0V 18V 
+–55°C ± 100
+nA
+–40°C ± 100
+25°C ± 0.3
+± 
+100
+(2)
+85°C
+± 
+1000
+(2)
+125°C
+± 
+1000
+(2)
+ON Channel Leakage Current: Any 
+Channel ON (Max) or
+ALL Channels ON (COMMON OUT/IN) 
+(Max)
+5 or 0 –5V 0V 10.5V 85°C ± 300
+nA
+5 0V 0V 18V 85°C ± 300
+Capaci
+tance
+Input, CIS
+0V 0V 10V 25°C
+5
+pF
+Output, COS
+CD4
+051 30
+Output, COS
+CD4
+052 18
+Output, COS
+CD4
+053 9
+Feed through, CIOS 0.2
+Prop Delay VDD
+RL = 200kΩ 5V
+25°C
+30 60
+nsCL = 50pF 10V 15 30
+tr, tf = 20ns 15V 10 20
+CONTROL (ADDRESS OR INHIBIT), VC 
+Input Low Voltage, VIL, Max
+5V
+–55°C 0.8
+V
+–40°C 0.8
+25°C 0.8
+85°C 0.8
+125°C 0.8
+10V
+–55°C 0.8
+–40°C 0.8
+25°C 0.8
+85°C 0.8
+125°C 0.8
+15V
+–55°C 0.8
+–40°C 0.8
+25°C 0.8
+85°C 0.8
+125°C 0.8
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 8 ---
+5.5 Electrical Characteristics (continued)
+Over operating free-air temperature range, VSUPPLY = ±5V, and RL = 100Ω, (unless otherwise noted)(1) 
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Input High Voltage, VIH, Min
+5V
+–55°C 3.5
+V
+–40°C 3.5
+25°C 3.5
+85°C 3.5
+125°C 3.5
+10V
+–55°C 7
+–40°C 7
+25°C 7
+85°C 7
+125°C 7
+15V
+–55°C 11
+–40°C 11
+25°C 11
+85°C 11
+125°C 11
+Input current, IIN (Max) VIN = 0, 18 18V
+–55°C ±1
+µA
+–40°C ±1
+25°C ±0.6 ±1
+85°C ±1
+125°C ±1
+Propa
+gation 
+Delay 
+Time
+Address-to-Signal OUT 
+(Channels ON or OFF) (See 
+Figure 10, Figure 11, and 
+Figure 15)
+tr , tf = 20ns,
+CL = 50pF,
+RL = 10kΩ
+0V 0V 5V 450 720
+ns
+0V 0V 10V 160 320
+0V 0V 15V 120 240
+–5V 0V 5V 225 450
+Propa
+gation 
+Delay 
+Time
+Inhibit-to-Signal OUT (Channel 
+Turning ON) (See Figure 11)
+tr , tf = 20ns,
+CL = 50pF,
+RL = 1kΩ
+0V 0V 5V 400 720
+ns
+0V 0V 10V 160 320
+0V 0V 15V 120 240
+–10V 0V 5V 200 400
+Propa
+gation 
+Delay 
+Time
+Inhibit-to-Signal OUT (Channel 
+Turning OFF) (See Figure 17)
+tr , tf = 20ns,
+CL = 50pF,
+RL = 10kΩ
+0V 0V 5V 200 450
+ns
+0V 0V 10V 90 210
+0V 0V 15V 70 160
+–10V 0V 5V 130 300
+Input Capacitance, CIN (Any Address or Inhibit Input) –5V 0V 5V 25°C 5 7.5 pF
+(1) Peak-to-Peak voltage symmetrical about (VDD – VEE) / 2.
+(2) Determined by minimum feasible leakage measurement for automatic testing.
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+8 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 9 ---
+5.6 AC Performance Characteristics
+VDD = +15V, VSS = VEE = 0V, TA = 25℃  (unless otherwise noted)
+PARAMETER TEST CONDITIONS TYP UNIT
+VIS (V) VDD (V) RL (kΩ)
+Cutoff (–3dB)
+Frequency Channel
+ON (Sine Wave
+Input)
+5(1)
+10 1
+VOS at Common OUT/IN
+CD4053 30
+MHz
+10 1 CD4052 25
+10 1 CD4051 20
+VEE = VSS ,
+20Log(VOS/VIS) = –3dB VOS at Any Channel 60
+Total Harmonic 
+Distortion, THD
+2(1) 5 10 0.3%
+%
+3(1) 10 10 0.2%
+5(1) 15 10 0.12%
+VEE = VSS, fIS = 1kHz Sine Wave
+–40dB Feedthrough
+Frequency
+(All Channels OFF)
+5(1) 10 1
+VOS at Common OUT/IN
+CD4053 8
+MHz
+VEE = VSS ,
+20Log(VOS/VIS) = –40dB
+CD4052 10
+CD4051 12
+VOS at Any Channel 8
+–40dB Signal
+Crosstalk
+Frequency
+5(1) 10 1 3
+MHzVEE = VSS ,
+20Log(VOS/VIS) = –3dB
+Between Sections,
+CD4052 Only
+Measured 
+on Common 6
+Measured 
+on Any 
+Channel
+10
+Between Any Two
+Sections, CD4053 Only
+In Pin 2, Out 
+Pin 14 2.5
+In Pin 15, 
+Out Pin 14 6
+Address-or-Inhibit-to-
+Signal
+Crosstalk
+10 10(2) 65 mVPEAK
+VEE = 0, VSS = 0, tr , tf = 20ns, mVPEAK
+VCC = VDD – VSS (Square Wave) 65 mVPEAK
+(1) Peak-to-Peak voltage symmetrical about (VDD - VEE) / 2.
+(2) Both ends of channel.
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 10 ---
+5.7 Typical Characteristics
+T = 25 CA o
+ALTERNATING “O”
+C = 50pFL
+AND “I” PATTERN
+10101010 543
+V = 15VDD
+V = 5VDD
+C = 15pFL
+10
+10
+10 2
+2
+10
+10
+10
+SWITCHING FREQUENCY (kHz)
+3
+4
+5
+PD, POWER DISSIPATION PACKAGE ( W)
+µ
+1
+TEST CIRCUIT
+V
+3
+DD
+5
+10 11
+678
+14
+15
+1
+2
+13
+12
+4 C
+CD4051
+L
+f
+100Ω
+100Ω
+B/D
+CD4029
+VDD
+A B C
+9
+Ι
+V = 10VDD
+Figure 5-1. Dynamic Power Dissipation vs Switching Frequency 
+(CD4051B)
+105101010 4310
+10
+10 2
+2
+10
+10
+10
+SWITCHING FREQUENCY (kHz)
+3
+4
+5
+PD, POWER DISSIPATION PACKAGE (
+µW)
+1
+V = 15VDD
+V = 5VDD
+T = 25 CA o
+ALTERNATING “O”
+C = 50pFL
+AND “I” PATTERN
+V
+3
+DD
+5
+10
+116
+7
+8
+14
+15
+1
+2
+13
+12
+4
+C
+CD4052
+L
+f
+100Ω
+100
+Ω
+B/D
+CD4029
+VDD
+A B
+9
+Ι
+TEST CIRCUIT
+V = 10VDD
+C = 15pFL
+Figure 5-2. Dynamic Power Dissipation vs Switching Frequency 
+(CD4052B)
+105101010 43
+V = 15VDD
+V = 10VDD
+V = 5VDD
+T = 25 CA o
+ALTERNATING “O”
+C = 50pFL
+AND “I” PATTERN
+C = 15pFL
+10
+10
+10
+2
+2
+10
+10
+10
+SWITCHING FREQUENCY (kHz)
+3
+4
+5
+PD, POWER DISSIPATION PACKAGE (
+µW)
+Ι
+TEST CIRCUITVDD
+9
+3
+5
+10
+11
+6
+7
+8
+14
+15
+1
+2
+13
+12
+4 C
+CD4053
+L
+f
+100Ω
+100Ω
+1
+Figure 5-3. Dynamic Power Dissipation vs Switching Frequency (CD4053B)
+6 Parameter Measurement Information
+V = 5VDD
+V = 0VSS
+V = -7.5VEE
+7
+8
+(B) (C) (D)(A)
+V = 7.5VDD
+7.5V
+1616 1616
+7
+8
+7
+8
+V = 5VDDV = 15VDD
+V = 0VSS
+V = 0VEE
+7
+8
+5V
+EEV = -10V
+V = 0VSS V = 0VSS
+5V
+EEV = -5V
+Figure 6-1. Typical Bias Voltages
+Note
+The ADDRESS (digital-control inputs) and INHIBIT logic levels are: 0 = V SS and 1 = V DD. The analog 
+signal (through the TG) may swing from VEE to VDD.
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+10 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 11 ---
+t = 20nsf
+10%
+10%
+90%
+50%
+10%
+50%
+90%
+10%
+50%
+90%
+t = 20nsr
+TURN-OFF TIME
+TURN-ON TIME
+Figure 6-2. Waveforms, Channel Being Turned ON 
+(RL = 1kΩ)
+t = 20nsf
+10%
+90%
+50%
+10%
+50%
+90%
+10%
+90%
+t = 20nsr
+TURN-OFF TIME TURN-ON
+tPHZ TIME
+Figure 6-3. Waveforms, Channel Being Turned OFF 
+(RL = 1kΩ)
+VDD
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+IDD IDD
+IDD
+V V
+CD4053
+DD DD
+CD4052
+Figure 6-4. OFF Channel Leakage Current – Any Channel OFF
+VDD
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+IDD
+VDD VDD
+CD4053CD4052CD4051
+IDD
+IDD
+Copyright © 2017, Texas Instruments Incorporated
+Figure 6-5. On Channel Leakage Current – Any Channel On
+Figure 6-6. OFF Channel Leakage Current – All Channels OFF
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 12 ---
+V
+CD4051
+DD
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V V V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+CD4052
+DD
+DD
+DD
+DD
+DD
+DD
+DD
+EE
+EE
+EE EE EE
+EE
+SS
+SS
+SS
+SS
+SS
+SS
+SS
+SS
+SS
+CD4053
+CLOCK
+IN
+CLOCK
+IN
+CLOCK
+IN
+RR R C
+CC
+OUTPUT
+L
+L L L
+LL
+OUTPUT OUTPUT
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+Figure 6-7. Propagation Delay – Address Input to Signal Output
+V
+V
+t AND t
+V CLOCK
+DD
+EE
+PHL PLH
+SS
+IN
+R
+OUTPUT
+L
+CD4051
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+CD4052
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+CD4053
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+V
+V
+V
+V
+V
+V
+V
+V
+OUTPUT
+DD
+DD
+DD
+DD
+DD
+DD
+DD
+DD
+OUTPUT
+t AND tt AND t
+R R
+V
+CLOCK
+PHL PLHPHL PLH
+L L
+SSIN
+CLOCK
+IN
+V
+V
+V
+V
+50pF
+SS
+SS
+EE
+EE
+50pF
+V
+V
+EE
+SS V
+V
+V
+V
+V
+SS
+SS
+SS
+SS
+EE
+V
+50pF
+EE
+Figure 6-8. Propagation Delay – Inhibit Input to Signal Output
+CD4051B
+V
+V
+V
+V
+V
+IL
+IH
+DD
+IH
+IL
+1K
+1K
+µA
+MEASURE < 2 A ON ALLµ
+“OFF” CHANNELS (e.g., CHANNEL 6)
+1
+2
+3
+4
+5
+6
+7
+8 9
+10
+11
+12
+13
+14
+15
+16
+µA
+V
+V
+V
+V
+1K
+IL
+IL
+IH
+IH
+1K
+V
+MEASURE < 2 A ON ALL
+DD
+µ
+“OFF” CHANNELS (e.g., CHANNEL by)
+CD4053B
+1
+2
+3
+4
+5
+6
+7
+8 9
+10
+11
+12
+13
+14
+15
+16
+VIH
+V
+V
+IH
+IL
+1K
+1K
+VDD
+µA
+MEASURE < 2 A ON ALLµ
+“OFF” CHANNELS (e.g., CHANNEL 2x)
+VIL
+CD4052B
+1
+2
+3
+4
+5
+6
+7
+8 9
+10
+11
+12
+13
+14
+15
+Figure 6-9. Input Voltage Test Circuits (Noise Immunity)
+CD4053
+Ι
+1
+2
+3
+4
+5
+6
+7
+8 9
+10
+11
+12
+13
+14
+15
+16
+CD4052
+Ι
+1
+2
+3
+4
+5
+6
+7
+8 9
+10
+11
+12
+13
+14
+15
+16
+VV DD
+DD
+Figure 6-10. Quiescent Device Current
+X-Y
+PLOTTER
+X
+Y1kΩ
+RANGE
+TG
+“ON”
+KEITHLEY
+160 DIGITAL
+MULTIMETER
+H.P.
+MOSELEY
+7030A
+V
+V
+10k
+SS
+DD
+Ω Figure 6-11. Channel ON Resistance Measurement 
+Circuit
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+12 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 13 ---
+VDD
+Ι
+V
+V CD4051
+DD
+SS
+CD4053
+VSS
+NOTE: Measure inputs sequentially,
+to both V and V connect allDD SS
+unused inputs to either V or V .DD SS
+1
+2
+3
+4
+5
+6
+7
+8 9
+10
+11
+12
+13
+14
+15
+16
+VDD
+Ι
+V
+V CD4052
+DD
+SS
+VSS
+NOTE: Measure inputs sequentially,
+to both V and V connect allDD SS
+unused inputs to either V or V .DD SS
+1
+2
+3
+4
+5
+6
+7
+8 9
+10
+11
+12
+13
+14
+15
+16
+Figure 6-12. Input Current
+RF
+VM
+VDD
+OFF
+CHANNEL
+6
+7
+8
+1K
+5VP-P
+Figure 6-13. Feed-Through (All Types)
+OFF
+CHANNEL
+RCOMMON L
+ON
+CHANNEL
+RL
+RF
+VM
+ON
+CHANNEL
+R
+5V
+L
+P-P
+OFF
+CHANNEL
+RL
+RF
+VM
+Figure 6-14. Crosstalk Between Any Two Channels 
+(All Types)
+5V
+RFP-P
+VMON OR OFF
+CHANNEL IN Y
+RR LL
+ON OR OFF
+CHANNEL IN X
+Figure 6-15. Crosstalk Between Duals or Triplets (CD4052B, CD4053B)
+LINK
+DIFF.
+AMPLIFIER/
+LINE DRIVER
+DIFF.
+RECEIVER
+DEMULTIPLEXINGDIFF.
+MULTIPLEXING
+DIFFERENTIAL
+SIGNALS
+CD4052 CD4052
+Special Considerations: In applications where separate power sources are used to drive VDD and the signal inputs, the VDD current 
+capability should exceed VDD/RL (RL = effective external load). This provision avoids permanent current flow or clamp action on the VDD 
+supply when power is applied or removed from the CD4051B, CD4052B or CD4053B.
+Figure 6-16. Typical Time-Division Application of the CD4052B
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 14 ---
+A
+B
+E
+1/2
+CD4556
+A
+B
+C CD4051B
+INH
+A
+B
+C CD4051B
+INH
+A
+B
+C CD4051B
+INH
+A
+B
+C
+D
+E
+Q
+Q
+Q
+0
+1
+2
+COMMON
+Figure 6-17. 24-to-1MUX Addressing
+7 Detailed Description
+7.1 Overview
+The CD4051B device is a single 8-channel multiplexer having three binary control inputs, A, B, and C, and an 
+inhibit input. The three binary signals select 1 of 8 channels to be turned on, and connect one of the 8 inputs to 
+the output.
+The CD4052B device is a differential 4-channel multiplexer having two binary control inputs, A and B, and an 
+inhibit input. The two binary input signals select 1 of 4 pairs of channels to be turned on and connect the analog 
+inputs to the outputs.
+The device is a triple 2-channel multiplexer having three separate digital control inputs, A, B, and C, and 
+an inhibit input. Each control input selects one of a pair of channels which are connected in a single-pole, 
+double-throw configuration.
+When these devices are used as demultiplexers, the CHANNEL IN/OUT terminals are the outputs and the 
+COMMON OUT/IN terminals are the inputs.
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+14 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 15 ---
+7.2 Functional Block Diagrams
+11
+10
+9
+6
+A
+B
+C
+INH
+134 2 5 1 12 15 14
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+3
+COMMON
+OUT/IN
+01234567
+BINARY
+TO
+1 OF 8
+DECODER
+WITH
+INHIBIT
+LOGIC
+LEVEL
+CONVERSION
+8 7V VSS EE
+16 V
+CHANNEL IN/OUT
+DD
+All inputs are protected by standard CMOS protection network.
+Figure 7-1. Functional Block Diagram, CD4051B 
+1211 15 14
+0123
+3210
+X CHANNELS IN/OUT
+Y CHANNELS IN/OUT
+BINARY
+TO
+1 OF 4
+DECODER
+WITH
+INHIBIT
+13
+3
+COMMON Y
+OUT/IN
+COMMON X
+OUT/IN
+78
+16
+6
+9
+10A
+B
+INH
+V V
+V
+SS EE
+DD
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+TG
+4251
+LOGIC
+LEVEL
+CONVERSION
+All inputs are protected by standard CMOS protection network.
+Figure 7-2. Functional Block Diagram, CD4052B
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 15
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 16 ---
+11
+10
+9
+6
+A
+B
+C
+INH
+123 5 1 2 13
+TG
+TG
+TG
+TG
+TG
+TG
+4
+COMMON
+OUT/IN
+axaybxbycxcy
+8 7V VSS EE
+16 V
+IN/OUT
+DD
+15
+14
+BINARY TO
+1 OF 2
+DECODERS
+WITH
+INHIBIT
+LOGIC
+LEVEL
+CONVERSION
+VDD
+COMMON
+OUT/IN
+COMMON
+OUT/IN
+ax OR ay
+bx OR by
+cx OR cy
+All inputs are protected by standard CMOS protection network.
+Figure 7-3. Functional Block Diagram, CD4053B 
+7.3 Feature Description
+The CD405xB line of multiplexers and demultiplexers can accept a wide range of digital and analog signal levels. 
+Digital signals range from 3V to 20V, and analog signals are accepted at levels ≤ 20V. The devices have low ON 
+resistance, typically 125Ω over 15V P-P signal input range for V DD – V EE = 18V. This feature allows for very little 
+signal loss through the switch.
+The CD405xB devices also have high OFF resistance, which keeps from the devices from wasting power when 
+the switch is in the OFF position, with typical channel leakage of ±100pA at VDD – VEE = 18V.
+Binary address decoding on the chip makes channel selection simple. When channels are changed, a break-
+before-make system eliminates channel overlap.
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+16 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 17 ---
+7.4 Device Functional Modes
+Table 7-1. Truth Table
+INPUT STATES(1)
+ON CHANNEL(S)
+INHIBIT C B A
+CD4051B
+0 0 0 0 0
+0 0 0 1 1
+0 0 1 0 2
+0 0 1 1 3
+0 1 0 0 4
+0 1 0 1 5
+0 1 1 0 6
+0 1 1 1 7
+1 X X X None
+CD4052B
+0 0 0 0x, 0y
+0 0 1 1x, 1y
+0 1 0 2x, 2y
+0 1 1 3x, 3y
+1 X X None
+CD4053B
+0 X X 0 ax
+0 X X 1 ay
+0 X 0 X bx
+0 X 1 X by
+0 0 X X cx
+0 1 X X cy
+1 X X X None
+(1) X = Do not care
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 17
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 18 ---
+8 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+8.1 Application Information
+The CD405xB multiplexers and demultiplexers can be used for a wide variety of applications.
+8.2 Typical Application
+One application of the CD4051B is to use it in conjunction with a microcontroller to poll a keypad. Figure 
+8-1 shows the basic schematic for such a polling system. The microcontroller uses the channel select pins 
+to cycle through the different channels while reading the input to see if a user is pressing any of the keys. 
+This application is a very robust setup, allowing for multiple simultaneous key-presses with very little power 
+consumption. This setup also uses very few pins on the microcontroller. The down side of polling is that the 
+microcontroller must continually scan the keys for a press and can do little else during this process.
+Figure 8-1. The CD4051B Being Used to Help Read Button Presses on a Keypad
+8.2.1 Design Requirements
+These devices use CMOS technology and have balanced output drive. Take care to avoid bus contention 
+because it can drive currents that would exceed maximum limits. The high drive will also create fast edges into 
+light loads, so routing and load conditions should be considered to prevent ringing.
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+18 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 19 ---
+8.2.2 Detailed Design Procedure
+1. Recommended Input Conditions:
+• For switch time specifications, see propagation delay times in Section 5.5.
+• Inputs cannot be pushed more than 0.5V above VDD or below VEE.
+• For input voltage level specifications for control inputs, see VIH and VIL in Section 5.5.
+2. Recommended Output Conditions:
+• Outputs cannot be pulled above VDD or below VEE.
+3. Input or output current consideration:
+• The CD405xB series of parts do not have internal current drive circuitry and thus cannot sink or source 
+current. Any current will be passed through the device.
+8.2.3 Application Curve
+-6 -4 -2 0 2 4 6
+V , INPUT SIGNAL VOLTAGE (V)IS
+VOS
+, OUTPUT SIGNAL VOLTAGE (V)
+-6
+-4
+-2
+0
+2
+4
+6
+V = 5VDD
+V = 0VSS
+V = -5VEE
+T = 25 CA o
+R = 100k , R = 10kL L Ω Ω
+100Ω
+500Ω
+1kΩ
+Figure 8-2. ON Characteristics for 1 of 8 Channels (CD4051B) 
+8.3 Power Supply Recommendations
+The power supply can be any voltage between the minimum and maximum supply voltage rating located in the 
+Section 5.5.
+Each V CC terminal should have a good bypass capacitor to prevent power disturbance. For devices with a 
+single supply, a 0.1 μF bypass capacitor is recommended. If there are multiple pins labeled V CC, then a 0.01 μF 
+or 0.022μF capacitor is recommended for each V CC because the V CC pins will be tied together internally. For 
+devices with dual supply pins operating at different voltages, for example VCC and VDD, a 0.1µF bypass capacitor 
+is recommended for each supply pin. It is acceptable to parallel multiple bypass capacitors to reject different 
+frequencies of noise. 0.1 μF and 1 μF capacitors are commonly used in parallel. The bypass capacitor must be 
+installed as close to the power terminal as possible for best results.
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 19
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 20 ---
+8.4 Layout
+8.4.1 Layout Guidelines
+Reflections and matching are closely related to loop antenna theory, but different enough to warrant their 
+own discussion. When a PCB trace turns a corner at a 90° angle, a reflection can occur. This reflection is 
+primarily due to the change of width of the trace. At the apex of the turn, the trace width is increased to 1.414 
+times its width. This upsets the transmission line characteristics, especially the distributed capacitance and 
+self–inductance of the trace — resulting in the reflection. It is a given that not all PCB traces can be straight, and 
+so they will have to turn corners. Figure 8-3 shows progressively better techniques of rounding corners. Only the 
+last example maintains constant trace width and minimizes reflections.
+8.4.2 Layout Example
+WORST BETTER BEST
+1W min.
+W
+2W
+Figure 8-3. Trace Example
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+20 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 21 ---
+9 Device and Documentation Support
+9.1 Documentation Support
+9.1.1 Related Documentation
+For related documentation, see the following:
+• Texas Instruments, Implications of Slow or Floating CMOS Inputs
+9.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Notifications to register and receive a weekly digest of any product information that has changed. For change 
+details, review the revision history included in any revised document.
+9.3 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+9.4 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+9.5 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+9.6 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+www.ti.com
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+Copyright © 2026 Texas Instruments Incorporated Submit Document Feedback 21
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 22 ---
+10 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision N (February 2025) to Revision O (May 2026) Page
+• Updated D (SOIC, 16) package size.................................................................................................................. 1
+• Added SOIC to CD4052B and CD4053B pin diagrams......................................................................................3
+Changes from Revision M (November 2024) to Revision N (February 2025) Page
+• Updated Section 1 .............................................................................................................................................1
+• Removed Figure 5-4 and Figure 5-5................................................................................................................ 10
+• Updated Section 7.1 ........................................................................................................................................14
+• Updated Section 7.3 ........................................................................................................................................16
+• Updated Figure 8-1 to 5V VDD.........................................................................................................................18
+Changes from Revision L (September 2023) to Revision M (November 2024) Page
+• Updated the Typical Characteristics section.....................................................................................................10
+• Added Figure 5-4 and Figure 5-5..................................................................................................................... 10
+Changes from Revision K (March 2023) to Revision L (September 2023) Page
+• Changed the format of the Package Information table to include package lead size.........................................1
+• Changed the format of the ESD Ratings, Electrical Characteristics, and AC Performance to consolidate 
+package specifications........................................................................................................................................5
+11 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+CD4051B, CD4052B, CD4053B
+SCHS047O – AUGUST 1998 – REVISED MAY 2026
+ www.ti.com
+22 Submit Document Feedback Copyright © 2026 Texas Instruments Incorporated
+Product Folder Links: CD4051B CD4052B CD4053B
+
+--- Page 23 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+7901502EA Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 7901502EA
+CD4052BF3A
+8101801EA Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 8101801EA
+CD4053BF3A
+CD4051BE Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4051BE
+CD4051BE.A Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4051BE
+CD4051BEE4 Obsolete Production PDIP (N) | 16 - - Call TI Call TI -55 to 125 CD4051BE
+CD4051BF Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4051BF
+CD4051BF.A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4051BF
+CD4051BF3A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4051BF3A
+CD4051BF3A.A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4051BF3A
+CD4051BM96 Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4051BM
+CD4051BM96.A Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4051BM
+CD4051BM96G3 Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4051BM
+CD4051BM96G4 Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4051BM
+CD4051BMT Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4051BM
+CD4051BNSR Active Production SOP (NS) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4051B
+CD4051BNSR.A Active Production SOP (NS) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4051B
+CD4051BPW Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM051B
+CD4051BPWR Active Production TSSOP (PW) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CM051B
+CD4051BPWR.A Active Production TSSOP (PW) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CM051B
+CD4051BPWRG4 Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM051B
+CD4052BE Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4052BE
+CD4052BE.A Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4052BE
+CD4052BEE4 Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4052BE
+CD4052BF Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4052BF
+CD4052BF.A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4052BF
+CD4052BF3A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 7901502EA
+CD4052BF3A
+Addendum-Page 1
+
+--- Page 24 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+CD4052BF3A.A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 7901502EA
+CD4052BF3A
+CD4052BM Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4052BM
+CD4052BM96 Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4052BM
+CD4052BM96.A Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4052BM
+CD4052BM961G4 Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4052BM
+CD4052BM961G4.A Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4052BM
+CD4052BM96G3 Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4052BM
+CD4052BM96G4 Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4052BM
+CD4052BMT Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4052BM
+CD4052BNSR Active Production SOP (NS) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4052B
+CD4052BNSR.A Active Production SOP (NS) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4052B
+CD4052BPW Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM052B
+CD4052BPWR Active Production TSSOP (PW) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CM052B
+CD4052BPWR.A Active Production TSSOP (PW) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CM052B
+CD4052BPWRG3 Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM052B
+CD4052BPWRG4 Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM052B
+CD4053BE Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4053BE
+CD4053BE.A Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4053BE
+CD4053BEE4 Active Production PDIP (N) | 16 25 | TUBE Yes NIPDAU N/A for Pkg Type -55 to 125 CD4053BE
+CD4053BF Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4053BF
+CD4053BF.A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 CD4053BF
+CD4053BF3A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 8101801EA
+CD4053BF3A
+CD4053BF3A.A Active Production CDIP (J) | 16 25 | TUBE No SNPB N/A for Pkg Type -55 to 125 8101801EA
+CD4053BF3A
+CD4053BM Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4053M
+CD4053BM96 Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4053M
+CD4053BM96.A Active Production SOIC (D) | 16 2500 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4053M
+CD4053BM96G3 Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4053M
+CD4053BM96G4 Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4053M
+Addendum-Page 2
+
+--- Page 25 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+CD4053BMT Obsolete Production SOIC (D) | 16 - - Call TI Call TI -55 to 125 CD4053M
+CD4053BNSR Active Production SOP (NS) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4053B
+CD4053BNSR.A Active Production SOP (NS) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CD4053B
+CD4053BPW Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM053B
+CD4053BPWR Active Production TSSOP (PW) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CM053B
+CD4053BPWR.A Active Production TSSOP (PW) | 16 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 CM053B
+CD4053BPWRG3 Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM053B
+CD4053BPWRG4 Obsolete Production TSSOP (PW) | 16 - - Call TI Call TI -55 to 125 CM053B
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+Addendum-Page 3
+
+--- Page 26 ---
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Jul-2026
+ 
+ OTHER QUALIFIED VERSIONS OF CD4051B, CD4051B-MIL, CD4052B, CD4052B-MIL, CD4053B, CD4053B-MIL :
+•Catalog : CD4051B, CD4052B, CD4053B
+•Automotive : CD4051B-Q1, CD4051B-Q1, CD4053B-Q1, CD4053B-Q1
+•Military : CD4051B-MIL, CD4052B-MIL, CD4053B-MIL
+ NOTE: Qualified Version Definitions:
+•Catalog - TI's standard catalog product
+•Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+•Military - QML certified for Military and Defense Applications
+Addendum-Page 4
+
+--- Page 27 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 21-Jun-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+CD4051BM96 SOIC D 16 2500 330.0 16.4 6.5 10.3 2.1 8.0 16.0 Q1
+CD4051BM96 SOIC D 16 2500 330.0 16.4 6.5 10.3 2.1 8.0 16.0 Q1
+CD4051BNSR SOP NS 16 2000 330.0 16.4 8.1 10.4 2.5 12.0 16.0 Q1
+CD4051BPWR TSSOP PW 16 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+CD4051BPWR TSSOP PW 16 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+CD4052BM96 SOIC D 16 2500 330.0 16.4 6.5 10.3 2.1 8.0 16.0 Q1
+CD4052BM961G4 SOIC D 16 2500 330.0 16.4 6.5 10.3 2.1 8.0 16.0 Q1
+CD4052BNSR SOP NS 16 2000 330.0 16.4 8.1 10.4 2.5 12.0 16.0 Q1
+CD4052BPWR TSSOP PW 16 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+CD4052BPWR TSSOP PW 16 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+CD4053BM96 SOIC D 16 2500 330.0 16.4 6.5 10.3 2.1 8.0 16.0 Q1
+CD4053BM96 SOIC D 16 2500 330.0 16.4 6.5 10.3 2.1 8.0 16.0 Q1
+CD4053BNSR SOP NS 16 2000 330.0 16.4 8.1 10.4 2.5 12.0 16.0 Q1
+CD4053BPWR TSSOP PW 16 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+CD4053BPWR TSSOP PW 16 2000 330.0 12.4 6.9 5.6 1.6 8.0 12.0 Q1
+Pack Materials-Page 1
+
+--- Page 28 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 21-Jun-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+CD4051BM96 SOIC D 16 2500 340.5 336.1 32.0
+CD4051BM96 SOIC D 16 2500 353.0 353.0 32.0
+CD4051BNSR SOP NS 16 2000 353.0 353.0 32.0
+CD4051BPWR TSSOP PW 16 2000 353.0 353.0 32.0
+CD4051BPWR TSSOP PW 16 2000 367.0 367.0 35.0
+CD4052BM96 SOIC D 16 2500 353.0 353.0 32.0
+CD4052BM961G4 SOIC D 16 2500 353.0 353.0 32.0
+CD4052BNSR SOP NS 16 2000 353.0 353.0 32.0
+CD4052BPWR TSSOP PW 16 2000 353.0 353.0 32.0
+CD4052BPWR TSSOP PW 16 2000 367.0 367.0 35.0
+CD4053BM96 SOIC D 16 2500 353.0 353.0 32.0
+CD4053BM96 SOIC D 16 2500 353.0 353.0 32.0
+CD4053BNSR SOP NS 16 2000 353.0 353.0 32.0
+CD4053BPWR TSSOP PW 16 2000 367.0 367.0 35.0
+CD4053BPWR TSSOP PW 16 2000 353.0 353.0 32.0
+Pack Materials-Page 2
+
+--- Page 29 ---
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 21-Jun-2026
+TUBE
+ 
+ 
+L - Tube length
+T - Tube  
+height
+W - Tube  
+width
+B - Alignment groove width
+ 
+ 
+*All dimensions are nominal
+Device Package Name Package Type Pins SPQ L (mm) W (mm) T (µm) B (mm)
+CD4051BE N PDIP 16 25 506 13.97 11230 4.32
+CD4051BE.A N PDIP 16 25 506 13.97 11230 4.32
+CD4052BE N PDIP 16 25 506 13.97 11230 4.32
+CD4052BE.A N PDIP 16 25 506 13.97 11230 4.32
+CD4052BEE4 N PDIP 16 25 506 13.97 11230 4.32
+CD4053BE N PDIP 16 25 506 13.97 11230 4.32
+CD4053BE.A N PDIP 16 25 506 13.97 11230 4.32
+CD4053BEE4 N PDIP 16 25 506 13.97 11230 4.32
+Pack Materials-Page 3
+
+--- Page 30 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+8.2
+7.4 TYP
+14X 1.27
+16X 0.51
+0.35
+2X
+8.89
+0.15 TYP
+0 - 10
+0.3
+0.1
+2.00 MAX
+(1.25)
+0.25
+GAGE PLANE
+1.05
+0.55
+A
+10.4
+10.0
+NOTE 3
+B 5.4
+5.2
+NOTE 4
+4220735/A   12/2021
+SOP - 2.00 mm max heightNS0016A
+SOP
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm, per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm, per side.
+ 
+ 
+1 16
+0.25 C A B
+9
+8
+PIN 1 ID
+AREA
+SEATING PLANE
+0.1 C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  1.500
+
+--- Page 31 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MAX
+ALL AROUND
+0.07 MIN
+ALL AROUND
+ 
+14X (1.27)
+(R0.05) TYP
+(7)
+16X (1.85)
+16X (0.6)
+4220735/A   12/2021
+SOP - 2.00 mm max heightNS0016A
+SOP
+NOTES: (continued)
+ 
+5. Publication IPC-7351 may have alternate designs. 
+6. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METAL SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+OPENING
+SOLDER MASK METAL
+SOLDER MASK
+DEFINED
+LAND PATTERN EXAMPLE
+SCALE:7X
+SYMM
+1
+8 9
+16
+SEE
+DETAILS
+SYMM
+
+--- Page 32 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(7)(R0.05) TYP
+16X (1.85)
+16X (0.6)
+14X (1.27)
+4220735/A   12/2021
+SOP - 2.00 mm max heightNS0016A
+SOP
+NOTES: (continued)
+ 
+7. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+8. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:7X
+SYMM
+SYMM
+1
+8 9
+16
+
+--- Page 33 ---
+
+
+--- Page 34 ---
+
+
+--- Page 35 ---
+www.ti.com
+PACKAGE OUTLINE
+C
+14X 0.65
+2X
+4.55
+16X 0.30
+0.17
+6.6
+6.2 TYP
+1.2 MAX
+0.15
+0.05
+0.25
+GAGE PLANE
+0 -8
+4X (0 -12 )
+B 4.5
+4.3
+NOTE 4
+A
+5.1
+4.9
+NOTE 3
+0.75
+0.50
+(0.15) TYP
+TSSOP - 1.2 mm max heightPW0016A
+SMALL OUTLINE PACKAGE
+4220204/B   12/2023
+1
+8
+9
+16
+0.1 C A B
+PIN 1 INDEX AREA
+SEE DETAIL  A
+0.1 C
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-153.
+ 
+SEATING
+PLANE
+A  20
+DETAIL A
+TYPICAL
+SCALE  2.500
+
+--- Page 36 ---
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+0.05 MIN
+ALL AROUND
+16X (1.5)
+16X (0.45)
+14X (0.65)
+(5.8)
+(R0.05) TYP
+TSSOP - 1.2 mm max heightPW0016A
+SMALL OUTLINE PACKAGE
+4220204/B   12/2023
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 10X
+SYMM
+SYMM
+1
+8 9
+16
+15.000
+METALSOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED METALEXPOSED METAL
+SOLDER MASK DETAILS
+NON-SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK
+DEFINED
+
+--- Page 37 ---
+www.ti.com
+EXAMPLE STENCIL DESIGN
+16X (1.5)
+16X (0.45)
+14X (0.65)
+(5.8)
+(R0.05) TYP
+TSSOP - 1.2 mm max heightPW0016A
+SMALL OUTLINE PACKAGE
+4220204/B   12/2023
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE: 10X
+SYMM
+SYMM
+1
+8 9
+16
+
+--- Page 38 ---
+
+
+--- Page 39 ---
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

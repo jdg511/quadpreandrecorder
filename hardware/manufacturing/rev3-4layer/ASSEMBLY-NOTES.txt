@@ -1,0 +1,58 @@
+QuadPreRecorder Rev 3 - Assembly Notes
+======================================
+
+BOARD
+  4-layer FR-4, 138.15 x 114.15 mm, 1.6 mm, 1 oz outer + 1 oz inner
+  Stackup top -> bottom:
+     L1  F_Cu    signal
+     L2  In1_Cu  SOLID GROUND PLANE
+     L3  In2_Cu  signal + ground pour
+     L4  B_Cu    signal
+
+ASSEMBLY
+  Two-sided SMT.  180 placements total: 113 top, 67 bottom.
+  74 BOM lines: 61 SMD lines, 13 through-hole lines.
+
+  Fine-pitch parts needing care:
+     U7   PCM1864DBT   TSSOP-30, 0.5 mm pitch
+     U10  TPA6132A2    WQFN-16 with exposed thermal pad, 0.5 mm pitch
+     U1   TPS62160DGK  VSSOP-8, 0.65 mm pitch
+     U4,U5,U6,U9       TSSOP, 0.65 mm pitch
+
+  Through-hole parts (13): J1 J2 J3 J4 J5 J6 J7 RV1 SW1 SW2 SW3 SW4 U8
+
+  U8 is a socket for a Teensy 4.1 module. Please confirm whether the
+  Teensy 4.1 module itself is included in your quote or supplied by me.
+
+SUBSTITUTION POLICY  (see the Substitution column in the BOM)
+  This is an audio product. The BOM marks every line either:
+
+    "EXACT PART - do not substitute"   (27 lines)
+        All ICs, connectors, switches, diodes, the inductor and the
+        volume pot. Use the exact manufacturer part number given.
+
+    "EQUIVALENT OK - must meet spec"   (47 lines)
+        Generic passives. Any manufacturer is fine PROVIDED the part
+        meets the full spec in the Description column - value,
+        tolerance, dielectric, voltage rating and package.
+
+  Two things that are NOT negotiable within the "equivalent OK" group:
+    - The 0.1 % thin-film resistors (R18-R37, 68k/33k/10k/90.9k).
+      These set the preamp gain. 1 % parts are NOT acceptable.
+    - C0G/NP0 dielectric where the BOM says C0G/NP0. Do not swap to
+      X7R or X5R - these are in the audio and clock paths.
+    - C1 and C66 electrolytics must be LOW-ESR types (switching
+      regulator input/output).
+
+  ONE known stock issue: SW3, the master gain encoder, MPN
+  EC11E15244G1, was showing zero stock at Mouser. Any EC11E-family
+  rotary encoder with the same footprint and shaft is acceptable.
+
+FILES
+  Gerbers + drill ....... QuadPreRecorder-Rev3-4L-GERBERS-ONLY.zip
+  BOM ................... QuadPreRecorder-Rev3-4L-BOM-PCBWay.csv
+  Centroid .............. QuadPreRecorder-Rev3-4L-CPL-PCBWay.csv
+                          (origin = board bottom-left, all coords positive,
+                           rotation in degrees CCW)
+
+  DRC status: 0 unconnected, 0 errors, schematic parity clean.

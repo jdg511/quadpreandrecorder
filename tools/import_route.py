@@ -9,6 +9,8 @@ import shutil
 
 import pcbnew
 
+from generate_pcb import BOARD_H, BOARD_W
+
 
 ROOT = Path(__file__).resolve().parents[1]
 HARDWARE = ROOT / "hardware"
@@ -30,13 +32,18 @@ def add_ground_zone(board: pcbnew.BOARD, layer: int, priority: int) -> pcbnew.ZO
     zone.SetAssignedPriority(priority)
     zone.SetLocalClearance(mm(0.20))
     zone.SetMinThickness(mm(0.20))
-    zone.SetPadConnection(pcbnew.ZONE_CONNECTION_THERMAL)
+    zone.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
     zone.SetThermalReliefGap(mm(0.25))
     zone.SetThermalReliefSpokeWidth(mm(0.25))
 
     outline = zone.Outline()
     contour = outline.NewOutline()
-    for x, y in ((0.5, 0.5), (109.5, 0.5), (109.5, 84.0), (0.5, 84.0)):
+    for x, y in (
+        (0.5, 0.5),
+        (BOARD_W - 0.5, 0.5),
+        (BOARD_W - 0.5, BOARD_H - 0.5),
+        (0.5, BOARD_H - 0.5),
+    ):
         outline.Append(mm(x), mm(y), contour)
     board.Add(zone)
     return zone

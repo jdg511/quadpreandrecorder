@@ -1,0 +1,194 @@
+** Drc report for QuadPreRecorder.kicad_pcb **
+** Created on 2026-07-23T20:44:30 **
+** Report includes: Errors, Warnings **
+
+** Found 45 DRC violations **
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0611 mm)
+    Local override; error
+    @(89.2000 mm, 65.2111 mm): Track [SPI_MOSI] on F.Cu, length 4.1653 mm
+    @(92.9244 mm, 61.8560 mm): Track [TFT_DC] on F.Cu, length 5.2422 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0611 mm)
+    Local override; error
+    @(92.9244 mm, 61.8560 mm): Track [TFT_DC] on F.Cu, length 5.2422 mm
+    @(89.2000 mm, 61.1483 mm): Track [SPI_MOSI] on F.Cu, length 4.0628 mm
+[shorting_items]: Items shorting two nets (nets  and I2C_SCL)
+    Local override; error
+    @(110.0000 mm, 105.0000 mm): Pad [<no net>] of FID2 on F.Cu
+    @(131.0000 mm, 105.2400 mm): Track [I2C_SCL] on F.Cu, length 67.3000 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.0000 mm, 105.2400 mm): Track [I2C_SCL] on F.Cu, length 67.3000 mm
+    @(110.0000 mm, 105.0000 mm): Pad [<no net>] of FID2 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(85.0347 mm, 65.2111 mm): Track [SPI_MOSI] on F.Cu, length 0.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(85.0347 mm, 65.2111 mm): Track [SPI_MOSI] on F.Cu, length 0.0000 mm
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(0.5000 mm, 0.5000 mm): Zone 'GND plane' [<no net>] on B.Cu, priority 0
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(0.5000 mm, 0.5000 mm): Zone 'GND plane' [<no net>] on F.Cu, priority 0
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(136.5000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(129.9400 mm, 70.9400 mm): Segment of J7 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(136.5000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(139.0800 mm, 106.3000 mm): Segment of J7 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(-0.2000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(4.0000 mm, -0.1500 mm): Reference field of H1
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(-0.2000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(92.0000 mm, -0.1500 mm): Reference field of H2
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(136.5000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(129.9400 mm, 11.9400 mm): Segment of J6 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(136.5000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(139.0800 mm, 47.3000 mm): Segment of J6 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(-0.2000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(132.0000 mm, -0.1500 mm): Reference field of H3
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(-0.2000 mm, 118.0000 mm): Segment on Edge.Cuts
+    @(-3.5800 mm, 36.3600 mm): Segment of J2 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(-0.2000 mm, 118.0000 mm): Segment on Edge.Cuts
+    @(5.5600 mm, 49.5600 mm): Segment of J2 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(8.0000 mm, 46.0000 mm): PCB text 'MIC DE-9' on F.Silkscreen
+    @(5.5600 mm, 36.3600 mm): Segment of J2 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(53.0000 mm, 13.0000 mm): PCB text 'GAIN' on F.Silkscreen
+    @(53.5000 mm, 9.5000 mm): Circle of SW3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(33.0000 mm, 13.0000 mm): PCB text 'REC' on F.Silkscreen
+    @(33.2500 mm, 9.5000 mm): Circle of SW2 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(108.0000 mm, 70.0000 mm): PCB text 'J7 DIGITAL DB-25' on F.Silkscreen
+    @(109.5200 mm, 64.2800 mm): Segment of J5 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(55.3100 mm, 58.3850 mm): Segment of U9 on F.Silkscreen
+    @(51.0000 mm, 58.0700 mm): Reference field of C64
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(108.1200 mm, 10.1200 mm): Segment of RV1 on F.Silkscreen
+    @(110.0000 mm, 11.0000 mm): PCB text 'J6 ANALOG DB-25' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(91.0000 mm, 78.5700 mm): Reference field of R66
+    @(90.3200 mm, 77.0000 mm): Reference field of C65
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(37.0000 mm, 54.1500 mm): Reference field of C10
+    @(37.0600 mm, 53.5600 mm): Segment of U3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(37.0000 mm, 54.1500 mm): Reference field of C10
+    @(37.0600 mm, 53.4650 mm): Segment of U3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(60.0000 mm, 13.0000 mm): PCB text 'TFT 1..14' on F.Silkscreen
+    @(60.5000 mm, 12.0000 mm): PTH pad S1 [GAIN_PUSH] of SW3
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.0000 mm, 58.0700 mm): Reference field of C64
+    @(50.1375 mm, 57.9250 mm): Pad 10 [GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.0000 mm, 58.0700 mm): Reference field of C64
+    @(50.1375 mm, 57.2750 mm): Pad 9 [GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(90.3200 mm, 77.0000 mm): Reference field of C65
+    @(89.4375 mm, 75.7500 mm): Pad 9 [HP_CPN] of U10 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(72.5000 mm, 53.3200 mm): Reference field of C8
+    @(71.1375 mm, 52.9500 mm): Pad 4 [<no net>] of U2 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(91.0000 mm, 78.5700 mm): Reference field of R66
+    @(92.0000 mm, 77.9500 mm): Pad 1 [+5V] of C65 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(90.3200 mm, 73.0000 mm): Reference field of C61
+    @(89.4375 mm, 74.2500 mm): Pad 12 [HPVDD] of U10 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(8.0000 mm, 46.0000 mm): PCB text 'MIC DE-9' on F.Silkscreen
+    @(4.5000 mm, 45.7300 mm): PTH pad 2 [FRD_RAW] of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(17.8400 mm, 80.1500 mm): Segment of D2 on F.Silkscreen
+    @(24.0000 mm, 80.7800 mm): PTH pad VIN [TEENSY_VIN] of U8
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(57.0000 mm, 61.4300 mm): Reference field of R57
+    @(83.6900 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(83.6900 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+    @(63.0000 mm, 61.4300 mm): Reference field of R59
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(83.6900 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+    @(66.0000 mm, 61.4300 mm): Reference field of R60
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(60.0000 mm, 61.4300 mm): Reference field of R58
+    @(83.6900 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(72.0000 mm, 61.4300 mm): Reference field of R62
+    @(83.6900 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(69.0000 mm, 61.4300 mm): Reference field of R61
+    @(83.6900 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(26.0000 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+    @(26.5400 mm, 63.0000 mm): PTH pad 0 [<no net>] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(26.0000 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+    @(26.5400 mm, 80.7800 mm): PTH pad GND2 [GND] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(80.5000 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+    @(79.8800 mm, 63.0000 mm): PTH pad 31 [GAIN_PUSH] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(80.5000 mm, 61.7300 mm): Segment of U8 on B.Silkscreen
+    @(79.8800 mm, 80.7800 mm): PTH pad GND3 [GND] of U8
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

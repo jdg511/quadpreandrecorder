@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1777" height="1117" viewBox="0 0 1777 1117">
+<rect width="100%" height="100%" fill="#f7f7f4"/>
+<text x="478.8" y="109.2" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">Hammond 1590F fit mockup — corrected 9V jack</text>
+<text x="478.8" y="999.6" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">J1 is now rotated 270° so the PJ-102AH barrel body projects through the left wall while pads stay on-board.</text>
+<rect x="84.0" y="159.6" width="789.6" height="789.6" rx="29.4" fill="#d6d1c8" stroke="#333" stroke-width="3"/>
+<rect x="111.5" y="187.1" width="734.6" height="734.6" fill="#ece8de" stroke="#777" stroke-dasharray="8 6" stroke-width="1.5"/>
+<rect x="113.4" y="189.0" width="730.8" height="730.8" fill="#153f2d" stroke="#052414" stroke-width="3"/>
+<defs><marker id="arrowG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#4caf50"/></marker></defs>
+<rect x="298.2" y="273.0" width="361.2" height="210.0" fill="#4aa3df" opacity="0.16" stroke="#4aa3df" stroke-width="1.5"/>
+<rect x="54.0" y="350.7" width="92.4" height="134.0" fill="#4caf50" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="135.2" y="445.0" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="white">J2</text>
+<rect x="88.1" y="571.1" width="67.4" height="48.8" fill="#4caf50" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="147.8" y="596.2" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="white">J1</text>
+<rect x="101.6" y="690.0" width="86.6" height="38.9" fill="#4caf50" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="132.3" y="713.8" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="white">J5</text>
+<rect x="101.4" y="733.8" width="49.9" height="126.4" fill="#4caf50" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="140.7" y="844.0" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="white">RV1</text>
+<rect x="605.3" y="847.6" width="143.8" height="77.8" fill="#4caf50" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="638.4" y="911.2" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="white">J4</text>
+<rect x="806.6" y="254.3" width="92.4" height="227.4" fill="#4caf50" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="817.7" y="302.2" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="white">J6</text>
+<rect x="806.6" y="632.3" width="92.4" height="227.4" fill="#4caf50" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="817.7" y="680.2" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="white">J7</text>
+<rect x="686.8" y="500.5" width="46.0" height="26.3" fill="#f1c232" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="701.4" y="520.6" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="black">SW1</text>
+<rect x="291.5" y="204.7" width="65.9" height="67.3" fill="#f1c232" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="298.2" y="235.0" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="black">SW2</text>
+<rect x="392.6" y="207.7" width="73.7" height="63.7" fill="#f1c232" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="399.0" y="235.0" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="black">SW3</text>
+<rect x="332.5" y="500.7" width="159.8" height="15.1" fill="#4aa3df" stroke="#111" stroke-width="1.2" opacity="0.88"/>
+<text x="478.8" y="512.2" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="black">J3</text>
+<line x1="135.2" y1="441.0" x2="84.0" y2="441.0" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowG)"/>
+<line x1="147.8" y1="592.2" x2="84.0" y2="592.2" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowG)"/>
+<line x1="132.3" y1="709.8" x2="84.0" y2="709.8" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowG)"/>
+<line x1="140.7" y1="840.0" x2="84.0" y2="840.0" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowG)"/>
+<line x1="817.7" y1="298.2" x2="873.6" y2="298.2" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowG)"/>
+<line x1="817.7" y1="676.2" x2="873.6" y2="676.2" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowG)"/>
+<line x1="638.4" y1="907.2" x2="638.4" y2="949.2" stroke="#4caf50" stroke-width="3" marker-end="url(#arrowG)"/>
+<text x="915.6" y="193.2" font-family="Arial" font-size="17" font-weight="700">Fit result</text>
+<rect x="915.6" y="204.2" width="13" height="13" fill="#4caf50" stroke="#111"/>
+<text x="935.6" y="215.2" font-family="Arial" font-size="12">J1 now projects correctly at left wall</text>
+<rect x="915.6" y="227.2" width="13" height="13" fill="#4caf50" stroke="#111"/>
+<text x="935.6" y="238.2" font-family="Arial" font-size="12">J2/J4/J5/J6/J7/RV1 edge-facing</text>
+<rect x="915.6" y="250.2" width="13" height="13" fill="#f1c232" stroke="#111"/>
+<text x="935.6" y="261.2" font-family="Arial" font-size="12">SW1/SW2/SW3 lid-facing</text>
+<rect x="915.6" y="273.2" width="13" height="13" fill="#4aa3df" stroke="#111"/>
+<text x="935.6" y="284.2" font-family="Arial" font-size="12">MSP2834 TFT area/header shown</text>
+<rect x="915.6" y="296.2" width="13" height="13" fill="#555" stroke="#111"/>
+<text x="935.6" y="307.2" font-family="Arial" font-size="12">Still verify real enclosure stackup</text>
+</svg>

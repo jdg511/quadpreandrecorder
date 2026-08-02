@@ -216,6 +216,62 @@ def custom_teensy_symbol() -> str:
     return "\n".join(lines)
 
 
+def custom_nav_symbol() -> str:
+    """6-pin symbol for the ALPS SKQUCAA010 4-way + center push nav switch."""
+
+    left = [("1", "A/UP"), ("2", "B/LEFT"), ("3", "C/DOWN")]
+    right = [("6", "CENTER"), ("5", "D/RIGHT"), ("4", "COM")]
+    lines = [
+        '(symbol "QuadPreRecorder:SW_Nav5"',
+        '\t(exclude_from_sim no)', '\t(in_bom yes)', '\t(on_board yes)',
+        '\t(in_pos_files yes)', '\t(duplicate_pin_numbers_are_jumpers no)',
+        '\t(property "Reference" "SW" (at -5.08 7.62 0) (effects (font (size 1.27 1.27))))',
+        '\t(property "Value" "SKQUCAA010" (at 0 7.62 0) (effects (font (size 1.27 1.27))))',
+        '\t(property "Footprint" "QuadPreRecorder:SW_Nav_ALPS_SKQUCAA010" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))',
+        '\t(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/SKQUCAA010-ALPS.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))',
+        '\t(property "Description" "ALPS 4-directional + center push TACT switch" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))',
+        '\t(symbol "SW_Nav5_0_1"',
+        '\t\t(rectangle (start -5.08 5.08) (end 5.08 -5.08) (stroke (width 0) (type default)) (fill (type background)))',
+        '\t)',
+        '\t(symbol "SW_Nav5_1_1"',
+    ]
+    for index, (number, name) in enumerate(left):
+        y = 2.54 - index * 2.54
+        lines.extend([
+            f'\t\t(pin passive line (at -7.62 {y:.2f} 0) (length 2.54)',
+            f'\t\t\t(name "{name}" (effects (font (size 1.0 1.0))))',
+            f'\t\t\t(number "{number}" (effects (font (size 1.0 1.0))))',
+            '\t\t)',
+        ])
+    for index, (number, name) in enumerate(right):
+        y = 2.54 - index * 2.54
+        lines.extend([
+            f'\t\t(pin passive line (at 7.62 {y:.2f} 180) (length 2.54)',
+            f'\t\t\t(name "{name}" (effects (font (size 1.0 1.0))))',
+            f'\t\t\t(number "{number}" (effects (font (size 1.0 1.0))))',
+            '\t\t)',
+        ])
+    lines.extend(['\t)', ')'])
+    return "\n".join(lines)
+
+
+def nav_pins() -> dict[str, tuple[float, float, int]]:
+    block = custom_nav_symbol()
+    pins: dict[str, tuple[float, float, int]] = {}
+    cursor = 0
+    while True:
+        start = block.find("(pin ", cursor)
+        if start < 0:
+            break
+        pin_block = extract_block(block, "(pin ", start)
+        number = re.search(r'\(number "([^"]+)"', pin_block)
+        at = re.search(r'\(at ([^ ]+) ([^ ]+) ([^)]+)\)', pin_block)
+        if number and at:
+            pins[number.group(1)] = (float(at.group(1)), float(at.group(2)), int(float(at.group(3))))
+        cursor = start + len(pin_block)
+    return pins
+
+
 @dataclass
 class Part:
     spec: LibrarySymbol | str
@@ -314,7 +370,12 @@ class Schematic:
         ])
         self.items.append("\n".join(lines))
 
-        pin_positions = self.registry.pins(identifier, part.unit) if identifier != "QuadPreRecorder:Teensy41" else teensy_pins()
+        if identifier == "QuadPreRecorder:Teensy41":
+            pin_positions = teensy_pins()
+        elif identifier == "QuadPreRecorder:SW_Nav5":
+            pin_positions = nav_pins()
+        else:
+            pin_positions = self.registry.pins(identifier, part.unit)
         for number, net in part.pins.items():
             if number not in pin_positions:
                 raise KeyError(f"{part.ref} {identifier} has no pin {number}")
@@ -364,6 +425,8 @@ TVS = stock("Device", "Device.kicad_sym", "D_TVS")
 FB = stock("Device", "Device.kicad_sym", "FerriteBead")
 JACK_DC = stock("Connector", "Connector.kicad_sym", "Barrel_Jack_Switch")
 DB9 = stock("Connector_Generic", "Connector_Generic.kicad_sym", "Conn_01x09")
+DB25 = stock("Connector_Generic", "Connector_Generic.kicad_sym", "Conn_01x25")
+RJ45S = stock("Connector", "Connector.kicad_sym", "8P8C_Shielded")
 JACK_TRS = stock("Connector_Audio", "Connector_Audio.kicad_sym", "AudioJack3")
 CONN14 = stock("Connector_Generic", "Connector_Generic.kicad_sym", "Conn_01x14")
 SW_SPDT = stock("Switch", "Switch.kicad_sym", "SW_SPDT")
@@ -454,7 +517,7 @@ def build_parts() -> list[Part]:
              manufacturer="Diodes Incorporated", mpn="SS14-13-F"),
         part(TVS, "D2", "SMBJ12A", "Diode_SMD:D_SMB", {"1": "+9V", "2": "GND"}, 78.0, 42.0,
              manufacturer="Littelfuse", mpn="SMBJ12A"),
-        polarized_cap("C1", "100uF 16V", "+9V", "GND", 96.0, 42.0),
+        polarized_cap("C1", "100uF 25V", "+9V", "GND", 96.0, 42.0),
         capacitor("C2", "100nF 25V", "+9V", "GND", 112.0, 42.0, size="0805"),
         capacitor("C3", "10uF 25V", "+9V", "GND", 128.0, 42.0, size="1206"),
         part(BUCK, "U1", "TPS62160DGK", "Package_SO:VSSOP-8_3x3mm_P0.65mm",
@@ -482,6 +545,10 @@ def build_parts() -> list[Part]:
         capacitor("C9", "1uF 10V", "VREF_NR", "GND", 326.0, 35.0, size="0805"),
         capacitor("C10", "47uF 10V", "VREF", "GND", 326.0, 49.0, size="1206"),
         capacitor("C11", "100nF", "VREF", "GND", 342.0, 49.0),
+        # RC-filtered electret bias rail: keeps buck-input noise off the
+        # capsule bias feeds (review finding, 2026-07-25).
+        resistor("R67", "100R MIC BIAS FILTER", "+9V", "+9V_MIC", 356.0, 28.0),
+        polarized_cap("C66", "100uF 16V", "+9V_MIC", "GND", 370.0, 28.0),
     ])
 
     # Explicit power-source flags keep ERC strict without hiding internally generated rails.
@@ -490,10 +557,14 @@ def build_parts() -> list[Part]:
                       hide_reference=True, hide_value=True, in_bom=False, on_board=False))
 
     # DE-9 microphone cable: four isolated capsule pairs and shield pin 5.
-    p.append(part(DB9, "J2", "AMBISONIC MIC DE-9", "Connector_Dsub:DSUB-9_Socket_Horizontal_P2.77x2.84mm_EdgePinOffset9.40mm",
-                  {"1": "FLU_RAW", "2": "FRD_RAW", "3": "BLD_RAW", "4": "BRU_RAW", "5": "CHASSIS",
-                   "6": "GND", "7": "GND", "8": "GND", "9": "GND"},
-                  28.0, 88.0, manufacturer="Amphenol ICC", mpn="LD09S13A4GV00LF"))
+    # Rev B (2026-07-25): mic input is a shielded RJ45. Each electret rides a
+    # proper T568 twisted pair (signal+return): FLU=1/2, FRD=3/6, BLD=4/5,
+    # BRU=7/8; the cable shield lands on the jack shell -> CHASSIS.
+    p.append(part(RJ45S, "J2", "AMBISONIC MIC RJ45", "Connector_RJ:RJ45_Amphenol_RJHSE5380",
+                  {"1": "FLU_RAW", "2": "GND", "3": "FRD_RAW", "6": "GND",
+                   "4": "BLD_RAW", "5": "GND", "7": "BRU_RAW", "8": "GND",
+                   "SH": "CHASSIS"},
+                  28.0, 88.0, manufacturer="Amphenol ICC", mpn="RJHSE-5380"))
     p.extend([
         resistor("R4", "1M", "CHASSIS", "GND", 52.0, 80.0),
         capacitor("C12", "1nF 1kV C0G", "CHASSIS", "GND", 52.0, 92.0, size="0805"),
@@ -535,7 +606,7 @@ def build_parts() -> list[Part]:
         adc_series_ref = 34 + ch - 1
         adc_bleed_ref = 38 + ch - 1
         p.extend([
-            resistor(f"R{bias_ref}", "4.7k ELECTRET BIAS", "+9V", mic, 76.0, y),
+            resistor(f"R{bias_ref}", "4.7k ELECTRET BIAS", "+9V_MIC", mic, 76.0, y),
             resistor(f"R{series_ref}", "100R RF", raw, mic, 92.0, y),
             capacitor(f"C{12 + ch}", "100pF C0G", mic, "CHASSIS", 108.0, y),
             capacitor(f"C{16 + ch}", "4.7uF 16V", mic, ac, 124.0, y, size="1206"),
@@ -548,7 +619,9 @@ def build_parts() -> list[Part]:
             capacitor(f"C{24 + ch}", "4.7uF 16V", out, adcsrc, 254.0, y, size="1206"),
             resistor(f"R{adc_series_ref}", "100R", adcsrc, adcin, 270.0, y),
             capacitor(f"C{28 + ch}", "10nF C0G", adcin, "GND", 286.0, y),
-            resistor(f"R{adc_bleed_ref}", "100k", adcin, "GND", 302.0, y),
+            # DNP: fights the PCM1864's internal AVDD/2 input self-bias
+            # (review finding, 2026-07-25); pads kept for bring-up options.
+            resistor(f"R{adc_bleed_ref}", "100k", adcin, "GND", 302.0, y, dnp=True),
         ])
 
     # Two triple SPDTs provide four matched pad selectors. Select high = direct.
@@ -565,11 +638,14 @@ def build_parts() -> list[Part]:
               "12": "BLD_ATT", "13": "BLD_AC", "14": "BLD_PAD", "15": "BRU_PAD", "16": "+9V"},
              188.0, 172.0, datasheet="https://www.ti.com/lit/ds/symlink/cd4053b.pdf",
              manufacturer="Texas Instruments", mpn="CD4053BPWR"),
-        part(SW_SPDT, "SW1", "PAD -10dB", "Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q",
+        part(SW_SPDT, "SW1", "PAD -10dB", "QuadPreRecorder:SW_Toggle_ESwitch_100SP_M7",
              {"1": "GND", "2": "PAD_SELECT", "3": "+9V"}, 224.0, 100.0,
-             manufacturer="C&K", mpn="OS102011MS2QN1"),
+             manufacturer="E-Switch", mpn="100SP1T1B1M7REH",
+             description="Right-angle PCB toggle, 1/4-40 x 8.89mm threaded bushing through the left enclosure wall"),
         resistor("R42", "100k", "PAD_SELECT", "PAD_SENSE", 244.0, 100.0),
         resistor("R43", "47k", "PAD_SENSE", "GND", 260.0, 100.0),
+        # Series protection for the 0/9V pad level exposed on debug J7.21.
+        resistor("R68", "1k", "PAD_SELECT", "PAD_DBG", 244.0, 114.0),
         capacitor("C33", "100nF", "PAD_SENSE", "GND", 276.0, 100.0),
         capacitor("C34", "100nF", "+9V", "GND", 204.0, 110.0),
         capacitor("C35", "100nF", "+9V", "GND", 204.0, 182.0),
@@ -603,7 +679,7 @@ def build_parts() -> list[Part]:
                    "5": "ADC_MICBIAS", "6": "ADC_VREF", "7": "GND", "8": "+3V3_A",
                    "9": None, "10": None, "11": "ADC_LDO", "12": "GND", "13": "+3V3_D",
                    "14": "+3V3_D", "15": "ADC_MCLK_IC", "16": "ADC_LRCLK_IC", "17": "ADC_BCLK_IC",
-                   "18": "ADC_TDM_IC", "19": None, "20": None, "21": None, "22": None,
+                   "18": "ADC_TDM_IC", "19": None, "20": None, "21": None, "22": "ADC_DOUT2_IC",
                    "23": "I2C_SDA", "24": "I2C_SCL", "25": "GND", "26": "GND",
                    "27": None, "28": None, "29": None, "30": None},
                   334.0, 112.0, datasheet="https://www.ti.com/lit/ds/symlink/pcm1864.pdf",
@@ -626,6 +702,9 @@ def build_parts() -> list[Part]:
         resistor("R47", "33R", "ADC_LRCLK", "ADC_LRCLK_IC", 354.0, 146.0),
         resistor("R48", "33R", "ADC_BCLK", "ADC_BCLK_IC", 370.0, 146.0),
         resistor("R49", "33R", "ADC_TDM_IC", "ADC_TDM", 386.0, 146.0),
+        # Second serial-audio data line (PCM1864 GPIO0 as DOUT2, 2x I2S mode)
+        # so all four channels can run at 192 kHz on Teensy SAI1 quad input.
+        resistor("R69", "33R", "ADC_DOUT2_IC", "ADC_DOUT2", 402.0, 146.0),
     ])
 
     # Teensy module. Unused accessible pins are intentionally no-connect.
@@ -634,12 +713,19 @@ def build_parts() -> list[Part]:
         "GND1": "GND", "GND2": "GND", "GND3": "GND", "VIN": "TEENSY_VIN",
         "3V3A": "+3V3_D", "3V3B": "+3V3_D",
         "2": "DAC_DIN", "3": "DAC_LRCLK", "4": "DAC_BCLK",
-        "5": "TOUCH_CS", "6": "TFT_RST", "8": "ADC_TDM",
+        "6": "ADC_DOUT2", "7": "TFT_RST", "8": "ADC_TDM",
+        # Rev B: pin 5 freed (capacitive TOUCH_RST gone); pin 24 drives the
+        # MSP3520's XPT2046 touch chip-select on the shared SPI bus.
+        "24": "TOUCH_CS",
         "9": "TFT_DC", "10": "TFT_CS", "11": "SPI_MOSI", "12": "SPI_MISO", "13": "SPI_SCK",
         "18": "I2C_SDA", "19": "I2C_SCL", "20": "ADC_LRCLK", "21": "ADC_BCLK",
         "22": "TOUCH_IRQ", "23": "ADC_MCLK", "28": "REC_BUTTON", "29": "GAIN_A",
         "30": "GAIN_B", "31": "GAIN_PUSH", "32": "PAD_SENSE", "33": "HP_ENABLE",
         "34": "DAC_MUTE", "35": "REC_LED",
+        # 5-way TFT menu navigation switch (SW4). Direction-to-pin mapping is
+        # firmware-remappable if the physical part reads differently.
+        "36": "NAV_UP", "37": "NAV_DOWN", "38": "NAV_LEFT", "39": "NAV_RIGHT",
+        "40": "NAV_PUSH",
     })
     p.append(part("QuadPreRecorder:Teensy41", "U8", "Teensy 4.1", "QuadPreRecorder:Teensy41_Socket",
                   teensy_nets, 340.0, 202.0, datasheet="https://www.pjrc.com/store/teensy41.html",
@@ -651,28 +737,76 @@ def build_parts() -> list[Part]:
         capacitor("C46", "10uF", "TEENSY_VIN", "GND", 320.0, 176.0, size="1206"),
     ])
 
-    # Recorder controls and the common 14-pin ILI9341/XPT2046 display header.
+    # Recorder controls and the selected LCDWiki MSP2834 capacitive-touch
+    # 14-pin ILI9341/FT6336G display header.
     p.extend([
         part(SW_PUSH, "SW2", "RECORD START/STOP", "Button_Switch_THT:SW_PUSH-12mm",
              {"1": "REC_BUTTON", "2": "GND"}, 286.0, 234.0,
-             manufacturer="Omron", mpn="B3F-4050"),
+             manufacturer="Omron", mpn="B3F-5150",
+             description="12mm tactile switch, 17.5mm tall plunger to reach the 1590F lid"),
         resistor("R50", "10k", "+3V3_D", "REC_BUTTON", 286.0, 248.0),
         capacitor("C47", "100nF", "REC_BUTTON", "GND", 302.0, 248.0),
         part(ENCODER, "SW3", "MASTER GAIN", "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",
              {"A": "GAIN_A", "B": "GAIN_B", "C": "GND", "S1": "GAIN_PUSH", "S2": "GND"},
              326.0, 248.0, manufacturer="Alps Alpine", mpn="EC11E15244G1"),
+        # 5-way TFT menu navigation (added 2026-07-25): ALPS SKQUCAA010,
+        # 4 directions + center push, active-low with 10k pullups + 100nF
+        # debounce like the other panel controls. Stem is ~10mm above the
+        # board vs the 16.5mm lid gap - a ~6.5mm stem-extension cap reaches
+        # the lid (see enclosure-stackup-and-templates.md).
+        part("QuadPreRecorder:SW_Nav5", "SW4", "TFT MENU NAV", "QuadPreRecorder:SW_Nav_ALPS_SKQUCAA010",
+             {"1": "NAV_UP", "2": "NAV_LEFT", "3": "NAV_DOWN", "4": "GND",
+              "5": "NAV_RIGHT", "6": "NAV_PUSH"}, 548.0, 244.0,
+             datasheet="https://cdn-shop.adafruit.com/datasheets/SKQUCAA010-ALPS.pdf",
+             description="ALPS 4-directional + center push TACT switch, snap-in",
+             manufacturer="Alps Alpine", mpn="SKQUCAA010"),
+        resistor("R70", "10k", "+3V3_D", "NAV_UP", 572.0, 224.0),
+        resistor("R71", "10k", "+3V3_D", "NAV_DOWN", 572.0, 234.0),
+        resistor("R72", "10k", "+3V3_D", "NAV_LEFT", 572.0, 244.0),
+        resistor("R73", "10k", "+3V3_D", "NAV_RIGHT", 572.0, 254.0),
+        resistor("R74", "10k", "+3V3_D", "NAV_PUSH", 572.0, 264.0),
+        capacitor("C69", "100nF", "NAV_UP", "GND", 588.0, 224.0),
+        capacitor("C70", "100nF", "NAV_DOWN", "GND", 588.0, 234.0),
+        capacitor("C71", "100nF", "NAV_LEFT", "GND", 588.0, 244.0),
+        capacitor("C72", "100nF", "NAV_RIGHT", "GND", 588.0, 254.0),
+        capacitor("C73", "100nF", "NAV_PUSH", "GND", 588.0, 264.0),
         resistor("R51", "10k", "+3V3_D", "GAIN_A", 350.0, 236.0),
         resistor("R52", "10k", "+3V3_D", "GAIN_B", 366.0, 236.0),
         resistor("R53", "10k", "+3V3_D", "GAIN_PUSH", 382.0, 236.0),
         capacitor("C48", "10nF", "GAIN_A", "GND", 350.0, 250.0),
         capacitor("C49", "10nF", "GAIN_B", "GND", 366.0, 250.0),
         capacitor("C50", "100nF", "GAIN_PUSH", "GND", 382.0, 250.0),
-        part(CONN14, "J3", "TFT TOUCH 14PIN HEADER", "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
+        # Rev B display: LCDWiki MSP3520 3.5in 480x320 (ILI9488 + XPT2046
+        # resistive touch). Same 14-pin header; touch rides the SPI bus with
+        # its own chip-select instead of I2C (I2C now serves only the ADC).
+        part(CONN14, "J3", "MSP3520 TFT 3.5IN 14PIN HEADER", "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical",
              {"1": "+5V", "2": "GND", "3": "TFT_CS", "4": "TFT_RST", "5": "TFT_DC",
               "6": "SPI_MOSI", "7": "SPI_SCK", "8": "TFT_LED", "9": "SPI_MISO",
               "10": "SPI_SCK", "11": "TOUCH_CS", "12": "SPI_MOSI", "13": "SPI_MISO", "14": "TOUCH_IRQ"},
              408.0, 222.0, manufacturer="Sullins Connector Solutions", mpn="PRPC014SAAN-RC",
-             description="14-pin 2.54 mm header for user-supplied ILI9341/XPT2046 TFT module"),
+             description="14-pin 2.54 mm header for LCDWiki MSP3520 ILI9488/XPT2046 3.5in resistive-touch TFT module"),
+        # Rev B: the external debug DB-25s became internal 0.1" test headers
+        # (2x13, pin 26 unused). Same signals, same pin numbers, no wall
+        # cutouts, no EMI stubs to big connectors.
+        part(DB25, "J6", "ANALOG TEST HEADER 2x13", "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical",
+             {"1": "GND", "2": "CHASSIS", "3": "+9V", "4": "VREF",
+              "5": "FLU_RAW", "6": "FLU_AC", "7": "FLU_PAD", "8": "FLU_PRE", "9": "FLU_ADC",
+              "10": "FRD_RAW", "11": "FRD_AC", "12": "FRD_PAD", "13": "FRD_PRE", "14": "FRD_ADC",
+              "15": "BLD_RAW", "16": "BLD_AC", "17": "BLD_PAD", "18": "BLD_PRE", "19": "BLD_ADC",
+              "20": "BRU_RAW", "21": "BRU_AC", "22": "BRU_PAD", "23": "BRU_PRE", "24": "BRU_ADC",
+              "25": "GND"},
+             408.0, 256.0, manufacturer="Generic", mpn="2x13 0.1in pin header",
+             description="Internal analog test header: every stage of all four channels"),
+        part(DB25, "J7", "DIGITAL TEST HEADER 2x13", "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical",
+             {"1": "GND", "2": "+5V", "3": "+3V3_D", "4": "ADC_MCLK",
+              "5": "ADC_BCLK", "6": "ADC_LRCLK", "7": "ADC_TDM", "8": "DAC_BCLK",
+              "9": "DAC_LRCLK", "10": "DAC_DIN", "11": "DAC_MUTE", "12": "I2C_SDA",
+              "13": "I2C_SCL", "14": "SPI_SCK", "15": "SPI_MOSI", "16": "SPI_MISO",
+              "17": "TFT_CS", "18": "TFT_DC", "19": "TOUCH_CS", "20": "TOUCH_IRQ",
+              "21": "PAD_DBG", "22": "REC_BUTTON", "23": "HP_ENABLE", "24": "REC_LED",
+              "25": "GND"},
+             438.0, 256.0, manufacturer="Generic", mpn="2x13 0.1in pin header",
+             description="Internal digital/control test header: every bus and control line"),
         part(LED, "D4", "POWER BLUE", "LED_SMD:LED_0603_1608Metric", {"1": "GND", "2": "PWR_LED_A"}, 400.0, 250.0,
              manufacturer="Lite-On", mpn="LTST-C190TBKT"),
         resistor("R54", "2.2k", "+5V", "PWR_LED_A", 416.0, 250.0),
@@ -683,7 +817,9 @@ def build_parts() -> list[Part]:
              manufacturer="Yageo", mpn="RC0805FR-07100RL"),
     ])
 
-    # Stereo DAC, independent line output, volume pot, and DirectPath headphone amp.
+    # Stereo DAC and binaural line output; the volume pot + DirectPath
+    # headphone amp are fed from the line-out nets, so headphones hear an
+    # amplified duplicate of exactly the line-out signal.
     p.append(part(DAC, "U9", "PCM5102A", "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
                   {"1": "+3V3_A", "2": "DAC_CAPP", "3": "GND", "4": "DAC_CAPM", "5": "DAC_VNEG",
                    "6": "DAC_L", "7": "DAC_R", "8": "+3V3_A", "9": "GND", "10": "GND", "11": "GND",
@@ -702,18 +838,27 @@ def build_parts() -> list[Part]:
         resistor("R57", "33R", "DAC_BCLK", "DAC_BCLK_IC", 330.0, 310.0),
         resistor("R58", "33R", "DAC_DIN", "DAC_DIN_IC", 346.0, 310.0),
         resistor("R59", "33R", "DAC_LRCLK", "DAC_LRCLK_IC", 362.0, 310.0),
-        resistor("R60", "10k", "+3V3_D", "DAC_MUTE_IC", 378.0, 310.0),
+        # Pull-DOWN: DAC stays muted until the Teensy actively raises XSMT
+        # (review finding, 2026-07-25 — was a pull-up to +3V3_D).
+        resistor("R60", "10k", "DAC_MUTE_IC", "GND", 378.0, 310.0),
         resistor("R61", "100R", "DAC_MUTE", "DAC_MUTE_IC", 394.0, 310.0),
-        resistor("R62", "100R", "DAC_L", "LINE_L", 318.0, 330.0),
-        resistor("R63", "100R", "DAC_R", "LINE_R", 334.0, 330.0),
+        # TI-recommended PCM5102A line-out filter: 470R series + 2.2nF shunt.
+        resistor("R62", "470R", "DAC_L", "LINE_L", 318.0, 330.0),
+        resistor("R63", "470R", "DAC_R", "LINE_R", 334.0, 330.0),
+        capacitor("C67", "2.2nF C0G", "LINE_L", "GND", 318.0, 344.0),
+        capacitor("C68", "2.2nF C0G", "LINE_R", "GND", 334.0, 344.0),
         part(JACK_TRS, "J4", "1/4in BINAURAL LINE OUT", "Connector_Audio:Jack_6.35mm_Neutrik_NRJ6HF_Horizontal",
              {"T": "LINE_L", "R": "LINE_R", "S": "GND"}, 354.0, 330.0,
              manufacturer="Neutrik", mpn="NRJ6HF"),
+        # Headphone path taps LINE_L/LINE_R (post reconstruction filter), not
+        # the raw DAC pins, so the headphone out is an exact amplified
+        # duplicate of the binaural line out (change 2026-07-25). The 10k pot
+        # loads the 470R filter by only ~0.4 dB.
         part(POT_DUAL, "RV1", "10kA HEADPHONE VOLUME", "QuadPreRecorder:RK097_Dual_Horizontal_NoEdgeGuide",
-             {"1": "DAC_L", "2": "HP_VOL_L", "3": "GND", "4": "DAC_R", "5": "HP_VOL_R", "6": "GND"},
+             {"1": "LINE_L", "2": "HP_VOL_L", "3": "GND", "4": "LINE_R", "5": "HP_VOL_R", "6": "GND"},
              386.0, 330.0, manufacturer="Alps Alpine", mpn="RK0971221-F15-C0-A103"),
         capacitor("C57", "680nF X7R", "HP_VOL_L", "HP_IN_L", 414.0, 324.0, size="0805"),
-        capacitor("C58", "680nF X7R", "HP_VOL_R", "HP_IN_R", 414.0, 338.0, size="0805"),
+        capacitor("C58", "680nF X7R", "HP_VOL_R", "HP_IN_R", 414.0, 338.0, size="0603"),
         part(HPAMP, "U10", "TPA6132A2", "Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm",
              {"1": "HP_IN_L", "2": "GND", "3": "GND", "4": "HP_IN_R", "5": "HP_OUT_R",
               "6": "+3V3_D", "7": "GND", "8": "HP_VSS", "9": "HP_CPN", "10": "GND",
@@ -721,10 +866,10 @@ def build_parts() -> list[Part]:
               "16": "HP_OUT_L", "17": "GND"}, 446.0, 330.0,
              datasheet="https://www.ti.com/lit/ds/symlink/tpa6132a2.pdf",
              manufacturer="Texas Instruments", mpn="TPA6132A2RTER"),
-        capacitor("C59", "1uF", "HP_CPP", "HP_CPN", 468.0, 310.0, size="0805"),
-        capacitor("C60", "2.2uF", "HP_VSS", "GND", 484.0, 310.0, size="0805"),
-        capacitor("C61", "2.2uF", "HPVDD", "GND", 500.0, 310.0, size="0805"),
-        capacitor("C65", "2.2uF", "+5V", "GND", 516.0, 310.0, size="0805"),
+        capacitor("C59", "1uF", "HP_CPP", "HP_CPN", 468.0, 310.0, size="0603"),
+        capacitor("C60", "2.2uF", "HP_VSS", "GND", 484.0, 310.0, size="0603"),
+        capacitor("C61", "2.2uF", "HPVDD", "GND", 500.0, 310.0, size="0603"),
+        capacitor("C65", "2.2uF", "+5V", "GND", 516.0, 310.0, size="0603"),
         resistor("R64", "100k", "HP_ENABLE", "GND", 468.0, 344.0),
         resistor("R65", "10R", "HP_OUT_L", "HP_JACK_L", 484.0, 344.0),
         resistor("R66", "10R", "HP_OUT_R", "HP_JACK_R", 500.0, 344.0),
@@ -750,14 +895,15 @@ def build() -> tuple[str, list[Part]]:
         "PCM5100", "PCM5102A"
     )
     registry.embedded["QuadPreRecorder:Teensy41"] = custom_teensy_symbol()
+    registry.embedded["QuadPreRecorder:SW_Nav5"] = custom_nav_symbol()
 
     sch = Schematic(registry)
     sch.text("QUAD PREAMP + 4-CHANNEL AMBISONIC RECORDER", 15.0, 15.0, 2.20, True)
-    sch.text("192 kHz / 24-bit capture • real-time binaural monitor • two-layer Rev A", 15.0, 21.0, 1.25)
+    sch.text("192 kHz / 24-bit capture • real-time binaural monitor • two-layer Rev B (Hammond 1590XX)", 15.0, 21.0, 1.25)
 
     sch.text("POWER: protected 9 V input, 5 V buck, quiet 3.3 V audio rail, 4.5 V virtual ground", 15.0, 29.0, 1.30, True)
     sch.text("MICROPHONE INPUT + FOUR MATCHED CHANNELS", 15.0, 67.0, 1.30, True)
-    sch.text("DE-9: 1 FLU+, 6 FLU return; 2 FRD+, 7 FRD return; 3 BLD+, 8 BLD return; 4 BRU+, 9 BRU return; 5 shield", 15.0, 72.0, 1.00)
+    sch.text("RJ45 (shielded): pair 1/2 FLU+ret; pair 3/6 FRD+ret; pair 4/5 BLD+ret; pair 7/8 BRU+ret; shell = shield to CHASSIS", 15.0, 72.0, 1.00)
     sch.text("One PAD switch controls four CD4053 paths: HIGH=direct, LOW=-9.7 dB. OPA1654 fixed gain is 20.1 dB.", 15.0, 76.0, 1.00)
     for name, y in zip(("FLU", "FRD", "BLD", "BRU"), (84.0, 120.0, 156.0, 192.0)):
         sch.text(f"{name} CHANNEL", 64.0, y - 9.0, 1.10, True)
@@ -766,10 +912,11 @@ def build() -> tuple[str, list[Part]]:
     sch.text("PCM1864: four single-ended inputs, common software PGA, 192 kHz 4-slot TDM", 294.0, 72.0, 1.00)
     sch.text("CONTROLLER, TOUCHSCREEN, RECORD CONTROLS", 278.0, 162.0, 1.30, True)
     sch.text("Teensy 4.1 records four mono WAV files over native SDIO and decodes the 48 kHz binaural monitor.", 278.0, 168.0, 1.00)
+    sch.text("J6/J7 are internal 2x13 0.1in test headers (Rev B): open the bottom plate to probe any stage or bus.", 278.0, 174.0, 1.00)
     sch.text("STEREO BINAURAL DAC, LINE OUTPUT, AND HEADPHONE AMPLIFIER", 278.0, 268.0, 1.30, True)
-    sch.text("PCM5102A ground-centered line output; TPA6132A2 is 0 dB, DirectPath, and controlled by HP_ENABLE.", 278.0, 273.0, 1.00)
+    sch.text("PCM5102A ground-centered line output; headphone path is an amplified duplicate of LINE_L/R (TPA6132A2, 0 dB, DirectPath, HP_ENABLE).", 278.0, 273.0, 1.00)
     sch.text("USB/POWER NOTE: do not connect 9 V barrel power and Teensy USB simultaneously unless the Teensy VIN-VUSB link is cut.", 15.0, 226.0, 1.05, True)
-    sch.text("DISPLAY NOTE: verify the purchased generic module's 14-pin order and 78 x 42 mm mounting pattern before enclosure drilling.", 15.0, 232.0, 1.05)
+    sch.text("DISPLAY NOTE: J3 targets LCDWiki MSP3520 ILI9488/XPT2046 3.5in resistive touch (480x320); its mounting-hole pattern is UNPUBLISHED - verify against the physical module before drilling.", 15.0, 232.0, 1.05)
     sch.text("CAPSULE NOTE: this input is only for four independent two-wire electrets with internal FETs; confirm bias polarity and current.", 15.0, 238.0, 1.05)
     sch.text("Rev A by jdg511 • https://github.com/jdg511/quadpreandrecorder", 15.0, 244.0, 1.05)
 
@@ -790,7 +937,7 @@ def build() -> tuple[str, list[Part]]:
         '\t\t(company "jdg511")',
         '\t\t(comment 1 "https://github.com/jdg511/quadpreandrecorder")',
         '\t\t(comment 2 "Four 192 kHz / 24-bit simultaneous microphone channels")',
-        '\t\t(comment 3 "Hammond 1590BB2 • two copper layers")',
+        '\t\t(comment 3 "Hammond 1590XX • two copper layers • Rev B")',
         '\t\t(comment 4 "Prototype before production; see hardware/requirements.md")',
         "\t)",
         "\t(lib_symbols",
@@ -814,6 +961,7 @@ def build_local_symbol_library() -> str:
         REGISTRY.embedded["QuadPreRecorder:TPS7A20DBV"],
         REGISTRY.embedded["QuadPreRecorder:PCM5102A"],
         custom_teensy_symbol(),
+        custom_nav_symbol(),
     ]
     # Local libraries use unqualified names at the library root.
     cleaned = []
