@@ -1,0 +1,18 @@
+=== stitch pass 4 ===
+=== connectivity ===
+GND pads: 174
+GND pad clusters: 6
+   MAIN     169 pads
+   ORPHAN   1 pads: U6.11
+   ORPHAN   1 pads: U4.9
+   ORPHAN   1 pads: C38.2
+   ORPHAN   1 pads: C41.2
+   ORPHAN   1 pads: C43.2
+
+KiCad unconnected count on the whole board: 5
+=== DRC ===
+Found 0 violations
+Found 5 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/QuadPreRecorder-drc.rpt
+=== PASS4 DONE ===

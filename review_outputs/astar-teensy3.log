@@ -1,0 +1,69 @@
+﻿
+16 connections to close
+[ok]   I2C_SDA      (75.24,42.18)->(81.00,44.17) 10 seg 1 via, 0s, margin 5
+[FAIL] +3V3_D       from (75.24,57.42)  Track [+3V3_D] on B.Cu, length 1.0362 mm | PTH pad 3V3B [+3V3_D] of U8
+[ok]   SPI_SCK      (75.24,29.48)->(76.40,33.40) 8 seg 1 via, 0s, margin 5
+[ok]   NAV_PUSH     (75.24,21.86)->(79.60,28.76) 14 seg 2 via, 0s, margin 5
+   (verify failed on segment 15/17 at (74.00,37.57))
+   (verify failed on segment 15/17 at (74.00,37.57))
+   (verify failed on segment 15/17 at (74.00,37.57))
+   (verify failed on segment 15/17 at (74.00,37.57))
+[ok]   NAV_ENC_A    (60.00,19.32)->(92.27,38.27) 10 seg 1 via, 6s, margin 5
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/14 at (74.02,38.46))
+   (verify failed on segment 14/16 at (74.02,38.96))
+   (verify failed on segment 14/16 at (74.02,38.96))
+   (verify failed on segment 14/16 at (74.02,38.96))
+   (verify failed on segment 14/16 at (74.02,38.96))
+[ok]   NAV_ENC_A    (75.02,66.96)->(74.00,38.07) 12 seg 1 via, 8s, margin 5
+[ok]   NAV_DOWN     (76.08,65.67)->(95.81,26.46) 58 seg 14 via, 9s, margin 14
+[ok]   NAV_RIGHT    (75.24,19.32)->(80.16,26.78) 12 seg 3 via, 0s, margin 5
+   (pulled NAV_LEFT end back 1.5 mm to (79.39,64.89))
+   (pulled NAV_LEFT end back 1.5 mm to (79.39,66.39))
+   (dropped 1.80 mm stub of NAV_LEFT at (79.39,66.39))
+[FAIL] NAV_LEFT     from (79.39,68.19)  Track [NAV_LEFT] on B.Cu, length 4.7996 mm | Track [NAV_LEFT] on F.Cu, length 
+29.8654 mm
+   (verify failed on segment 68/68 at (74.39,98.76))
+   (verify failed on segment 64/64 at (74.39,98.76))
+[ok]   BRU_PRE      (73.14,61.51)->(74.49,100.69) 40 seg 8 via, 22s, margin 14
+[FAIL] REC_LED      from (75.24,9.16)  PTH pad 35 [REC_LED] of U8 | Track [REC_LED] on B.Cu, length 9.5683 mm
+   (pulled ADC_DOUT2 end back 1.5 mm to (70.81,38.02))
+   (pulled ADC_DOUT2 end back 1.5 mm to (69.31,38.02))
+   (pulled ADC_DOUT2 end back 1.5 mm to (67.81,38.02))
+   (dropped 1.75 mm stub of ADC_DOUT2 at (67.81,38.02))
+   (dropped 0.64 mm stub of ADC_DOUT2 at (66.06,38.02))
+[FAIL] ADC_DOUT2    from (66.06,38.66)  Track [ADC_DOUT2] on F.Cu, length 20.5718 mm | Track [ADC_DOUT2] on F.Cu, 
+length 6.2480 mm
+   (verify failed on segment 16/16 at (79.99,45.30))
+   (verify failed on segment 16/16 at (79.99,45.30))
+   (verify failed on segment 16/16 at (79.99,45.30))
+   (verify failed on segment 16/16 at (79.99,45.30))
+[ok]   ADC_BCLK     (75.24,49.80)->(83.23,38.42) 19 seg 1 via, 1s, margin 5
+[FAIL] ADC_MCLK     from (75.24,54.88)  Track [ADC_MCLK] on B.Cu, length 5.4190 mm | PTH pad 23 [ADC_MCLK] of U8
+   (pulled ADC_TDM end back 1.5 mm to (70.72,39.64))
+   (pulled ADC_TDM end back 1.5 mm to (69.22,39.64))
+   (pulled ADC_TDM end back 1.5 mm to (67.72,39.64))
+   (pulled ADC_TDM end back 1.5 mm to (66.22,39.64))
+   (pulled ADC_TDM end back 1.5 mm to (64.72,39.64))
+   (pulled ADC_TDM end back 1.5 mm to (63.22,39.64))
+[FAIL] ADC_TDM      from (63.22,39.64)  Track [ADC_TDM] on F.Cu, length 12.2163 mm | Track [ADC_TDM] on F.Cu, length 
+17.4326 mm
+[FAIL] ADC_LRCLK    from (75.24,47.26)  Track [ADC_LRCLK] on B.Cu, length 4.6371 mm | PTH pad 20 [ADC_LRCLK] of U8
+done 9/16, board saved
+
+
+
+zones refilled: 20
+
+
+Found 0 violations
+Found 8 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-teensyfix6.json
+ASTAR3 DONE

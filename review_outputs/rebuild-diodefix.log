@@ -1,0 +1,21 @@
+=== netlist (schematic changed) ===
+=== ERC ===
+Found 0 violations
+Saved ERC Report to hardware/fabrication/QuadPreRecorder-erc.rpt
+=== regenerate board + re-import existing route ===
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted.dsn
+Board: 138.0 x 114.0 mm, footprints: 250
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+Tracks/vias: 3063; zones: 19
+  stitching vias added: 175
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+  pass-2 vias added     : 19
+  islands with no room  : 19
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+=== DRC ===
+Found 0 violations
+Found 17 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/QuadPreRecorder-drc.rpt
+=== REBUILD DONE ===

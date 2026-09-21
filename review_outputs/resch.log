@@ -1,0 +1,19 @@
+﻿=== generate_schematic ===
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_sch
+Symbol instances: 329
+=== ERC ===
+Found 0 violations
+Saved ERC Report to hardware/review_outputs/erc-c3mic.rpt
+
+ ** ERC messages: 0  Errors 0  Warnings 0
+
+
+=== DRC + parity ===
+
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+
+
+DONE
+RESCH+FAB DONE

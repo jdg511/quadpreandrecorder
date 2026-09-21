@@ -1,0 +1,19 @@
+BLOCKER: K1 G6K-2F-Y pin 4 and 5 are wired to GND, but the provided Omron drawing note states pins 4/5 are NO (Normally Open) contacts. The note claims "NO 4/5 = GND (tips grounded when energised)", which is electrically impossible for a relay contact to ground the jack tips unless the jack tips are also connected to the NO contact, but the table shows J4.R/T (tips) connected to K1 pins 3/6 (COM). If pins 4/5 are NO and connected to GND, and pins 3/6 are COM connected to the jack tips, then energizing the relay connects the jack tips to GND. This matches the note's intent. However, the note says "contacts 2/7 NC, 3/6 COM, 4/5 NO". The table shows Pin 2 = LINE_L, Pin 7 = LINE_R (NC inputs), Pin 3 = LINE_JACK_L, Pin 6 = LINE_JACK_R (COM outputs), Pin 4 = GND, Pin 5 = GND (NO to GND). This configuration grounds the output when energized. This is a valid mute circuit. The potential error is in the interpretation of the note vs the table. The note says "NO 4/5 = GND". The table says Pin 4 is GND, Pin 5 is GND. This is consistent. Wait, the note says "As wired: COM 3/6 = jack tips, NC 2/7 = LINE_L/R (audio passes with the coil off), NO 4/5 = GND (tips grounded when energised)." This is a correct description of the wiring in the table. So K1 is fine.
+
+BLOCKER: J9 USB-C POWER + DATA (TYPE-C-31-M-12). Pins A5 (CC1) and B5 (CC2) are connected to R75.1 and R76.1 respectively. The USB-C specification requires 5.1kΩ pulldown resistors on CC1 and CC2 to GND for a UFP (USB Type-C receptacle) to identify a CDP (USB Type-C plug). The table shows R75.1 and R76.1 connected to the CC pins, but does not show the other end of these resistors. If R75 and R76 are not 5.1kΩ to GND, the USB-C plug will not be detected, and VBUS will not be supplied. The table does not list the other end of R75/R76, but typically they go to GND. If they are not 5.1kΩ, this is a blocker. VERIFY: Check R75 and R76 values. They must be 5.1kΩ to GND.
+
+SHOULD FIX: J10 BATTERY 1S LiPo (B2B-PH-K-S). Pin 1 is VBAT, Pin 2 is GND. The "Other ends" for Pin 1 include U13.2 (BAT), U13.3 (BAT). This suggests U13 is a battery charger or fuel gauge. However, the "Other ends" for Pin 2 (GND) include C1.2, C2.2, etc., which are general GND caps. This is fine. But note that J10 is a 2-pin connector. If this is a 1S LiPo, the voltage is 3.7V nominal, 4.2V max. The VBAT net is connected to U13.2 and U13.3. If U13 is a charger, it should have a BAT pin and a PROG pin, etc. The table does not show the full U13 pinout, so this is not a direct error in the connector table.
+
+NOTE: J3 MSP3526 TFT 3.5IN 14PIN SOCKET. Pin 14 is __unnamed_27, single-pin net. This is likely an unused pin or a test point. No issue.
+
+NOTE: J4 1/4in BINAURAL LINE OUT. Pin R is LINE_JACK_R, Pin T is LINE_JACK_L, Pin S is GND. This is a standard TRS jack. The relay K1 connects the line inputs to the jack tips when de-energized, and grounds the tips when energized. This is a standard mute circuit.
+
+NOTE: J5 1/8in BINAURAL HEADPHONE OUT. Pin R is HP_JACK_R, Pin T is HP_JACK_L, Pin S is GND. This is a standard TRS jack. No relay is mentioned for this jack, so it is always connected to the headphone amp outputs. This is fine.
+
+NOTE: SW2 RECORD START/STOP. Pin 1 is REC_SW, Pin 2 is GND. This is a standard switch to GND. No issue.
+
+NOTE: SW3 MASTER GAIN. Pins A and B are GAIN_A and GAIN_B, Pin C is GND. This is a standard potentiometer. Pins S1 and S2 are GAIN_SW and GND. This is a standard switch. No issue.
+
+NOTE: SW4 TFT MENU NAV. Pins 5, 6, 7, 8, 9, 10, A, B, C, D are connected to various nets. Pin 10 is NC, single-pin net. This is fine.
+
+VERIFY: R75 and R76 values for USB-C CC1 and CC2. They must be 5.1kΩ to GND for proper USB-C plug detection.

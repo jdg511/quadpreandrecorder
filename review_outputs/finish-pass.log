@@ -1,0 +1,50 @@
+=== export DSN from the routed board ===
+exported 3428 tracks/vias
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish.dsn
+=== protect everything already routed ===
+wiring entries protected: 3196 (was 3196 routable)
+sample via: (via "Via[0-3]_800:400_um"  115830 -63715.5 (net +5V)(type protect))
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish.dsn
+=== In1.Cu -> (type power) ===
+layer decls changed to power : 1
+In1 wire_keepouts removed    : 1
+bytes 414582 -> 414423
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn
+=== freerouting finishing pass 08:07:23 ===
+2026-09-11 08:07:24.381 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 08:07:24.418 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 08:07:25.671 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-11 08:07:26.003 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 08:07:35.301 [Thread-29] INFO  Starting auto-routing...
+2026-09-11 08:07:35.760 [Thread-29] INFO  Auto-routing was completed in 0.46 seconds.
+2026-09-11 08:07:35.862 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-11 08:07:39.568 [Thread-29] INFO  Route optimization was completed in 3.70 seconds.
+2026-09-11 08:07:39.595 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+=== freerouting done 08:07:39 ===
+=== regenerate pristine board, import the finished route ===
+Board: 138.0 x 114.0 mm, footprints: 254
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+Tracks/vias: 3487; zones: 19
+  SW2    duplicate pad numbers 1,2 -> treated as internal jumpers
+  J9     duplicate pad numbers SH -> treated as internal jumpers
+  SW3    duplicate pad numbers MP -> treated as internal jumpers
+  J2     duplicate pad numbers SH -> treated as internal jumpers
+footprints updated: 4
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+  stitching vias added: 0
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+  pass-2 vias added     : 0
+  islands with no room  : 1
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+=== connectivity ===
+GND pads: 174
+GND pad clusters: 1
+   MAIN     174 pads
+
+KiCad unconnected count on the whole board: 0
+=== DRC ===
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/QuadPreRecorder-drc.rpt
+=== FINISH PASS DONE 08:08:24 ===

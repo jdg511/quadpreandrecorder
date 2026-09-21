@@ -1,0 +1,8 @@
+A_power FAILED: <HTTPError 401: 'Unauthorized'>
+B_ics_power FAILED: <HTTPError 401: 'Unauthorized'>
+C_ics_audio FAILED: <HTTPError 401: 'Unauthorized'>
+D_discretes_conn FAILED: <HTTPError 401: 'Unauthorized'>
+E_analog FAILED: <HTTPError 401: 'Unauthorized'>
+F_board FAILED: <HTTPError 401: 'Unauthorized'>
+G_bom FAILED: <HTTPError 401: 'Unauthorized'>
+ALL DONE

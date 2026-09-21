@@ -1,0 +1,42 @@
+﻿
+structor found.
+
+
+
+Found 0 violations
+Found 11 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t7.json
+
+
+
+1 connections to close
+[ok]   BRU_PRE      (73.14,61.51)->(74.49,97.96) 3 seg 0 via, 1s, margin 5
+done 1/1, board saved
+
+
+
+1 connections to close
+   (verify failed on segment 17/18 at (70.80,105.68))
+   (verify failed on segment 17/18 at (70.79,105.68))
+   (verify failed on segment 17/18 at (70.79,105.68))
+   (verify failed on segment 17/18 at (70.79,105.68))
+[ok]   BRU_CFB      (73.80,61.66)->(74.67,86.08) 9 seg 4 via, 32s, margin 9
+done 1/1, board saved
+
+
+
+Found 20 violations
+Found 9 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t8.json
+
+
+
+9 connections to close
+[ok]   LINE_MUTE    (72.47,61.33)->(97.52,102.34) 13 seg 5 via, 65s, margin 9
+[FAIL] +3V3_D       from (75.24,57.42)  Track [+3V3_D] on B.Cu, length 1.0362 mm | PTH pad 3V3B [+3V3_D] of U8
+   (pulled NAV_LEFT end back 1.5 mm to (80.45,69.25))
+   (pulled NAV_LEFT end back 1.5 mm to (81.51,70.31))
+
+

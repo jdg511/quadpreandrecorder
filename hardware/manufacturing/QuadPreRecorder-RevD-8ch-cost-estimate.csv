@@ -1,0 +1,47 @@
+REV D (8ch/192k) BOM COST ESTIMATE - 5 BOARDS - 2026-09-20
+Basis: Rev C3 best-source sweep 2026-09-12 (Mouser/LCSC lowest per line) + Rev D delta below.
+NOT an order package. No PCB/assembly/shipping included. Prices rechecked 2026-09-20 for the ICs and doubled lines.
+
+SECTION 1: REV C3 BASELINE (unchanged lines carry over as-is)
+"baseline parts total (5 boards, incl Teensy line)",$572.67
+baseline excl. Teensy 4.1 line,$404.67
+
+SECTION 2: REV D DELTA LINES
+change,MPN,source,qty (5 bd),unit $,ext $,note
++ 4.7k ELECTRET BIAS,RC0603FR-074K7L,LCSC,20,0.0043,0.09,second bank electret bias
++ 100R RF,RC0603FR-07100RL,Mouser,40,0.1000,4.00,"hot+cold 100R RF, ch5-8"
++ 100pF C0G,GRM1885C1H101JA01D,LCSC,40,0.0270,1.08,"hot+cold 100pF, ch5-8"
++ PESD12VL1BA,"PESD12VL1BA,115",LCSC,40,0.3046,12.18,"PESD ch5-8  ** substitute needed, see flags **"
++ 4.7uF 35V FILM,35MU475KC44532,LCSC,60,0.7848,47.09,"PMLCAP 4.7uF film coupling, ch5-8"
++ 1M,RC0603FR-071ML,LCSC,40,0.0055,0.22,"1M input bias + cold, ch5-8"
++ 100k,RC0603FR-07100KL,LCSC,20,0.0036,0.07,"100k ACC->VREF, ch5-8"
++ 68k 0.1%,RT0603BRD0768KL,LCSC,20,0.0351,0.70,"68k 0.1%, ch5-8"
++ 33k 0.1%,RT0603BRD0733KL,LCSC,20,0.0374,0.75,"33k 0.1%, ch5-8"
++ 10k 0.1%,RT0603BRD0710KL,LCSC,40,0.0331,1.32,"10k 0.1% Ra (A1+A2), ch5-8"
++ 90.9k 0.1%,RT0603BRD0790K9L,LCSC,40,0.0434,1.74,"90.9k 0.1% Rb (A1+A2), ch5-8"
++ 22pF C0G,GCM1885C2A220JA16D,LCSC,40,0.0244,0.98,"22pF comp across Rb, ch5-8"
++ 10nF C0G,C1608C0G1H103JT000N,LCSC,20,0.0460,0.92,"10nF C0G filter, ch5-8"
++ OPA1654,OPA1654AIPWR,LCSC,10,2.6201,26.20,"OPA1654 A1+A2 quads, second bank"
++ CD4053BPW,CD4053BPWR,LCSC,15,0.3464,5.20,"CD4053 cold-leg grounding, second bank"
++ AMBISONIC MIC RJ45,RJHSE-5380,Mouser,5,1.6600,8.30,"second shielded RJ45 (J2B), mics 5-8"
++ 100nF,CL10B104KB8NNNC,LCSC,40,0.0105,0.42,100nF decoupling for new ICs
++ 1uF 10V,CC0805KKX7R9BB105,LCSC,20,0.0427,0.85,"1uF decoupling, new ADCs/opamps"
++ 10uF,CL31B106KAHNNNE,LCSC,10,0.1958,1.96,"10uF bulk, new ADCs"
+- PCM1864DBT (removed),PCM1864DBTR,LCSC,-5,4.5395,-22.70,replaced; cannot do 8ch @192k within 2 SAI RX lines
++ TLV320ADC5140 x2/board,TLV320ADC5140IRTWR,LCSC C2876368,10,4.0121,40.12,4ch TDM @192k on one data line each; Active; LCSC 235 pcs / Mouser $3.94@10 (51 pcs)
+DELTA TOTAL,,,,,131.49,
+
+SECTION 3: TOTALS (5 boards)
+Rev C3 baseline excl Teensy,$404.67,per board,$80.93
+Rev D delta,$131.49,per board,$26.30
+REV D TOTAL excl Teensy,$536.16,per board,$107.23
+REV D TOTAL incl Teensy 4.1,$704.16,per board,$140.83
+
+SECTION 4: SOURCING FLAGS (checked live 2026-09-20)
+"PESD12VL1BA,115: Mouser = Restricted Availability / factory not accepting orders, 0 stock; LCSC down to ~41 pcs (80 needed). PICK SUBSTITUTE for Rev D: 12V bidirectional ESD, SOD-323, low C; e.g. LCSC preferred-library H12VSD3B (1.5pF, $0.03) or name-brand equivalent. Cost impact negligible."
+"CD4053BPW (tube) shows End of Life at Mouser; the reel part CD4053BPWR used in the BOM is Active (Mouser 3011, LCSC 775). Watch this family; 30 pcs needed."
+"TLV320ADC5140IRTWR: Active. LCSC 235 @ $4.01, Mouser 51 @ $3.94(10+). 10 needed. Verify in firmware: 4ch TDM @192k = 24.576 MHz BCK, at the part and SAI limit."
+PCM1864DBTR removed in Rev D (LCSC stock was down to ~97 anyway).
+"Rubycon PMLCAP films: Active but LCSC-only. 4.7uF C3778321: 6901 pcs (120 needed, was 60). 2.2uF C3778570: 429 pcs (20 needed, unchanged) - still buy spares."
+"OPA1654AIPWR Active (LCSC 1151/Mouser 1339), 20 needed. All other Rev C3 ICs rechecked Active: PCM5102A, TPA6130A2, TLE2426, BQ24074, TPS61175, TPS62160, TPS7A2033, ADP7142."
+"NOT included (out of scope: PCB parts only): Teensy PSRAM (~$2-4/bd, recommended for 2x data rate buffering), display, battery, CAT6 cable plugs, PCB fab/assembly. Larger board will raise fab cost vs Rev C3."

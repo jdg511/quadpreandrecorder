@@ -1,0 +1,45 @@
+﻿=== BLD_MICC: lift the C99.1->C103.1 run to y=98.1 (opens a via slot at (41,98.85)) ===
+BLD_MICC items removed in box: 3
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+ok  seg B.Cu (36.00,98.88)-(36.45,98.42) 0.6 mm
+ok  seg B.Cu (36.45,98.42)-(36.77,98.10) 0.5 mm
+ok  seg B.Cu (36.77,98.10)-(41.50,98.10) 4.7 mm
+ok  seg B.Cu (41.50,98.10)-(42.85,99.45) 1.9 mm
+ok  seg B.Cu (42.85,99.45)-(44.00,100.15) 1.3 mm
+BLD_MICC: 5 segments, 0 vias added
+=== CHASSIS: C15.2 -> F band -> via (41,98.85) -> B.Cu down to D23.2 ===
+ok  seg F.Cu (38.00,97.33)-(41.00,97.33) 3.0 mm
+ok  seg F.Cu (41.00,97.33)-(41.00,98.85) 1.5 mm
+ok  seg B.Cu (41.00,98.85)-(41.00,103.35) 4.5 mm
+ok  seg B.Cu (41.00,103.35)-(40.00,103.35) 1.0 mm
+ok  via (41.00,98.85)
+CHASSIS: 4 segments, 1 vias added
+=== BRU_MICC: feeder hops over BRU_RAWC on F.Cu, vias (34.5,102.3) (39.0,105.3) ===
+ok  seg B.Cu (33.66,101.75)-(34.50,102.30) 1.0 mm
+ok  seg F.Cu (34.50,102.30)-(39.60,102.30) 5.1 mm
+ok  seg F.Cu (39.60,102.30)-(39.60,104.60) 2.3 mm
+ok  seg F.Cu (39.60,104.60)-(39.00,105.30) 0.9 mm
+ok  seg B.Cu (39.00,105.30)-(39.00,106.05) 0.8 mm
+ok  via (34.50,102.30)
+ok  via (39.00,105.30)
+BRU_MICC: 5 segments, 2 vias added
+=== refill zones ===
+zones refilled: 20
+=== GND clusters ===
+GND pad clusters: 1
+   MAIN     184 pads
+
+KiCad unconnected count on the whole board: 0
+=== CHASSIS / BRU_MICC / BLD_MICC clusters ===
+CHASSIS: 1 clusters
+BRU_MICC: 1 clusters
+BLD_MICC: 1 clusters
+=== DRC ===
+
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+
+
+DONE

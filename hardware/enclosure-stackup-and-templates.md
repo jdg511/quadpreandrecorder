@@ -1,5 +1,11 @@
 # Hammond 1590F stackup study and drill templates — Rev A
 
+**SUPERSEDED 2026-09-06.** The target enclosure changed from the Hammond 1590F to the compact Hammond 1590XX (Rev B), and the board outline changed from 174 x 174 mm to 138 x 114 mm with an entirely different wall layout (see `mechanical.md` and `enclosure-fit-audit.md` for the current Rev B placement). Everything below is a real physical stackup study done against an actual Hammond 1590F box and its drill templates — none of these measurements, corrections, or the companion PDF apply to the 1590XX. They are kept here only as a record of the method used, and as a reminder that a new stackup study against a real 1590XX box (with new drill templates) is required before drilling anything for Rev B. Do not use the `QuadPreRecorder-1590F-drill-templates.pdf` file for the current board.
+
+---
+
+## Original 1590F study (historical, retired 2026-09-06)
+
 Date: 2026-07-25 (templates Rev 2, post-reroute). Companion file:
 `QuadPreRecorder-1590F-drill-templates.pdf` (four 1:1 pages: left wall, right
 wall, bottom wall, lid).
@@ -8,7 +14,11 @@ wall, bottom wall, lid).
 on their footprint *anchor* (pin 1) instead of the true bushing/shell center,
 and drew the bottom wall un-mirrored. Discard any Rev 1 prints. Corrections,
 measured from the routed board's fab geometry: J2 DE-9 shell center 61.46 (was
-67.0), J6/J7 DB-25 shell centers 138.38/48.38 (were 155/65 — 16.6 mm off),
+67.0) — **NOTE: this is the OLD D-sub footprint; J2 is being replaced with an
+Amphenol RJHSE-5380 shielded RJ45/CAT6 jack per the schematic, so this entire
+J2 measurement is void until the PCB is regenerated with the new footprint and
+re-measured against the RJHSE-5380's real shell geometry.** J6/J7 DB-25 shell
+centers 138.38/48.38 (were 155/65 — 16.6 mm off),
 RV1 shaft 164.5 (was 162.0), J4 bushing axis at board X 132.23 (was drawn at
 the pad column, 7.2 mm off). The bottom wall now also carries J1 (9 V power,
 moved off the left wall), and the left wall carries SW1, the pad toggle. The
@@ -110,12 +120,13 @@ from the top edge, bottom holes 6.92 from the bottom edge). The board's H5–H8
 are at **78 x 42** — off by ~1.9/2.0 mm, more than the screw slack. Move H5–H8
 (and re-check J3's position/wiring to the module header) before ordering.
 
-**B (RESOLVED — BOM is now LD09S33E4GV00LF, the US-style part).** BOM listed Amphenol
-**LD09S13A4GV00LF**, which is the *Europe-style* right-angle DE-9: 10.4 mm
-footprint, 2.54 row pitch, centerline 7.2 above board. The routed footprint
-(`DSUB-9...P2.77x2.84 EdgePinOffset9.40mm`) matches the *US-style* part
-**LD09S33E4GV00LF** (2.84 rows, centerline 6.3). Order the 33E part (or requote
-the footprint). Templates assume the US-style 6.3 centerline.
+**B (SUPERSEDED — J2 is no longer a DE-9 at all).** This EU-vs-US DE-9 part-number
+question (LD09S13A4GV00LF vs LD09S33E4GV00LF) is now moot: J2 has been changed to
+a shielded 8P8C RJ45/CAT6 jack, Amphenol RJHSE-5380, per the schematic. The PCB
+still has the old DSUB-9 footprint routed and must be regenerated with the
+RJHSE-5380 footprint before ordering; new drill-template measurements for J2 are
+needed once that's done, since the RJ45 jack's shell size/protrusion differs from
+the D-sub.
 
 **C (RESOLVED — BOM is now Omron B3F-5150).** The B3F-4050 plunger tops out
 7.3 mm above the board against a 16.5 mm gap. Cleanest fix: swap SW2 to a

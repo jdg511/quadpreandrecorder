@@ -3,7 +3,7 @@
 ```mermaid
 %%{init: {"flowchart": {"useMaxWidth": false, "nodeSpacing": 70, "rankSpacing": 110, "padding": 24}, "themeVariables": {"fontSize": "64px"}}}%%
 flowchart LR
-    MIC["DE-9: four electret pairs + shield"] --> BIAS["Bias, RF protection, DC blocking"]
+    MIC["RJ45/CAT6: four electret pairs + shield"] --> BIAS["Bias, RF protection, DC blocking"]
     BIAS --> PAD["Ganged four-channel -10 dB pad"]
     PAD --> PRE["OPA1654 quad JFET preamp, +20 dB"]
     PRE --> ADC["PCM1864 4-channel ADC/PGA, 192 kHz/24-bit"]
@@ -46,7 +46,7 @@ analog potentiometer. The -10 dB pad shifts the effective range to -2 dB to
 
 ## Grounding and shielding
 
-The DE-9 metal shell and pin 5 are `CHASSIS`. They bond directly to the metal
+The RJ45/CAT6 jack's metal shell is `CHASSIS`. It bonds directly to the metal
 enclosure at the connector. `CHASSIS` couples to circuit ground through a
 parallel 1 nF capacitor and 1 MOhm bleed resistor, with an optional 0 Ohm link
 for EMC testing. Capsule returns are not tied to the cable jacket in the cable;

@@ -1,0 +1,2092 @@
+** Drc report for QuadPreRecorder.kicad_pcb **
+** Created on 2026-09-15T16:08:46 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 220 DRC violations **
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(64.4400 mm, 113.3100 mm): Segment of D4 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(67.5600 mm, 113.3100 mm): Segment of D4 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(67.5600 mm, 113.3100 mm): Rectangle of D4 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(12.0000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(35.3000 mm, 0.6000 mm): Segment of J9 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(12.0000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(44.7000 mm, 0.6000 mm): Segment of J9 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(12.2200 mm, 90.5300 mm): Segment of J4 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(28.2100 mm, 90.5300 mm): Segment of J4 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(0.0000 mm, 12.0000 mm): Segment on Edge.Cuts
+    @(11.7500 mm, -0.2500 mm): Reference field of J1
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(12.0000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(12.9000 mm, 3.4000 mm): Segment of J1 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(12.0000 mm, 0.0000 mm): Segment on Edge.Cuts
+    @(22.1000 mm, -5.6000 mm): Segment of J1 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(74.4400 mm, 113.3100 mm): Segment of D5 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(77.5600 mm, 113.3100 mm): Segment of D5 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(126.0000 mm, 114.0000 mm): Segment on Edge.Cuts
+    @(77.5600 mm, 113.3100 mm): Rectangle of D5 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(0.0000 mm, 102.0000 mm): Segment on Edge.Cuts
+    @(-3.8600 mm, 69.1950 mm): Segment of J2 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(0.0000 mm, 102.0000 mm): Segment on Edge.Cuts
+    @(-3.8600 mm, 85.9250 mm): Segment of J2 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(138.0000 mm, 12.0000 mm): Segment on Edge.Cuts
+    @(137.2200 mm, 38.7800 mm): Segment of J5 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(138.0000 mm, 12.0000 mm): Segment on Edge.Cuts
+    @(141.2200 mm, 45.0200 mm): Segment of J5 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(7.0000 mm, 35.0000 mm): Reference field of D12
+    @(9.5000 mm, 34.9500 mm): Reference field of U11
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(118.0000 mm, 6.8500 mm): Reference field of H6
+    @(119.0000 mm, 6.0000 mm): PCB text 'TP ANALOG' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(101.6400 mm, 101.5000 mm): Segment of D13 on F.Silkscreen
+    @(104.0000 mm, 101.6000 mm): Reference field of Q2
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(114.0000 mm, 90.6500 mm): Reference field of C3
+    @(113.8100 mm, 90.3100 mm): Segment of L1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(114.0000 mm, 90.6500 mm): Reference field of C3
+    @(113.8100 mm, 85.6900 mm): Segment of L1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(48.0600 mm, 28.4650 mm): Segment of U3 on F.Silkscreen
+    @(47.0000 mm, 29.1500 mm): Reference field of C10
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(47.0000 mm, 29.1500 mm): Reference field of C10
+    @(48.0600 mm, 28.5600 mm): Segment of U3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(48.0000 mm, 12.5700 mm): Reference field of C78
+    @(48.4900 mm, 12.1500 mm): Segment of D10 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(48.4900 mm, 8.8500 mm): Segment of D10 on F.Silkscreen
+    @(48.0000 mm, 12.5700 mm): Reference field of C78
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(135.0700 mm, 28.5000 mm): Reference field of R88
+    @(130.7400 mm, 27.2000 mm): Segment of D17 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(133.1000 mm, 26.2000 mm): Reference field of D17
+    @(127.4900 mm, 26.1500 mm): Segment of D14 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(134.3200 mm, 24.5000 mm): Reference field of C92
+    @(133.1000 mm, 26.2000 mm): Reference field of D17
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(128.3000 mm, 26.2000 mm): Reference field of D16
+    @(127.4900 mm, 26.1500 mm): Segment of D14 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(127.4900 mm, 22.8500 mm): Segment of D14 on F.Silkscreen
+    @(128.3000 mm, 26.2000 mm): Reference field of D16
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.5500 mm, 11.2900 mm): Polygon of D11 on F.Silkscreen
+    @(40.0000 mm, 10.4000 mm): Reference field of D11
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(135.0700 mm, 28.5000 mm): Reference field of R88
+    @(130.7400 mm, 29.2000 mm): Segment of D17 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(96.5000 mm, 53.5700 mm): Reference field of C68
+    @(96.3800 mm, 51.9000 mm): Reference field of C52
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(96.5000 mm, 53.5700 mm): Reference field of C68
+    @(102.3100 mm, 53.3850 mm): Segment of U9 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(96.1400 mm, 47.0700 mm): Polygon of U9 on F.Silkscreen
+    @(96.3800 mm, 48.4000 mm): Reference field of C51
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(112.6094 mm, 52.7100 mm): Segment of C59 on F.Silkscreen
+    @(112.0000 mm, 52.6700 mm): Reference field of U10
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(116.1094 mm, 55.1100 mm): Segment of C60 on F.Silkscreen
+    @(116.2500 mm, 54.7700 mm): Reference field of C65
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(116.1094 mm, 54.0900 mm): Segment of C60 on F.Silkscreen
+    @(116.2500 mm, 54.7700 mm): Reference field of C65
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(101.1113 mm, 57.7400 mm): Segment of C87 on F.Silkscreen
+    @(100.4000 mm, 58.0000 mm): Reference field of C86
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(18.6500 mm, 18.5000 mm): Reference field of C85
+    @(17.5000 mm, 17.0000 mm): PCB text '9VDC' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0000 mm, 16.4700 mm): Reference field of J3
+    @(29.5000 mm, 17.0000 mm): PCB text 'MSP3526 PIN1' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(17.5000 mm, 17.0000 mm): PCB text '9VDC' on F.Silkscreen
+    @(10.9900 mm, 16.8500 mm): Segment of D1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(10.9900 mm, 20.1500 mm): Segment of D1 on F.Silkscreen
+    @(17.0000 mm, 20.1500 mm): Reference field of C1
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(52.0000 mm, 12.5700 mm): Reference field of R78
+    @(48.4900 mm, 12.1500 mm): Segment of D10 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(24.8500 mm, 73.6100 mm): Segment of D7 on F.Silkscreen
+    @(25.0700 mm, 70.9000 mm): Reference field of R100
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0700 mm, 74.0000 mm): Reference field of R103
+    @(25.0700 mm, 70.9000 mm): Reference field of R100
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(24.8500 mm, 73.6100 mm): Segment of D7 on F.Silkscreen
+    @(25.0700 mm, 74.0000 mm): Reference field of R103
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(30.0000 mm, 73.0700 mm): Reference field of R86
+    @(30.7600 mm, 71.5600 mm): Segment of Q4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(30.0000 mm, 73.0700 mm): Reference field of R86
+    @(30.7600 mm, 72.5600 mm): Segment of Q4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(30.0000 mm, 73.0700 mm): Reference field of R86
+    @(29.2400 mm, 72.5600 mm): Segment of Q4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0700 mm, 77.1000 mm): Reference field of R104
+    @(25.0700 mm, 74.0000 mm): Reference field of R103
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0700 mm, 74.0000 mm): Reference field of R103
+    @(24.8500 mm, 77.6100 mm): Segment of D8 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0700 mm, 74.0000 mm): Reference field of R103
+    @(23.1500 mm, 73.6100 mm): Segment of D7 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0700 mm, 77.1000 mm): Reference field of R104
+    @(23.1500 mm, 77.6100 mm): Segment of D8 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0700 mm, 77.1000 mm): Reference field of R104
+    @(24.8500 mm, 77.6100 mm): Segment of D8 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.0000 mm, 81.9000 mm): Reference field of Q9
+    @(38.0000 mm, 81.0700 mm): Reference field of R102
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.0000 mm, 81.9000 mm): Reference field of Q9
+    @(37.7627 mm, 81.9775 mm): Segment of R102 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(37.2400 mm, 81.0600 mm): Segment of Q9 on F.Silkscreen
+    @(38.0000 mm, 81.0700 mm): Reference field of R102
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.7600 mm, 81.0600 mm): Segment of Q9 on F.Silkscreen
+    @(38.0000 mm, 81.0700 mm): Reference field of R102
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.7600 mm, 81.0100 mm): Segment of Q9 on F.Silkscreen
+    @(38.0000 mm, 81.0700 mm): Reference field of R102
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.0000 mm, 81.0700 mm): Reference field of R102
+    @(39.5700 mm, 80.2000 mm): Reference field of R99
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(27.0000 mm, 91.0000 mm): PCB text 'LINE' on F.Silkscreen
+    @(12.2200 mm, 90.5300 mm): Segment of J4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(27.0000 mm, 91.0000 mm): PCB text 'LINE' on F.Silkscreen
+    @(28.2100 mm, 90.5300 mm): Segment of J4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(27.0000 mm, 91.0000 mm): PCB text 'LINE' on F.Silkscreen
+    @(28.5700 mm, 91.8000 mm): Reference field of R7
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(34.7600 mm, 81.0600 mm): Segment of Q7 on F.Silkscreen
+    @(34.0000 mm, 80.5000 mm): Reference field of D24
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(34.0000 mm, 80.5000 mm): Reference field of D24
+    @(33.2400 mm, 81.0600 mm): Segment of Q7 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(34.0000 mm, 80.5000 mm): Reference field of D24
+    @(34.7600 mm, 80.0600 mm): Segment of Q7 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(33.2400 mm, 79.8900 mm): Segment of Q7 on F.Silkscreen
+    @(34.0000 mm, 80.5000 mm): Reference field of D24
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(33.2400 mm, 77.0600 mm): Segment of Q6 on F.Silkscreen
+    @(34.0000 mm, 77.1000 mm): Reference field of Q7
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(34.7600 mm, 77.0600 mm): Segment of Q6 on F.Silkscreen
+    @(34.0000 mm, 77.1000 mm): Reference field of Q7
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(39.5700 mm, 77.1000 mm): Reference field of R101
+    @(39.5700 mm, 80.2000 mm): Reference field of R99
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(34.7600 mm, 76.0600 mm): Segment of Q6 on F.Silkscreen
+    @(34.0000 mm, 77.1000 mm): Reference field of Q7
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(39.3000 mm, 79.8800 mm): Polygon of Q9 on F.Silkscreen
+    @(39.5700 mm, 80.2000 mm): Reference field of R99
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.0000 mm, 77.9000 mm): Reference field of Q8
+    @(37.2400 mm, 78.9400 mm): Segment of Q9 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(37.2400 mm, 77.9400 mm): Segment of Q9 on F.Silkscreen
+    @(38.0000 mm, 77.9000 mm): Reference field of Q8
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(39.5700 mm, 77.1000 mm): Reference field of R101
+    @(39.3000 mm, 75.8800 mm): Polygon of Q8 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(38.0000 mm, 77.9000 mm): Reference field of Q8
+    @(38.7600 mm, 77.9400 mm): Segment of Q9 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(25.0700 mm, 70.9000 mm): Reference field of R100
+    @(24.8500 mm, 69.6100 mm): Segment of D6 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(23.1500 mm, 69.6100 mm): Segment of D6 on F.Silkscreen
+    @(25.0700 mm, 70.9000 mm): Reference field of R100
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(29.2400 mm, 68.5600 mm): Segment of Q3 on F.Silkscreen
+    @(30.0000 mm, 68.6000 mm): Reference field of Q4
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(30.7600 mm, 67.5600 mm): Segment of Q3 on F.Silkscreen
+    @(30.0000 mm, 68.6000 mm): Reference field of Q4
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(30.0000 mm, 68.6000 mm): Reference field of Q4
+    @(30.7600 mm, 68.5600 mm): Segment of Q3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(12.1100 mm, 69.2400 mm): Segment of J2 on F.Silkscreen
+    @(11.0000 mm, 71.0000 mm): PCB text 'MIC RJ45' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(34.5000 mm, 67.0700 mm): Reference field of R106
+    @(38.0000 mm, 67.0700 mm): Reference field of R107
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(33.0000 mm, 63.5000 mm): PCB text 'PWR: HOLD REC+GAIN 2s' on F.Silkscreen
+    @(33.2400 mm, 62.9900 mm): Segment of Q5 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(33.2400 mm, 62.9400 mm): Segment of Q5 on F.Silkscreen
+    @(33.0000 mm, 63.5000 mm): PCB text 'PWR: HOLD REC+GAIN 2s' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(34.7600 mm, 62.9400 mm): Segment of Q5 on F.Silkscreen
+    @(33.0000 mm, 63.5000 mm): PCB text 'PWR: HOLD REC+GAIN 2s' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(39.5700 mm, 77.1000 mm): Reference field of R101
+    @(39.5700 mm, 74.0000 mm): Reference field of R98
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(28.5700 mm, 104.4000 mm): Reference field of R9
+    @(29.5000 mm, 104.3500 mm): Reference field of J4
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(28.5700 mm, 104.4000 mm): Reference field of R9
+    @(28.2100 mm, 90.5300 mm): Segment of J4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(29.4775 mm, 104.6373 mm): Segment of R9 on F.Silkscreen
+    @(29.5000 mm, 104.3500 mm): Reference field of J4
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(28.2100 mm, 90.5300 mm): Segment of J4 on F.Silkscreen
+    @(28.5700 mm, 98.1000 mm): Reference field of R8
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(28.2100 mm, 90.5300 mm): Segment of J4 on F.Silkscreen
+    @(28.5700 mm, 91.8000 mm): Reference field of R7
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(84.0000 mm, 3.0000 mm): PCB text 'jdg511  QUAD PRE RECORDER  REV C  HAMMOND 1590XX' on F.Silkscreen
+    @(75.2400 mm, 4.0800 mm): PTH pad 33 [HP_ENABLE] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(119.0000 mm, 12.5000 mm): PCB text 'TP DIGITAL' on F.Silkscreen
+    @(118.0000 mm, 11.0000 mm): NPTH pad of H6
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(111.5000 mm, 84.8500 mm): Reference field of L1
+    @(112.2250 mm, 84.0000 mm): Pad 1 [+5V] of C4 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(135.0700 mm, 28.5000 mm): Reference field of R88
+    @(134.7500 mm, 28.2000 mm): Pad 2 [+9V_FUSED] of D17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(134.3200 mm, 24.5000 mm): Reference field of C92
+    @(133.0000 mm, 24.5000 mm): Pad 2 [BAT_SYS] of D14 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(93.0000 mm, 53.5700 mm): Reference field of C67
+    @(94.7000 mm, 52.8500 mm): Pad 2 [GND] of C52 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.5000 mm, 53.5700 mm): Reference field of C68
+    @(94.7000 mm, 52.8500 mm): Pad 2 [GND] of C52 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.5000 mm, 53.5700 mm): Reference field of C68
+    @(97.1375 mm, 52.9250 mm): Pad 10 [GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 51.9000 mm): Reference field of C52
+    @(97.1375 mm, 51.6250 mm): Pad 8 [+3V3_A] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 51.9000 mm): Reference field of C52
+    @(97.1375 mm, 50.9750 mm): Pad 7 [DAC_R] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 48.4000 mm): Reference field of C51
+    @(97.1375 mm, 49.6750 mm): Pad 5 [DAC_VNEG] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 48.4000 mm): Reference field of C51
+    @(97.1375 mm, 49.0250 mm): Pad 4 [DAC_CAPM] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 48.4000 mm): Reference field of C51
+    @(97.1375 mm, 48.3750 mm): Pad 3 [GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 48.4000 mm): Reference field of C51
+    @(97.1375 mm, 47.0750 mm): Pad 1 [+3V3_A] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 48.4000 mm): Reference field of C51
+    @(97.1375 mm, 47.7250 mm): Pad 2 [DAC_CAPP] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(112.0000 mm, 52.6700 mm): Reference field of U10
+    @(110.3000 mm, 52.5250 mm): Pad 1 [+5V] of C61 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(112.0000 mm, 52.6700 mm): Reference field of U10
+    @(111.9750 mm, 52.2000 mm): Pad 1 [HP_CPP] of C59 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(112.0000 mm, 52.6700 mm): Reference field of U10
+    @(113.5250 mm, 52.2000 mm): Pad 2 [HP_CPN] of C59 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(116.2500 mm, 54.7700 mm): Reference field of C65
+    @(115.4750 mm, 54.6000 mm): Pad 1 [HP_VSS] of C60 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(116.2500 mm, 54.7700 mm): Reference field of C65
+    @(117.0250 mm, 54.6000 mm): Pad 2 [GND] of C60 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(118.0000 mm, 56.3500 mm): Reference field of H8
+    @(117.0250 mm, 56.2000 mm): Pad 2 [GND] of C65 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.4000 mm, 58.0000 mm): Reference field of C86
+    @(98.9250 mm, 59.1000 mm): Pad 2 [GND] of C87 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.4000 mm, 58.0000 mm): Reference field of C86
+    @(101.8750 mm, 59.1000 mm): Pad 1 [HP_INP_R] of C87 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 51.9000 mm): Reference field of C52
+    @(97.1375 mm, 52.2750 mm): Pad 9 [GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3800 mm, 51.9000 mm): Reference field of C52
+    @(97.1375 mm, 52.9250 mm): Pad 10 [GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(38.0000 mm, 81.9000 mm): Reference field of Q9
+    @(37.1750 mm, 82.5000 mm): Pad 1 [MIC5_CTRL] of R102 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(38.0000 mm, 81.9000 mm): Reference field of Q9
+    @(38.8250 mm, 82.5000 mm): Pad 2 [MIC5_CTRL_G] of R102 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(38.0000 mm, 81.0700 mm): Reference field of R102
+    @(38.9375 mm, 80.4500 mm): Pad 1 [MIC5_CTRL_G] of Q9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.5700 mm, 80.2000 mm): Reference field of R99
+    @(38.9375 mm, 80.4500 mm): Pad 1 [MIC5_CTRL_G] of Q9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(34.0000 mm, 80.5000 mm): Reference field of D24
+    @(33.0625 mm, 80.4500 mm): Pad 2 [GND] of Q7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(34.0000 mm, 77.1000 mm): Reference field of Q7
+    @(33.0625 mm, 76.4500 mm): Pad 2 [+9V] of Q6 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(28.0000 mm, 78.5700 mm): Reference field of R67
+    @(26.5000 mm, 77.9250 mm): Pad 1 [+9V_MIC] of R104 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(28.0000 mm, 78.5700 mm): Reference field of R67
+    @(29.1750 mm, 77.5000 mm): Pad 1 [VBAT] of R87 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.5700 mm, 77.1000 mm): Reference field of R101
+    @(38.9375 mm, 78.5500 mm): Pad 2 [GND] of Q9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.5700 mm, 77.1000 mm): Reference field of R101
+    @(38.9375 mm, 76.4500 mm): Pad 1 [MIC5_G] of Q8 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(38.0000 mm, 77.9000 mm): Reference field of Q8
+    @(38.9375 mm, 78.5500 mm): Pad 2 [GND] of Q9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(30.0000 mm, 68.6000 mm): Reference field of Q4
+    @(29.0625 mm, 67.9500 mm): Pad 2 [VBAT] of Q3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(33.0000 mm, 63.5000 mm): PCB text 'PWR: HOLD REC+GAIN 2s' on F.Silkscreen
+    @(37.6375 mm, 63.3250 mm): Pad 5 [<no net>] of U15 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(33.0000 mm, 63.5000 mm): PCB text 'PWR: HOLD REC+GAIN 2s' on F.Silkscreen
+    @(37.6375 mm, 63.9750 mm): Pad 6 [GND] of U15 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(11.8700 mm, 52.4000 mm): Reference field of R131
+    @(10.6375 mm, 51.4500 mm): Pad 4 [LDO_FB] of U12 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(33.0000 mm, 63.5000 mm): PCB text 'PWR: HOLD REC+GAIN 2s' on F.Silkscreen
+    @(33.0625 mm, 63.5500 mm): Pad 1 [COLD_CTRL_G] of Q5 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(66.0000 mm, 111.5000 mm): PCB text 'PWR' on F.Silkscreen
+    @(64.7300 mm, 112.1000 mm): PTH pad 1 [GND] of D4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(66.0000 mm, 111.5000 mm): PCB text 'PWR' on F.Silkscreen
+    @(67.2700 mm, 112.1000 mm): PTH pad 2 [PWR_LED_A] of D4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(74.0000 mm, 111.5000 mm): PCB text 'REC' on F.Silkscreen
+    @(74.7300 mm, 112.1000 mm): PTH pad 1 [GND] of D5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.5700 mm, 74.0000 mm): Reference field of R98
+    @(38.9375 mm, 74.5500 mm): Pad 2 [+5V] of Q8 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(56.0700 mm, 58.5000 mm): Reference field of C109
+    @(54.8625 mm, 60.2000 mm): Pad 13 [BRU_CFB] of U16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(56.0700 mm, 58.5000 mm): Reference field of C109
+    @(54.8625 mm, 59.5500 mm): Pad 14 [BRU_CPRE] of U16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(29.5000 mm, 104.3500 mm): Reference field of J4
+    @(30.0000 mm, 103.5750 mm): Pad 2 [BRU_MIC] of R9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(29.5000 mm, 104.3500 mm): Reference field of J4
+    @(30.0000 mm, 105.2250 mm): Pad 1 [+9V_MIC] of R9 on F.Cu
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(44.0000 mm, 24.5000 mm): PCB text 'TP1 D+ / TP2 D- -> TEENSY USB PADS' on B.Silkscreen
+    @(56.5000 mm, 23.4980 mm): Reference field of TP2
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(56.5000 mm, 19.9980 mm): Reference field of TP1
+    @(57.7000 mm, 20.3000 mm): Segment of TP2 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(56.5000 mm, 19.9980 mm): Reference field of TP1
+    @(55.3000 mm, 20.3000 mm): Segment of TP2 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(82.6594 mm, 47.1900 mm): Segment of C40 on B.Silkscreen
+    @(83.0000 mm, 47.5800 mm): Reference field of C39
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(82.8000 mm, 49.1300 mm): Reference field of C40
+    @(82.6594 mm, 48.7900 mm): Segment of C41 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(82.8000 mm, 50.7300 mm): Reference field of C41
+    @(82.6594 mm, 50.3900 mm): Segment of C43 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(86.2627 mm, 43.9775 mm): Segment of R57 on B.Silkscreen
+    @(86.5000 mm, 43.8480 mm): Reference field of TP9
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(86.3887 mm, 46.4900 mm): Segment of C42 on B.Silkscreen
+    @(86.5000 mm, 45.9300 mm): Reference field of R57
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(86.3887 mm, 48.9400 mm): Segment of C62 on B.Silkscreen
+    @(87.1000 mm, 49.2500 mm): Reference field of C42
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(87.0500 mm, 37.4500 mm): Segment of TP4 on B.Silkscreen
+    @(88.0000 mm, 38.1480 mm): Reference field of TP4
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(87.4300 mm, 104.4000 mm): Reference field of R41
+    @(100.0000 mm, 104.5000 mm): PCB text 'BATT J10 + LiPo 906090 UNDER RIGHT HALF' on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(86.5225 mm, 104.6373 mm): Segment of R41 on B.Silkscreen
+    @(100.0000 mm, 104.5000 mm): PCB text 'BATT J10 + LiPo 906090 UNDER RIGHT HALF' on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(102.1894 mm, 48.1400 mm): Segment of C53 on B.Silkscreen
+    @(102.3000 mm, 48.5100 mm): Reference field of C56
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(82.8000 mm, 52.3300 mm): Reference field of C43
+    @(82.6594 mm, 51.9900 mm): Segment of C44 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(88.0000 mm, 58.0000 mm): Reference field of U2
+    @(88.9100 mm, 57.9400 mm): Segment of U14 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(88.9100 mm, 54.0400 mm): Segment of U2 on B.Silkscreen
+    @(87.1000 mm, 54.1500 mm): Reference field of C45
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(86.3887 mm, 51.3900 mm): Segment of C45 on B.Silkscreen
+    @(87.1000 mm, 51.7000 mm): Reference field of C62
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(87.7387 mm, 62.2650 mm): Segment of C96 on B.Silkscreen
+    @(88.0000 mm, 61.9000 mm): Reference field of U14
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(57.4300 mm, 98.1000 mm): Reference field of R124
+    @(72.0000 mm, 100.0000 mm): PCB text 'TEENSY 4.1 ON BOTTOM - CUT VIN/VUSB LINK' on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(72.0000 mm, 100.0000 mm): PCB text 'TEENSY 4.1 ON BOTTOM - CUT VIN/VUSB LINK' on B.Silkscreen
+    @(64.4300 mm, 98.1000 mm): Reference field of C107
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(41.8500 mm, 98.1000 mm): Reference field of D22
+    @(42.2900 mm, 99.2613 mm): Segment of C103 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(41.8500 mm, 104.4000 mm): Reference field of D23
+    @(42.2900 mm, 105.5613 mm): Segment of C104 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(41.8500 mm, 85.5000 mm): Reference field of D20
+    @(42.2900 mm, 86.6613 mm): Segment of C101 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(48.0000 mm, 57.8500 mm): Reference field of C46
+    @(44.4900 mm, 58.3500 mm): Segment of D3 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(41.8500 mm, 91.8000 mm): Reference field of D21
+    @(42.2900 mm, 92.9613 mm): Segment of C102 on B.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(98.5000 mm, 45.9300 mm): Reference field of R60
+    @(97.7000 mm, 45.6500 mm): Reference field of C54
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(98.2627 mm, 45.0225 mm): Segment of R60 on B.Silkscreen
+    @(97.7000 mm, 45.6500 mm): Reference field of C54
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(96.0000 mm, 41.4300 mm): Reference field of R44
+    @(95.4500 mm, 41.2500 mm): Segment of TP11 on B.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(56.5000 mm, 19.9980 mm): Reference field of TP1
+    @(56.5000 mm, 21.5000 mm): Pad 1 [USB_DM] of TP2 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(58.7300 mm, 60.5000 mm): Segment of U8 on B.Silkscreen
+    @(60.0000 mm, 59.9600 mm): PTH pad 0 [MIC5_CTRL] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(58.7300 mm, 60.5000 mm): Segment of U8 on B.Silkscreen
+    @(75.2400 mm, 59.9600 mm): PTH pad GND2 [GND] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(58.7300 mm, 6.0000 mm): Segment of U8 on B.Silkscreen
+    @(60.0000 mm, 6.6200 mm): PTH pad 31 [GAIN_PUSH] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(58.7300 mm, 6.0000 mm): Segment of U8 on B.Silkscreen
+    @(75.2400 mm, 6.6200 mm): PTH pad 34 [DAC_MUTE] of U8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(86.5000 mm, 43.8480 mm): Reference field of TP9
+    @(85.6750 mm, 44.5000 mm): Pad 1 [DAC_BCLK] of R57 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(83.0000 mm, 47.5800 mm): Reference field of C39
+    @(83.5750 mm, 47.7000 mm): Pad 2 [GND] of C40 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(83.0000 mm, 47.5800 mm): Reference field of C39
+    @(82.0250 mm, 47.7000 mm): Pad 1 [ADC_VREF] of C40 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.8000 mm, 49.1300 mm): Reference field of C40
+    @(82.0250 mm, 49.3000 mm): Pad 1 [+3V3_A] of C41 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.8000 mm, 50.7300 mm): Reference field of C41
+    @(82.0250 mm, 50.9000 mm): Pad 1 [ADC_LDO] of C43 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.8000 mm, 49.1300 mm): Reference field of C40
+    @(83.5750 mm, 49.3000 mm): Pad 2 [GND] of C41 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(86.5000 mm, 43.8480 mm): Reference field of TP9
+    @(87.3250 mm, 44.5000 mm): Pad 2 [DAC_BCLK_IC] of R57 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(90.5000 mm, 43.8480 mm): Reference field of TP10
+    @(89.6750 mm, 44.5000 mm): Pad 1 [DAC_DIN] of R58 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(87.1000 mm, 49.2500 mm): Reference field of C42
+    @(88.5750 mm, 49.8500 mm): Pad 2 [GND] of C62 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(87.1000 mm, 49.2500 mm): Reference field of C42
+    @(85.6250 mm, 49.8500 mm): Pad 1 [ADC_LDO] of C62 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.5000 mm, 64.6800 mm): Reference field of C95
+    @(92.5001 mm, 65.6999 mm): PTH pad C [NAV_UP] of SW4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.8000 mm, 50.7300 mm): Reference field of C41
+    @(83.5750 mm, 50.9000 mm): Pad 2 [GND] of C43 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.8000 mm, 52.3300 mm): Reference field of C43
+    @(83.5750 mm, 52.5000 mm): Pad 2 [GND] of C44 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.8000 mm, 52.3300 mm): Reference field of C43
+    @(82.0250 mm, 52.5000 mm): Pad 1 [+3V3_DC] of C44 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(87.1000 mm, 51.7000 mm): Reference field of C62
+    @(85.6250 mm, 52.3000 mm): Pad 1 [+3V3_DC] of C45 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(88.0000 mm, 58.0000 mm): Reference field of U2
+    @(89.1375 mm, 58.5500 mm): Pad 4 [<no net>] of U14 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(88.0000 mm, 58.0000 mm): Reference field of U2
+    @(86.8625 mm, 58.5500 mm): Pad 3 [+5V] of U14 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(87.1000 mm, 54.1500 mm): Reference field of C45
+    @(86.8625 mm, 54.6500 mm): Pad 3 [+5V] of U2 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(87.1000 mm, 51.7000 mm): Reference field of C62
+    @(88.5750 mm, 52.3000 mm): Pad 2 [GND] of C45 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(88.0000 mm, 61.9000 mm): Reference field of U14
+    @(88.9500 mm, 63.0000 mm): Pad 2 [GND] of C96 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(88.0000 mm, 64.6800 mm): Reference field of C96
+    @(89.5001 mm, 65.6999 mm): PTH pad 9 [GND] of SW4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(88.0000 mm, 61.9000 mm): Reference field of U14
+    @(87.0500 mm, 63.0000 mm): Pad 1 [+3V3_DC] of C96 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 104.4000 mm): Reference field of R129
+    @(52.0000 mm, 105.2250 mm): Pad 1 [BRU_CFB] of R121 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 104.4000 mm): Reference field of R117
+    @(50.0000 mm, 103.5750 mm): Pad 2 [VREF] of R129 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 104.4000 mm): Reference field of R117
+    @(50.0000 mm, 105.2250 mm): Pad 1 [BRU_ACC] of R129 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 104.4000 mm): Reference field of R129
+    @(52.0000 mm, 103.5750 mm): Pad 2 [BRU_CPRE] of R121 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 91.8000 mm): Reference field of R127
+    @(52.0000 mm, 92.6250 mm): Pad 1 [FRD_CFB] of R119 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 91.8000 mm): Reference field of R127
+    @(52.0000 mm, 90.9750 mm): Pad 2 [FRD_CPRE] of R119 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 91.8000 mm): Reference field of R115
+    @(50.0000 mm, 90.9750 mm): Pad 2 [VREF] of R127 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 91.8000 mm): Reference field of R115
+    @(50.0000 mm, 92.6250 mm): Pad 1 [FRD_ACC] of R127 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 98.1000 mm): Reference field of R116
+    @(50.0000 mm, 97.2750 mm): Pad 2 [VREF] of R128 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 98.1000 mm): Reference field of R116
+    @(50.0000 mm, 98.9250 mm): Pad 1 [BLD_ACC] of R128 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 98.1000 mm): Reference field of R128
+    @(52.0000 mm, 97.2750 mm): Pad 2 [BLD_CPRE] of R120 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 98.1000 mm): Reference field of R128
+    @(52.0000 mm, 98.9250 mm): Pad 1 [BLD_CFB] of R120 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 85.5000 mm): Reference field of R114
+    @(50.0000 mm, 84.6750 mm): Pad 2 [VREF] of R126 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.4300 mm, 85.5000 mm): Reference field of R114
+    @(50.0000 mm, 86.3250 mm): Pad 1 [FLU_ACC] of R126 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 85.5000 mm): Reference field of R126
+    @(52.0000 mm, 84.6750 mm): Pad 2 [FLU_CPRE] of R118 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(51.4300 mm, 85.5000 mm): Reference field of R126
+    @(52.0000 mm, 86.3250 mm): Pad 1 [FLU_CFB] of R118 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(102.3000 mm, 48.5100 mm): Reference field of C56
+    @(101.5550 mm, 48.6500 mm): Pad 1 [DAC_LDO] of C53 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(102.3000 mm, 48.5100 mm): Reference field of C56
+    @(103.1050 mm, 48.6500 mm): Pad 2 [GND] of C53 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(94.5000 mm, 43.8480 mm): Reference field of TP11
+    @(93.6750 mm, 44.5000 mm): Pad 1 [DAC_LRCLK] of R59 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(90.5000 mm, 43.8480 mm): Reference field of TP10
+    @(91.3250 mm, 44.5000 mm): Pad 2 [DAC_DIN_IC] of R58 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(94.5000 mm, 43.8480 mm): Reference field of TP11
+    @(95.3250 mm, 44.5000 mm): Pad 2 [DAC_LRCLK_IC] of R59 on B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 41.4300 mm): Reference field of R44
+    @(94.5000 mm, 42.2000 mm): Pad 1 [DAC_DIN] of TP11 on B.Cu
+
+** Found 0 unconnected pads **
+
+** Found 398 Footprint errors **
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(17.0000 mm, 24.5000 mm): Footprint C1
+[net_conflict]: Pad net (VBOOST_IN) doesn't match net given by schematic (/VBOOST_IN)
+    Local override; warning
+    @(14.3000 mm, 24.5000 mm): Pad 1 [VBOOST_IN] of C1 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(19.7000 mm, 24.5000 mm): Pad 2 [GND] of C1 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(108.0000 mm, 92.5000 mm): Footprint C2
+[net_conflict]: Pad net (+10V5) doesn't match net given by schematic (/+10V5)
+    Local override; warning
+    @(107.0500 mm, 92.5000 mm): Pad 1 [+10V5] of C2 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(108.9500 mm, 92.5000 mm): Pad 2 [GND] of C2 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(114.0000 mm, 92.5000 mm): Footprint C3
+[net_conflict]: Pad net (+10V5) doesn't match net given by schematic (/+10V5)
+    Local override; warning
+    @(112.5250 mm, 92.5000 mm): Pad 1 [+10V5] of C3 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(115.4750 mm, 92.5000 mm): Pad 2 [GND] of C3 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(113.0000 mm, 84.0000 mm): Footprint C4
+[net_conflict]: Pad net (+5V) doesn't match net given by schematic (/+5V)
+    Local override; warning
+    @(112.2250 mm, 84.0000 mm): Pad 1 [+5V] of C4 on F.Cu
+[net_conflict]: Pad net (BUCK_FB) doesn't match net given by schematic (/BUCK_FB)
+    Local override; warning
+    @(113.7750 mm, 84.0000 mm): Pad 2 [BUCK_FB] of C4 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(117.0000 mm, 88.0000 mm): Footprint C5
+[net_conflict]: Pad net (+5V) doesn't match net given by schematic (/+5V)
+    Local override; warning
+    @(115.5250 mm, 88.0000 mm): Pad 1 [+5V] of C5 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(118.4750 mm, 88.0000 mm): Pad 2 [GND] of C5 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(123.0000 mm, 88.0000 mm): Footprint C6
+[net_conflict]: Pad net (+5V) doesn't match net given by schematic (/+5V)
+    Local override; warning
+    @(121.5250 mm, 88.0000 mm): Pad 1 [+5V] of C6 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(124.4750 mm, 88.0000 mm): Pad 2 [GND] of C6 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(92.5000 mm, 55.0000 mm): Footprint C7
+[net_conflict]: Pad net (+5V) doesn't match net given by schematic (/+5V)
+    Local override; warning
+    @(91.5500 mm, 55.0000 mm): Pad 1 [+5V] of C7 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(93.4500 mm, 55.0000 mm): Pad 2 [GND] of C7 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(92.5000 mm, 59.0000 mm): Footprint C8
+[net_conflict]: Pad net (+3V3_A) doesn't match net given by schematic (/+3V3_A)
+    Local override; warning
+    @(91.5500 mm, 59.0000 mm): Pad 1 [+3V3_A] of C8 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(93.4500 mm, 59.0000 mm): Pad 2 [GND] of C8 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(42.0000 mm, 31.0000 mm): Footprint C9
+[net_conflict]: Pad net (VREF_NR) doesn't match net given by schematic (/VREF_NR)
+    Local override; warning
+    @(41.0500 mm, 31.0000 mm): Pad 1 [VREF_NR] of C9 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(42.9500 mm, 31.0000 mm): Pad 2 [GND] of C9 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(47.0000 mm, 31.0000 mm): Footprint C10
+[net_conflict]: Pad net (VREF) doesn't match net given by schematic (/VREF)
+    Local override; warning
+    @(45.5250 mm, 31.0000 mm): Pad 1 [VREF] of C10 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(48.4750 mm, 31.0000 mm): Pad 2 [GND] of C10 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(51.5000 mm, 31.0000 mm): Footprint C11
+[net_conflict]: Pad net (VREF) doesn't match net given by schematic (/VREF)
+    Local override; warning
+    @(50.7250 mm, 31.0000 mm): Pad 1 [VREF] of C11 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(52.2750 mm, 31.0000 mm): Pad 2 [GND] of C11 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(10.5000 mm, 64.0000 mm): Footprint C12
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(9.5500 mm, 64.0000 mm): Pad 1 [CHASSIS] of C12 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(11.4500 mm, 64.0000 mm): Pad 2 [GND] of C12 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(38.0000 mm, 85.5000 mm): Footprint C13
+[net_conflict]: Pad net (FLU_MIC) doesn't match net given by schematic (/FLU_MIC)
+    Local override; warning
+    @(38.0000 mm, 86.2750 mm): Pad 1 [FLU_MIC] of C13 on F.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(38.0000 mm, 84.7250 mm): Pad 2 [CHASSIS] of C13 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(38.0000 mm, 91.8000 mm): Footprint C14
+[net_conflict]: Pad net (FRD_MIC) doesn't match net given by schematic (/FRD_MIC)
+    Local override; warning
+    @(38.0000 mm, 92.5750 mm): Pad 1 [FRD_MIC] of C14 on F.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(38.0000 mm, 91.0250 mm): Pad 2 [CHASSIS] of C14 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(38.0000 mm, 98.1000 mm): Footprint C15
+[net_conflict]: Pad net (BLD_MIC) doesn't match net given by schematic (/BLD_MIC)
+    Local override; warning
+    @(38.0000 mm, 98.8750 mm): Pad 1 [BLD_MIC] of C15 on F.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(38.0000 mm, 97.3250 mm): Pad 2 [CHASSIS] of C15 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(38.0000 mm, 104.4000 mm): Footprint C16
+[net_conflict]: Pad net (BRU_MIC) doesn't match net given by schematic (/BRU_MIC)
+    Local override; warning
+    @(38.0000 mm, 105.1750 mm): Pad 1 [BRU_MIC] of C16 on F.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(38.0000 mm, 103.6250 mm): Pad 2 [CHASSIS] of C16 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(42.0000 mm, 85.5000 mm): Footprint C17
+[net_conflict]: Pad net (FLU_MIC) doesn't match net given by schematic (/FLU_MIC)
+    Local override; warning
+    @(42.0000 mm, 87.5500 mm): Pad 1 [FLU_MIC] of C17 on F.Cu
+[net_conflict]: Pad net (FLU_AC) doesn't match net given by schematic (/FLU_AC)
+    Local override; warning
+    @(42.0000 mm, 83.4500 mm): Pad 2 [FLU_AC] of C17 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(42.0000 mm, 91.8000 mm): Footprint C18
+[net_conflict]: Pad net (FRD_MIC) doesn't match net given by schematic (/FRD_MIC)
+    Local override; warning
+    @(42.0000 mm, 93.8500 mm): Pad 1 [FRD_MIC] of C18 on F.Cu
+[net_conflict]: Pad net (FRD_AC) doesn't match net given by schematic (/FRD_AC)
+    Local override; warning
+    @(42.0000 mm, 89.7500 mm): Pad 2 [FRD_AC] of C18 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(42.0000 mm, 98.1000 mm): Footprint C19
+[net_conflict]: Pad net (BLD_MIC) doesn't match net given by schematic (/BLD_MIC)
+    Local override; warning
+    @(42.0000 mm, 100.1500 mm): Pad 1 [BLD_MIC] of C19 on F.Cu
+[net_conflict]: Pad net (BLD_AC) doesn't match net given by schematic (/BLD_AC)
+    Local override; warning
+    @(42.0000 mm, 96.0500 mm): Pad 2 [BLD_AC] of C19 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(42.0000 mm, 104.4000 mm): Footprint C20
+[net_conflict]: Pad net (BRU_MIC) doesn't match net given by schematic (/BRU_MIC)
+    Local override; warning
+    @(42.0000 mm, 106.4500 mm): Pad 1 [BRU_MIC] of C20 on F.Cu
+[net_conflict]: Pad net (BRU_AC) doesn't match net given by schematic (/BRU_AC)
+    Local override; warning
+    @(42.0000 mm, 102.3500 mm): Pad 2 [BRU_AC] of C20 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(70.0000 mm, 85.5000 mm): Footprint C21
+[net_conflict]: Pad net (FLU_PRE) doesn't match net given by schematic (/FLU_PRE)
+    Local override; warning
+    @(70.0000 mm, 86.2750 mm): Pad 1 [FLU_PRE] of C21 on B.Cu
+[net_conflict]: Pad net (FLU_FB) doesn't match net given by schematic (/FLU_FB)
+    Local override; warning
+    @(70.0000 mm, 84.7250 mm): Pad 2 [FLU_FB] of C21 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(70.0000 mm, 91.8000 mm): Footprint C22
+[net_conflict]: Pad net (FRD_PRE) doesn't match net given by schematic (/FRD_PRE)
+    Local override; warning
+    @(70.0000 mm, 92.5750 mm): Pad 1 [FRD_PRE] of C22 on B.Cu
+[net_conflict]: Pad net (FRD_FB) doesn't match net given by schematic (/FRD_FB)
+    Local override; warning
+    @(70.0000 mm, 91.0250 mm): Pad 2 [FRD_FB] of C22 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(70.0000 mm, 98.1000 mm): Footprint C23
+[net_conflict]: Pad net (BLD_PRE) doesn't match net given by schematic (/BLD_PRE)
+    Local override; warning
+    @(70.0000 mm, 98.8750 mm): Pad 1 [BLD_PRE] of C23 on B.Cu
+[net_conflict]: Pad net (BLD_FB) doesn't match net given by schematic (/BLD_FB)
+    Local override; warning
+    @(70.0000 mm, 97.3250 mm): Pad 2 [BLD_FB] of C23 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(70.0000 mm, 104.4000 mm): Footprint C24
+[net_conflict]: Pad net (BRU_PRE) doesn't match net given by schematic (/BRU_PRE)
+    Local override; warning
+    @(70.0000 mm, 105.1750 mm): Pad 1 [BRU_PRE] of C24 on B.Cu
+[net_conflict]: Pad net (BRU_FB) doesn't match net given by schematic (/BRU_FB)
+    Local override; warning
+    @(70.0000 mm, 103.6250 mm): Pad 2 [BRU_FB] of C24 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(74.0000 mm, 85.5000 mm): Footprint C25
+[net_conflict]: Pad net (FLU_PRE) doesn't match net given by schematic (/FLU_PRE)
+    Local override; warning
+    @(74.0000 mm, 87.5500 mm): Pad 1 [FLU_PRE] of C25 on F.Cu
+[net_conflict]: Pad net (FLU_ADC_SRC) doesn't match net given by schematic (/FLU_ADC_SRC)
+    Local override; warning
+    @(74.0000 mm, 83.4500 mm): Pad 2 [FLU_ADC_SRC] of C25 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(74.0000 mm, 91.8000 mm): Footprint C26
+[net_conflict]: Pad net (FRD_PRE) doesn't match net given by schematic (/FRD_PRE)
+    Local override; warning
+    @(74.0000 mm, 93.8500 mm): Pad 1 [FRD_PRE] of C26 on F.Cu
+[net_conflict]: Pad net (FRD_ADC_SRC) doesn't match net given by schematic (/FRD_ADC_SRC)
+    Local override; warning
+    @(74.0000 mm, 89.7500 mm): Pad 2 [FRD_ADC_SRC] of C26 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(74.0000 mm, 98.1000 mm): Footprint C27
+[net_conflict]: Pad net (BLD_PRE) doesn't match net given by schematic (/BLD_PRE)
+    Local override; warning
+    @(74.0000 mm, 100.1500 mm): Pad 1 [BLD_PRE] of C27 on F.Cu
+[net_conflict]: Pad net (BLD_ADC_SRC) doesn't match net given by schematic (/BLD_ADC_SRC)
+    Local override; warning
+    @(74.0000 mm, 96.0500 mm): Pad 2 [BLD_ADC_SRC] of C27 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(74.0000 mm, 104.4000 mm): Footprint C28
+[net_conflict]: Pad net (BRU_PRE) doesn't match net given by schematic (/BRU_PRE)
+    Local override; warning
+    @(74.0000 mm, 106.4500 mm): Pad 1 [BRU_PRE] of C28 on F.Cu
+[net_conflict]: Pad net (BRU_ADC_SRC) doesn't match net given by schematic (/BRU_ADC_SRC)
+    Local override; warning
+    @(74.0000 mm, 102.3500 mm): Pad 2 [BRU_ADC_SRC] of C28 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.0000 mm, 85.5000 mm): Footprint C29
+[net_conflict]: Pad net (FLU_ADC) doesn't match net given by schematic (/FLU_ADC)
+    Local override; warning
+    @(82.0000 mm, 86.2750 mm): Pad 1 [FLU_ADC] of C29 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(82.0000 mm, 84.7250 mm): Pad 2 [GND] of C29 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.0000 mm, 91.8000 mm): Footprint C30
+[net_conflict]: Pad net (FRD_ADC) doesn't match net given by schematic (/FRD_ADC)
+    Local override; warning
+    @(82.0000 mm, 92.5750 mm): Pad 1 [FRD_ADC] of C30 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(82.0000 mm, 91.0250 mm): Pad 2 [GND] of C30 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.0000 mm, 98.1000 mm): Footprint C31
+[net_conflict]: Pad net (BLD_ADC) doesn't match net given by schematic (/BLD_ADC)
+    Local override; warning
+    @(82.0000 mm, 98.8750 mm): Pad 1 [BLD_ADC] of C31 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(82.0000 mm, 97.3250 mm): Pad 2 [GND] of C31 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.0000 mm, 104.4000 mm): Footprint C32
+[net_conflict]: Pad net (BRU_ADC) doesn't match net given by schematic (/BRU_ADC)
+    Local override; warning
+    @(82.0000 mm, 105.1750 mm): Pad 1 [BRU_ADC] of C32 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(82.0000 mm, 103.6250 mm): Pad 2 [GND] of C32 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(10.5000 mm, 61.0000 mm): Footprint C33
+[net_conflict]: Pad net (PAD_SELECT) doesn't match net given by schematic (/PAD_SELECT)
+    Local override; warning
+    @(9.7250 mm, 61.0000 mm): Pad 1 [PAD_SELECT] of C33 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(11.2750 mm, 61.0000 mm): Pad 2 [GND] of C33 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(40.0000 mm, 40.0000 mm): Footprint C34
+[net_conflict]: Pad net (+9V) doesn't match net given by schematic (/+9V)
+    Local override; warning
+    @(39.2250 mm, 40.0000 mm): Pad 1 [+9V] of C34 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(40.7750 mm, 40.0000 mm): Pad 2 [GND] of C34 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(40.0000 mm, 60.5000 mm): Footprint C35
+[net_conflict]: Pad net (+9V) doesn't match net given by schematic (/+9V)
+    Local override; warning
+    @(39.2250 mm, 60.5000 mm): Pad 1 [+9V] of C35 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(40.7750 mm, 60.5000 mm): Pad 2 [GND] of C35 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(47.0000 mm, 42.0000 mm): Footprint C36
+[net_conflict]: Pad net (+9V) doesn't match net given by schematic (/+9V)
+    Local override; warning
+    @(46.2250 mm, 42.0000 mm): Pad 1 [+9V] of C36 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(47.7750 mm, 42.0000 mm): Pad 2 [GND] of C36 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(51.0000 mm, 42.0000 mm): Footprint C37
+[net_conflict]: Pad net (+9V) doesn't match net given by schematic (/+9V)
+    Local override; warning
+    @(49.5250 mm, 42.0000 mm): Pad 1 [+9V] of C37 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(52.4750 mm, 42.0000 mm): Pad 2 [GND] of C37 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(83.0000 mm, 45.9000 mm): Footprint C39
+[net_conflict]: Pad net (ADC_VREF) doesn't match net given by schematic (/ADC_VREF)
+    Local override; warning
+    @(82.0500 mm, 45.9000 mm): Pad 1 [ADC_VREF] of C39 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(83.9500 mm, 45.9000 mm): Pad 2 [GND] of C39 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.8000 mm, 47.7000 mm): Footprint C40
+[net_conflict]: Pad net (ADC_VREF) doesn't match net given by schematic (/ADC_VREF)
+    Local override; warning
+    @(82.0250 mm, 47.7000 mm): Pad 1 [ADC_VREF] of C40 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(83.5750 mm, 47.7000 mm): Pad 2 [GND] of C40 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.8000 mm, 49.3000 mm): Footprint C41
+[net_conflict]: Pad net (+3V3_A) doesn't match net given by schematic (/+3V3_A)
+    Local override; warning
+    @(82.0250 mm, 49.3000 mm): Pad 1 [+3V3_A] of C41 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(83.5750 mm, 49.3000 mm): Pad 2 [GND] of C41 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(87.1000 mm, 47.4000 mm): Footprint C42
+[net_conflict]: Pad net (+3V3_A) doesn't match net given by schematic (/+3V3_A)
+    Local override; warning
+    @(85.6250 mm, 47.4000 mm): Pad 1 [+3V3_A] of C42 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(88.5750 mm, 47.4000 mm): Pad 2 [GND] of C42 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.8000 mm, 50.9000 mm): Footprint C43
+[net_conflict]: Pad net (ADC_LDO) doesn't match net given by schematic (/ADC_LDO)
+    Local override; warning
+    @(82.0250 mm, 50.9000 mm): Pad 1 [ADC_LDO] of C43 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(83.5750 mm, 50.9000 mm): Pad 2 [GND] of C43 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(82.8000 mm, 52.5000 mm): Footprint C44
+[net_conflict]: Pad net (+3V3_DC) doesn't match net given by schematic (/+3V3_DC)
+    Local override; warning
+    @(82.0250 mm, 52.5000 mm): Pad 1 [+3V3_DC] of C44 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(83.5750 mm, 52.5000 mm): Pad 2 [GND] of C44 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(87.1000 mm, 52.3000 mm): Footprint C45
+[net_conflict]: Pad net (+3V3_DC) doesn't match net given by schematic (/+3V3_DC)
+    Local override; warning
+    @(85.6250 mm, 52.3000 mm): Pad 1 [+3V3_DC] of C45 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(88.5750 mm, 52.3000 mm): Pad 2 [GND] of C45 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(48.0000 mm, 56.0000 mm): Footprint C46
+[net_conflict]: Pad net (TEENSY_VIN) doesn't match net given by schematic (/TEENSY_VIN)
+    Local override; warning
+    @(46.5250 mm, 56.0000 mm): Pad 1 [TEENSY_VIN] of C46 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(49.4750 mm, 56.0000 mm): Pad 2 [GND] of C46 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(106.0000 mm, 16.0000 mm): Footprint C47
+[net_conflict]: Pad net (REC_BUTTON) doesn't match net given by schematic (/REC_BUTTON)
+    Local override; warning
+    @(105.2250 mm, 16.0000 mm): Pad 1 [REC_BUTTON] of C47 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(106.7750 mm, 16.0000 mm): Pad 2 [GND] of C47 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.0000 mm, 24.0000 mm): Footprint C48
+[net_conflict]: Pad net (GAIN_A) doesn't match net given by schematic (/GAIN_A)
+    Local override; warning
+    @(101.2250 mm, 24.0000 mm): Pad 1 [GAIN_A] of C48 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(102.7750 mm, 24.0000 mm): Pad 2 [GND] of C48 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(106.0000 mm, 24.0000 mm): Footprint C49
+[net_conflict]: Pad net (GAIN_B) doesn't match net given by schematic (/GAIN_B)
+    Local override; warning
+    @(105.2250 mm, 24.0000 mm): Pad 1 [GAIN_B] of C49 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(106.7750 mm, 24.0000 mm): Pad 2 [GND] of C49 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(110.0000 mm, 24.0000 mm): Footprint C50
+[net_conflict]: Pad net (GAIN_PUSH) doesn't match net given by schematic (/GAIN_PUSH)
+    Local override; warning
+    @(109.2250 mm, 24.0000 mm): Pad 1 [GAIN_PUSH] of C50 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(110.7750 mm, 24.0000 mm): Pad 2 [GND] of C50 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(94.7000 mm, 48.4000 mm): Footprint C51
+[net_conflict]: Pad net (DAC_CAPP) doesn't match net given by schematic (/DAC_CAPP)
+    Local override; warning
+    @(94.7000 mm, 47.4500 mm): Pad 1 [DAC_CAPP] of C51 on F.Cu
+[net_conflict]: Pad net (DAC_CAPM) doesn't match net given by schematic (/DAC_CAPM)
+    Local override; warning
+    @(94.7000 mm, 49.3500 mm): Pad 2 [DAC_CAPM] of C51 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(94.7000 mm, 51.9000 mm): Footprint C52
+[net_conflict]: Pad net (DAC_VNEG) doesn't match net given by schematic (/DAC_VNEG)
+    Local override; warning
+    @(94.7000 mm, 50.9500 mm): Pad 1 [DAC_VNEG] of C52 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(94.7000 mm, 52.8500 mm): Pad 2 [GND] of C52 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.3300 mm, 48.6500 mm): Footprint C53
+[net_conflict]: Pad net (DAC_LDO) doesn't match net given by schematic (/DAC_LDO)
+    Local override; warning
+    @(101.5550 mm, 48.6500 mm): Pad 1 [DAC_LDO] of C53 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(103.1050 mm, 48.6500 mm): Pad 2 [GND] of C53 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(97.7000 mm, 47.0800 mm): Footprint C54
+[net_conflict]: Pad net (+3V3_A) doesn't match net given by schematic (/+3V3_A)
+    Local override; warning
+    @(98.4750 mm, 47.0800 mm): Pad 1 [+3V3_A] of C54 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(96.9250 mm, 47.0800 mm): Pad 2 [GND] of C54 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(99.9000 mm, 55.0000 mm): Footprint C55
+[net_conflict]: Pad net (+3V3_A) doesn't match net given by schematic (/+3V3_A)
+    Local override; warning
+    @(98.4250 mm, 55.0000 mm): Pad 1 [+3V3_A] of C55 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(101.3750 mm, 55.0000 mm): Pad 2 [GND] of C55 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.3000 mm, 47.0800 mm): Footprint C56
+[net_conflict]: Pad net (+3V3_DC) doesn't match net given by schematic (/+3V3_DC)
+    Local override; warning
+    @(101.5250 mm, 47.0800 mm): Pad 1 [+3V3_DC] of C56 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(103.0750 mm, 47.0800 mm): Pad 2 [GND] of C56 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(106.4000 mm, 54.6000 mm): Footprint C57
+[net_conflict]: Pad net (LINE_L) doesn't match net given by schematic (/LINE_L)
+    Local override; warning
+    @(104.9250 mm, 54.6000 mm): Pad 1 [LINE_L] of C57 on F.Cu
+[net_conflict]: Pad net (HP_IN_L) doesn't match net given by schematic (/HP_IN_L)
+    Local override; warning
+    @(107.8750 mm, 54.6000 mm): Pad 2 [HP_IN_L] of C57 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(106.4000 mm, 60.2000 mm): Footprint C58
+[net_conflict]: Pad net (LINE_R) doesn't match net given by schematic (/LINE_R)
+    Local override; warning
+    @(104.9250 mm, 60.2000 mm): Pad 1 [LINE_R] of C58 on F.Cu
+[net_conflict]: Pad net (HP_IN_R) doesn't match net given by schematic (/HP_IN_R)
+    Local override; warning
+    @(107.8750 mm, 60.2000 mm): Pad 2 [HP_IN_R] of C58 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(112.7500 mm, 52.2000 mm): Footprint C59
+[net_conflict]: Pad net (HP_CPP) doesn't match net given by schematic (/HP_CPP)
+    Local override; warning
+    @(111.9750 mm, 52.2000 mm): Pad 1 [HP_CPP] of C59 on F.Cu
+[net_conflict]: Pad net (HP_CPN) doesn't match net given by schematic (/HP_CPN)
+    Local override; warning
+    @(113.5250 mm, 52.2000 mm): Pad 2 [HP_CPN] of C59 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(116.2500 mm, 54.6000 mm): Footprint C60
+[net_conflict]: Pad net (HP_VSS) doesn't match net given by schematic (/HP_VSS)
+    Local override; warning
+    @(115.4750 mm, 54.6000 mm): Pad 1 [HP_VSS] of C60 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(117.0250 mm, 54.6000 mm): Pad 2 [GND] of C60 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(110.3000 mm, 51.7500 mm): Footprint C61
+[net_conflict]: Pad net (+5V) doesn't match net given by schematic (/+5V)
+    Local override; warning
+    @(110.3000 mm, 52.5250 mm): Pad 1 [+5V] of C61 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(110.3000 mm, 50.9750 mm): Pad 2 [GND] of C61 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(87.1000 mm, 49.8500 mm): Footprint C62
+[net_conflict]: Pad net (ADC_LDO) doesn't match net given by schematic (/ADC_LDO)
+    Local override; warning
+    @(85.6250 mm, 49.8500 mm): Pad 1 [ADC_LDO] of C62 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(88.5750 mm, 49.8500 mm): Pad 2 [GND] of C62 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(97.7000 mm, 51.6200 mm): Footprint C64
+[net_conflict]: Pad net (+3V3_A) doesn't match net given by schematic (/+3V3_A)
+    Local override; warning
+    @(98.4750 mm, 51.6200 mm): Pad 1 [+3V3_A] of C64 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(96.9250 mm, 51.6200 mm): Pad 2 [GND] of C64 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(116.2500 mm, 56.2000 mm): Footprint C65
+[net_conflict]: Pad net (+5V) doesn't match net given by schematic (/+5V)
+    Local override; warning
+    @(115.4750 mm, 56.2000 mm): Pad 1 [+5V] of C65 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(117.0250 mm, 56.2000 mm): Pad 2 [GND] of C65 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(34.0000 mm, 74.0000 mm): Footprint C66
+[net_conflict]: Pad net (+9V_MIC) doesn't match net given by schematic (/+9V_MIC)
+    Local override; warning
+    @(31.3000 mm, 74.0000 mm): Pad 1 [+9V_MIC] of C66 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(36.7000 mm, 74.0000 mm): Pad 2 [GND] of C66 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(93.0000 mm, 55.0000 mm): Footprint C67
+[net_conflict]: Pad net (LINE_L) doesn't match net given by schematic (/LINE_L)
+    Local override; warning
+    @(92.2250 mm, 55.0000 mm): Pad 1 [LINE_L] of C67 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(93.7750 mm, 55.0000 mm): Pad 2 [GND] of C67 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(96.5000 mm, 55.0000 mm): Footprint C68
+[net_conflict]: Pad net (LINE_R) doesn't match net given by schematic (/LINE_R)
+    Local override; warning
+    @(95.7250 mm, 55.0000 mm): Pad 1 [LINE_R] of C68 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(97.2750 mm, 55.0000 mm): Pad 2 [GND] of C68 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.0000 mm, 32.0000 mm): Footprint C69
+[net_conflict]: Pad net (NAV_UP) doesn't match net given by schematic (/NAV_UP)
+    Local override; warning
+    @(101.2250 mm, 32.0000 mm): Pad 1 [NAV_UP] of C69 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(102.7750 mm, 32.0000 mm): Pad 2 [GND] of C69 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(106.0000 mm, 32.0000 mm): Footprint C70
+[net_conflict]: Pad net (NAV_DOWN) doesn't match net given by schematic (/NAV_DOWN)
+    Local override; warning
+    @(105.2250 mm, 32.0000 mm): Pad 1 [NAV_DOWN] of C70 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(106.7750 mm, 32.0000 mm): Pad 2 [GND] of C70 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(110.0000 mm, 32.0000 mm): Footprint C71
+[net_conflict]: Pad net (NAV_LEFT) doesn't match net given by schematic (/NAV_LEFT)
+    Local override; warning
+    @(109.2250 mm, 32.0000 mm): Pad 1 [NAV_LEFT] of C71 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(110.7750 mm, 32.0000 mm): Pad 2 [GND] of C71 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(114.0000 mm, 32.0000 mm): Footprint C72
+[net_conflict]: Pad net (NAV_RIGHT) doesn't match net given by schematic (/NAV_RIGHT)
+    Local override; warning
+    @(113.2250 mm, 32.0000 mm): Pad 1 [NAV_RIGHT] of C72 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(114.7750 mm, 32.0000 mm): Pad 2 [GND] of C72 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(118.0000 mm, 32.0000 mm): Footprint C73
+[net_conflict]: Pad net (NAV_PUSH) doesn't match net given by schematic (/NAV_PUSH)
+    Local override; warning
+    @(117.2250 mm, 32.0000 mm): Pad 1 [NAV_PUSH] of C73 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(118.7750 mm, 32.0000 mm): Pad 2 [GND] of C73 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(18.5000 mm, 45.0000 mm): Footprint C74
+[net_conflict]: Pad net (+9V) doesn't match net given by schematic (/+9V)
+    Local override; warning
+    @(17.0250 mm, 45.0000 mm): Pad 1 [+9V] of C74 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(19.9750 mm, 45.0000 mm): Pad 2 [GND] of C74 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(17.0000 mm, 53.5000 mm): Footprint C75
+[net_conflict]: Pad net (+9V) doesn't match net given by schematic (/+9V)
+    Local override; warning
+    @(16.2250 mm, 53.5000 mm): Pad 1 [+9V] of C75 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(17.7750 mm, 53.5000 mm): Pad 2 [GND] of C75 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(13.5000 mm, 37.5000 mm): Footprint C76
+[net_conflict]: Pad net (+10V5) doesn't match net given by schematic (/+10V5)
+    Local override; warning
+    @(12.0250 mm, 37.5000 mm): Pad 1 [+10V5] of C76 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(14.9750 mm, 37.5000 mm): Pad 2 [GND] of C76 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(18.5000 mm, 37.5000 mm): Footprint C77
+[net_conflict]: Pad net (+10V5) doesn't match net given by schematic (/+10V5)
+    Local override; warning
+    @(17.0250 mm, 37.5000 mm): Pad 1 [+10V5] of C77 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(19.9750 mm, 37.5000 mm): Pad 2 [GND] of C77 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(48.0000 mm, 14.0000 mm): Footprint C78
+[net_conflict]: Pad net (VBUS_SENSE) doesn't match net given by schematic (/VBUS_SENSE)
+    Local override; warning
+    @(47.2250 mm, 14.0000 mm): Pad 1 [VBUS_SENSE] of C78 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(48.7750 mm, 14.0000 mm): Pad 2 [GND] of C78 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(15.0000 mm, 29.0000 mm): Footprint C79
+[net_conflict]: Pad net (BOOST_SS) doesn't match net given by schematic (/BOOST_SS)
+    Local override; warning
+    @(15.0000 mm, 29.7750 mm): Pad 1 [BOOST_SS] of C79 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(15.0000 mm, 28.2250 mm): Pad 2 [GND] of C79 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(5.0000 mm, 45.0000 mm): Footprint C80
+[net_conflict]: Pad net (BOOST_COMP_C) doesn't match net given by schematic (/BOOST_COMP_C)
+    Local override; warning
+    @(4.2250 mm, 45.0000 mm): Pad 1 [BOOST_COMP_C] of C80 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(5.7750 mm, 45.0000 mm): Pad 2 [GND] of C80 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(9.0000 mm, 45.0000 mm): Footprint C81
+[net_conflict]: Pad net (BOOST_COMP) doesn't match net given by schematic (/BOOST_COMP)
+    Local override; warning
+    @(8.2250 mm, 45.0000 mm): Pad 1 [BOOST_COMP] of C81 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(9.7750 mm, 45.0000 mm): Pad 2 [GND] of C81 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(5.5000 mm, 50.5000 mm): Footprint C83
+[net_conflict]: Pad net (+10V5) doesn't match net given by schematic (/+10V5)
+    Local override; warning
+    @(5.5000 mm, 51.4500 mm): Pad 1 [+10V5] of C83 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(5.5000 mm, 49.5500 mm): Pad 2 [GND] of C83 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(20.5000 mm, 18.5000 mm): Footprint C85
+[net_conflict]: Pad net (VBOOST_IN) doesn't match net given by schematic (/VBOOST_IN)
+    Local override; warning
+    @(20.5000 mm, 19.9750 mm): Pad 1 [VBOOST_IN] of C85 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(20.5000 mm, 17.0250 mm): Pad 2 [GND] of C85 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(100.4000 mm, 55.7000 mm): Footprint C86
+[net_conflict]: Pad net (HP_INP_L) doesn't match net given by schematic (/HP_INP_L)
+    Local override; warning
+    @(101.8750 mm, 55.7000 mm): Pad 1 [HP_INP_L] of C86 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(98.9250 mm, 55.7000 mm): Pad 2 [GND] of C86 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(100.4000 mm, 59.1000 mm): Footprint C87
+[net_conflict]: Pad net (HP_INP_R) doesn't match net given by schematic (/HP_INP_R)
+    Local override; warning
+    @(101.8750 mm, 59.1000 mm): Pad 1 [HP_INP_R] of C87 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(98.9250 mm, 59.1000 mm): Pad 2 [GND] of C87 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(17.0000 mm, 50.0000 mm): Footprint C88
+[net_conflict]: Pad net (+9V) doesn't match net given by schematic (/+9V)
+    Local override; warning
+    @(15.5250 mm, 50.0000 mm): Pad 1 [+9V] of C88 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(18.4750 mm, 50.0000 mm): Pad 2 [GND] of C88 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(132.0000 mm, 31.5000 mm): Footprint C89
+[net_conflict]: Pad net (BAT_SENSE) doesn't match net given by schematic (/BAT_SENSE)
+    Local override; warning
+    @(131.2250 mm, 31.5000 mm): Pad 1 [BAT_SENSE] of C89 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(132.7750 mm, 31.5000 mm): Pad 2 [GND] of C89 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(124.0000 mm, 15.0000 mm): Footprint C90
+[net_conflict]: Pad net (VBUS_FUSED) doesn't match net given by schematic (/VBUS_FUSED)
+    Local override; warning
+    @(124.0000 mm, 15.9500 mm): Pad 1 [VBUS_FUSED] of C90 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(124.0000 mm, 14.0500 mm): Pad 2 [GND] of C90 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(135.0000 mm, 15.0000 mm): Footprint C91
+[net_conflict]: Pad net (BAT_SYS) doesn't match net given by schematic (/BAT_SYS)
+    Local override; warning
+    @(135.0000 mm, 15.9500 mm): Pad 1 [BAT_SYS] of C91 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(135.0000 mm, 14.0500 mm): Pad 2 [GND] of C91 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(136.0000 mm, 24.5000 mm): Footprint C92
+[net_conflict]: Pad net (VBAT) doesn't match net given by schematic (/VBAT)
+    Local override; warning
+    @(136.0000 mm, 25.4500 mm): Pad 1 [VBAT] of C92 on F.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(136.0000 mm, 23.5500 mm): Pad 2 [GND] of C92 on F.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(110.0000 mm, 36.0000 mm): Footprint C93
+[net_conflict]: Pad net (NAV_ENC_A) doesn't match net given by schematic (/NAV_ENC_A)
+    Local override; warning
+    @(109.2250 mm, 36.0000 mm): Pad 1 [NAV_ENC_A] of C93 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(110.7750 mm, 36.0000 mm): Pad 2 [GND] of C93 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(114.0000 mm, 36.0000 mm): Footprint C94
+[net_conflict]: Pad net (NAV_ENC_B) doesn't match net given by schematic (/NAV_ENC_B)
+    Local override; warning
+    @(113.2250 mm, 36.0000 mm): Pad 1 [NAV_ENC_B] of C94 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(114.7750 mm, 36.0000 mm): Pad 2 [GND] of C94 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(92.5000 mm, 63.0000 mm): Footprint C95
+[net_conflict]: Pad net (+5V) doesn't match net given by schematic (/+5V)
+    Local override; warning
+    @(91.5500 mm, 63.0000 mm): Pad 1 [+5V] of C95 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(93.4500 mm, 63.0000 mm): Pad 2 [GND] of C95 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(88.0000 mm, 63.0000 mm): Footprint C96
+[net_conflict]: Pad net (+3V3_DC) doesn't match net given by schematic (/+3V3_DC)
+    Local override; warning
+    @(87.0500 mm, 63.0000 mm): Pad 1 [+3V3_DC] of C96 on B.Cu
+[net_conflict]: Pad net (GND) doesn't match net given by schematic (/GND)
+    Local override; warning
+    @(88.9500 mm, 63.0000 mm): Pad 2 [GND] of C96 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(36.0000 mm, 85.5000 mm): Footprint C97
+[net_conflict]: Pad net (FLU_MICC) doesn't match net given by schematic (/FLU_MICC)
+    Local override; warning
+    @(36.0000 mm, 86.2750 mm): Pad 1 [FLU_MICC] of C97 on B.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(36.0000 mm, 84.7250 mm): Pad 2 [CHASSIS] of C97 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(36.0000 mm, 91.8000 mm): Footprint C98
+[net_conflict]: Pad net (FRD_MICC) doesn't match net given by schematic (/FRD_MICC)
+    Local override; warning
+    @(36.0000 mm, 92.5750 mm): Pad 1 [FRD_MICC] of C98 on B.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(36.0000 mm, 91.0250 mm): Pad 2 [CHASSIS] of C98 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(36.0000 mm, 98.1000 mm): Footprint C99
+[net_conflict]: Pad net (BLD_MICC) doesn't match net given by schematic (/BLD_MICC)
+    Local override; warning
+    @(36.0000 mm, 98.8750 mm): Pad 1 [BLD_MICC] of C99 on B.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(36.0000 mm, 97.3250 mm): Pad 2 [CHASSIS] of C99 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(36.0000 mm, 104.4000 mm): Footprint C100
+[net_conflict]: Pad net (BRU_MICC) doesn't match net given by schematic (/BRU_MICC)
+    Local override; warning
+    @(36.0000 mm, 105.1750 mm): Pad 1 [BRU_MICC] of C100 on B.Cu
+[net_conflict]: Pad net (CHASSIS) doesn't match net given by schematic (/CHASSIS)
+    Local override; warning
+    @(36.0000 mm, 103.6250 mm): Pad 2 [CHASSIS] of C100 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(44.0000 mm, 85.5000 mm): Footprint C101
+[net_conflict]: Pad net (FLU_MICC) doesn't match net given by schematic (/FLU_MICC)
+    Local override; warning
+    @(44.0000 mm, 87.5500 mm): Pad 1 [FLU_MICC] of C101 on B.Cu
+[net_conflict]: Pad net (FLU_ACC) doesn't match net given by schematic (/FLU_ACC)
+    Local override; warning
+    @(44.0000 mm, 83.4500 mm): Pad 2 [FLU_ACC] of C101 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(44.0000 mm, 91.8000 mm): Footprint C102
+[net_conflict]: Pad net (FRD_MICC) doesn't match net given by schematic (/FRD_MICC)
+    Local override; warning
+    @(44.0000 mm, 93.8500 mm): Pad 1 [FRD_MICC] of C102 on B.Cu
+[net_conflict]: Pad net (FRD_ACC) doesn't match net given by schematic (/FRD_ACC)
+    Local override; warning
+    @(44.0000 mm, 89.7500 mm): Pad 2 [FRD_ACC] of C102 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(44.0000 mm, 98.1000 mm): Footprint C103
+[net_conflict]: Pad net (BLD_MICC) doesn't match net given by schematic (/BLD_MICC)
+    Local override; warning
+    @(44.0000 mm, 100.1500 mm): Pad 1 [BLD_MICC] of C103 on B.Cu
+[net_conflict]: Pad net (BLD_ACC) doesn't match net given by schematic (/BLD_ACC)
+    Local override; warning
+    @(44.0000 mm, 96.0500 mm): Pad 2 [BLD_ACC] of C103 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(44.0000 mm, 104.4000 mm): Footprint C104
+[net_conflict]: Pad net (BRU_MICC) doesn't match net given by schematic (/BRU_MICC)
+    Local override; warning
+    @(44.0000 mm, 106.4500 mm): Pad 1 [BRU_MICC] of C104 on B.Cu
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(63.0000 mm, 85.5000 mm): Footprint C105
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(63.0000 mm, 91.8000 mm): Footprint C106
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(63.0000 mm, 98.1000 mm): Footprint C107
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(63.0000 mm, 104.4000 mm): Footprint C108
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(57.5000 mm, 58.5000 mm): Footprint C109
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(33.5000 mm, 60.5000 mm): Footprint C110
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(14.5000 mm, 18.5000 mm): Footprint D1
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(64.7300 mm, 112.1000 mm): Footprint D4
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(74.7300 mm, 112.1000 mm): Footprint D5
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(52.0000 mm, 10.5000 mm): Footprint D10
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(7.0000 mm, 37.5000 mm): Footprint D12
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(131.0000 mm, 24.5000 mm): Footprint D14
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(123.5000 mm, 28.2000 mm): Footprint D15
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(128.3000 mm, 28.2000 mm): Footprint D16
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(133.1000 mm, 28.2000 mm): Footprint D17
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(98.0000 mm, 16.0000 mm): Footprint D18
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(98.0000 mm, 20.0000 mm): Footprint D19
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(105.0000 mm, 84.0000 mm): Footprint R1
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(109.0000 mm, 84.0000 mm): Footprint R2
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(117.0000 mm, 84.0000 mm): Footprint R3
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(6.0000 mm, 64.0000 mm): Footprint R4
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(15.0000 mm, 64.0000 mm): Footprint R5
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(30.0000 mm, 85.5000 mm): Footprint R6
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(30.0000 mm, 91.8000 mm): Footprint R7
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(30.0000 mm, 98.1000 mm): Footprint R8
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(30.0000 mm, 104.4000 mm): Footprint R9
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(34.0000 mm, 85.5000 mm): Footprint R10
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(34.0000 mm, 91.8000 mm): Footprint R11
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(34.0000 mm, 98.1000 mm): Footprint R12
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(34.0000 mm, 104.4000 mm): Footprint R13
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(46.0000 mm, 85.5000 mm): Footprint R14
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(46.0000 mm, 91.8000 mm): Footprint R15
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(46.0000 mm, 98.1000 mm): Footprint R16
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(46.0000 mm, 104.4000 mm): Footprint R17
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(50.0000 mm, 85.5000 mm): Footprint R18
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(54.0000 mm, 85.5000 mm): Footprint R19
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(50.0000 mm, 91.8000 mm): Footprint R20
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(54.0000 mm, 91.8000 mm): Footprint R21
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(50.0000 mm, 98.1000 mm): Footprint R22
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(54.0000 mm, 98.1000 mm): Footprint R23
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(50.0000 mm, 104.4000 mm): Footprint R24
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(54.0000 mm, 104.4000 mm): Footprint R25
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(60.0000 mm, 85.5000 mm): Footprint R26
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(60.0000 mm, 91.8000 mm): Footprint R27
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(60.0000 mm, 98.1000 mm): Footprint R28
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(60.0000 mm, 104.4000 mm): Footprint R29
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(66.0000 mm, 85.5000 mm): Footprint R30
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(66.0000 mm, 91.8000 mm): Footprint R31
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(66.0000 mm, 98.1000 mm): Footprint R32
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(66.0000 mm, 104.4000 mm): Footprint R33
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(78.0000 mm, 85.5000 mm): Footprint R34
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(78.0000 mm, 91.8000 mm): Footprint R35
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(78.0000 mm, 98.1000 mm): Footprint R36
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(78.0000 mm, 104.4000 mm): Footprint R37
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(86.0000 mm, 85.5000 mm): Footprint R38
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(86.0000 mm, 91.8000 mm): Footprint R39
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(86.0000 mm, 98.1000 mm): Footprint R40
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(86.0000 mm, 104.4000 mm): Footprint R41
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(10.5000 mm, 57.5000 mm): Footprint R42
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(14.5000 mm, 57.5000 mm): Footprint R43
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(96.0000 mm, 40.0000 mm): Footprint R44
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(100.0000 mm, 40.0000 mm): Footprint R45
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(104.0000 mm, 40.0000 mm): Footprint R46
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(108.0000 mm, 40.0000 mm): Footprint R47
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(112.0000 mm, 40.0000 mm): Footprint R48
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(116.0000 mm, 40.0000 mm): Footprint R49
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.0000 mm, 16.0000 mm): Footprint R50
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.0000 mm, 20.0000 mm): Footprint R51
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(106.0000 mm, 20.0000 mm): Footprint R52
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(110.0000 mm, 20.0000 mm): Footprint R53
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(70.0000 mm, 108.0000 mm): Footprint R54
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(78.0000 mm, 108.0000 mm): Footprint R55
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(86.5000 mm, 44.5000 mm): Footprint R57
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(90.5000 mm, 44.5000 mm): Footprint R58
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(94.5000 mm, 44.5000 mm): Footprint R59
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(98.5000 mm, 44.5000 mm): Footprint R60
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.5000 mm, 44.5000 mm): Footprint R61
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(93.0000 mm, 58.0000 mm): Footprint R62
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(96.5000 mm, 58.0000 mm): Footprint R63
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(108.0000 mm, 48.0000 mm): Footprint R64
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(125.0000 mm, 64.0000 mm): Footprint R65
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(125.0000 mm, 67.5000 mm): Footprint R66
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(28.0000 mm, 80.0000 mm): Footprint R67
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(120.0000 mm, 40.0000 mm): Footprint R69
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(102.0000 mm, 28.0000 mm): Footprint R70
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(106.0000 mm, 28.0000 mm): Footprint R71
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(110.0000 mm, 28.0000 mm): Footprint R72
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(114.0000 mm, 28.0000 mm): Footprint R73
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(118.0000 mm, 28.0000 mm): Footprint R74
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(33.0000 mm, 9.0000 mm): Footprint R75
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(47.0000 mm, 9.0000 mm): Footprint R76
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(56.0000 mm, 14.0000 mm): Footprint R77
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(52.0000 mm, 14.0000 mm): Footprint R78
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(17.0000 mm, 41.5000 mm): Footprint R79
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(5.0000 mm, 41.5000 mm): Footprint R80
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(9.0000 mm, 41.5000 mm): Footprint R81
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(13.0000 mm, 41.5000 mm): Footprint R82
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(18.5000 mm, 57.5000 mm): Footprint R83
+[footprint_symbol_field_mismatch]: Missing symbol field 'AltMPN' in footprint
+    Local override; warning
+    @(100.0000 mm, 104.0000 mm): Footprint R84
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

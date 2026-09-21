@@ -90,10 +90,67 @@ def build_cpl() -> None:
             })
 
 
+# 2026-09-06: parts PCBWay must fit or supply that are NOT placement lines in
+# the KiCad BOM/CPL - the U8 socket sub-assembly, and loose off-board parts to
+# quote and ship with the boards. Written as a separate CSV so the CPL import
+# is not confused by designators that have no placement.
+EXTRA_PARTS: list[tuple[str, str, str, str, str, str]] = [
+    # designator/role, description, manufacturer, MPN, qty per board, note
+    ("U8 (socket)", "1x24 low-profile female socket strip, 2.54 mm, 4.57 mm profile",
+     "Samtec", "SLW-124-01-G-S", "2",
+     "Solder BOTH strips into the U8 footprint (bottom side, rows at 17.78 mm). "
+     "Then plug the Teensy into them - see U8 (module)."),
+    ("U8 (module)", "Teensy 4.1 WITH pins pre-soldered (outer 2x24 rows)",
+     "PJRC", "TEENSY41_PINS", "1",
+     "Plug into the two SLW-124 sockets, microSD slot toward the board edge marked "
+     "'SD CARD SLOT THIS EDGE'. Customer-supplied if PCBWay cannot source PJRC. "
+     "TEENSY41_NE_PINS (no Ethernet chip) is an acceptable substitute."),
+    ("TFT (loose)", "LCDWiki MSP3526 3.5in IPS SPI TFT 320x480, ST7796U, FT6336U CAPACITIVE touch, 14-pin header",
+     "LCDWiki / QDtech", "MSP3526", "1",
+     "OFF-BOARD, ship loose - do NOT solder; it plugs into the J3 socket. NOT the "
+     "MSP3520 (resistive). Please quote; customer will supply if unavailable."),
+    ("TFT standoffs (loose)", "M3 x 11 mm brass standoff, female-female, + 8x M3x6 screws",
+     "generic", "M3x11 F-F", "4",
+     "OFF-BOARD, ship loose. Mounts the TFT over H5-H8 (socket 8.5 mm + header body 2.5 mm)."),
+    ("USB D+/D- wires", "2x ~20 mm 30 AWG wire, TP1/TP2 (bottom) to the Teensy 4.1 underside 'USB Device' D+ / D- pads",
+     "-", "-", "2",
+     "ASSEMBLY STEP: solder the two wires to the Teensy's underside D+/D- pads and to TP1 (D+) / TP2 (D-) "
+     "before plugging the Teensy into its sockets. Also CUT the Teensy's VIN-VUSB link pad. "
+     "Keep the wires short and together."),
+    ("Battery (loose, customer-supplied)", "3.7 V 1S LiPo pouch 906090 (9 x 60 x 90 mm) 5000 mAh WITH protection circuit (PCM) and JST-PH 2.0 mm pigtail",
+     "generic", "LP906090 5000mAh PCM JST-PH", "1",
+     "OFF-BOARD. Lithium cells usually cannot ship with the boards - customer will supply. Plugs into J10 (bottom, + on pin 1 - CHECK pigtail polarity), lies on the box floor under the right half of the board on foam tape."),
+    ("PSU (loose)", "9 VDC 1 A regulated wall adapter, 5.5 x 2.1 mm barrel, CENTER POSITIVE, US plug",
+     "generic", "9V/1A 5.5x2.1 center+", "1",
+     "OFF-BOARD, ship loose. Mates with J1 (CUI PJ-102AH). Optional - the unit also runs from USB-C 5 V. Please quote."),
+    ("USB-C cable (loose)", "USB-C to USB-C (or USB-A to USB-C) 2.0 cable, 1 m",
+     "generic", "USB-C 2.0 cable", "1",
+     "OFF-BOARD, ship loose. Please quote."),
+    ("Knob SW3 (loose)", "Push-on knob for 6 mm 18-spline knurled shaft, ~Ø16-20 mm",
+     "generic", "6 mm knurled push-on knob", "1",
+     "OFF-BOARD, ship loose. For the Alps EC11E encoder. Please quote."),
+    ("Keycap SW2 (loose)", "Round keycap for Omron B3F-5xxx 12 mm tactile switch",
+     "Omron", "B32-1000 series", "1",
+     "OFF-BOARD, ship loose. Please quote."),
+]
+
+
+def write_extras_bom() -> None:
+    path = OUT / "QuadPreRecorder-BOM-extras.csv"
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["Designator", "Comment", "Manufacturer", "Manufacturer Part Number", "Quantity", "Note"])
+        for row in EXTRA_PARTS:
+            writer.writerow(row)
+
+
 def write_checksums() -> None:
     files = sorted(
         path for path in OUT.rglob("*")
         if path.is_file() and path.name != "SHA256SUMS.txt" and path.suffix != ".zip"
+        and "RevA" not in path.name and "RevB" not in path.name and "Rev3" not in path.name and "REV3" not in path.name
+        and not path.relative_to(OUT).as_posix().startswith("rev3-4layer/")
+        and not path.relative_to(OUT).as_posix().startswith("revb-archive/")
     )
     lines = []
     for path in files:
@@ -134,7 +191,7 @@ def main() -> None:
 
     run(
         "pcb", "export", "gerbers", "--check-zones", "--subtract-soldermask",
-        "--layers", "F.Cu,B.Cu,F.Paste,B.Paste,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,Edge.Cuts",
+        "--layers", "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,Edge.Cuts",
         "-o", str(GERBERS), str(BOARD),
     )
     run("pcb", "export", "ipcd356", "-o", str(GERBERS / "QuadPreRecorder.d356"), str(BOARD))
@@ -154,6 +211,7 @@ def main() -> None:
         str(SCHEMATIC),
     )
     build_cpl()
+    write_extras_bom()
 
     run("sch", "export", "pdf", "-o", str(EXPORTS / "QuadPreRecorder-schematic.pdf"), str(SCHEMATIC))
     run(
@@ -188,7 +246,7 @@ def main() -> None:
     )
     run(
         "pcb", "export", "step", "--force", "--no-dnp", "--subst-models",
-        "-o", str(OUT / "QuadPreRecorder-RevA.step"), str(BOARD),
+        "-o", str(OUT / "QuadPreRecorder-RevC.step"), str(BOARD),
     )
     for side in ("top", "bottom"):
         run(
@@ -213,13 +271,28 @@ def main() -> None:
     shutil.copy2(HARDWARE / "mechanical.md", OUT / "mechanical.md")
 
     gerber_files = sorted(path for path in GERBERS.iterdir() if path.is_file() and path.suffix.lower() != ".pdf")
-    make_zip(OUT / "QuadPreRecorder-RevA-Gerbers.zip", gerber_files, GERBERS)
+    make_zip(OUT / "QuadPreRecorder-RevC-Gerbers.zip", gerber_files, GERBERS)
     write_checksums()
+    # 2026-09-08 (Rev C): exclude the retired Rev A/B outputs and
+    # the out-of-scope Rev3 4-layer files that also live in this folder, so the
+    # PCBWay handoff only contains the current board.
+    def _excluded(path: Path) -> bool:
+        rel = path.relative_to(OUT).as_posix()
+        name = path.name
+        return (
+            name == "QuadPreRecorder-RevC-PCBWay-handoff.zip"
+            or "RevA" in name
+            or "RevB" in name
+            or "Rev3" in name
+            or "REV3" in name
+            or rel.startswith("rev3-4layer/")
+            or rel.startswith("revb-archive/")
+        )
     handoff_files = [
         path for path in OUT.rglob("*")
-        if path.is_file() and path.name != "QuadPreRecorder-RevA-PCBWay-handoff.zip"
+        if path.is_file() and not _excluded(path)
     ]
-    make_zip(OUT / "QuadPreRecorder-RevA-PCBWay-handoff.zip", handoff_files, OUT)
+    make_zip(OUT / "QuadPreRecorder-RevC-PCBWay-handoff.zip", handoff_files, OUT)
 
     print(f"Manufacturing package: {OUT}")
 

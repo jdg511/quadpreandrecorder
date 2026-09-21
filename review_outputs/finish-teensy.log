@@ -1,0 +1,44 @@
+﻿
+.
+
+
+
+exported 3315 tracks/vias
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix.dsn
+
+
+
+wiring entries protected: 3137 (was 3137 routable)
+sample via: (via "Via[0-3]_800:400_um"  52627.5 -59466.1 (net FLU_CPRE)(type protect))
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix.dsn
+
+
+
+layer decls changed to power : 0
+In1/In2 wire_keepouts removed: 2
+bytes 418291 -> 417975
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix-plane.dsn
+
+
+=== freerouting start 15:10:12 ===
+2026-09-15 15:10:12.591 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-15 15:10:12.631 [main] INFO  Settings were loaded from freerouting.json
+2026-09-15 15:10:14.171 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix-plane.dsn'...
+2026-09-15 15:10:14.488 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-15 15:10:15.735 [main] WARN  The normalization of net 'BUCK_PG' failed.
+2026-09-15 15:10:15.746 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-15 15:10:15.754 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-15 15:10:24.190 [Thread-29] INFO  Starting auto-routing...
+2026-09-15 15:13:04.852 [Thread-29] INFO  Auto-routing was completed in 2 minute(s) 40.66 seconds.
+2026-09-15 15:13:04.953 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-15 15:13:09.787 [Thread-29] INFO  Route optimization was completed in 4.83 seconds and it improved the design by ~0.02%.
+2026-09-15 15:13:09.813 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix.ses'...
+=== freerouting done 15:13:10 ===
+
+Found 0 violations
+Found 34 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t12.json
+
+
+FINISH DONE

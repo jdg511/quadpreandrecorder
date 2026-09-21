@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1091" height="798" viewBox="0 0 1091 798" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="1091" height="798" fill="#faf8f5"/>
+<text x="46" y="42" font-size="24" font-weight="700" fill="#1d1a17">4xprerec Rev C  /  board map, seen from the top</text>
+<text x="46" y="68" font-size="14" fill="#6b625b">PCB 138 x 114 mm in a Hammond 1590XX. Dashed = not on the top surface (enclosure, screen above, or parts underneath).</text>
+<text x="46" y="88" font-size="14" font-weight="600" fill="#b3761f">REAR wall is the top of this drawing. FRONT (the 1/4 inch jack) is the bottom.</text>
+<rect x="469.2" y="228.2" width="276.0" height="413.99999999999994" fill="#e8b84b" fill-opacity="0.20" stroke="#b3861f" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="607.1999999999999" y="619.1999999999999" font-size="13" font-weight="700" fill="#8a6410" text-anchor="middle">LiPo pouch on the box floor, UNDER the board</text>
+<path d="M 156.39999999999998 159.2 L 680.8 159.2 L 736.0 214.39999999999998 L 736.0 628.4 L 680.8 683.5999999999999 L 156.39999999999998 683.5999999999999 L 101.19999999999999 628.4 L 101.19999999999999 214.39999999999998 Z" fill="#ffffff" fill-opacity="0.93" stroke="#2f2a25" stroke-width="2.4"/>
+<circle cx="108.1" cy="166.1" r="20.7" fill="#d94f4f" fill-opacity="0.14" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 4"/>
+<circle cx="729.0999999999999" cy="166.1" r="20.7" fill="#d94f4f" fill-opacity="0.14" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 4"/>
+<circle cx="108.1" cy="676.6999999999999" r="20.7" fill="#d94f4f" fill-opacity="0.14" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 4"/>
+<circle cx="729.0999999999999" cy="676.6999999999999" r="20.7" fill="#d94f4f" fill-opacity="0.14" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="729.0999999999999" y="124.7" font-size="11.5" fill="#c0392b" text-anchor="middle">corner screw posts</text>
+<rect x="207.0" y="196.0" width="450.79999999999995" height="255.29999999999998" fill="#8a6bb5" fill-opacity="0.13" stroke="#6f52a0" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="432.4" y="311.0" font-size="17" font-weight="700" fill="#5a4185" text-anchor="middle">MSP3526 capacitive touchscreen</text>
+<text x="432.4" y="340.9" font-size="12.5" fill="#5a4185" text-anchor="middle">3.5 in, on 11 mm standoffs above the board</text>
+<circle cx="220.79999999999998" cy="209.8" r="7.359999999999999" fill="#fff" stroke="#6f52a0" stroke-width="1.4"/>
+<circle cx="644.0" cy="209.8" r="7.359999999999999" fill="#fff" stroke="#6f52a0" stroke-width="1.4"/>
+<circle cx="220.79999999999998" cy="437.5" r="7.359999999999999" fill="#fff" stroke="#6f52a0" stroke-width="1.4"/>
+<circle cx="644.0" cy="437.5" r="7.359999999999999" fill="#fff" stroke="#6f52a0" stroke-width="1.4"/>
+<rect x="371.35799999999995" y="172.12599999999998" width="93.472" height="280.416" fill="#3f7fbf" fill-opacity="0.13" stroke="#2c6ba8" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="418.59999999999997" y="416.79999999999995" font-size="13.5" font-weight="700" fill="#1f5a8f" text-anchor="middle">Teensy 4.1</text>
+<text x="418.59999999999997" y="439.79999999999995" font-size="11.5" fill="#1f5a8f" text-anchor="middle">on the UNDERSIDE</text>
+<text x="418.59999999999997" y="143.56" font-size="12" font-weight="700" fill="#1f5a8f" text-anchor="middle">microSD slot</text>
+<rect x="151.8" y="131.6" width="52.9" height="73.6" rx="2" fill="#2c6ba8" fill-opacity="0.30" stroke="#2c6ba8" stroke-width="1.8"/>
+<text x="181.7" y="131.6" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">J1  9V in</text>
+<rect x="260.72799999999995" y="159.43" width="48.943999999999996" height="43.331999999999994" rx="2" fill="#2c6ba8" fill-opacity="0.30" stroke="#2c6ba8" stroke-width="1.8"/>
+<text x="285.2" y="131.6" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">J9  USB-C</text>
+<text x="285.2" y="144.6" font-size="10.5" fill="#4a423b" text-anchor="middle">power + data</text>
+<rect x="81.65" y="470.988" width="77.05" height="89.976" rx="2" fill="#2c6ba8" fill-opacity="0.30" stroke="#2c6ba8" stroke-width="1.8"/>
+<text x="239.2" y="515.7" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="start">J2  RJ45</text>
+<rect x="654.1199999999999" y="327.1" width="87.39999999999993" height="42.32000000000001" rx="2" fill="#2c6ba8" fill-opacity="0.30" stroke="#2c6ba8" stroke-width="1.8"/>
+<text x="644.0" y="347.79999999999995" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="end">J5  headphones</text>
+<rect x="137.264" y="569.29" width="77.05" height="157.31999999999994" rx="2" fill="#2c6ba8" fill-opacity="0.30" stroke="#2c6ba8" stroke-width="1.8"/>
+<text x="175.72" y="711.1999999999999" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">J4  1/4 in line out</text>
+<rect x="281.75" y="463.95" width="71.3" height="66.69999999999999" rx="2" fill="#c0392b" fill-opacity="0.30" stroke="#c0392b" stroke-width="1.8"/>
+<text x="317.4" y="501.29999999999995" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">SW2  RECORD</text>
+<rect x="377.2" y="464.64" width="80.5" height="65.31999999999994" rx="2" fill="#c0392b" fill-opacity="0.30" stroke="#c0392b" stroke-width="1.8"/>
+<text x="417.45" y="501.29999999999995" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">SW3  encoder</text>
+<text x="417.45" y="514.3" font-size="10.5" fill="#4a423b" text-anchor="middle">master gain</text>
+<rect x="494.03999999999996" y="467.4" width="51.519999999999946" height="59.8" rx="2" fill="#c0392b" fill-opacity="0.30" stroke="#c0392b" stroke-width="1.8"/>
+<text x="519.8" y="501.29999999999995" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">SW4  nav</text>
+<text x="519.8" y="514.3" font-size="10.5" fill="#4a423b" text-anchor="middle">5-way</text>
+<rect x="126.96" y="291.45" width="35.88" height="25.299999999999997" rx="2" fill="#1d7a3e" fill-opacity="0.30" stroke="#1d7a3e" stroke-width="1.8"/>
+<text x="239.2" y="304.1" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="start">U11 boost</text>
+<text x="239.2" y="317.1" font-size="10.5" fill="#4a423b" text-anchor="start">10.45 V</text>
+<rect x="130.502" y="381.70199999999994" width="28.796" height="28.79600000000002" rx="2" fill="#1d7a3e" fill-opacity="0.30" stroke="#1d7a3e" stroke-width="1.8"/>
+<text x="239.2" y="396.09999999999997" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="start">U12 LDO</text>
+<text x="239.2" y="409.09999999999997" font-size="10.5" fill="#4a423b" text-anchor="start">9 V analog</text>
+<rect x="569.5719999999999" y="555.95" width="29.25600000000006" height="16.099999999999998" rx="2" fill="#1d7a3e" fill-opacity="0.30" stroke="#1d7a3e" stroke-width="1.8"/>
+<text x="584.1999999999999" y="587.0" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">U1 buck</text>
+<text x="584.1999999999999" y="600.0" font-size="10.5" fill="#4a423b" text-anchor="middle">5 V</text>
+<rect x="687.102" y="225.30199999999996" width="19.595999999999957" height="19.595999999999997" rx="2" fill="#1d7a3e" fill-opacity="0.30" stroke="#1d7a3e" stroke-width="1.8"/>
+<text x="696.9" y="269.6" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="end">U13 charger</text>
+<text x="696.9" y="282.6" font-size="10.5" fill="#4a423b" text-anchor="end">BQ24074</text>
+<rect x="322.69" y="376.54999999999995" width="35.42000000000001" height="25.299999999999997" rx="2" fill="#8a5a1f" fill-opacity="0.30" stroke="#8a5a1f" stroke-width="1.8"/>
+<text x="340.4" y="393.2" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">U6</text>
+<text x="340.4" y="406.2" font-size="10.5" fill="#4a423b" text-anchor="middle">opamp</text>
+<rect x="467.59" y="367.81" width="35.419999999999945" height="38.179999999999986" rx="2" fill="#8a5a1f" fill-opacity="0.30" stroke="#8a5a1f" stroke-width="1.8"/>
+<text x="485.29999999999995" y="390.9" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">U7 ADC</text>
+<text x="485.29999999999995" y="403.9" font-size="10.5" fill="#4a423b" text-anchor="middle">PCM1864</text>
+<rect x="543.49" y="373.09999999999997" width="35.419999999999945" height="32.199999999999996" rx="2" fill="#8a5a1f" fill-opacity="0.30" stroke="#8a5a1f" stroke-width="1.8"/>
+<text x="561.1999999999999" y="393.2" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">U9 DAC</text>
+<text x="561.1999999999999" y="406.2" font-size="10.5" fill="#4a423b" text-anchor="middle">PCM5102A</text>
+<rect x="604.302" y="404.702" width="24.195999999999955" height="24.196000000000023" rx="2" fill="#8a5a1f" fill-opacity="0.30" stroke="#8a5a1f" stroke-width="1.8"/>
+<text x="616.4" y="389.2" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">U10</text>
+<text x="616.4" y="402.2" font-size="10.5" fill="#4a423b" text-anchor="middle">hp amp</text>
+<rect x="599.6099999999999" y="611.15" width="42.78000000000005" height="48.3" rx="2" fill="#8a5a1f" fill-opacity="0.30" stroke="#8a5a1f" stroke-width="1.8"/>
+<text x="621.0" y="679.0" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">K1 relay</text>
+<text x="621.0" y="692.0" font-size="10.5" fill="#4a423b" text-anchor="middle">line mute</text>
+<rect x="470.212" y="166.928" width="156.53799999999998" height="28.013999999999996" rx="2" fill="#8a8078" fill-opacity="0.30" stroke="#8a8078" stroke-width="1.8"/>
+<text x="547.4" y="184.04" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">J6 analog debug</text>
+<rect x="470.212" y="196.82799999999997" width="156.53799999999998" height="28.013999999999996" rx="2" fill="#8a8078" fill-opacity="0.30" stroke="#8a8078" stroke-width="1.8"/>
+<text x="547.4" y="213.94" font-size="12.5" font-weight="700" fill="#1d1a17" text-anchor="middle">J7 digital debug</text>
+<circle cx="657.8" cy="662.9" r="11.959999999999999" fill="#e8b84b" stroke="#8a6410" stroke-width="1.6"/>
+<text x="630.1999999999999" y="665.1999999999999" font-size="11.5" font-weight="700" fill="#8a6410" text-anchor="end">J10 battery</text>
+<circle cx="404.79999999999995" cy="656.0" r="6.8999999999999995" fill="#2c6ba8"/>
+<text x="404.79999999999995" y="678.0" font-size="10.5" fill="#4a423b" text-anchor="middle">PWR</text>
+<circle cx="441.59999999999997" cy="656.0" r="6.8999999999999995" fill="#c0392b"/>
+<text x="441.59999999999997" y="678.0" font-size="10.5" fill="#4a423b" text-anchor="middle">REC</text>
+<text x="418.59999999999997" y="90" font-size="14" font-weight="700" fill="#8a7d70" text-anchor="middle">REAR WALL</text>
+<text x="418.59999999999997" y="720.4" font-size="14" font-weight="700" fill="#8a7d70" text-anchor="middle">FRONT WALL</text>
+<text x="59.8" y="421.4" font-size="14" font-weight="700" fill="#8a7d70" text-anchor="middle" transform="rotate(-90 59.8 421.4)">LEFT WALL</text>
+<text x="777.4" y="421.4" font-size="14" font-weight="700" fill="#8a7d70" text-anchor="middle" transform="rotate(90 777.4 421.4)">RIGHT WALL</text>
+<text x="817.1999999999999" y="110" font-size="15" font-weight="700" fill="#1d1a17">Colour key</text>
+<rect x="817.1999999999999" y="127" width="15" height="15" rx="3" fill="#2c6ba8" fill-opacity="0.45" stroke="#2c6ba8" stroke-width="1.6"/>
+<text x="841.1999999999999" y="139" font-size="13" fill="#3a332d">Connectors / wall parts</text>
+<rect x="817.1999999999999" y="152" width="15" height="15" rx="3" fill="#c0392b" fill-opacity="0.45" stroke="#c0392b" stroke-width="1.6"/>
+<text x="841.1999999999999" y="164" font-size="13" fill="#3a332d">Front-panel controls</text>
+<rect x="817.1999999999999" y="177" width="15" height="15" rx="3" fill="#1d7a3e" fill-opacity="0.45" stroke="#1d7a3e" stroke-width="1.6"/>
+<text x="841.1999999999999" y="189" font-size="13" fill="#3a332d">Power chain</text>
+<rect x="817.1999999999999" y="202" width="15" height="15" rx="3" fill="#8a5a1f" fill-opacity="0.45" stroke="#8a5a1f" stroke-width="1.6"/>
+<text x="841.1999999999999" y="214" font-size="13" fill="#3a332d">Audio signal chain</text>
+<rect x="817.1999999999999" y="227" width="15" height="15" rx="3" fill="#8a8078" fill-opacity="0.45" stroke="#8a8078" stroke-width="1.6"/>
+<text x="841.1999999999999" y="239" font-size="13" fill="#3a332d">Debug headers</text>
+<rect x="817.1999999999999" y="252" width="15" height="15" rx="3" fill="#8a6bb5" fill-opacity="0.45" stroke="#8a6bb5" stroke-width="1.6"/>
+<text x="841.1999999999999" y="264" font-size="13" fill="#3a332d">Screen (above the board)</text>
+<rect x="817.1999999999999" y="277" width="15" height="15" rx="3" fill="#e8b84b" fill-opacity="0.45" stroke="#e8b84b" stroke-width="1.6"/>
+<text x="841.1999999999999" y="289" font-size="13" fill="#3a332d">Battery (below the board)</text>
+<text x="817.1999999999999" y="336" font-size="15" font-weight="700" fill="#1d1a17">Holes you drill in the box</text>
+<text x="817.1999999999999" y="362" font-size="12.5" fill="#3a332d">REAR: 9 V barrel, USB-C, microSD slot</text>
+<text x="817.1999999999999" y="383" font-size="12.5" fill="#3a332d">LEFT: RJ45 mic input</text>
+<text x="817.1999999999999" y="404" font-size="12.5" fill="#3a332d">RIGHT: 3.5 mm headphone</text>
+<text x="817.1999999999999" y="425" font-size="12.5" fill="#3a332d">FRONT: 1/4 inch line out</text>
+<text x="817.1999999999999" y="446" font-size="12.5" fill="#3a332d">LID: screen window, REC button, encoder shaft</text>
+<text x="817.1999999999999" y="482" font-size="12.5" font-style="italic" fill="#8a7d70">SW4 has no lid hole yet. That is the</text>
+<text x="817.1999999999999" y="500" font-size="12.5" font-style="italic" fill="#8a7d70">5-way part you asked to replace.</text>
+</svg>

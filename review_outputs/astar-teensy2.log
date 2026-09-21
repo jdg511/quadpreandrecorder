@@ -1,0 +1,47 @@
+﻿
+NAV_PUSH items removed in box: 11
+
+
+Found 0 violations
+Found 16 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-teensyfix4.json
+
+16 connections to close
+[ok]   I2C_SDA      (75.24,42.18)->(81.00,44.17) 10 seg 1 via, 0s, margin 5
+   (trimming 1.04 mm stub of +3V3_D at (95.17,40.00))
+[FAIL] +3V3_D       (95.91,39.27)->(75.24,57.42)  Track [+3V3_D] on B.Cu, length 1.0362 mm | PTH pad 3V3B [+3V3_D] of 
+U8
+[ok]   SPI_SCK      (76.40,33.40)->(75.24,29.48) 19 seg 3 via, 0s, margin 9
+[ok]   NAV_PUSH     (79.60,28.76)->(75.24,21.86) 12 seg 2 via, 0s, margin 5
+   (verify failed on segment 15/17 at (74.00,37.57))
+   (verify failed on segment 15/17 at (74.00,37.57))
+   (verify failed on segment 15/17 at (74.00,37.57))
+   (verify failed on segment 15/17 at (74.00,37.57))
+[FAIL] NAV_ENC_A    (60.00,19.32)->(74.51,38.27)  PTH pad 26 [NAV_ENC_A] of U8 | Track [NAV_ENC_A] on F.Cu, length 
+17.7636 mm
+   (verify failed on segment 1/19 at (74.51,38.27))
+   (verify failed on segment 1/19 at (74.51,38.27))
+   (verify failed on segment 1/19 at (74.51,38.27))
+   (verify failed on segment 1/19 at (74.51,38.27))
+[FAIL] NAV_ENC_A    (74.51,38.27)->(75.02,66.96)  Track [NAV_ENC_A] on F.Cu, length 17.7636 mm | Track [NAV_ENC_A] on 
+B.Cu, length 11.3734 mm
+   (verify failed on segment 2/33 at (95.31,26.46))
+   (verify failed on segment 2/33 at (95.31,26.46))
+   (trimming 7.99 mm stub of NAV_DOWN at (76.08,65.67))
+   (verify failed on segment 2/70 at (95.31,26.46))
+   (verify failed on segment 2/70 at (95.31,26.46))
+   (trimming 0.91 mm stub of NAV_DOWN at (81.73,71.32))
+   (verify failed on segment 2/58 at (95.31,26.46))
+   (verify failed on segment 2/58 at (95.31,26.46))
+
+
+
+zones refilled: 20
+
+
+Found 0 violations
+Found 16 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-teensyfix5.json
+ASTAR2 DONE

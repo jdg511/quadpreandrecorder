@@ -1,0 +1,202 @@
+r"""Rev C3 (2026-09-12): pre-place the vias that make the converter decoupling
+and the headphone amp's exposed pad actually work, BEFORE fanout_gnd.py and
+BEFORE Freerouting.
+
+Why
+---
+The 2026-09-11 audio audit found every 100 nF decoupler 2.4 to 11.7 mm from
+its pin. The caps now sit on the bottom directly under their pins
+(generate_pcb.py), but a via still has to join the pin (top) to the cap pad
+(bottom), and on a 0.5 / 0.65 mm pitch TSSOP a 0.6 mm via cannot sit in the
+pin row itself: it would violate clearance to the neighbouring pins. The
+only legal spot is just inside the IC body, past the pad's inner end. Left to
+Freerouting that via lands wherever it likes; here it lands exactly on the
+cap's pad 1, fed by a stub from the pin pad's inner end.
+
+The TPA6130A2's 2.7 x 2.7 mm exposed pad had ZERO vias in it (nearest ground
+via 2.55 mm from centre, outside the pad). It is the amp's main ground return
+and its only heat path. It gets a 3 x 3 array of 0.30 mm-drill vias on a
+0.9 mm pitch.
+
+Runs on the pristine placed board (right after generate_pcb.py). fanout_gnd.py
+then runs with --allow-existing and treats these as obstacles.
+"""
+import math
+import sys
+from pathlib import Path
+
+import pcbnew
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import stitch_pass3 as sp
+
+ROOT = Path(__file__).resolve().parents[1]
+BOARD = ROOT / "hardware" / "QuadPreRecorder.kicad_pcb"
+DSN = ROOT / "hardware" / "review_outputs" / "QuadPreRecorder-unrouted.dsn"
+
+VIA = (0.60, 0.30)
+STUB_W = 0.20
+
+# (ref, pin, via x, via y[, bend]). The via must land on the matching
+# bottom-side cap's pad 1 (see the placement table in generate_pcb.py). An
+# optional bend point routes the stub as two segments: straight out of the
+# pin row first, then across to the via, so it never grazes a neighbour pad.
+DECOUPLE = [
+    ("U7", "6",  82.0, 47.70, (81.6, 48.5)),  # VREF -> C40 100n ADC_VREF
+    ("U7", "8",  82.0, 49.30, (81.6, 49.5)),  # AVDD -> C41 100n +3V3_A (bend: a straight diagonal grazed pin 7 by 0.7 um)
+    ("U7", "11", 82.0, 50.90),   # LDO out -> C43 100n ADC_LDO
+    ("U7", "14", 82.0, 52.50),   # IOVDD   -> C44 100n +3V3_DC (pin 13 DVDD joins on top)
+    ("U9", "1",  98.5, 47.08),   # AVDD    -> C54 100n +3V3_A
+    ("U9", "8",  98.5, 51.62),   # AVDD    -> C64 100n +3V3_A
+    ("U9", "20", 101.5, 47.08),  # DVDD    -> C56 100n +3V3_DC
+    ("U9", "18", 101.5, 48.65),  # LDOO    -> C53 1u   DAC_LDO
+]
+
+EP = ("U10", "21", 3, 0.90)      # ref, pad number, n x n, pitch
+
+
+def find_pad(board, ref, number):
+    for fp in board.Footprints():
+        if fp.GetReference() != ref:
+            continue
+        for p in fp.Pads():
+            if p.GetNumber() == number:
+                return p
+    raise SystemExit(f"{ref}.{number} not found")
+
+
+def add_via(board, x, y, netcode):
+    via = pcbnew.PCB_VIA(board)
+    via.SetPosition(pcbnew.VECTOR2I(sp.mm(x), sp.mm(y)))
+    via.SetWidth(sp.mm(VIA[0]))
+    via.SetDrill(sp.mm(VIA[1]))
+    via.SetNetCode(netcode)
+    via.SetViaType(pcbnew.VIATYPE_THROUGH)
+    via.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu)
+    board.Add(via)
+    return via
+
+
+def add_track(board, ax, ay, bx, by, layer, netcode, width):
+    trk = pcbnew.PCB_TRACK(board)
+    trk.SetStart(pcbnew.VECTOR2I(sp.mm(ax), sp.mm(ay)))
+    trk.SetEnd(pcbnew.VECTOR2I(sp.mm(bx), sp.mm(by)))
+    trk.SetWidth(sp.mm(width))
+    trk.SetLayer(layer)
+    trk.SetNetCode(netcode)
+    board.Add(trk)
+    return trk
+
+
+def main():
+    board = pcbnew.LoadBoard(str(BOARD))
+    if list(board.GetTracks()):
+        raise SystemExit("board already carries tracks/vias - run generate_pcb.py first")
+    gnd = board.FindNet("GND").GetNetCode()
+    sp.TRACK_W = STUB_W
+
+    # --- exposed pad array -------------------------------------------------
+    ref, num, n, pitch = EP
+    pad = find_pad(board, ref, num)
+    if pad.GetNetCode() != gnd:
+        raise SystemExit(f"{ref}.{num} is not on GND")
+    cx, cy = sp.to_mm(pad.GetPosition().x), sp.to_mm(pad.GetPosition().y)
+    sx, sy = sp.to_mm(pad.GetSizeX()), sp.to_mm(pad.GetSizeY())
+    half = (n - 1) / 2.0
+    ep_vias = 0
+    for i in range(n):
+        for j in range(n):
+            x = cx + (i - half) * pitch
+            y = cy + (j - half) * pitch
+            if abs(x - cx) + VIA[0] / 2 > sx / 2 or abs(y - cy) + VIA[0] / 2 > sy / 2:
+                raise SystemExit("EP via array does not fit inside the pad")
+            add_via(board, x, y, gnd)
+            ep_vias += 1
+    print(f"{ref} exposed pad {sx:.2f}x{sy:.2f} at ({cx:.2f},{cy:.2f}): {ep_vias} vias, pitch {pitch}")
+    # U10.13 (GND, east edge) has no room for its own fanout via: tie it
+    # straight into the exposed pad with a 0.2 mm stub instead of trusting
+    # the top pour to bridge the 0.2 mm gap.
+    p13 = find_pad(board, ref, "13")
+    if p13.GetNetCode() == gnd:
+        x13, y13 = sp.to_mm(p13.GetPosition().x), sp.to_mm(p13.GetPosition().y)
+        add_track(board, x13, y13, cx + sx / 2 - 0.3, y13, pcbnew.F_Cu, gnd, 0.20)
+        print(f"{ref}.13 GND stub into the exposed pad")
+
+    # --- decoupling vias + stubs -------------------------------------------
+    pad_net = {p.m_Uuid.AsString(): p.GetNetCode()
+               for fp in board.Footprints() for p in fp.Pads()}
+
+    def obstacles_for(netcode):
+        """build_obstacles() only treats GND as 'same net'. For a supply via
+        the pads of ITS OWN net (the pin, the cap pad it lands on, the IC's
+        second DVDD pin) are connections, not obstacles."""
+        pads, segs, vias, edges, holes, rule_areas = sp.build_obstacles(board)
+        pads = [t for t in pads if pad_net.get(t[5]) != netcode]
+        return pads, segs, vias, edges, holes, rule_areas
+
+    for entry in DECOUPLE:
+        ref, num, vx, vy = entry[:4]
+        bend = entry[4] if len(entry) > 4 else None
+        pad = find_pad(board, ref, num)
+        net = pad.GetNetCode()
+        px, py = sp.to_mm(pad.GetPosition().x), sp.to_mm(pad.GetPosition().y)
+        layer = sp.pad_layers(pad)[0]
+        skip = pad.m_Uuid.AsString()
+        obs = obstacles_for(net)
+        if not sp.via_is_legal(vx, vy, VIA[0], obs, skip):
+            raise SystemExit(f"{ref}.{num}: via at ({vx},{vy}) is not legal")
+        points = [(px, py)] + ([bend] if bend else []) + [(vx, vy)]
+        for (ax, ay), (bx, by) in zip(points, points[1:]):
+            if not sp.track_is_legal(ax, ay, bx, by, layer, obs, skip, new_via=(vx, vy)):
+                raise SystemExit(f"{ref}.{num}: stub ({ax:.2f},{ay:.2f})->({bx:.2f},{by:.2f}) is not legal")
+        add_via(board, vx, vy, net)
+        for (ax, ay), (bx, by) in zip(points, points[1:]):
+            add_track(board, ax, ay, bx, by, layer, net, STUB_W)
+        print(f"{ref}.{num:>2} {pad.GetNetname():9} stub {math.hypot(vx-px, vy-py):.2f} mm -> via ({vx},{vy})")
+
+    # U10.12 (VDD) is a 0.25 mm WQFN pad with 0.5 mm neighbours; Freerouting
+    # has failed to escape it on every Rev C route. C65's pad 1 is 1.1 mm due
+    # east, so draw the 0.2 mm track ourselves.
+    p12 = find_pad(board, "U10", "12")
+    c65 = find_pad(board, "C65", "1")
+    x12, y12 = sp.to_mm(p12.GetPosition().x), sp.to_mm(p12.GetPosition().y)
+    x65, y65 = sp.to_mm(c65.GetPosition().x), sp.to_mm(c65.GetPosition().y)
+    add_track(board, x12, y12, x12 + 0.9, y12, pcbnew.F_Cu, p12.GetNetCode(), 0.20)
+    add_track(board, x12 + 0.9, y12, x65, y65, pcbnew.F_Cu, p12.GetNetCode(), 0.20)
+    print(f"U10.12 {p12.GetNetname()} stub -> C65.1 ({math.hypot(x65-x12, y65-y12):.2f} mm)")
+
+    # U11.4 (BOOST_EN) and U11.5 (BOOST_SS): the TPS61175's two west-column
+    # control pins were fenced in on F.Cu by VBOOST_IN and pin 6's GND fanout
+    # once In2 stopped being a routing layer. Pre-placed escape vias in the
+    # band between the pad ends (x=5.85) and the board's left strip.
+    for num, vy in (("4", 31.50), ("5", 32.30)):
+        pin = find_pad(board, "U11", num)
+        x, y = sp.to_mm(pin.GetPosition().x), sp.to_mm(pin.GetPosition().y)
+        add_track(board, x, y, 5.30, vy, pcbnew.F_Cu, pin.GetNetCode(), 0.20)
+        add_via(board, 5.30, vy, pin.GetNetCode())
+        print(f"U11.{num} {pin.GetNetname()} escape via (5.30,{vy})")
+
+    # sanity: every decoupling via must sit on a bottom pad of the same net
+    for t in board.GetTracks():
+        if t.Type() != pcbnew.PCB_VIA_T or t.GetNetCode() == gnd:
+            continue
+        pos = t.GetPosition()
+        hit = None
+        for fp in board.Footprints():
+            for p in fp.Pads():
+                if p.GetNetCode() == t.GetNetCode() and p.IsOnLayer(pcbnew.B_Cu) and p.HitTest(pos):
+                    hit = fp.GetReference() + "." + p.GetNumber()
+        if hit is None:
+            if t.GetNetname() in ("BOOST_EN", "BOOST_SS"):
+                continue     # escape vias, not decouplers
+            raise SystemExit(f"via {t.GetNetname()} at ({sp.to_mm(pos.x):.2f},{sp.to_mm(pos.y):.2f}) lands on no bottom pad")
+        print(f"   via {t.GetNetname():9} -> {hit}")
+
+    pcbnew.SaveBoard(str(BOARD), board)
+    if not pcbnew.ExportSpecctraDSN(board, str(DSN)):
+        raise SystemExit("Specctra DSN export failed")
+    print(BOARD)
+
+
+if __name__ == "__main__":
+    main()

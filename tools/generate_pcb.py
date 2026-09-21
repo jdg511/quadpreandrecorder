@@ -28,16 +28,34 @@ LOCAL_FP_ROOT = HARDWARE / "QuadPreRecorder.pretty"
 
 # Rev B (2026-07-25): Hammond 1590XX, pedal-style. Board = Hammond's max PCB
 # 138 x 114; y=0 edge faces the REAR wall (SD/USB), y=114 the FRONT wall
-# (line out + 9V), x=0 the LEFT wall (RJ45 mic + pad toggle), x=138 the
-# RIGHT wall (volume + phones). Corners are chamfered 9mm for the lid-screw
-# posts. Display: LCDWiki MSP3520 3.5in (module 98.3 x 56.34).
+# (line out), x=0 the LEFT wall (RJ45 mic), x=138 the RIGHT wall (phones).
+# Rev C: 9 V barrel + USB-C both on the REAR wall (left of the SD slot); the
+# pad toggle and volume pot are gone (screen/firmware controls). Corners are
+# chamfered 12mm for the lid-screw posts. Display: LCDWiki MSP3526 3.5in
+# capacitive (module 98.0 x 55.5).
 BOARD_W = 138.0
 BOARD_H = 114.0
-CORNER = 9.0
+# 2026-09-06: 9.0 -> 11.0. Hammond 1590XX drawing: 6-32 posts on a 135 x 111
+# pattern with 126 x 102 clear floor between them => ~4.5mm-radius columns
+# centred ~1.5mm inboard of the board edge. A 9mm chamfer computes to ~0.26mm
+# interference if the posts are full height; 11mm gives ~1.2mm clearance.
+# 2026-09-06 (later): probed Hammond's own STEP model - the posts ARE full
+# height and end 5.0mm along the corner diagonal from the board corner, so
+# 9mm (clears to 4.5) interfered by 0.5mm and 11mm (5.5) cleared by only 0.5mm.
+# 13mm would clear by 1.5mm but clips J4's mounting pin at the front-left
+# corner; 12mm clears the posts by 1.0mm along the diagonal.
+CORNER = 12.0
+# Rev C (2026-09-08): LCDWiki MSP3526 (ST7796U + FT6336U capacitive):
+# module PCB 98.0 x 55.5, mounting holes 92.0 x 49.5 (3.0 mm in from each
+# edge), 14-pin header 2.0 mm in from the LEFT short edge, pins 11.24 mm
+# from either long edge (LCDWiki spec CR2023-MI2434 V1.0). Header pin 1 is
+# at the REAR end when the display faces up with the header on the left.
 TFT_LEFT = 23.0
 TFT_TOP = 8.0
-TFT_W = 98.3
-TFT_H = 56.34
+TFT_W = 98.0
+TFT_H = 55.5
+TFT_HOLE_DX = 46.0
+TFT_HOLE_DY = 24.75
 
 
 def mm(value: float) -> int:
@@ -317,30 +335,116 @@ def placements() -> dict[str, tuple[float, float, float, bool]]:
     place: dict[str, tuple[float, float, float, bool]] = {
         # --- Enclosure interfaces ---
         "J2": (4.0, 74.0, 270.0, False),      # RJ45 mic in, LEFT wall (port ~flush)
-        "SW1": (2.2, 40.0, 0.0, False),       # pad toggle, LEFT wall
-        "RV1": (132.0, 82.0, 180.0, False),   # volume, RIGHT wall (shaft +x)
-        "J5": (133.5, 41.0, 270.0, False),    # phones, RIGHT wall
-        "J1": (108.0, 105.8, 0.0, False),     # 9V barrel, FRONT wall
-        "J4": (22.0, 97.0, 270.0, False),     # 1/4in line out, FRONT wall, TOP side
+        # Rev C2 2026-09-11: was x=133.5, which left the jack nose 2.40 mm
+        # BEHIND the outer wall face. The SJ1-3533NG is not a panel-mount part
+        # (no thread, no bushing), so a plug would have given away 2.4 mm of
+        # its travel with nothing to clamp against - the classic cause of a
+        # plug that detents but lands the tip contact on the wrong conductor.
+        # +2.40 mm puts the nose flush with the outer face; its binding pad
+        # allows 3.30, so there is margin. Wall hole o6.5-7.0 for the o6 nose.
+        "J5": (135.9, 41.0, 270.0, False),    # phones, RIGHT wall
+        # Rev C: 9 V barrel on the REAR-LEFT wall (between the corner post and
+        # the display module's H5 standoff), USB-C on the REAR wall left of
+        # the Teensy's SD slot. Both are low enough to sit under the module.
+        "J1": (17.5, 8.2, 180.0, False),      # 9V barrel, REAR wall (nose -y)
+        # Rev C2 2026-09-11, enclosure fit recheck: was y=4.20, which put the
+        # mating face 0.55 mm INSIDE the board edge and so 4.15 mm behind the
+        # outer wall face. A USB-C plug shell is ~6.5 mm and the receptacle
+        # cavity is 6.20 mm deep, so it needed 10.35 mm of travel and had 6.5:
+        # no cable could seat. 2.05 mm is the most it can move - its own
+        # through-hole shield tabs run out of edge clearance beyond that.
+        # The rest is made up in the wall: cut the rear opening ~13 x 7.5 mm
+        # (NOT 9.5 x 4.0) so the plug overmold enters 1.80 mm of the 2.60 mm
+        # wall. See hardware/reviews/enclosure-fit-recheck.md.
+        # The limit is NOT the 0.30 mm copper-to-edge rule but the 0.65 mm
+        # edge keepout strip (add_edge_keepouts): the shield tabs must clear
+        # that, which caps the move at 1.60 mm and puts the face 2.55 mm in.
+        # Overmold then enters 2.25 mm of the 2.60 mm wall - still fine.
+        "J9": (40.0, 2.60, 180.0, False),     # USB-C, REAR wall
+        # Rev C2 2026-09-11: +1.00 mm in y on top of the earlier +4 mm in x.
+        # The jack itself always reached (nose 5.30 mm proud of the outer
+        # wall), but the NUT did not: Neutrik specifies a max panel thickness
+        # of <3.0 mm and the bushing shoulder sat 1.00 mm of air + 2.60 mm of
+        # wall = 3.60 mm from the outer face. +1.00 mm seats the shoulder on
+        # the INNER wall face, so the nut clamps only the 2.60 mm wall and the
+        # wall carries plug insertion force instead of the solder joints.
+        # The nut is NOT supplied - order NRJ-NUT-B/-MK/-MS/-MN.
+        "J4": (26.0, 98.0, 270.0, False),     # 1/4in line out, FRONT wall, TOP side
+                                      # Rev C2: +4 mm right. At x=22 the courtyard
+                                      # cleared the front-left 1590XX post by only
+                                      # 1.84 mm; at x=26 it clears by 5.84 mm. +10 mm
+                                      # was rejected: it lands on the channel rows,
+                                      # which are a packed 4 mm-pitch chain from
+                                      # x=29.3 to x=86.7 with nowhere to shift to.
         "U8": (60.0, 62.5, 0.0, True),        # Teensy BOTTOM rear-center (between the TFT holes), SD at REAR wall x~69
         # Control row under the display.
-        "SW2": (40.75, 71.0, 0.0, False),     # record (plunger at 47, 73.5)
+        # Rev C2 2026-09-11: the 12 mm B3F footprint became the 6 x 6 THT
+        # pattern (see generate_schematic.py). SW_PUSH_6mm's origin is PAD 1,
+        # not the plunger - the four pads sit on a 6.5 x 4.5 grid, so the
+        # plunger is at anchor + (3.25, 2.25). Anchor (43.75, 71.25) therefore
+        # lands the plunger on exactly (47.00, 73.50), the same control-row
+        # line as SW3 and SW4. Verified collision-free.
+        "SW2": (43.75, 71.25, 0.0, False),    # record (plunger at 47, 73.5)
         "SW3": (61.5, 71.0, 0.0, False),      # gain encoder (shaft at 69, 73.5)
         "SW4": (91.0, 73.5, 0.0, False),      # 5-way nav (stem at 91, 73.5)
-        # Display header along the module's front edge. NOTE: at rot 270 the
-        # pin row runs WESTWARD from the anchor - anchor at the east end so
-        # pins span x 79.98..113, clear of the Teensy pad columns (x 60 and
-        # 77.78) and of TFT hole H8 (VERIFY vs module).
-        "J3": (113.35, 63.0, 270.0, False),  # split the window between U8 VIN's pad (west) and H8 (east)
-        # Internal test headers (replace the Rev A DB-25s): horizontal along
-        # the rear edge east of the Teensy, clear of the NE corner chamfer.
-        "J6": (82.0, 6.0, 90.0, False),
-        "J7": (82.0, 12.5, 90.0, False),
+        # Rev C display socket: the MSP3526's header is 2.0 mm in from the
+        # module's LEFT short edge, pins from 11.24 mm behind the module's
+        # rear edge (pin 1, rear) to 44.26 mm (pin 14). Female socket, pins
+        # run +y from pin 1 at rot 0.
+        "J3": (TFT_LEFT + 2.0, TFT_TOP + 11.24, 0.0, False),
+        # Rev C3 2026-09-12: the J6/J7 test headers that used to sit here
+        # (82, 6) / (82, 12.5) are gone - see generate_schematic.py.
 
-        # --- Power entry chain (front-right, behind J1) + buck ---
-        "F1": (96.0, 107.0, 90.0, False),
-        "D1": (96.0, 100.0, 90.0, False),
-        "D2": (96.0, 92.5, 90.0, False),
+        # --- Rev C power: barrel + USB inputs, boost, LDO in the LEFT strip
+        # (x 3..22, between the rear-left corner post and the module zone) ---
+        "F1": (7.0, 18.5, 0.0, False),
+        "D1": (14.5, 18.5, 0.0, False),
+        "C85": (20.5, 18.5, 90.0, False),
+        "D2": (8.0, 23.5, 0.0, False),
+        "C1": (17.0, 24.5, 0.0, False),
+        # Rev C3 test-point rebuild: U11 rotated 180 so its SW / VBOOST_IN /
+        # EN / SS pins face L2 and the rest of the board. At rot 0 the switch
+        # node had to wrap around the IC's north and east sides to reach L2,
+        # which fenced pins 8-10 (COMP/FB/FREQ) into a 0.86 mm corridor and
+        # pins 4/5 against the board edge; Freerouting could not finish them.
+        "U11": (9.5, 31.5, 180.0, False),
+        "L2": (18.0, 31.5, 0.0, False),
+        "D12": (7.0, 37.5, 0.0, False),
+        "C76": (13.5, 37.5, 0.0, False),
+        "C77": (18.5, 37.5, 0.0, False),
+        "R80": (5.0, 41.5, 0.0, False),
+        "R81": (9.0, 41.5, 0.0, False),
+        "R82": (13.0, 41.5, 0.0, False),
+        "R79": (17.0, 41.5, 0.0, False),
+        # Rev C3: C79 (soft-start cap) on the BOTTOM under L2, 2 mm from
+        # U11.5 (now on the east column).
+        "C79": (15.0, 29.0, 90.0, True),
+        "C80": (5.0, 45.0, 0.0, False),
+        "C81": (9.0, 45.0, 0.0, False),
+        "C74": (18.5, 45.0, 0.0, False),
+        # 2026-09-12: U12 is an ADP7142 in TSOT-5 now (pins 1-3 VIN/GND/EN on
+        # the west side, 4-5 ADJ/VOUT on the east). Input cap west, feedback
+        # divider east, all inside the footprint of the old VQFN.
+        "U12": (9.5, 50.5, 0.0, False),
+        "C83": (5.5, 50.5, 90.0, False),     # 2.2u input cap, pad 1 up by VIN
+        "R130": (13.3, 48.6, 90.0, False),   # 130k +9V -> LDO_FB
+        "R131": (13.3, 52.4, 90.0, False),   # 20k LDO_FB -> GND
+        "C88": (17.0, 50.0, 0.0, False),
+        "C75": (17.0, 53.5, 0.0, False),
+        # USB-C support parts just behind J9 (top, under the module zone).
+        "R75": (33.0, 9.0, 90.0, False),
+        "R76": (47.0, 9.0, 90.0, False),
+        "D11": (40.0, 12.8, 0.0, False),
+        "F2": (52.0, 6.0, 0.0, False),
+        "D10": (52.0, 10.5, 0.0, False),
+        "R77": (56.0, 14.0, 0.0, False),
+        "R78": (52.0, 14.0, 0.0, False),
+        "C78": (48.0, 14.0, 0.0, False),
+        # D+/D- wire pads for the Teensy's underside USB-Device pads: BOTTOM,
+        # just west of the Teensy socket (pads ~18 mm from its USB end).
+        "TP1": (56.5, 18.0, 0.0, True),
+        "TP2": (56.5, 21.5, 0.0, True),
+        # 5 V buck (unchanged, now fed from +10V5), front-right.
         "U1": (105.0, 88.0, 0.0, False),
         "L1": (111.5, 88.0, 0.0, False),
         "C5": (117.0, 88.0, 0.0, False),
@@ -351,7 +455,6 @@ def placements() -> dict[str, tuple[float, float, float, bool]]:
         "R2": (109.0, 84.0, 0.0, False),
         "C4": (113.0, 84.0, 0.0, False),
         "R3": (117.0, 84.0, 0.0, False),
-        "C1": (127.0, 96.0, 0.0, False),
 
         # --- Chassis coupling + input ESD + bias filter ---
         "R4": (6.0, 64.0, 0.0, False),
@@ -364,43 +467,71 @@ def placements() -> dict[str, tuple[float, float, float, bool]]:
         "R67": (28.0, 80.0, 0.0, False),
         "C66": (34.0, 74.0, 0.0, True),
 
-        # --- Pad sense + debug protection, by the toggle ---
-        "R42": (6.0, 52.0, 0.0, False),
-        "R43": (10.5, 52.0, 0.0, False),
-        "C33": (15.0, 52.0, 0.0, False),
-        "R68": (19.5, 52.0, 0.0, False),
+        # --- Pad control (Q1 level shifter) + debug protection, left strip ---
+        "Q1": (6.0, 58.0, 0.0, False),
+        "R42": (10.5, 57.5, 0.0, False),
+        "R43": (14.5, 57.5, 0.0, False),
+        "R83": (18.5, 57.5, 0.0, False),
+        "C33": (10.5, 61.0, 0.0, False),
 
         # --- Bias reference + analog LDO (low profile, under the module) ---
-        "U3": (34.0, 26.0, 0.0, False),
-        "C9": (30.0, 31.0, 0.0, False),
-        "C10": (35.0, 31.0, 0.0, False),
-        "C11": (39.5, 31.0, 0.0, False),
+        # (moved east in Rev C: the display socket J3 runs x=25, y 19..53)
+        "U3": (46.0, 26.0, 0.0, False),
+        "C9": (42.0, 31.0, 0.0, False),
+        "C10": (47.0, 31.0, 0.0, False),
+        "C11": (51.5, 31.0, 0.0, False),
         # LDO + its caps live on the BOTTOM, east of the Teensy, tucked north
         # into the low-profile module zone to clear J3's courtyard band
         # (y 61.23..64.77) and stay well short of SW4's (y >= 67.0).
-        "U2": (88.0, 55.0, 0.0, True),   # nudged north off C45's silkscreen/fab bbox corner
+        "U2": (88.0, 55.6, 0.0, True),   # Rev C3: +0.6 south to clear the 10 uF column above it
         "C7": (92.5, 55.0, 0.0, True),   # east flank, clear of the C41-45 column at x=84
         "C8": (92.5, 59.0, 0.0, True),
+        # Rev C3: U14 = the converters' own digital-rail LDO (+3V3_DC), directly
+        # south of U2 so both LDOs share the +5V feed; its caps flank it.
+        "U14": (88.0, 59.5, 0.0, True),
+        "C96": (88.0, 63.0, 0.0, True),
+        "C95": (92.5, 63.0, 0.0, True),
 
         # --- Mux + preamp + ADC (low profile, under the module) ---
         "U4": (40.0, 44.0, 0.0, False),
         "U5": (40.0, 56.0, 0.0, False),
         "U6": (52.0, 50.0, 0.0, False),
-        "U7": (68.0, 50.0, 0.0, False),
+        # 2026-09-06: U7 moved OUT of the Teensy socket pin box (x 60..77.78)
+        # to sit directly over its C41-C45 decoupling column (bottom, x=84).
+        # Inside the box every ADC clock/data/decoupling net had to thread
+        # 0.74mm gaps between 1.8mm THT socket pins on both layers; Freerouting
+        # and the grid mini-router both left the same 17 items unrouted there
+        # (2026-07-29, 2026-09-05). Caps now via straight down under the IC.
+        "U7": (83.5, 49.5, 0.0, False),
         "C34": (40.0, 40.0, 0.0, True),
         "C35": (40.0, 60.5, 0.0, True),
         "C36": (47.0, 42.0, 0.0, True),
         "C37": (51.0, 42.0, 0.0, True),
-        "C38": (56.0, 46.0, 0.0, True),
-        "C39": (56.0, 50.0, 0.0, True),
-        "C40": (56.0, 54.0, 0.0, True),
-        "C41": (84.0, 44.0, 0.0, True),
-        "C42": (84.0, 48.0, 0.0, True),
-        "C43": (84.0, 52.0, 0.0, True),
-        "C44": (84.0, 56.0, 0.0, True),
-        "C45": (84.0, 60.0, 0.0, True),
-        "C62": (93.0, 48.0, 0.0, True),
-        "C63": (93.0, 52.0, 0.0, True),
+        # Rev C3: the PCM1864 VREF (pin 6) and MICBIAS (pin 5) caps used to
+        # sit 25 mm away at x=56, on the far side of the Teensy socket. VREF
+        # is the ADC's reference; C40 (100n) now joins column A with its own
+        # via, C39 (1u) sits right behind it. (C38, the MICBIAS cap, was
+        # deleted: pin 5 is left unconnected per the datasheet.)
+        "C39": (83.0, 45.9, 0.0, True),    # 1u   ADC_VREF bulk
+        "C40": (82.8, 47.7, 0.0, True),    # 100n ADC_VREF  pin 6 (y 48.5)
+        # Rev C3 2026-09-12 decoupling rework (audio audit check 3: the 100 nF
+        # decouplers were 2.4-11.7 mm from their pins). U7's supply pins are
+        # all on its WEST column at x=80.64 (pins 8 AVDD, 11 LDO, 13/14 DVDD),
+        # and the Teensy socket's THT pins at x=77.78 leave no room west of
+        # the IC. So the 100 nF caps go on the BOTTOM at x=82.8, rot 0: their
+        # pad 1 lands at x=82.02, under the IC body, where
+        # tools/fanout_decouple.py drops a via at x=82.0 fed by a 0.6 mm
+        # stub from the pin pad's inner end (x=81.38). A via cannot sit in
+        # the 0.5 mm pin row itself (0.6 mm annulus vs 0.2 mm pad gaps), so
+        # this is the shortest loop the geometry allows: pin -> 0.6 mm ->
+        # via -> cap pad, and the cap's GND pad gets its own fanout via.
+        # 10 uF bulk caps sit one column east (x=86.6), behind the 100 nF.
+        "C41": (82.8, 49.3, 0.0, True),    # 100n  +3V3_A   pin 8  (y 49.5)
+        "C43": (82.8, 50.9, 0.0, True),    # 100n  ADC_LDO  pin 11 (y 51.0)
+        "C44": (82.8, 52.5, 0.0, True),    # 100n  +3V3_DC  pin 14 (y 52.5), pin 13 joins on top
+        "C42": (87.1, 47.4, 0.0, True),    # 10u   +3V3_A
+        "C62": (87.1, 49.85, 0.0, True),   # 10u   ADC_LDO
+        "C45": (87.1, 52.3, 0.0, True),    # 10u   +3V3_DC
         "R44": (96.0, 40.0, 0.0, True),
         "R45": (100.0, 40.0, 0.0, True),
         "R46": (104.0, 40.0, 0.0, True),
@@ -408,6 +539,28 @@ def placements() -> dict[str, tuple[float, float, float, bool]]:
         "R48": (112.0, 40.0, 0.0, True),
         "R49": (116.0, 40.0, 0.0, True),
         "R69": (120.0, 40.0, 0.0, True),
+        # Rev C3 probe pads (BOTTOM). ADC clocks/data + GND in a row just north
+        # of their 33 R terminators; DAC clocks + GND north of R57-R59;
+        # +3V3_DC + GND beside U14's output cap. Under the display module on
+        # the top side there is nothing to probe, so they all face the floor.
+        # (the 1.5 mm pad footprint is 2.5 mm square with its silk ring, so
+        # it does not fit between the 4 mm-pitch resistor rows)
+        # ADC clock probe pads: moved from the x=124 column (2026-09-12 audit:
+        # the five clocks were being dragged 40 mm east past the DAC and the
+        # headphone caps to reach them; ADC_BCLK ran 21 mm beside FRD_ADC) to
+        # the empty bottom-side strip between U7 and its terminators R44-R48.
+        "TP8": (81.0, 36.5, 0.0, True),     # GND
+        "TP3": (84.5, 36.5, 0.0, True),     # ADC_MCLK
+        "TP4": (88.0, 36.5, 0.0, True),     # ADC_BCLK
+        "TP5": (91.5, 36.5, 0.0, True),     # ADC_LRCLK
+        "TP6": (95.0, 36.5, 0.0, True),     # ADC_TDM
+        "TP7": (98.5, 36.5, 0.0, True),     # ADC_DOUT2
+        "TP9": (86.5, 42.2, 0.0, True),     # DAC_BCLK
+        "TP10": (90.5, 42.2, 0.0, True),    # DAC_LRCLK
+        "TP11": (94.5, 42.2, 0.0, True),    # DAC_DIN
+        "TP13": (82.5, 42.2, 0.0, True),    # GND
+        "TP12": (84.0, 63.0, 0.0, True),    # +3V3_DC
+        "TP14": (81.0, 59.5, 0.0, True),    # GND
 
         # --- Teensy feed: BOTTOM side, next to the Teensy's VIN corner ---
         "D3": (48.0, 60.0, 0.0, True),
@@ -432,48 +585,163 @@ def placements() -> dict[str, tuple[float, float, float, bool]]:
         "C71": (110.0, 32.0, 0.0, True),
         "C72": (114.0, 32.0, 0.0, True),
         "C73": (118.0, 32.0, 0.0, True),
+        # Rev C2: SW4's rotary-encoder phases get the same pull-up + debounce
+        # treatment, on a new row south of the direction pull-ups.
+        "R96": (102.0, 36.0, 0.0, True),
+        "R97": (106.0, 36.0, 0.0, True),
+        "C93": (110.0, 36.0, 0.0, True),
+        "C94": (114.0, 36.0, 0.0, True),
 
         # --- LEDs on the front strip ---
-        "D4": (66.0, 108.0, 0.0, False),
+        # Rev C2 2026-09-11: D4/D5 went from 0603 chips lying flat (invisible
+        # under a 15.5 mm lid gap, and too small to feed any light pipe) to
+        # 3 mm THT LEDs bent over to fire out the FRONT wall.
+        # The horizontal footprint's body reaches 5.07 mm past the pad row and
+        # its axis is at anchor_x + 1.27, so pads at y=112.53 put the lens on
+        # the outer wall face (114 + 3.60) and anchors 64.73 / 74.73 put the
+        # two axes on x = 66 and x = 76, 10 mm apart on the front face.
+        # Drill the front wall o3.2-3.5 at those two points; the hole also
+        # carries the LED laterally.
+        # y=112.10, not 112.53: at 112.53 the lens sat exactly on the outer
+        # wall face but the pads clipped the 0.65 mm edge keepout by 0.08 mm.
+        # Backing off 0.43 mm leaves the lens 0.43 mm inside the wall face,
+        # which is invisible in a o3.2 hole and arguably better protected.
+        "D4": (64.73, 112.10, 0.0, False),
         "R54": (70.0, 108.0, 0.0, False),
-        "D5": (74.0, 108.0, 0.0, False),
+        "D5": (74.73, 112.10, 0.0, False),
         "R55": (78.0, 108.0, 0.0, False),
         "R56": (88.0, 57.0, 0.0, False),
 
         # --- DAC + headphone amp (low profile, under the module edge) ---
         "U9": (100.0, 50.0, 0.0, False),
-        "C51": (91.0, 46.0, 0.0, False),
-        "C52": (95.0, 43.0, 0.0, False),
-        "C53": (98.5, 43.0, 0.0, False),
-        "C54": (102.0, 43.0, 0.0, False),
-        "C55": (109.5, 43.0, 0.0, False),
-        "C56": (91.0, 53.0, 0.0, False),
-        "C64": (91.0, 49.5, 0.0, False),
-        "R57": (86.0, 46.0, 0.0, True),
-        "R58": (90.0, 46.0, 0.0, True),
-        "R59": (94.0, 46.0, 0.0, True),
-        "R60": (98.0, 46.0, 0.0, True),
-        "R61": (102.0, 46.0, 0.0, True),
+        # Rev C3: the PCM5102A charge-pump caps hug the west pin column
+        # (pins 2/4 CAPP/CAPM at y 47.73/49.02, pin 5 VNEG at 49.67) instead
+        # of sitting 6 mm away. rot 270 puts pad 1 NORTH.
+        "C51": (94.7, 48.4, 270.0, False),   # 2.2u flying cap
+        "C52": (94.7, 51.9, 270.0, False),   # 2.2u VNEG
+        # Rev C3: U9's decouplers on the BOTTOM, directly under their pins.
+        # West-column caps (pins 1/8 AVDD at x=97.14) point WEST (rot 180) so
+        # pad 1 is at x=98.48 under the via column at x=98.5; east-column caps
+        # (pins 20 DVDD, 18 LDOO at x=102.86) point EAST so pad 1 is at
+        # x=101.5x under the via column at x=101.5. Same stub-and-via scheme
+        # as U7 (fanout_decouple.py).
+        "C54": (97.7, 47.08, 180.0, True),   # 100n +3V3_A  pin 1
+        "C64": (97.7, 51.62, 180.0, True),   # 100n +3V3_A  pin 8
+        "C56": (102.3, 47.08, 0.0, True),    # 100n +3V3_DC pin 20
+        "C53": (102.33, 48.65, 0.0, True),   # 1u   DAC_LDO pin 18 (y 48.38)
+        "C55": (99.9, 55.0, 0.0, True),      # 10u  +3V3_A bulk, south of the IC
+        # Rev C3: series terminators moved north 1.5 mm to make room for the
+        # decoupling columns under U7/U9.
+        "R57": (86.5, 44.5, 0.0, True),
+        "R58": (90.5, 44.5, 0.0, True),
+        "R59": (94.5, 44.5, 0.0, True),
+        "R60": (98.5, 44.5, 0.0, True),
+        "R61": (102.5, 44.5, 0.0, True),
         # Line-out reconstruction filter lives by the DAC; LINE_L/R then run
         # to J4 (front-left) and RV1 (right wall).
-        "R62": (95.0, 58.0, 0.0, False),
-        "R63": (98.5, 58.0, 0.0, False),
-        "C67": (95.0, 55.0, 0.0, False),
-        "C68": (98.5, 55.0, 0.0, False),
+        # Rev C3: filter shifted 2 mm west (C56/C64 left the top side) to make
+        # room for the 1210 film caps between it and U10.
+        "R62": (93.0, 58.0, 0.0, False),
+        "R63": (96.5, 58.0, 0.0, False),
+        "C67": (93.0, 55.0, 0.0, False),
+        "C68": (96.5, 55.0, 0.0, False),
         "U10": (112.0, 56.0, 0.0, False),
-        "C57": (123.0, 76.0, 0.0, False),
-        "C58": (123.0, 79.5, 0.0, False),
-        "C59": (106.0, 52.0, 0.0, False),
-        "C60": (106.0, 58.5, 0.0, False),
-        "C61": (105.0, 67.5, 0.0, False),
-        "C65": (117.0, 52.0, 0.0, False),
+        # Rev C3: the headphone input coupling caps are now 1210 PMLCAP film
+        # and sit BETWEEN the DAC filter (x=95-98.5) and U10's input pins
+        # (x=110.04) instead of 16 mm past the amp in the right-wall strip.
+        # Rev C3 mic-mode rebuild: C86/C87 rotated 180 so their signal pad
+        # (pad 1, HP_INP_x) faces U10 and the GND pad faces the DAC filter;
+        # C57/C58 spread apart (y 54.6 / 60.2) and moved 1.2 mm east so the
+        # channel between their pads is 2.9 mm tall and BOTH HP_INP_L and
+        # HP_INP_R can run through it to U10 pins 2 and 4 (the single-track
+        # gap at y 57.05..57.75 left HP_INP_R unroutable).
+        "C86": (100.4, 55.7, 180.0, False),
+        "C87": (100.4, 59.1, 180.0, False),
+        "C57": (106.4, 54.6, 0.0, False),
+        "C58": (106.4, 60.2, 0.0, False),
+        # Rev C3: U10's charge-pump and supply caps hug the WQFN. Pins 17/18
+        # (CPN/CPP) and 20 (CPVDD) are on the NORTH edge at y=54.04, pins 12
+        # (VDD) and 15 (CPVSS) on the EAST edge at x=113.96.
+        "C59": (112.75, 52.2, 0.0, False),   # 1u flying cap, pad 1 straight above pin 18
+        "C61": (110.3, 51.75, 90.0, False),  # 1u CPVDD, pad 1 (south) 1.7 mm from pin 20
+        "C60": (116.25, 54.6, 0.0, False),   # 1u CPVSS, pad 1 0.7 mm off pin 15
+        "C65": (116.25, 56.2, 0.0, False),   # 1u VDD,   pad 1 0.7 mm off pin 12
         "R64": (108.0, 48.0, 0.0, False),
         "R65": (125.0, 64.0, 0.0, False),
         "R66": (125.0, 67.5, 0.0, False),
+        # --- Rev C battery charger + soft-power enable logic: TOP, rear-right
+        # strip between TFT hole H6 and the phones jack (x 122..137, y 14..33) ---
+        "C90": (124.0, 15.0, 90.0, False),
+        "U13": (129.5, 16.5, 0.0, False),
+        "C91": (135.0, 15.0, 90.0, False),
+        "R91": (123.5, 20.5, 0.0, False),
+        "R92": (127.0, 20.5, 0.0, False),
+        "R93": (130.5, 20.5, 0.0, False),
+        "R94": (134.0, 20.5, 0.0, False),
+        "R95": (124.0, 24.5, 0.0, False),
+        "D14": (131.0, 24.5, 0.0, False),
+        "C92": (136.0, 24.5, 90.0, False),
+        "D15": (123.5, 28.2, 0.0, False),
+        "D16": (128.3, 28.2, 0.0, False),
+        "D17": (133.1, 28.2, 0.0, False),
+        "R88": (136.5, 28.5, 90.0, False),
+        "R89": (124.0, 31.5, 0.0, False),
+        "R90": (128.0, 31.5, 0.0, False),
+        "C89": (132.0, 31.5, 0.0, False),
+        # Battery connector: BOTTOM, front-right corner; the 906090 pouch lies
+        # on the box floor under the RIGHT half (x 80..140, y 15..105), clear
+        # of the Teensy stack, its lead reaching J10 at the front.
+        "J10": (121.0, 109.5, 0.0, True),
+        # Soft-power latch transistors + isolation diodes, just south of the
+        # control row (between SW2/SW3 and the channel rows).
+        "Q3": (30.0, 67.0, 0.0, False),
+        "Q4": (30.0, 71.0, 0.0, False),
+        "R86": (30.0, 74.5, 0.0, False),
+        "R87": (30.0, 77.5, 0.0, False),
+        # --- Rev C3 mic-mode hardware (TOP, front-left, around the bias filter) ---
+        "U16": (52.0, 61.5, 0.0, False),    # cold-leg OPA1654 quad, under U6
+        "C109": (57.5, 58.5, 90.0, False),
+        "U15": (40.5, 63.0, 0.0, False),    # third CD4053: cold-leg grounding
+        "C110": (33.5, 60.5, 0.0, False),
+        "Q5": (34.0, 64.5, 0.0, False),     # COLD_SEL level shifter
+        "R106": (34.5, 68.5, 0.0, False),
+        "R107": (38.0, 68.5, 0.0, False),
+        "R108": (34.5, 71.5, 0.0, False),
+        "Q6": (34.0, 75.5, 0.0, False),     # 9 V bias P-FET
+        # Q8/Q9 rotated 180 (2026-09-12): with pins 1/2 on the west, Q9's gate
+        # was fenced by BIAS5, MIC5_G and FRD_AC on both layers and stayed
+        # unrouted. Rotated, Q9's gate sits 2 mm above R102 and Q8's gate
+        # faces R101; Q8's drain (BIAS5) faces D24.
+        "Q8": (38.0, 75.5, 180.0, False),   # 5 V bias P-FET
+        "Q7": (34.0, 79.5, 0.0, False),     # 9 V gate driver
+        "Q9": (38.0, 79.5, 180.0, False),   # 5 V gate driver
+        "D24": (34.0, 82.5, 0.0, False),    # BAT54 5 V blocking
+        "R98": (41.0, 74.0, 90.0, False),
+        "R101": (41.0, 77.1, 90.0, False),
+        "R99": (41.0, 80.2, 90.0, False),
+        "R102": (38.0, 82.5, 0.0, False),
+        "R100": (26.5, 70.9, 90.0, False),
+        "R103": (26.5, 74.0, 90.0, False),
+        "R104": (26.5, 77.1, 90.0, False),
+        # D18/D19 sit by the Teensy-side pull-ups on the BOTTOM.
+        "D18": (98.0, 16.0, 0.0, True),
+        "D19": (98.0, 20.0, 0.0, True),
+        # --- Rev C line-out mute relay + driver: TOP, front-right strip where
+        # the Rev B barrel jack used to be. (First try put K1 on the BOTTOM
+        # under the channel rows at (44, 95): it blocked the only corridor the
+        # BRU_AC net had north to U5 and Freerouting left it open.) ---
+        "K1": (113.0, 103.5, 0.0, False),
+        "D13": (104.0, 100.5, 0.0, False),
+        "Q2": (104.0, 104.0, 0.0, False),
+        "R84": (100.0, 104.0, 0.0, False),
+        "R85": (100.0, 107.5, 0.0, False),
     }
 
-    # Four matched channel rows across the front-left field, y = 86..104.
-    channel_rows = (86.0, 92.0, 98.0, 104.0)
+    # Four matched channel rows across the front-left field.
+    # Rev C3: 6.3 mm row pitch (was 6.0) because the coupling caps C17-C20 /
+    # C25-C28 are now 1812 PMLCAP film (courtyard 6.1 mm tall when rotated);
+    # the column pitch stays 4 mm (they are 4.0 mm wide in that orientation).
+    channel_rows = (85.5, 91.8, 98.1, 104.4)
     for index, y in enumerate(channel_rows):
         channel = index + 1
         input_refs = (
@@ -497,6 +765,21 @@ def placements() -> dict[str, tuple[float, float, float, bool]]:
         for ref, x in input_refs + output_refs:
             bottom = bool(re.fullmatch(r"R(?:2[6-9]|3[0-3]|3[8-9]|4[0-1])|C2[1-4]", ref))
             place[ref] = (x, y, 90.0, bottom)
+        # Rev C3 differential front end: the cold-leg parts ride on the
+        # BOTTOM directly under the input group (x 32..56 is empty there),
+        # same 4 mm pitch, plus the 22 pF between R26-R29 and R30-R33.
+        for ref, x in (
+            (f"R{109 + channel}", 32.0),   # 100R RF
+            (f"C{96 + channel}", 36.0),    # 100pF to CHASSIS
+            (f"D{19 + channel}", 40.0),    # TVS
+            (f"C{100 + channel}", 44.0),   # 4u7 film coupling
+            (f"R{113 + channel}", 48.0),   # 1M to VREF
+            (f"R{125 + channel}", 50.0),   # 100k to VREF (input-impedance balance, SPICE 2026-09-12)
+            (f"R{117 + channel}", 52.0),   # 10k 0.1% (Ra)
+            (f"R{121 + channel}", 56.0),   # 90.9k 0.1% (Rb)
+            (f"C{104 + channel}", 63.0),   # 22pF
+        ):
+            place[ref] = (x, y, 90.0, True)
     return place
 
 
@@ -573,12 +856,12 @@ def add_edge_keepouts(board: pcbnew.BOARD) -> None:
 
     Freerouting's internal edge clearance is looser than the 0.5mm KiCad
     rule, so without these it routes long tracks ~0.47mm from the outline.
-    Four edge strips plus four corner triangles hugging the 9mm chamfers.
+    Four edge strips plus four corner triangles hugging the 12mm chamfers.
     """
 
     layers = pcbnew.LSET()
-    layers.AddLayer(pcbnew.F_Cu)
-    layers.AddLayer(pcbnew.B_Cu)
+    for _layer in (pcbnew.F_Cu, pcbnew.In1_Cu, pcbnew.In2_Cu, pcbnew.B_Cu):
+        layers.AddLayer(_layer)
     w, h, c = BOARD_W, BOARD_H, CORNER
     m = 0.65
     shapes: list[list[tuple[float, float]]] = [
@@ -605,6 +888,123 @@ def add_edge_keepouts(board: pcbnew.BOARD) -> None:
         board.Add(zone)
 
 
+def add_fiducial_keepout(board: pcbnew.BOARD, x: float, y: float, layer: int) -> None:
+    """Track/via keepout ring around a fiducial (2026-09-06).
+
+    The Fiducial_1mm_Mask2mm footprint carries a 0.6mm local pad clearance and
+    a 2mm mask opening that the Specctra DSN does not express, so Freerouting
+    happily runs tracks ~0.2mm from the 1mm dot and KiCad DRC then reports
+    clearance + solder-mask-bridge errors.  A 1.7mm-radius octagon keepout on
+    the fiducial's own copper layer keeps the autorouter clear of it.
+    """
+
+    import math
+
+    layers = pcbnew.LSET()
+    layers.AddLayer(layer)
+    zone = pcbnew.ZONE(board)
+    zone.SetIsRuleArea(True)
+    zone.SetDoNotAllowTracks(True)
+    zone.SetDoNotAllowVias(True)
+    zone.SetDoNotAllowZoneFills(False)
+    zone.SetDoNotAllowPads(False)        # the fiducial's own pad lives inside
+    zone.SetDoNotAllowFootprints(False)
+    zone.SetLayerSet(layers)
+    outline = zone.Outline()
+    contour = outline.NewOutline()
+    r = 1.7
+    for k in range(8):
+        a = math.radians(22.5 + 45.0 * k)
+        outline.Append(mm(x + r * math.cos(a)), mm(y + r * math.sin(a)), contour)
+    board.Add(zone)
+
+
+def set_island_removal(zone) -> None:
+    """Drop fill islands that end up with no connection to the net.
+
+    Without this, every isolated sliver of GND pour is reported by DRC as an
+    unconnected item, and floating copper is undesirable anyway.
+    """
+    for attr in ("ISLAND_REMOVAL_MODE_ALWAYS", "ISLAND_REMOVAL_MODE_ALWAYS_REMOVE"):
+        mode = getattr(pcbnew, attr, None)
+        if mode is not None:
+            try:
+                zone.SetIslandRemovalMode(mode)
+                return
+            except Exception:  # pylint: disable=broad-except
+                pass
+    try:
+        zone.SetIslandRemovalMode(0)
+    except Exception as error:  # pylint: disable=broad-except
+        print(f"WARNING: island removal not set ({error})")
+
+
+def add_ground_planes(board: pcbnew.BOARD, gnd_net) -> None:
+    """Rev C3 4-layer stackup: F(sig) / In1(solid GND) / In2(solid GND) / B(sig).
+
+    Rev C2 routed signals on In2.Cu. With the fab's default 4-layer build
+    (0.21 mm prepreg / 1.07 mm core / 0.21 mm prepreg) that layer had NO
+    usable reference plane (In1 is 1.07 mm away across the core) and sat
+    0.21 mm from B.Cu, so every In2 track coupled broadside into B.Cu. Now
+    both inner layers are solid GND: F.Cu references In1 at 0.21 mm, B.Cu
+    references In2 at 0.21 mm, and no two signal layers face each other.
+
+    Both inner layers carry a wire keepout covering the whole layer, which
+    stops Freerouting putting signals on them. Vias are deliberately still
+    allowed, because a via spans F->B as one object: banning vias on In1 would
+    ban every via on the board. The plane therefore only ever loses copper to
+    via antipads.
+
+    Zones are left unfilled here. cleanup_board.py fills them after the route
+    is imported, which is why routing sees bare copper layers.
+    """
+
+    w, h, c = BOARD_W, BOARD_H, CORNER
+    shape = ((c, 0.0), (w - c, 0.0), (w, c), (w, h - c),
+             (w - c, h), (c, h), (0.0, h - c), (0.0, c))
+
+    def _outline(zone):
+        poly = zone.Outline()
+        contour = poly.NewOutline()
+        for x, y in shape:
+            poly.Append(mm(x), mm(y), contour)
+
+    for layer in (pcbnew.In1_Cu, pcbnew.In2_Cu):
+        layers = pcbnew.LSET()
+        layers.AddLayer(layer)
+        zone = pcbnew.ZONE(board)
+        zone.SetLayerSet(layers)
+        zone.SetNet(gnd_net)
+        zone.SetIsFilled(False)
+        try:
+            zone.SetMinThickness(mm(0.20))
+            zone.SetLocalClearance(mm(0.25))
+            # Solid, not thermal: this is a reference plane, so we want the
+            # lowest-inductance GND connection, and thermal spokes on THT pads
+            # (J6/J7) were triggering starved_thermal DRC errors.
+            zone.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
+        except Exception as error:  # pylint: disable=broad-except
+            print(f"WARNING: zone refinement skipped on layer {layer} ({error})")
+        set_island_removal(zone)
+        _outline(zone)
+        board.Add(zone)
+
+    for layer in (pcbnew.In1_Cu, pcbnew.In2_Cu):
+        keep = pcbnew.ZONE(board)
+        keep_layers = pcbnew.LSET()
+        keep_layers.AddLayer(layer)
+        keep.SetIsRuleArea(True)
+        keep.SetDoNotAllowTracks(True)
+        keep.SetDoNotAllowVias(False)
+        keep.SetDoNotAllowZoneFills(False)
+        keep.SetDoNotAllowPads(False)
+        keep.SetDoNotAllowFootprints(False)
+        keep.SetLayerSet(keep_layers)
+        _outline(keep)
+        board.Add(keep)
+    print("4-layer: In1.Cu and In2.Cu solid GND planes (wire keepouts); signals on F/B only")
+
+
 def build_board() -> pcbnew.BOARD:
     parts = load_design_parts()
     paths = schematic_paths()
@@ -616,19 +1016,23 @@ def build_board() -> pcbnew.BOARD:
         raise RuntimeError(f"placement mismatch; missing={missing}, extra={extra}")
 
     board = pcbnew.BOARD()
-    board.SetCopperLayerCount(2)
+    board.SetCopperLayerCount(4)
     title = board.GetTitleBlock()
     title.SetTitle("Quad Preamp and 4-Channel Ambisonic Recorder")
     title.SetCompany("jdg511")
     title.SetComment(0, "https://github.com/jdg511/quadpreandrecorder")
-    title.SetComment(1, "Hammond 1590XX / two copper layers / Rev B pedal-style build")
-    title.SetRevision("B")
-    title.SetDate("2026-07-19")
+    title.SetComment(1, "Hammond 1590XX / 4 layers F-In1(GND)-In2(GND)-B / Rev C3: no test headers, converter LDO, film coupling")
+    title.SetRevision("C3")
+    title.SetDate("2026-09-12")
 
     settings = board.GetDesignSettings()
     settings.m_MinClearance = mm(0.15)
     settings.m_TrackMinWidth = mm(0.20)
-    settings.m_ViasMinSize = mm(0.80)
+    # 0.60 is the board FLOOR, not the routing size: the default netclass below
+    # still routes at 0.80. GND stitching vias fall back to 0.60 for islands
+    # too tight for 0.80, which is still comfortably inside PCBWay's cheap tier
+    # (0.30 mm drill). Without this the stitcher cannot serve narrow pour necks.
+    settings.m_ViasMinSize = mm(0.60)
     settings.SetCustomTrackWidth(mm(0.25))
     settings.SetCustomViaSize(mm(0.80))
     settings.SetCustomViaDrill(mm(0.40))
@@ -637,8 +1041,26 @@ def build_board() -> pcbnew.BOARD:
     default_class.SetTrackWidth(mm(0.20))
     default_class.SetViaDiameter(mm(0.80))
     default_class.SetViaDrill(mm(0.40))
+    # Rev C: a Power netclass (0.3 mm tracks) for the supply rails; Rev B
+    # routed everything at 0.20 mm. Best effort - older pcbnew bindings may
+    # lack the setter, in which case the default class applies.
+    try:
+        power = pcbnew.NETCLASS("Power")
+        power.SetClearance(mm(0.15))
+        # 0.30 mm, not 0.50: the rails land on 0.65 mm-pitch VSSOP/HTSSOP
+        # pads (U1, U11) and Freerouting will not neck a wider track down to
+        # them (5 pads were left open at 0.50 on the first Rev C route).
+        power.SetTrackWidth(mm(0.30))
+        power.SetViaDiameter(mm(0.80))
+        power.SetViaDrill(mm(0.40))
+        settings.m_NetSettings.SetNetclass("Power", power)
+        for netname in ("VBUS", "VBUS_FUSED", "+9V_IN", "+9V_FUSED", "VBOOST_IN", "BOOST_SW", "+10V5", "+9V", "+9V_MIC", "+5V", "TEENSY_VIN", "BUCK_SW", "VBAT", "BAT_SYS"):
+            settings.m_NetSettings.SetNetclassPatternAssignment(netname, "Power")
+        print("Power netclass assigned (0.30 mm)")
+    except Exception as error:  # pylint: disable=broad-except
+        print(f"WARNING: Power netclass not applied ({error}); default class used")
 
-    # Rev B outline: rectangle with 9mm corner chamfers clearing the 1590XX
+    # Rev B outline: rectangle with 12mm corner chamfers clearing the 1590XX
     # lid-screw posts (post centers 4.21mm in from the enclosure corners).
     c, w, h = CORNER, BOARD_W, BOARD_H
     outline = ((c, 0.0), (w - c, 0.0), (w, c), (w, h - c), (w - c, h), (c, h), (0.0, h - c), (0.0, c))
@@ -646,7 +1068,7 @@ def build_board() -> pcbnew.BOARD:
         add_segment(board, pcbnew.Edge_Cuts, start, end)
     add_edge_keepouts(board)
     add_rect(board, pcbnew.Dwgs_User, TFT_LEFT, TFT_TOP, TFT_LEFT + TFT_W, TFT_TOP + TFT_H, 0.20)
-    add_text(board, "3.5in MSP3520 MODULE ENVELOPE - VERIFY MODULE", 72.0, 36.0, 0.8, pcbnew.Dwgs_User)
+    add_text(board, "3.5in MSP3526 MODULE ENVELOPE 98x55.5 - VERIFY MODULE", 72.0, 36.0, 0.8, pcbnew.Dwgs_User)
 
     net_names = sorted({net for (ref, _), net in pad_nets.items() if ref in parts})
     nets = {}
@@ -654,6 +1076,8 @@ def build_board() -> pcbnew.BOARD:
         net = pcbnew.NETINFO_ITEM(board, netname)
         board.Add(net)
         nets[netname] = net
+
+    add_ground_planes(board, nets["GND"])
 
     for ref, item in parts.items():
         library, footprint_name = item.footprint.split(":", 1)
@@ -689,45 +1113,50 @@ def build_board() -> pcbnew.BOARD:
             if netname is not None:
                 pad.SetNet(nets[netname])
 
-    # MSP3520 module pattern center (module envelope center).
+    # MSP3526 module pattern center (module envelope center).
     tft_cx, tft_cy = TFT_LEFT + TFT_W / 2, TFT_TOP + TFT_H / 2
-    # Rev B: no H1-H4 - the board is carried entirely by its wall hardware
-    # (RJ45, toggle, pot, phone/line jacks, 9V). H5-H8 are the MSP3520
-    # module standoffs at a PROVISIONAL corner pattern (holes inset 2.5mm
-    # from the module outline) - the MSP3520 drawing does not publish them,
-    # so VERIFY against the physical module before ordering.
+    # No H1-H4 - the board is carried entirely by its wall hardware (RJ45,
+    # phone/line jacks, barrel, USB-C). H5-H8 are the MSP3526 module
+    # standoffs: 92.0 x 49.5 pattern per the LCDWiki drawing (holes 3.0 mm in
+    # from each module edge, 3.2 mm dia). VERIFY against the physical module.
     for ref, x, y in (
-        ("H5", tft_cx - 46.65, tft_cy - 25.67),
-        ("H6", tft_cx + 46.65, tft_cy - 25.67),
-        ("H7", tft_cx - 46.65, tft_cy + 25.67),
-        ("H8", tft_cx + 46.65, tft_cy + 25.67),
+        ("H5", tft_cx - TFT_HOLE_DX, tft_cy - TFT_HOLE_DY),
+        ("H6", tft_cx + TFT_HOLE_DX, tft_cy - TFT_HOLE_DY),
+        ("H7", tft_cx - TFT_HOLE_DX, tft_cy + TFT_HOLE_DY),
+        ("H8", tft_cx + TFT_HOLE_DX, tft_cy + TFT_HOLE_DY),
     ):
-        add_mounting_hole(board, ref, x, y, "M3 TFT MSP3520 PROVISIONAL-VERIFY")
+        add_mounting_hole(board, ref, x, y, "M3 TFT MSP3526 92x49.5 VERIFY")
 
     # Rev B fiducials inside the 138 x 114 chamfered outline.
-    for index, (x, y) in enumerate(((10.0, 8.0), (130.0, 60.0), (50.0, 110.0)), start=1):
+    for index, (x, y) in enumerate(((30.0, 18.0), (129.0, 50.0), (50.0, 110.0)), start=1):
         add_fiducial(board, f"FID{index}", x, y, False)
-    for index, (x, y) in enumerate(((12.0, 8.0), (126.0, 66.0), (60.0, 110.0)), start=4):
+        add_fiducial_keepout(board, x, y, pcbnew.F_Cu)
+    for index, (x, y) in enumerate(((30.0, 22.0), (126.0, 66.0), (60.0, 110.0)), start=4):
         add_fiducial(board, f"FID{index}", x, y, True)
+        add_fiducial_keepout(board, x, y, pcbnew.B_Cu)
 
-    # Enclosure-facing labels and setup warnings (Rev B frame).
-    add_text(board, "PAD", 11.0, 47.0, 0.70)
+    # Enclosure-facing labels and setup warnings (Rev C frame).
     add_text(board, "REC", 47.0, 83.5, 0.70)
     add_text(board, "GAIN", 69.0, 83.5, 0.70)
     add_text(board, "NAV", 91.0, 83.5, 0.70)
     add_text(board, "PWR", 66.0, 111.5, 0.60)
     add_text(board, "REC", 74.0, 111.5, 0.60)
-    add_text(board, "MSP3520 TFT 1..14", 97.0, 64.5, 0.60)
+    add_text(board, "MSP3526 PIN1", 29.5, 17.0, 0.55)
     add_text(board, "MIC RJ45", 11.0, 71.0, 0.70)
-    add_text(board, "9VDC", 108.0, 101.5, 0.70)
+    add_text(board, "9VDC", 17.5, 17.0, 0.60)
+    add_text(board, "USB-C 5V", 40.0, 15.5, 0.60)
     add_text(board, "HP", 128.0, 47.5, 0.70)
-    add_text(board, "VOL", 128.0, 88.5, 0.70)
     add_text(board, "LINE", 27.0, 91.0, 0.70)
     add_text(board, "TP ANALOG", 119.0, 6.0, 0.55)
     add_text(board, "TP DIGITAL", 119.0, 12.5, 0.55)
-    add_text(board, "jdg511  QUAD PRE RECORDER  REV B  HAMMOND 1590XX", 69.0, 3.5, 0.70)
-    add_text(board, "TEENSY 4.1 ON BOTTOM - CUT VIN/VUSB FOR DUAL POWER", 72.0, 100.0, 0.65, pcbnew.B_SilkS)
-    add_text(board, "SD CARD SLOT THIS EDGE", 30.0, 3.5, 0.60, pcbnew.B_SilkS)
+    add_text(board, "jdg511  QUAD PRE RECORDER  REV C  HAMMOND 1590XX", 84.0, 3.0, 0.65)
+    add_text(board, "TEENSY 4.1 ON BOTTOM - CUT VIN/VUSB LINK", 72.0, 100.0, 0.65, pcbnew.B_SilkS)
+    add_text(board, "SD CARD SLOT THIS EDGE", 69.0, 1.6, 0.50, pcbnew.B_SilkS)
+    add_text(board, "TP1 D+ / TP2 D- -> TEENSY USB PADS", 44.0, 24.5, 0.55, pcbnew.B_SilkS)
+    add_text(board, "K1 LINE MUTE", 113.0, 109.5, 0.55)
+    add_text(board, "CHG", 129.5, 12.5, 0.55)
+    add_text(board, "BATT J10 + LiPo 906090 UNDER RIGHT HALF", 100.0, 104.5, 0.55, pcbnew.B_SilkS)
+    add_text(board, "PWR: HOLD REC+GAIN 2s", 33.0, 63.5, 0.5)
 
     board.BuildListOfNets()
     return board

@@ -25,9 +25,17 @@ def mm(value: float) -> int:
 
 
 def add_ground_zone(board: pcbnew.BOARD, layer: int, priority: int) -> pcbnew.ZONE:
+    # 2026-09-06: the regenerated schematic names the ground net "GND" (the
+    # Rev A board used "/GND"). FindNet() on the wrong name returned None and
+    # the pours were silently created with NO net - floating copper that KiCad
+    # DRC does not flag because Freerouting had routed every GND pad with
+    # tracks. Resolve either name and refuse to continue if neither exists.
+    gnd = board.FindNet("GND") or board.FindNet("/GND")
+    if gnd is None:
+        raise RuntimeError("Ground net not found (tried GND and /GND); refusing to add an un-netted pour")
     zone = pcbnew.ZONE(board)
     zone.SetLayer(layer)
-    zone.SetNet(board.FindNet("/GND"))
+    zone.SetNet(gnd)
     zone.SetZoneName("GND plane")
     zone.SetAssignedPriority(priority)
     zone.SetLocalClearance(mm(0.20))
@@ -35,6 +43,11 @@ def add_ground_zone(board: pcbnew.BOARD, layer: int, priority: int) -> pcbnew.ZO
     zone.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
     zone.SetThermalReliefGap(mm(0.25))
     zone.SetThermalReliefSpokeWidth(mm(0.25))
+    try:
+        from generate_pcb import set_island_removal
+        set_island_removal(zone)
+    except Exception as error:  # pylint: disable=broad-except
+        print(f"WARNING: island removal not set on layer {layer} ({error})")
 
     outline = zone.Outline()
     contour = outline.NewOutline()
@@ -55,6 +68,23 @@ def main() -> None:
 
     shutil.copy2(UNROUTED, UNROUTED_ARCHIVE)
     board = pcbnew.LoadBoard(str(UNROUTED))
+
+    # 2026-09-08: import_route reads and writes the SAME file, so running it
+    # twice stacks a second route and a second pair of GND pours on top of the
+    # first. That is exactly what happened when a killed Freerouting left its
+    # pipeline to finish against a stale .ses. Fail loudly instead.
+    existing = len(list(board.GetTracks()))
+    if existing:
+        raise RuntimeError(
+            f"{UNROUTED.name} already carries {existing} tracks/vias - "
+            "regenerate the board with generate_pcb.py before importing a route"
+        )
+    stale = [z for z in board.Zones() if z.GetZoneName() == "GND plane"]
+    for zone in stale:
+        board.Remove(zone)
+    if stale:
+        print(f"removed {len(stale)} stale 'GND plane' zone(s)")
+
     if not pcbnew.ImportSpecctraSES(board, str(SESSION)):
         raise RuntimeError("Specctra SES import failed")
 

@@ -21,8 +21,8 @@ import sys
 from pathlib import Path
 
 BOARD = Path(__file__).resolve().parents[1] / "hardware" / "QuadPreRecorder.kicad_pcb"
-# Rev B: Hammond 1590XX board, 138 x 114. y=0 REAR, y=114 FRONT,
-# x=0 LEFT (mic), x=138 RIGHT (volume/phones).
+# Rev B/C: Hammond 1590XX board, 138 x 114. y=0 REAR, y=114 FRONT,
+# x=0 LEFT (mic), x=138 RIGHT (phones).
 W = 138.0
 H = 114.0
 
@@ -30,10 +30,11 @@ H = 114.0
 # must reach; negative allows the tip to stop short of the edge)
 RULES = {
     "J2": ("west", -1.5),   # RJ45 port face at/near the left edge
-    "SW1": ("west", 4.0),   # pad toggle bushing through the left wall
     "J5": ("east", 0.3),    # 3.5mm phones nose just past the right edge
-    "RV1": ("east", 10.0),  # volume shaft well past the right edge
-    "J1": ("south", 3.0),   # 9V barrel nose past the front edge
+    # Rev C: SW1 toggle and RV1 pot removed; 9 V barrel moved to the REAR
+    # wall; USB-C receptacle J9 on the REAR wall (face just inside the edge).
+    "J1": ("north", 3.0),   # 9V barrel nose past the rear edge
+    "J9": ("north", -0.8),  # USB-C face within 0.8 mm of the rear edge
     "J4": ("south", 5.0),   # NRJ6HF line-out bushing through the front wall
     # Teensy SD end must sit at the REAR edge (within 4mm) so the card
     # reaches the wall slot; a flipped module fails this by ~57mm.

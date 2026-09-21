@@ -1,0 +1,99 @@
+﻿Designator,Quantity,Value,Footprint,Package,MPN,DNP,Mount_Type,KiLib_Generator,Manufacturer,Description
+C1,1,100uF 25V,CP_Elec_6.3x5.8,,EEE-FT1E101AP,,smt,capacitor/SMD/elec_round_polarized,Panasonic,
+C10,1,47uF 10V,C_1206_3216Metric,,EMK316BBJ476ML-T,,smt,SMD_2terminal_chip_molded,Taiyo Yuden,
+"C100, C13, C14, C15, C16, C97, C98, C99",8,100pF C0G,C_0603_1608Metric,,GRM1885C1H101JA01D,,smt,SMD_2terminal_chip_molded,Murata,
+"C101, C102, C103, C104, C17, C18, C19, C20, C25, C26, C27, C28",12,4.7uF 35V FILM,C_1812_4532Metric,,35MU475KC44532,,smt,SMD_2terminal_chip_molded,Rubycon,"PMLCAP metallised acrylic film chip capacitor, signal-path coupling"
+"C105, C106, C107, C108, C21, C22, C23, C24, C4",9,22pF C0G,C_0603_1608Metric,,GCM1885C2A220JA16D,,smt,SMD_2terminal_chip_molded,Murata,
+"C109, C11, C110, C33, C34, C35, C36, C40, C41, C43, C44, C47, C50, C54, C56, C64, C69, C70, C71, C72, C73, C75, C78, C89",24,100nF,C_0603_1608Metric,,CL10B104KB8NNNC,,smt,SMD_2terminal_chip_molded,Samsung,
+C12,1,1nF 1kV C0G,C_0805_2012Metric,,CC0805KRX7RCBB102,,smt,SMD_2terminal_chip_molded,Yageo,
+C2,1,100nF 25V,C_0805_2012Metric,,CL21B104KCFNNNE,,smt,SMD_2terminal_chip_molded,Samsung,
+"C29, C30, C31, C32",4,10nF C0G,C_0603_1608Metric,,C1608C0G1H103JT000N,,smt,SMD_2terminal_chip_molded,TDK,
+"C3, C76, C77, C85",4,10uF 25V,C_1206_3216Metric,,CL31B106KAHNNNE,,smt,SMD_2terminal_chip_molded,Samsung,
+"C37, C74, C88",3,10uF 16V,C_1206_3216Metric,,CL31B106KAHNNNE,,smt,SMD_2terminal_chip_molded,Samsung,
+C39,1,1uF,C_0805_2012Metric,,CC0805KKX7R9BB105,,smt,SMD_2terminal_chip_molded,Yageo,
+"C42, C45, C46, C55, C62",5,10uF,C_1206_3216Metric,,CL31B106KAHNNNE,,smt,SMD_2terminal_chip_molded,Samsung,
+"C48, C49, C93, C94",4,10nF,C_0603_1608Metric,,CL10B103KB8NNNC,,smt,SMD_2terminal_chip_molded,Samsung,
+"C5, C6",2,22uF 10V,C_1206_3216Metric,,EMK316BB7226ML-T,,smt,SMD_2terminal_chip_molded,Taiyo Yuden,
+"C51, C52, C83",3,2.2uF,C_0805_2012Metric,,CL21B225KAFNNNE,,smt,SMD_2terminal_chip_molded,Samsung,
+"C53, C59, C60, C61, C65",5,1uF,C_0603_1608Metric,,CC0603KRX7R8BB105,,smt,SMD_2terminal_chip_molded,Yageo,
+"C57, C58, C86, C87",4,2.2uF 25V FILM,C_1210_3225Metric,,25MU225MB23225,,smt,SMD_2terminal_chip_molded,Rubycon,"PMLCAP metallised acrylic film chip capacitor, signal-path coupling"
+C66,1,100uF 16V,CP_Elec_6.3x5.8,,EEE-FK1C101P,,smt,capacitor/SMD/elec_round_polarized,Panasonic,
+"C67, C68",2,2.2nF C0G,C_0603_1608Metric,,CL10C222JB8NNNC,,smt,SMD_2terminal_chip_molded,Samsung,
+"C7, C9, C95",3,1uF 10V,C_0805_2012Metric,,CC0805KKX7R9BB105,,smt,SMD_2terminal_chip_molded,Yageo,
+C79,1,47nF,C_0603_1608Metric,,CC0603KRX7R9BB473,,smt,SMD_2terminal_chip_molded,Yageo,
+"C8, C96",2,4.7uF 10V,C_0805_2012Metric,,GRM21BZ71E475KE15L,,smt,SMD_2terminal_chip_molded,Murata,
+C80,1,4.7nF C0G,C_0603_1608Metric,,GRM1885C1H472JA01D,,smt,SMD_2terminal_chip_molded,Murata,
+C81,1,47pF C0G,C_0603_1608Metric,,GCM1885C2A470JA16D,,smt,SMD_2terminal_chip_molded,Murata,
+"C90, C91, C92",3,10uF 10V,C_0805_2012Metric,,GRM21BZ71E106KE15L,,smt,SMD_2terminal_chip_molded,Murata,
+"D1, D10, D12, D14",4,B340A 40V 3A,D_SMA,,B340A-13-F,,smt,,Diodes Incorporated,[D1]Barrel-input OR-ing Schottky; [D10]USB-input OR-ing Schottky; [D12]Boost rectifier; [D14]Charger OUT / battery OR-ing Schottky (blocks the 9 V barrel from the charger)
+D11,1,USBLC6-2SC6,SOT-23-6,,USBLC6-2SC6,,smt,package/gullwing,STMicroelectronics,
+"D13, D15, D16, D17, D18, D19",6,1N4148W,D_SOD-123,,1N4148W-7-F,,smt,,Diodes Incorporated,[D13]Relay coil flyback; [D15]Teensy KEEP_ON -> boost enable; [D16]USB present -> boost enable; [D17]9 V barrel present -> boost enable; [D18]Isolates the RECORD switch net from the Teensy input; [D19]Isolates the encoder push net from the Teensy input
+D2,1,SMBJ12A,D_SMB,,SMBJ12A,,smt,,Littelfuse,
+"D20, D21, D22, D23, D6, D7, D8, D9",8,PESD12VL1BA,D_SOD-323,,"PESD12VL1BA,115",,smt,,Nexperia,
+D24,1,BAT54,D_SOD-123,,BAT54-7-F,,smt,,Diodes Incorporated,Blocks the 9 V bias setting from the +5V rail
+D3,1,SS14,D_SMA,,SS14,,smt,,onsemi,
+D4,1,POWER BLUE,LED_D3.0mm_Horizontal_O1.27mm_Z6.0mm,,WP7113QBC/D,,tht,LED/THT,Kingbright,"3mm THT blue, leads bent to fire out the front wall"
+D5,1,RECORD RED,LED_D3.0mm_Horizontal_O1.27mm_Z6.0mm,,WP7113ID,,tht,LED/THT,Kingbright,"3mm THT red, leads bent to fire out the front wall"
+F1,1,750mA PTC,Fuse_1206_3216Metric,,1206L075/13.2WR,,smt,SMD_2terminal_chip_molded,Littelfuse,
+F2,1,2A PTC,Fuse_1206_3216Metric,,1206L200PR,,smt,SMD_2terminal_chip_molded,Littelfuse,USB input PTC: system load + battery charge
+J1,1,9V DC IN,BarrelJack_CUI_PJ-102AH_Horizontal,,PJ-102AH,,tht,,CUI Devices,"5.5 x 2.1 mm centre-positive 9 V barrel, REAR-LEFT wall (Rev C)"
+J10,1,BATTERY 1S LiPo,JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,,B2B-PH-K-S,,tht,connector/JST,JST,"JST PH 2-pin, BOTTOM side: 3.7 V 5000 mAh 906090 LiPo pouch with PCM, + on pin 1"
+J2,1,AMBISONIC MIC RJ45,RJ45_Amphenol_RJHSE5380,,RJHSE-5380,,tht,,Amphenol ICC,
+J3,1,MSP3526 TFT 3.5IN 14PIN SOCKET,PinSocket_1x14_P2.54mm_Vertical,,PPTC141LFBN-RC,,tht,connector/pin_header_socket,Sullins Connector Solutions,1x14 2.54 mm female socket (8.5 mm) that the MSP3526 module's pin header plugs into; module rides on 11 mm M3 standoffs
+J4,1,1/4in BINAURAL LINE OUT,Jack_6.35mm_Neutrik_NRJ6HF_Horizontal,,NRJ6HF,,tht,,Neutrik,
+J5,1,1/8in BINAURAL HEADPHONE OUT,Jack_3.5mm_CUI_SJ1-3533NG_Horizontal,,SJ1-3533NG,,tht,,CUI Devices,
+J9,1,USB-C POWER + DATA,USB_C_Receptacle_HRO_TYPE-C-31-M-12,,TYPE-C-31-M-12,,smt,,HRO,"USB-C 2.0 receptacle, 16-pin, REAR wall: 5 V power in, SD-card file transfer, firmware updates"
+K1,1,G6K-2F-Y 5VDC,Relay_DPDT_Omron_G6K-2F-Y,,G6K-2F-Y DC5,,smt,,Omron,"DPDT 1 A signal relay, 5 V coil (21 mA): line-out mute for USB-host ground loops"
+L1,1,2.2uH 1.5A,L_Abracon_ASPIAIG-F4020,,ASPIAIG-F4020-2R2M-T,,smt,inductor/SMD,Abracon,
+L2,1,10uH 2A,L_Bourns_SRN6045TA,,SRN6045TA-100M,,smt,,Bourns,
+"Q1, Q2, Q5, Q7, Q9",5,2N7002,SOT-23,,2N7002NXAKR,,smt,package/gullwing,Nexperia,[Q1]Pad select level shifter (3.3 V GPIO -> 0/9 V CD4053 select); [Q2]Relay coil driver; [Q5]Cold-leg mode level shifter (3.3 V GPIO -> 0/9 V CD4053 select); [Q7]9 V bias gate driver; [Q9]5 V bias gate driver
+"Q3, Q4, Q6, Q8",4,AO3401A,SOT-23,,AO3401A,,smt,package/gullwing,Alpha & Omega,"[Q3]Soft-power latch, RECORD side; [Q4]Soft-power latch, encoder-push side; [Q6]9 V mic-bias high-side switch; [Q8]5 V mic-bias high-side switch"
+R1,1,680k,R_0603_1608Metric,,RC0603FR-07680KL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R10, R11, R110, R111, R112, R113, R12, R13",8,100R RF,R_0603_1608Metric,,RC0603FR-07100RL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R100, R101, R103, R108, R126, R127, R128, R129, R3, R43, R64, R77, R85, R94, R95, R98",16,100k,R_0603_1608Metric,,RC0603FR-07100KL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R102, R107, R34, R35, R36, R37, R42, R61, R84, R99",10,100R,R_0603_1608Metric,,RC0603FR-07100RL,,smt,SMD_2terminal_chip_molded,Yageo,
+R104,1,100k BLEED,R_0603_1608Metric,,RC0603FR-07100KL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R106, R50, R51, R52, R53, R60, R70, R71, R72, R73, R74, R79, R81, R83, R96, R97",16,10k,R_0603_1608Metric,,RC0603FR-0710KL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R114, R115, R116, R117, R14, R15, R16, R17, R4, R86, R87, R88, R89, R90",14,1M,R_0603_1608Metric,,RC0603FR-071ML,,smt,SMD_2terminal_chip_molded,Yageo,
+"R118, R119, R120, R121, R26, R27, R28, R29",8,10k 0.1%,R_0603_1608Metric,,RT0603BRD0710KL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R122, R123, R124, R125, R30, R31, R32, R33",8,90.9k 0.1%,R_0603_1608Metric,,RT0603BRD0790K9L,,smt,SMD_2terminal_chip_molded,Yageo,
+"R130, R2",2,130k,R_0603_1608Metric,,RC0603FR-07130KL,,smt,SMD_2terminal_chip_molded,Yageo,
+R131,1,20k,R_0603_1608Metric,,RC0603FR-0720KL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R18, R20, R22, R24",4,68k 0.1%,R_0603_1608Metric,,RT0603BRD0768KL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R19, R21, R23, R25",4,33k 0.1%,R_0603_1608Metric,,RT0603BRD0733KL,,smt,SMD_2terminal_chip_molded,Yageo,
+R38,1,100k,R_0603_1608Metric,,RC0603FR-07100KL,Yes,smt,SMD_2terminal_chip_molded,Yageo,
+R39,1,100k,R_0603_1608Metric,,RC0603FR-07100KL,Yes,smt,SMD_2terminal_chip_molded,Yageo,
+R40,1,100k,R_0603_1608Metric,,RC0603FR-07100KL,Yes,smt,SMD_2terminal_chip_molded,Yageo,
+R41,1,100k,R_0603_1608Metric,,RC0603FR-07100KL,Yes,smt,SMD_2terminal_chip_molded,Yageo,
+"R44, R45",2,4.7k,R_0603_1608Metric,,RC0603FR-074K7L,,smt,SMD_2terminal_chip_molded,Yageo,
+"R46, R47, R48, R49, R57, R58, R59, R69",8,33R,R_0603_1608Metric,,RC0603FR-0733RL,,smt,SMD_2terminal_chip_molded,Yageo,
+R5,1,0R CHASSIS LINK,R_0603_1608Metric,,RC0603FR-070RL,Yes,smt,SMD_2terminal_chip_molded,Yageo,
+R54,1,2.2k,R_0603_1608Metric,,RC0603FR-072K2L,,smt,SMD_2terminal_chip_molded,Yageo,
+R55,1,1k,R_0603_1608Metric,,RC0603FR-071KL,,smt,SMD_2terminal_chip_molded,Yageo,
+R56,1,100R TFT BACKLIGHT,R_0805_2012Metric,,RC0805FR-07100RL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R6, R7, R8, R9",4,4.7k ELECTRET BIAS,R_0603_1608Metric,,RC0603FR-074K7L,,smt,SMD_2terminal_chip_molded,Yageo,
+"R62, R63",2,470R,R_0603_1608Metric,,RC0603FR-13470RL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R65, R66",2,10R,R_0603_1608Metric,,RC0603FR-0710RL,,smt,SMD_2terminal_chip_molded,Yageo,
+R67,1,100R MIC BIAS FILTER,R_0603_1608Metric,,RC0603FR-07100RL,,smt,SMD_2terminal_chip_molded,Yageo,
+"R75, R76",2,5.1k,R_0603_1608Metric,,RC0603FR-075K1L,,smt,SMD_2terminal_chip_molded,Yageo,
+R78,1,47k,R_0603_1608Metric,,RC0603FR-0747KL,,smt,SMD_2terminal_chip_molded,Yageo,
+R80,1,75k,R_0603_1608Metric,,RC0603FR-0775KL,,smt,SMD_2terminal_chip_molded,Yageo,
+R82,1,80.6k,R_0603_1608Metric,,RC0603FR-0780K6L,,smt,SMD_2terminal_chip_molded,Yageo,
+R91,1,1.1k ILIM,R_0603_1608Metric,,RC0603FR-071K1L,,smt,SMD_2terminal_chip_molded,Yageo,
+R92,1,1.2k ISET,R_0603_1608Metric,,RC0603FR-071K2L,,smt,SMD_2terminal_chip_molded,Yageo,
+R93,1,10k TS,R_0603_1608Metric,,RC0603FR-0710KL,,smt,SMD_2terminal_chip_molded,Yageo,
+SW2,1,RECORD START/STOP,SW_PUSH_6mm,,TS02-66-150-BK-160-LCR-D,,tht,,Same Sky,"6x6 THT tactile, 15.0mm stem - reaches the 1590XX lid"
+SW3,1,MASTER GAIN,RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm,,EC11E15244G1,,tht,,Alps Alpine,
+SW4,1,TFT MENU NAV,SW_Nav5_ALPS_RKJXT1F42001,,RKJXT1F42001,,tht,,Alps Alpine,"ALPS 4-direction + centre push + incremental rotary encoder, THT"
+U1,1,TPS62160DGK,VSSOP-8_3x3mm_P0.65mm,,TPS62160DGKR,,smt,package/gullwing,Texas Instruments,
+U10,1,TPA6130A2RTJ,WQFN-20-1EP_4x4mm_P0.5mm_EP2.7x2.7mm,,TPA6130A2RTJR,,smt,package/no_lead,Texas Instruments,138 mW DirectPath stereo headphone amplifier with I2C volume control
+U11,1,TPS61175PWP,Texas_HTSSOP-14-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask3.155x3.255mm,,TPS61175PWPR,,smt,package/gullwing,Texas Instruments,"3 A / 40 V current-mode boost, 2.9-18 V input"
+U12,1,ADP7142AUJZ,TSOT-23-5,,ADP7142AUJZ-R7,,smt,package/gullwing,Analog Devices,"200 mA low-noise (11 uVrms) positive LDO, 40 V input, adjustable"
+U13,1,BQ24074RGT,VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm,,BQ24074RGTR,,smt,package/no_lead,Texas Instruments,"1.5 A Li-ion linear charger with power-path management, 10.5 V input OVP"
+"U14, U2",2,TPS7A2033PDBV,SOT-23-5,,TPS7A2033PDBVR,,smt,package/gullwing,Texas Instruments,"Converter digital-rail LDO (PCM1864 DVDD/IOVDD, PCM5102A DVDD)"
+"U15, U4, U5",3,CD4053BPW,TSSOP-16_4.4x5mm_P0.65mm,,CD4053BPWR,,smt,package/gullwing,Texas Instruments,
+"U16, U6",2,OPA1654,TSSOP-14_4.4x5mm_P0.65mm,,OPA1654AIPWR,,smt,package/gullwing,Texas Instruments,[U16]Quad low-noise FET-input audio operational amplifier (cold-leg stage); [U6]Quad low-noise FET-input audio operational amplifier
+U3,1,TLE2426ID,SOIC-8_3.9x4.9mm_P1.27mm,,TLE2426IDR,,smt,package/gullwing,Texas Instruments,
+U7,1,PCM1864DBT,TSSOP-30_4.4x7.8mm_P0.5mm,,PCM1864DBTR,,smt,package/gullwing,Texas Instruments,Four-channel software-controlled 192 kHz audio ADC with matched PGA
+U8,1,Teensy 4.1,Teensy41_Socket,,TEENSY41,,tht,,PJRC,600 MHz Cortex-M7 module with native 4-bit SDIO microSD
+U9,1,PCM5102A,TSSOP-20_4.4x6.5mm_P0.65mm,,PCM5102APWR,,smt,package/gullwing,Texas Instruments,

@@ -1,0 +1,60 @@
+﻿=== EP thermal vias U13 / U11 + In1/In2 power ===
+
+GND via (130.00,16.00)
+GND via (130.00,17.00)
+GND via (8.50,29.55)
+GND via (9.50,29.55)
+GND via (10.50,29.55)
+GND via (9.90,33.45)
+layer In1.Cu -> power
+layer In2.Cu -> power
+saved
+
+
+=== TP1/TP2 out of BOM ===
+
+excluded from BOM: TP1
+excluded from BOM: TP2
+saved
+
+
+=== stitch pass 3 (orphan GND rescue) ===
+
+GND pads KiCad reports as not grounded: 0
+nothing to do
+
+
+=== cleanup + refill ===
+
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+
+
+
+zones refilled: 20
+
+
+=== GND clusters ===
+
+GND pads: 184
+GND pad clusters: 1
+   MAIN     184 pads
+
+KiCad unconnected count on the whole board: 0
+
+
+=== DRC all severities ===
+
+Found 228 violations
+Found 0 unconnected items
+Found 398 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-post.json
+
+
+
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/QuadPreRecorder-drc.rpt
+
+
+POST DONE

@@ -1,0 +1,13 @@
+﻿
+stripped 3315 segment/via blocks from the file
+tracks/vias before 0, after import 3520
+
+
+
+Found 0 violations
+Found 6 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t12.json
+
+
+IMPORT DONE

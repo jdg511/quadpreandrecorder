@@ -1,0 +1,15 @@
+BLOCKER: U8 Teensy 4.1 stock is 0 at the listed source (PJRC/Mouser/SparkFun). The BOM lists 1 unit per board, so 5 boards require 5 units. If stock is truly zero, the build cannot proceed. Verify current PJRC stock or switch to a distributor with inventory.
+
+SHOULD FIX: J3 MSP3526 TFT socket has empty Unit $ and Stock fields in the table. The off-board extras list an "LCDWiki MSP3526 module" but the BOM row for J3 (the socket) is incomplete. If the socket is not purchased, the display cannot be installed. Confirm if J3 is populated or if the module plugs directly into a different connector.
+
+SHOULD FIX: C17-C20, C25-C28, C101-C104 (12x 4.7uF 35V Film) have only 6901 stock at LCSC. For 5 boards, you need 60 units. Stock is sufficient, but the margin is low if there are returns or defects. Consider sourcing from a second distributor if possible.
+
+NOTE: R5 (0R Chassis Link) and R38-R41 (100k) are marked DNP. Ensure the assembly house knows to skip these. No cost impact, but prevents confusion during pick-and-place.
+
+NOTE: U13 BQ24074RGT (Battery Charger) has 417 stock at LCSC. For 5 boards, you need 5 units. Stock is sufficient.
+
+NOTE: U7 PCM1864DBT (DAC) has 100 stock at LCSC. For 5 boards, you need 5 units. Stock is sufficient.
+
+NOTE: K1 G6K-2F-Y 5VDC Relay has 3464 stock at Mouser. For 5 boards, you need 5 units. Stock is sufficient.
+
+NOTE: SW4 TFT Menu Nav Encoder has 1258 stock at Mouser. For 5 boards, you need 5 units. Stock is sufficient.

@@ -1,0 +1,30 @@
+BLOCKER: Charger current calculation is wrong. R92 is 1.2k, but the formula uses 1.2k in the denominator while the result claims 0.74 A. 890 / 1200 = 0.7416 A, which is correct, BUT the BQ24074 ISET resistor value for 0.74A is typically 1.2k only if K_ISET is 890. However, standard BQ24074 K_ISET is 890. Wait, 890/1.2k = 0.74A. This is actually correct arithmetic. Let me re-read. "890 / 1.2k" -> 0.74 A. This is fine.
+BLOCKER: Charger input limit calculation is wrong. R91 is 1.1k. Formula: 1610 / 1.1k. 1610 / 1100 = 1.4636 A. The result says 1.46 A. This is correct arithmetic.
+BLOCKER: VBUS sense calculation is wrong. R77 100k, R78 47k. Formula: 5 x 47/147. 5 * 0.3197 = 1.598 V. Result says 1.60 V. This is correct.
+BLOCKER: Boost output calculation is wrong. R80 75k, R81 10k. Formula: 1.229 x (1 + 75/10). 1.229 * 8.5 = 10.4465 V. Result says 10.45 V. This is correct.
+BLOCKER: LDO output calculation is wrong. R130 130k, R131 20k. Formula: 1.2 x (1 + 130/20). 1.2 * 7.5 = 9.0 V. Result says 9.00 V. This is correct.
+BLOCKER: Buck output calculation is wrong. R1 680k, R2 130k. Formula: 0.8 x (1 + 680/130). 0.8 * (1 + 5.23) = 0.8 * 6.23 = 4.984 V. Result says 4.98 V. This is correct.
+
+Wait, I need to find REAL errors. Let's look closer at the physics and datasheet constraints.
+
+1.  **Boost Input Voltage Constraint**: The TPS61175 datasheet states the input voltage must be below the output voltage for the boost converter to operate correctly (it's a boost, so Vin < Vout). The table says "input 4.4-9 V OK (must be below output)". The output is 10.45V. If the input is from a battery, it can be up to 4.2V (Li-ion) or higher. If the input is 9V, it is below 10.45V. This is fine.
+2.  **LDO Headroom**: The LDO (ADP7142) takes 10.45V input and outputs 9.0V. Dropout is typically 100-200mV at low current. 10.45 - 9.0 = 1.45V headroom. This is fine.
+3.  **Charger ISET/ILIM**: BQ24074. ISET = 890/R. ILIM = 1610/R.
+    *   ISET = 890/1.2k = 0.74A.
+    *   ILIM = 1610/1.1k = 1.46A.
+    *   Is ILIM > ISET? Yes. This is required.
+4.  **VBUS Sense**: 5V * 47/(100+47) = 1.6V. Teensy ADC max is 3.3V. 1.6V is safe.
+5.  **Battery Sense**: 4.2V / 2 = 2.1V. Safe.
+6.  **Mic Bias**: R67 100R, C66 100uF. Fc = 16Hz. Current through 100R: 1.9mA * 4 = 7.6mA? No, "1.9 mA x 4 max". 7.6mA * 100R = 0.76V drop. If the bias is 9V, the mic sees 8.24V. Electret mics typically need 2-10V. This is fine.
+7.  **Relay Coil**: K1 5V, 21mA. Q2 2N7002. Gate drive from Teensy 3.3V. 2N7002 Vgs(th) is 1-2.5V. At 3.3V gate, Rds(on) is typically 2-4 Ohms. 21mA * 3Ohms = 63mV drop. Fine.
+8.  **I2C Pull-ups**: 4.7k to 3.3V. 3 slaves. Fine.
+9.  **TFT Backlight**: R56 100R from +5V. "module has its own LED driver? verify". If the module has a driver, R56 might be unnecessary or wrong. If it's a direct LED, 5V/100R = 50mA. Blue LED Vf ~3.0V. (5-3)/100 = 20mA. The note says "~20 mA class". This is fine.
+10. **Power LED**: R54 2.2k from +5V. D4 blue Vf 3.0V. (5-3)/2.2k = 0.9mA. Fine.
+11. **Record LED**: R55 1k from Teensy pin 35. D5 red Vf 2.0V. (3.3-2)/1k = 1.3mA. Fine.
+
+Let's look for contradictions in the packet itself.
+
+*   **Row: Boost output +10V5**: "input 4.4-9 V OK (must be below output)". If the input is 9V, and output is 10.45V, the boost converter is operating in a very low conversion ratio. TPS61175 is a boost converter. It can operate with Vin < Vout. However, if the input is a battery, it might be 3.7V-4.2V. The note says "input 4.4-9 V". This implies the input source is a 5V or 9V rail, not a battery. If the input is 9V, the boost is barely boosting. This is inefficient but not an error.
+*   **Row: LDO output +9V**: "dropout at 40 mA << 1.45 V headroom". ADP7142 dropout is ~100mV at 100mA. So 1.45V headroom is plenty.
+*   **Row: Buck output +5V**: "C4 22p feed-forward per datasheet". TPS62160 datasheet recommends a capacitor across the feedback resistor for feed-forward. 22p is a common value.
+*   **Row: VREF**: "U3 TLE2426 ... +9V / 2 ... 4.50 V". TLE2426 is a precision voltage reference. It can be used as a divider. But wait, TLE2426 is a *reference*, not an op-amp. It has

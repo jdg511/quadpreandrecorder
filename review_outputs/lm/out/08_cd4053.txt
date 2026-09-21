@@ -1,0 +1,85 @@
+BLOCKER U15 Pin 10 (S2) is connected to COLD_SEL, but the description states "sel B 10 = COLD_SEL" while Pin 9 (S3) is also COLD_SEL. The description says "C section grounds BRU_MICC... sel C 9 = COLD_SEL". However, looking at U4 and U5, Pin 9 is S3 (sel C) and Pin 10 is S2 (sel B). In U15, Pin 9 is S3 and Pin 10 is S2. The description for U15 says "B section grounds FRD_MICC... sel B 10 = COLD_SEL" and "C section grounds BRU_MICC... sel C 9 = COLD_SEL". This is consistent. Wait, let's re-read the U15 description carefully. "B section grounds FRD_MICC (common 15, BY 1 = GND, BX 2 = NC, sel B 10 = COLD_SEL)". Pin 15 is B common. Pin 1 is BY. Pin 2 is BX. Pin 10 is S2 (sel B). This is correct. "C section grounds BRU_MICC (common 4, CY 3 = GND, CX 5 = NC, sel C 9 = COLD_SEL)". Pin 4 is C common. Pin 3 is CY. Pin 5 is CX. Pin 9 is S3 (sel C). This is correct. So U15 is fine.
+
+BLOCKER U4 Pin 14 (A common) is FLU_PAD. Pin 13 (AY) is FLU_AC. Pin 12 (AX) is FLU_ATT. Description says "A: common 14 = FLU_PAD, AY 13 = FLU_AC (direct, select high = default), AX 12 = FLU_ATT (pad)". This is consistent.
+BLOCKER U4 Pin 15 (B common) is FRD_PAD. Pin 1 (BY) is FRD_AC. Pin 2 (BX) is FRD_ATT. Description says "B: common 15 = FRD_PAD, BY 1 = FRD_AC, BX 2 = FRD_ATT". This is consistent.
+BLOCKER U4 Pin 4 (C common) is FLU_MICC. Pin 3 (CY) is GND. Pin 5 (CX) is NC. Description says "C: common 4 = FLU_MICC, CY 3 = GND (grounded when COLD_SEL high = electret default), CX 5 = NC (released)". This is consistent.
+
+SHOULD FIX U4 Pin 9 (S3) is COLD_SEL. U4 Pin 10 (S2) is PAD_SELECT. U4 Pin 11 (S1) is PAD_SELECT.
+SHOULD FIX U5 Pin 9 (S3) is COLD_SEL. U5 Pin 10 (S2) is PAD_SELECT. U5 Pin 11 (S1) is PAD_SELECT.
+SHOULD FIX U15 Pin 9 (S3) is COLD_SEL. U15 Pin 10 (S2) is COLD_SEL. U15 Pin 11 (S1) is GND.
+
+NOTE U4, U5, U15 all have VDD = +9V, VEE = GND, VSS = GND. This is standard for CD4053B.
+NOTE U4 Pin 5 (C0) is NO_CONNECT. U5 Pin 5 (C0) is NO_CONNECT. U15 Pin 5 (C0) is NO_CONNECT.
+NOTE U15 Pin 2 (B0) is NO_CONNECT. U15 Pin 12 (A0) is NO_CONNECT. U15 Pin 14 (A) is NO_CONNECT.
+
+Let's check the arithmetic and consistency again.
+U4:
+Pin 1: B1 -> FRD_AC. Correct.
+Pin 2: B0 -> FRD_ATT. Correct.
+Pin 3: C1 -> GND. Correct.
+Pin 4: C -> FLU_MICC. Correct.
+Pin 5: C0 -> NO_CONNECT. Correct.
+Pin 6: INH -> GND. Correct.
+Pin 7: VEE -> GND. Correct.
+Pin 8: VSS -> GND. Correct.
+Pin 9: S3 -> COLD_SEL. Correct.
+Pin 10: S2 -> PAD_SELECT. Correct.
+Pin 11: S1 -> PAD_SELECT. Correct.
+Pin 12: A0 -> FLU_ATT. Correct.
+Pin 13: A1 -> FLU_AC. Correct.
+Pin 14: A -> FLU_PAD. Correct.
+Pin 15: B -> FRD_PAD. Correct.
+Pin 16: VDD -> +9V. Correct.
+
+U5:
+Pin 1: B1 -> BRU_AC. Correct.
+Pin 2: B0 -> BRU_ATT. Correct.
+Pin 3: C1 -> GND. Correct.
+Pin 4: C -> BLD_MICC. Correct.
+Pin 5: C0 -> NO_CONNECT. Correct.
+Pin 6: INH -> GND. Correct.
+Pin 7: VEE -> GND. Correct.
+Pin 8: VSS -> GND. Correct.
+Pin 9: S3 -> COLD_SEL. Correct.
+Pin 10: S2 -> PAD_SELECT. Correct.
+Pin 11: S1 -> PAD_SELECT. Correct.
+Pin 12: A0 -> BLD_ATT. Correct.
+Pin 13: A1 -> BLD_AC. Correct.
+Pin 14: A -> BLD_PAD. Correct.
+Pin 15: B -> BRU_PAD. Correct.
+Pin 16: VDD -> +9V. Correct.
+
+U15:
+Pin 1: B1 -> GND. Correct.
+Pin 2: B0 -> NO_CONNECT. Correct.
+Pin 3: C1 -> GND. Correct.
+Pin 4: C -> BRU_MICC. Correct.
+Pin 5: C0 -> NO_CONNECT. Correct.
+Pin 6: INH -> GND. Correct.
+Pin 7: VEE -> GND. Correct.
+Pin 8: VSS -> GND. Correct.
+Pin 9: S3 -> COLD_SEL. Correct.
+Pin 10: S2 -> COLD_SEL. Correct.
+Pin 11: S1 -> GND. Correct.
+Pin 12: A0 -> NO_CONNECT. Correct.
+Pin 13: A1 -> GND. Correct.
+Pin 14: A -> NO_CONNECT. Correct.
+Pin 15: B -> FRD_MICC. Correct.
+Pin 16: VDD -> +9V. Correct.
+
+All pins match the descriptions and the datasheet pinout. The nets are consistent. The rails are correct. There are no obvious errors.
+
+Wait, let's look at U15 again.
+Description: "B section grounds FRD_MICC (common 15, BY 1 = GND, BX 2 = NC, sel B 10 = COLD_SEL)".
+Pin 15 is B common. Pin 1 is BY. Pin 2 is BX. Pin 10 is S2 (sel B).
+This is correct.
+Description: "C section grounds BRU_MICC (common 4, CY 3 = GND, CX 5 = NC, sel C 9 = COLD_SEL)".
+Pin 4 is C common. Pin 3 is CY. Pin 5 is CX. Pin 9 is S3 (sel C).
+This is correct.
+
+Is there any issue with the select lines?
+U4: S1 and S2 are PAD_SELECT. S3 is COLD_SEL.
+U5: S1 and S2 are PAD_SELECT. S3 is COLD_SEL.
+U15: S1 is GND. S2 and S3 are COLD_SEL.
+
+This seems intentional. U

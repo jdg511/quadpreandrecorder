@@ -1,0 +1,76 @@
+﻿=== +3V3_A: drop U7.26 fanout via, stub U7.26->U7.25, B.Cu lane at y=48.5 ===
+GND items removed in box: 2
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+ok  seg F.Cu (86.36,48.00)-(86.36,48.50) 0.5 mm
+GND: 1 segments, 0 vias added
+ok  seg B.Cu (82.03,49.30)-(82.03,48.50) 0.8 mm
+ok  seg B.Cu (82.03,48.50)-(85.35,48.50) 3.3 mm
+ok  seg B.Cu (85.35,48.50)-(85.62,48.27) 0.4 mm
++3V3_A: 3 segments, 0 vias added
+=== BRU_MICC: move the feeder fence south (y=102.75) ===
+BRU_MICC items removed in box: 2
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+BRU_MICC items removed in box: 1
+=== CHASSIS: drop island via, new vias (40.7,99.5) (37.5,101.95) (39.0,103.35) ===
+CHASSIS items removed in box: 3
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+ok  seg B.Cu (33.66,101.75)-(34.66,102.75) 1.4 mm
+ok  seg B.Cu (34.66,102.75)-(40.24,102.75) 5.6 mm
+BAD seg B.Cu (40.24,102.75)-(40.54,103.06) 0.4 mm
+python.exe : 1 problems - nothing saved
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\fix_c3mic4_stragglers.ps1:14 char:1
++ & $py tools\poly_route.py BRU_MICC "B:33.659,101.745;34.664,102.75;40 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (1 problems - nothing saved:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ok  seg F.Cu (38.00,97.33)-(40.50,97.33) 2.5 mm
+ok  seg F.Cu (40.50,97.33)-(40.70,97.53) 0.3 mm
+BAD seg F.Cu (40.70,97.53)-(40.70,99.50) 2.0 mm
+ok  seg B.Cu (40.70,99.50)-(40.70,100.60) 1.1 mm
+ok  seg B.Cu (40.70,100.60)-(37.50,100.60) 3.2 mm
+ok  seg B.Cu (37.50,100.60)-(37.50,101.95) 1.4 mm
+ok  seg F.Cu (37.50,101.95)-(37.50,103.12) 1.2 mm
+ok  seg F.Cu (37.50,103.12)-(38.00,103.62) 0.7 mm
+BAD via (40.70,99.50)
+ok  via (37.50,101.95)
+python.exe : 2 problems - nothing saved
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\fix_c3mic4_stragglers.ps1:15 char:1
++ & $py tools\poly_route.py CHASSIS "F:38.0,97.325;40.5,97.325;40.7,97. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2 problems - nothing saved:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ok  seg B.Cu (39.30,103.35)-(39.00,103.35) 0.3 mm
+ok  seg F.Cu (39.00,103.35)-(38.54,103.35) 0.5 mm
+ok  seg F.Cu (38.54,103.35)-(38.41,103.22) 0.2 mm
+ok  via (39.00,103.35)
+CHASSIS: 3 segments, 1 vias added
+=== refill zones ===
+zones refilled: 20
+=== GND clusters ===
+GND pad clusters: 1
+   MAIN     184 pads
+
+KiCad unconnected count on the whole board: 2
+=== CHASSIS clusters ===
+CHASSIS: 2 clusters
+--- cluster 0: 11 items
+   pad C16.2 F.Cu (38.00,103.62)
+=== DRC ===
+
+Found 0 violations
+Found 2 unconnected items
+Found 0 schematic parity issues
+> [unconnected_items]: Missing connection between items
+      Local override; error
+      @(38.4086 mm, 103.2160 mm): Track [CHASSIS] on F.Cu, length 0.5781 mm
+      @(38.0000 mm, 97.3250 mm): Track [CHASSIS] on F.Cu, length 1.0594 mm
+> [unconnected_items]: Missing connection between items
+      Local override; error
+      @(24.9492 mm, 93.0356 mm): Track [BRU_MICC] on B.Cu, length 12.3171 mm
+      @(33.6000 mm, 105.1750 mm): Track [BRU_MICC] on B.Cu, length 2.2627 mm
+
+
+DONE

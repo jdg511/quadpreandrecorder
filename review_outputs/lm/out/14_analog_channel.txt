@@ -1,0 +1,29 @@
+BLOCKER: The full-scale check in Section 9 contains a critical arithmetic error. It states the preamp clips at "9 V rail / 2 / 10 = 0.3 Vrms". This calculation is incorrect; 9/2/10 is 0.45 V, not 0.3 V. More importantly, the conclusion that the ADC clips first is flawed because it ignores the actual op-amp output swing limit. With a 9V single supply and 4.5V reference, the max output swing is roughly 3.9Vrms (as correctly noted later in the text). The ADC full scale is 2.1Vrms. Since 3.9Vrms > 2.1Vrms, the ADC *does* clip first, but the intermediate calculation "9 V rail / 2 / 10 = 0.3 Vrms" is mathematically wrong and confusing. The correct input level for ADC full scale is 2.1Vrms / 10.09 gain = 0.208Vrms. The text's "0.3 Vrms" figure is unsupported by the math shown.
+
+SHOULD FIX: In the "Mic-mode logic" table, the "Electret 5 V" row lists +9V_MIC as "~4.7 V (D24 drop)". However, the "Boot / unknown" and "Dynamic / balanced" rows list +9V_MIC as "0 V (bleeds through R104)". If Q8 is ON for 5V mode, the rail is pulled to ~4.7V. If Q8 is OFF (as in boot/dynamic), the rail is 0V. This is consistent. However, the sequencing rule says "drop MIC9/MIC5 first... then raise COLD_CTRL". In "Dynamic / balanced" mode, COLD_CTRL is HIGH, which releases the cold leg into A1. But the table says "Pad allowed: NO (firmware lockout)". This is a firmware constraint, not a hardware one. The hardware allows the pad, but firmware prevents it. This is acceptable but should be clearly documented as a firmware requirement, not a hardware limitation. The risk is if firmware fails, the pad could be active in dynamic mode, causing incorrect gain. This is a SHOULD FIX for documentation clarity.
+
+NOTE: The "RF stop" corner frequency calculation: 1/(2 pi 100 x 100p) = 15.9 MHz, rounded to 16 MHz. This is correct. The "Coupling" corner frequency: 1/(2 pi 1M x 4.7uF) = 0.034 Hz. Correct. The "Input bias" resistance calculation: 1M parallel 101k = 92k. Correct. The "Pad" attenuation: 33/(68+33) = 0.327, which is -9.7 dB. Correct. The "A1" gain: 1 + 10k/90.9k = 1.11. Correct. The "A2" gain: 1 + 90.9k/10k = 10.09, which is +20.08 dB. Correct. The "A2" -3dB frequency: 1/(2 pi 90.9k x 22p) = 79.9 kHz, rounded to 80 kHz. Correct. The "Output coupling" RC corner: 1/(2 pi 100 x 10n) = 159 kHz. Correct.
+
+NOTE: The PCM1864 I2C address is listed as 0x4A (0x94 write). The MD0/MD1 pins are both GND. According to the PCM1864 datasheet, MD0=0, MD1=0 corresponds to I2C address 0x4A. This is correct. The PCM5102A mode pins are hard-wired: FLT=GND, DEMP=GND, FMT=GND, XSMT driven by Teensy with 10k pull-down. This is consistent with I2S mode, no de-emphasis, normal latency, and muted by default. Correct.
+
+NOTE: The Teensy 1 MIC9_CTRL and Teensy 0 MIC5_CTRL are used to control the bias voltage. The table shows that in "Electret 9 V" mode, MIC9_CTRL is HIGH, and in "Electret 5 V" mode, MIC5_CTRL is HIGH. This is consistent with the description of Q6 and Q8. Correct.
+
+NOTE: The "Cold-leg ground" section mentions U4 C section (pins 4/3) and COLD_SEL pin 9. The CD4053 on-resistance is ~120 R at 9 V. This is a reasonable value for a CD4053. Correct.
+
+NOTE: The "Bias feed" section mentions R6 4.7k from +9V_MIC to FLU_MIC. The current into a shorted capsule is 9V / 4.7k = 1.9 mA. This is correct. The typical capsule current is 0.5 mA at ~6.5 V. This is consistent with electret microphone specifications. Correct.
+
+NOTE: The "RF stop" section mentions D6/D20 PESD. This is a standard ESD protection component. Correct.
+
+NOTE: The "Coupling" section mentions C17 4.7 uF PMLCAP (hot) and C101 4.7 uF (cold). The use of PMLCAP for the hot leg is appropriate for low ESR and low noise. Correct.
+
+NOTE: The "Input bias" section mentions R14 1M hot -> VREF and R114 1M + R126 100k cold -> VREF. The hot leg sees 1M parallel 101k = 92k, and the cold leg sees 1M parallel 100k = 91k. This is balanced within 1%. Correct.
+
+NOTE: The "Pad" section mentions R18 68k / R19 33k 0.1 % to VREF, switched by U4 (A section). The attenuation is 33/(68+33) = 0.327 = -9.7 dB. Correct.
+
+NOTE: The "A1 (cold amp)" section mentions U16 unit A: + = FLU_ACC, out = FLU_CPRE, R118 10k CFB-CPRE, R122 90.9k CFB-VREF, C105 22p across R122. The gain is 1 + 10k/90.9k = 1.11. Correct.
+
+NOTE: The "A2 (hot amp)" section mentions U6 unit A: + = FLU_PAD, out = FLU_PRE, R26 10k FB-CPRE, R30 90.9k PRE-FB, C21 22p across R30. The gain is 1 + 90.9/10 = 10.09 x = +20.08 dB. Correct.
+
+NOTE: The "Output coupling" section mentions C25 4.7 uF PMLCAP -> R34 100R -> C29 10 nF C0G -> PCM1864 VINL1. The RC corner is 1/(2 pi 100 x 10n) = 159 kHz. Correct.
+
+NOTE: The "Full-scale check" section mentions PCM1864 input is 2.1 Vrms (single-ended, 0 dB PGA). With +20.1 dB gain, the preamp clips at about 9 V rail / 2 / 10 = 0.3 Vrms in at the op-amp. This calculation is incorrect as noted in the BLOCKER item. The correct input level for ADC full scale is 2.1Vrms / 10.09 gain = 0.208Vrms. The text

@@ -49,25 +49,31 @@ def teensy41_socket() -> pcbnew.FOOTPRINT:
     fp.SetKeywords("Teensy 4.1 PJRC module SDIO")
 
     left = ["GND1", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "3V3A", "24", "25", "26", "27", "28", "29", "30", "31", "32"]
-    right = ["VIN", "GND2", "23", "22", "21", "20", "19", "18", "17", "16", "15", "14", "13", "41", "40", "39", "38", "37", "36", "35", "34", "33", "GND3", "3V3B"]
+    right = ["VIN", "GND2", "3V3B", "23", "22", "21", "20", "19", "18", "17", "16", "15", "14", "13", "GND3", "41", "40", "39", "38", "37", "36", "35", "34", "33"]
     for index, number in enumerate(left):
         add_th_pad(fp, number, 0.0, index * 2.54, square=(index == 0))
     for index, number in enumerate(right):
-        add_th_pad(fp, number, 17.78, index * 2.54)
+        add_th_pad(fp, number, 15.24, index * 2.54)
 
+    # Rev C3 fix (2026-09-15): PJRC dimension drawing gives the two pin rows
+    # 15.24 mm (0.6 in) apart on a 17.78 mm wide, 60.96 mm long module, pins
+    # 1.27 mm in from each long edge. The right row, USB end first, reads
+    # VIN, GND, 3.3V, 23..13, GND, 41..33 (PJRC pinout card / XenGi symbol
+    # pins 48..25). Until this fix the rows were drawn 17.78 mm apart and the
+    # right row was shifted by one position; no board had been built.
     # Nominal 61.0 x 17.8 mm module body and connector-end references.
-    for x1, y1, x2, y2 in ((-1.27, -1.27, 19.05, -1.27), (19.05, -1.27, 19.05, 59.69),
-                            (19.05, 59.69, -1.27, 59.69), (-1.27, 59.69, -1.27, -1.27)):
+    for x1, y1, x2, y2 in ((-1.27, -1.27, 16.51, -1.27), (16.51, -1.27, 16.51, 59.69),
+                            (16.51, 59.69, -1.27, 59.69), (-1.27, 59.69, -1.27, -1.27)):
         add_line(fp, x1, y1, x2, y2, pcbnew.F_Fab, 0.20)
         add_line(fp, x1, y1, x2, y2, pcbnew.F_SilkS, 0.20)
-    add_line(fp, -1.27, 2.0, 19.05, 2.0, pcbnew.F_SilkS, 0.20)
-    add_line(fp, -1.27, 56.5, 19.05, 56.5, pcbnew.F_SilkS, 0.20)
+    add_line(fp, -1.27, 2.0, 16.51, 2.0, pcbnew.F_SilkS, 0.20)
+    add_line(fp, -1.27, 56.5, 16.51, 56.5, pcbnew.F_SilkS, 0.20)
 
     fp.Reference().SetText("REF**")
-    fp.Reference().SetPosition(pos(8.89, 28.0))
+    fp.Reference().SetPosition(pos(7.62, 28.0))
     fp.Reference().SetLayer(pcbnew.F_SilkS)
     fp.Value().SetText("Teensy41_Socket")
-    fp.Value().SetPosition(pos(8.89, 31.0))
+    fp.Value().SetPosition(pos(7.62, 31.0))
     fp.Value().SetLayer(pcbnew.F_Fab)
     return fp
 

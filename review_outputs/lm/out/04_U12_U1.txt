@@ -1,0 +1,78 @@
+BLOCKER: U12 ADP7142AUJZ is an LDO with a maximum input voltage rating of 16 V (VERIFY exact max for this specific part number, but typically 16V or 20V); however, the critical error is that the input net +10V5 is connected to U12 Pin 1 (VIN) and Pin 3 (EN). The ADP7142 is a low-dropout regulator, not a buck converter. If the input source is 10.5V, this is electrically valid for the LDO, BUT the output is set to 9.00V. The dropout voltage of the ADP7142 at full load is typically 100-200mV. 10.5V - 9.0V = 1.5V headroom, which is fine. HOWEVER, looking at U1 TPS62160DGK: Pin 2 (VIN) is connected to +10V5. The TPS62160 is a buck converter. Its input voltage range is typically 4.5V to 18V. 10.5V is within range. The output is +5V. This is a standard buck configuration.
+Wait, let's re-read the U12 section. "VOUT = 1.2 V x (1 + R130/R131) = 9.00 V". This implies R130/R131 = 6.5.
+Let's check the U1 section. "VOS to +5V, FB from R1/R2".
+The net +10V5 is the input to both.
+Is there a conflict? No.
+Let's look closer at U12. ADP7142AUJZ.
+Datasheet check: ADP7142 is a 16V input, 1A LDO.
+Input 10.5V, Output 9.0V. Drop 1.5V. Power dissipation = 1.5V * 1A = 1.5W.
+TSOT-23-5 package thermal resistance (junction to ambient) is typically around 100-150 C/W.
+1.5W * 100 C/W = 150C rise. If ambient is 25C, junction is 175C. This exceeds the max junction temperature (usually 125C or 150C).
+This is a thermal violation. The LDO is dissipating too much power for the package size.
+Also, the input is 10.5V. The ADP7142 max input is 16V. So voltage is okay, but power is not.
+
+Let's check U1 TPS62160DGK.
+Input 10.5V, Output 5V.
+Efficiency ~90%. Power in = 5V * Iout / 0.9. Power dissipated = Vin*Iin - Vout*Iout.
+If Iout is 1A (typical for this part), Pin 2 current is ~0.5A.
+Power dissipated in IC = (10.5 - 5) * 0.5 = 2.75W? No, that's not how buck dissipation works.
+Dissipation is mainly in the switch and diode/inductor. The IC itself dissipates gate drive and quiescent current.
+Quiescent current is ~1mA. 10.5V * 1mA = 10.5mW. Negligible.
+Switching losses are in the external components.
+So U1 is thermally fine.
+
+Back to U12.
+1.5W dissipation in a TSOT-23-5 is a BLOCKER. The package cannot handle 1.5W.
+Typical max power for TSOT-23-5 is ~0.5W to 0.8W depending on copper area.
+1.5W will cause thermal shutdown or failure.
+
+Are there other errors?
+U12 Pin 3 (EN) is tied to VIN (+10V5). This is correct for always-on.
+U12 Pin 4 (SENSE/ADJ) is connected to R130.2 and R131.1.
+U12 Pin 5 (VOUT) is connected to R130.1.
+This is the standard feedback divider.
+R130 is between VOUT and FB. R131 is between FB and GND.
+Vout = 1.2 * (1 + R130/R131).
+If R130/R131 = 6.5, then Vout = 1.2 * 7.5 = 9.0V. Correct.
+
+U1 Pin 5 (FB) is connected to R1.2 and R2.1.
+U1 Pin 6 (VOS) is connected to +5V.
+This is the standard configuration for TPS62160.
+Vout = 0.8 * (1 + R1/R2).
+If Vout is 5V, then 5 = 0.8 * (1 + R1/R2) => 6.25 = 1 + R1/R2 => R1/R2 = 5.25.
+This is a valid ratio.
+
+Check net connections for shorts.
+U12 Pin 1 (VIN) is +10V5.
+U1 Pin 2 (VIN) is +10V5.
+U1 Pin 3 (EN) is +10V5.
+U12 Pin 3 (EN) is +10V5.
+No shorts between VIN and GND.
+
+Check U1 Pin 7 (SW) to L1.1.
+L1.2 is +5V.
+This is correct for a buck converter.
+
+Check U1 Pin 8 (PG) to R3.2.
+R3.1 is likely GND or a pull-up. Not specified, but PG is an open-drain output. It needs a pull-up.
+If R3.1 is not connected to a rail, PG will float.
+The table says "Other ends of that net" for BUCK_PG is only R3.2.
+This implies R3.1 is not connected to anything else listed, or it's a single resistor to GND?
+If R3.1 is to GND, then PG is pulled low. This is incorrect. PG should be pulled high to a logic rail (e.g., +5V or +3.3V) to indicate "Power Good" when high.
+If R3.1 is to GND, the net BUCK_PG is always low (when PG is off) or high (when PG is on? No, PG is open drain. When active, it pulls low. When inactive, it floats).
+Wait, TPS62160 PG pin: "Power Good. Open-drain output. Active low."
+So when power is good, PG is HIGH (floating, pulled up by external resistor).
+When power is bad, PG is LOW (pulled down by internal transistor).
+Therefore, an external pull-up resistor is REQUIRED.
+The net BUCK_PG has only R3.2 connected to U1.8.
+Where is R3.1 connected?
+The table for U1 Pin 8 says "Other ends of that net: R3.2".
+It does NOT list R3.1.
+This suggests R3.1 is not connected to the BUCK_PG net?
+Or is R3.1 connected to GND?
+If R3.1 is connected to GND, then the net BUCK_PG is connected to GND via R3.
+This would mean the PG signal is always pulled to GND.
+This is a BLOCKER. The Power Good signal will never be high.
+Let's verify the net list for BUCK_PG.
+Pin 8: BUCK_PG. Other ends: R3.2.
+If R3.1 is connected to GND

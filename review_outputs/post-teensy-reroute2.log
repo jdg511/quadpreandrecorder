@@ -1,0 +1,49 @@
+﻿=== stitching vias drilled into THT GND pad holes ===
+
+GND items removed in box: 1
+
+
+
+GND items removed in box: 1
+
+
+
+GND items removed in box: 1
+
+
+
+GND items removed in box: 1
+
+
+
+zones refilled: 20
+
+
+
+GND pads: 184
+GND pad clusters: 1
+   MAIN     184 pads
+
+KiCad unconnected count on the whole board: 0
+
+
+
+Found 220 violations
+Found 0 unconnected items
+Found 398 schematic parity issues
+Saved DRC Report to hardware/review_outputs/final-drc.rpt
+
+
+
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/QuadPreRecorder-drc.rpt
+
+
+17 x [silk_edge_clearance]
+105 x [silk_overlap]
+98 x [silk_over_copper]
+199 x [footprint_symbol_field_mismatch]
+199 x [net_conflict]
+POST2 DONE

@@ -1,0 +1,79 @@
+BLOCKER: Pin 10/11 (OUT) is connected to net BAT_SYS, but Pin 2/3 (BAT) is connected to net VBAT. The BQ24074 is a battery charger; the OUT pins are the battery output. Connecting OUT to a system rail (BAT_SYS) and BAT to VBAT implies the charger is driving the system bus directly or the net names are swapped. If BAT_SYS is the main system power rail, this is a critical architectural error or net naming confusion that will cause the charger to drive the wrong load or the battery to be isolated. VERIFY: Confirm if BAT_SYS is intended to be the battery terminal and VBAT is a misnamed net, or if the charger is incorrectly wired to the system bus.
+
+SHOULD FIX: Pin 15 (ITERM) is left as NO_CONNECT. The datasheet states "open = 10%". While this is a valid configuration, leaving it floating on a PCB without a defined net can be susceptible to noise or accidental shorts. It is better practice to explicitly tie it to GND if 10% is not desired, or leave it open only if 10% is the intended termination current. Given the ISET is 0.74A, 10% is ~74mA, which is reasonable. However, "NO_CONNECT" in KiCad often means the pad is not connected to any net, which is correct for "open". This is acceptable but worth noting for clarity.
+
+NOTE: Pin 12 (ILIM) is connected to R91.1 on net CHG_ILIM. The calculation 1610/1.1k = 1.46A is correct for the BQ24074 formula (I_ILIM = 1610 / R_ILIM). This sets the input current limit. This is fine.
+
+NOTE: Pin 16 (ISET) is connected to R92.1 on net CHG_ISET. The calculation 890/1.2k = 0.74A is correct for the BQ24074 formula (I_CHG = 890 / R_ISET). This sets the charge current. This is fine.
+
+NOTE: Pin 4 (CE) is tied to GND, enabling charging. Pin 14 (TMR) is tied to GND, disabling safety timers. This is a common configuration for simple chargers but removes over-temperature and over-voltage protection on the battery. VERIFY: Ensure the system has other protections (e.g., in the battery pack or MCU) since the charger's internal safety timers are disabled.
+
+NOTE: Pin 5 (EN2) is connected to VBUS_FUSED. This enables charging only when USB power is present. This is correct for a USB charger.
+
+NOTE: Pin 6 (EN1) is connected to GND. This is correct for the BQ24074, where EN1 low means the input current limit is set by R_ILIM.
+
+NOTE: Pin 7 (PGOOD) and Pin 9 (CHG) are connected to U8 (likely a microcontroller) via resistors R95 and R94. This is standard for status monitoring.
+
+NOTE: Pin 1 (TS) is connected to R93.1 on net CHG_TS. This is likely a thermistor connection. Ensure R93 is the correct value for the thermistor divider if any.
+
+NOTE: Pin 8 (VSS) and Pin 17 (VSS pad) are connected to GND. This is correct.
+
+NOTE: Pin 13 (IN) is connected to VBUS_FUSED. This is the input power source. This is correct.
+
+NOTE: Pin 2/3 (BAT) are connected to VBAT. This is the battery output. This is correct if VBAT is the battery net.
+
+NOTE: Pin 10/11 (OUT) are connected to BAT_SYS. This is the system output. This is correct if BAT_SYS is the system power net.
+
+Wait, the BQ24074 has BAT and OUT pins. BAT is the battery connection. OUT is the system connection. The charger regulates the battery voltage and provides power to the system. So BAT should go to the battery, and OUT should go to the system. In this design, BAT goes to VBAT and OUT goes to BAT_SYS. This is consistent if VBAT is the battery net and BAT_SYS is the system net. The previous BLOCKER was based on a misunderstanding of the net names. If VBAT is the battery and BAT_SYS is the system, then the wiring is correct. I will retract the BLOCKER.
+
+Re-evaluating:
+- BAT (2,3) -> VBAT (Battery)
+- OUT (10,11) -> BAT_SYS (System)
+This is the correct topology for a BQ24074. The charger takes power from IN (VBUS_FUSED), charges the battery at BAT (VBAT), and powers the system at OUT (BAT_SYS).
+
+So the wiring is correct.
+
+Let's re-check the calculations and connections.
+- ILIM: 1610 / 1.1k = 1.46 A. Correct.
+- ISET: 890 / 1.2k = 0.74 A. Correct.
+- CE: GND (Enabled). Correct.
+- TMR: GND (Timers off). Correct.
+- ITERM: Open (10%). Correct.
+- EN1: GND (ILIM set by resistor). Correct.
+- EN2: VBUS_FUSED (Enabled when USB present). Correct.
+
+Are there any other issues?
+- Pin 1 (TS) is connected to CHG_TS. This is likely a thermistor. The BQ24074 has a TS pin for temperature sensing. It is usually connected to a thermistor. The net CHG_TS goes to R93.1. This is fine.
+- Pin 7 (PGOOD) and Pin 9 (CHG) are open-drain outputs, connected to U8 via pull-ups (R95, R94). This is fine.
+
+Is there any issue with the VQFN-16-1EP package? The thermal pad (Pin 17) is connected to GND. This is correct.
+
+Is there any issue with the net names? VBAT and BAT_SYS are distinct nets. This is good.
+
+Is there any issue with the components?
+- R91: 1.1k.
+- R92: 1.2k.
+- R93: Value not specified, but it's on the TS net.
+- R94, R95: Pull-ups.
+
+I don't see any obvious errors in the provided packet. The calculations are correct, the pin connections are consistent with the datasheet and the intended function, and the net names are logical.
+
+Wait, let's look at Pin 15 (ITERM) again. It is NO_CONNECT. The datasheet says "open = 10%". In KiCad, NO_CONNECT means the pin is not connected to any net. This is the correct way to implement "open". So this is fine.
+
+Let's look at Pin 1 (TS). It is connected to R93.1. The other end of R93 is not listed. It is likely connected to a thermistor and GND. This is a standard configuration.
+
+Let's look at Pin 5 (EN2). It is connected to VBUS_FUSED. This is correct.
+
+Let's look at Pin 6 (EN1). It is connected to GND. This is correct.
+
+Let's look at Pin 4 (CE). It is connected to GND. This is correct.
+
+Let's look at Pin 14 (TMR). It is connected to GND. This is correct.
+
+Let's look at Pin 12 (ILIM). It is connected to R91.1. This is correct.
+
+Let's look at Pin 16 (ISET). It is connected to R92.1. This is correct.
+
+Let's look at Pin 13 (IN). It is connected to VBUS_FUSED. This is correct.
+
+Let's look at Pin 2/3 (BAT

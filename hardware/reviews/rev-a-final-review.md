@@ -1,5 +1,7 @@
 # Rev A final pre-order review — consolidated report
 
+> **Historical note (2026-09-06):** this review is dated 2026-07-25 and describes the Rev A board targeting the Hammond 1590F (174 x 174 mm), including its "1590F enclosure stackup study" reference below. The current design is Rev B, targeting the Hammond 1590XX (138 x 114 mm) — see `../enclosure-fit-audit.md` and `../mechanical.md`. The electrical findings below (TDM feasibility, etc.) are independent of the enclosure change and are not affected by it.
+
 Date: 2026-07-25. Method: netlist pin→net extraction cross-validated against the
 routed PCB (527 pads, 0 mismatches), per-IC datasheet reviews using the cached
 datasheet text extracts, fab-outline orientation analysis, and the 1590F

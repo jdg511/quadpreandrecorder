@@ -1,0 +1,49 @@
+﻿
+GND items removed in box: 1
+
+
+
+exported 3519 tracks/vias
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix2.dsn
+
+
+
+protected 2821 entries, left routable 490 (nets: BAT_SENSE,BOOST_EN,CHG_STAT_N,COLD_CTRL,CTP_RST,DAC_MUTE,GAIN_A,GAIN_B
+,GAIN_PUSH,GAIN_SW,HP_ENABLE,KEEP_ON,LINE_MUTE,MIC5_CTRL,MIC9_CTRL,NAV_DOWN,NAV_ENC_A,NAV_ENC_B,NAV_LEFT,NAV_PUSH,NAV_R
+IGHT,NAV_UP,PAD_CTRL,PGOOD_N,REC_BUTTON,REC_LED,TEENSY_VIN,TFT_LED,TOUCH_IRQ,VBUS_SENSE)
+
+
+
+layer decls changed to power : 0
+In1/In2 wire_keepouts removed: 2
+bytes 431107 -> 430791
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix2-plane.dsn
+
+
+=== freerouting start 15:18:15 ===
+2026-09-15 15:18:23.706 [Thread-29] INFO  Starting auto-routing...
+2026-09-15 15:19:50.406 [Thread-29] WARN  There were only 10.00 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:21:10.254 [Thread-29] WARN  There were only 10.00 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:22:30.166 [Thread-29] WARN  There were only 10.00 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:23:54.364 [Thread-29] WARN  There were only 10.00 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:25:20.980 [Thread-29] WARN  There were only 10.00 changes in the last 100 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:26:45.434 [Thread-29] WARN  There were only 10.00 changes in the last 120 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:28:13.340 [Thread-29] WARN  There were only 10.00 changes in the last 140 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:28:25.867 [Thread-29] INFO  Auto-routing was completed in 10 minute(s) 2.16 seconds.
+2026-09-15 15:28:25.968 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-15 15:28:27.320 [Thread-29] INFO  Route optimization was completed in 1.35 seconds and it improved the design by ~0.00%.
+2026-09-15 15:28:27.348 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix2.ses'...
+=== freerouting done 15:28:27 ===
+
+stripped 3519 segment/via blocks from the file
+tracks/vias before 0, after import 3553
+
+
+
+Found 0 violations
+Found 6 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t13.json
+
+
+FINISH2 DONE

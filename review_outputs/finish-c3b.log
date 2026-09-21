@@ -1,0 +1,32 @@
+U11.6 fanout items removed: 2
+U11.4 BOOST_EN via (5.30,31.50); U11.5 BOOST_SS via (5.30,32.30)
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+exported 2636 tracks/vias
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish.dsn
+wiring entries protected: 2475 (was 2475 routable)
+layer decls changed to power : 2
+In1/In2 wire_keepouts removed: 2
+=== freerouting 23:08:26 ===
+2026-09-11 23:08:27.272 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 23:08:27.321 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 23:08:28.688 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-11 23:08:28.950 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 23:08:30.696 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-11 23:08:30.703 [main] WARN  The normalization of net '+3V3_DC' failed.
+=== freerouting done 23:24:36 ===
+NO SES from the finishing pass
+   MAIN     172 pads
+
+KiCad unconnected count on the whole board: 2
+Found 22 violations
+Found 2 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/QuadPreRecorder-drc.rpt
+=== FINISH C3B DONE 23:24:44 ===

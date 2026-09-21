@@ -1,0 +1,71 @@
+=============================================================
+PCBWAY ORDER - PASTE-READY NOTES  (Rev B, Hammond 1590XX, 2-layer)
+Generated 2026-09-06 from the routed board (DRC 0/0/0, ERC 0/0)
+=============================================================
+
+Upload file:
+  hardware\manufacturing\QuadPreRecorder-RevB-PCBWay-handoff.zip
+  (or just QuadPreRecorder-RevB-Gerbers.zip for a bare-board quote)
+
+Use the "Quick Order (Upload files & checkout)" button on the PCB
+Instant Quote page. The zip auto-detects 2 layers and 138 x 114 mm.
+
+-------------------------------------------------------------
+AFTER UPLOAD, CHECK / CHANGE THESE
+-------------------------------------------------------------
+  Layers .................. 2
+  Size .................... 138 x 114 mm (9 mm chamfered corners)
+  Quantity ................ 5 (PCBWay minimum for assembly)
+  Material / thickness .... FR-4, 1.6 mm
+  Copper .................. 1 oz
+  Min track / spacing ..... 8 / 6 mil is plenty (board is 0.20 / 0.15 mm)
+  Min hole ................ 0.4 mm (board minimum via drill is 0.40 mm)
+  Solder mask / silk ...... Green / white
+  Surface finish .......... HASL lead-free (defaults to leaded) or ENIG
+  Via process ............. Tenting vias (default)
+  Assembly Service ........ tick the checkbox
+     - Turnkey (PCBWay supplies parts by MPN)
+     - Board type: Single pieces
+     - Assembly side(s): BOTH SIDES   <- defaults to Top only!
+     - Quantity: 5
+     - "Accept alternatives/substitutes?" -> NO for the ICs
+       (U1, U4-U7, U9, U10); generic R/C substitutes are fine
+
+-------------------------------------------------------------
+PASTE INTO "Detailed information of assembly"
+-------------------------------------------------------------
+Two-sided assembly, 175 placements (112 top, 63 bottom), mixed SMT
+and through-hole. BOM and centroid files: QuadPreRecorder-BOM.csv and
+QuadPreRecorder-CPL-PCBWay.csv (KiCad coordinate convention, Y negative
+= downward). DNP: R5, R38-R41 (listed in BOM as DNP, not in CPL).
+
+U8 (BOTTOM side) is a socketed sub-assembly - see
+QuadPreRecorder-BOM-extras.csv: solder TWO Samtec SLW-124-01-G-S
+low-profile 1x24 female socket strips into the U8 footprint (the two
+24-pin rows, 17.78 mm apart), then plug a PJRC TEENSY41_PINS (Teensy
+4.1 with pins pre-soldered) into the sockets with its microSD slot
+toward the board edge marked "SD CARD SLOT THIS EDGE". If you cannot
+source PJRC parts, quote the sockets only and we will supply the
+Teensy. TEENSY41_NE_PINS (no Ethernet chip) is acceptable.
+
+J3 is a bare 1x14 2.54 mm header - do NOT solder a display to it. We
+would like you to quote and ship LOOSE (not fitted) the off-board
+items in QuadPreRecorder-BOM-extras.csv: LCDWiki MSP3520 3.5in
+capacitive-touch TFT module, 4x M3x10 standoffs + screws, a 9 VDC 1 A
+regulated adapter with 5.5x2.1 mm CENTER-POSITIVE plug (US), two
+push-on knobs for 6 mm 18-spline knurled shafts, and one Omron B32
+keycap for the B3F-5150. If any of these are unavailable, quote the
+rest and we will supply them.
+
+J6/J7 are 2x13 2.54 mm pin headers. Please do not substitute the
+electret ESD diodes with high-capacitance TVS parts, and do not
+substitute the Neutrik, Alps, E-Switch, CUI or Amphenol connectors/
+controls with look-alikes ("accept substitutes" = NO for those);
+generic R/C substitutes of equal value/package/rating are fine.
+Keep each four-resistor 0.1% set (matched channel resistors) from one
+lot. Verify pin-1 orientation of U1, U4-U7, U9, U10 against the
+assembly PDFs (QuadPreRecorder-assembly-top.pdf / -bottom.pdf).
+Fiducials: three 1 mm fiducials per side (not in BOM/CPL).
+
+REMINDERS: Assembly side(s) = BOTH SIDES (form defaults to Top only).
+Assembly minimum is 5 boards - the quote is for five populated units.

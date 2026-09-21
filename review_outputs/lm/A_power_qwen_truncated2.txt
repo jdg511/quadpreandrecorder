@@ -1,0 +1,30 @@
+[reasoning only, truncated]
+quires CC resistors? Not in packet? Maybe missing CC pull-downs? But not asked? Could be missing parts. USB-C 5V source? It says USB-C 5V. If board is sink, needs CC5/CC1 5.1k to GND for 5V. Not listed. Could be missing. But maybe not in power packet? Need find real errors. Could flag NOTE/SHOULD FIX: USB-C CC pins not shown; if intended as 5V sink, missing CC1/CC5 5.1k to GND and ESD. But user says focus values, rails, polarities, missing parts. This is missing part. But maybe not enough? Need concrete: J9 VBUS pins listed, no CC pins in rail membership. Could be blocker if USB-C not functional. But maybe CC handled elsewhere not in packet? Packet is power, but USB-C VBUS only. Need flag as missing if no CC. But don't overreach? It says USB-C 5 V. For USB-C receptacle, VBUS only won't work without CC resistors. So SHOULD FIX/BLOCKER? If board expects USB-C 5V, missing CC pull-downs is a real error. But maybe not in packet? We can say not visible in packet; if absent, blocker. Need be concrete: J9.A4/A9/B4/B9 to VBUS, no J9.A5/A13/B5/B13 CC nets in rail membership. But user says don't recall pinouts? USB-C pinout is standard? They said don't try to recall IC pinouts from memory; USB-C not IC? Could still flag. But maybe avoid if not in packet? It says missing parts. We can flag.
+
+- USB-C VBUS F2 2A PTC, D10 B340A. B340A is 30V 1A? B340A Schottky 1A 30V. USB 2A through 1A diode? If USB-C 5V 2A, B340A max 1A continuous? That's a violation. B340A is 1A. F2 2A PTC, D10 1A. If USB source can deliver 2A, diode may overheat. Need flag. Also D1 barrel 750mA PTC, B340A 1A okay. D14 battery maybe 0.74A charge? But battery discharge through D14 maybe load current? If system draws >1A? B340A 1A. Need flag. B340A is 1A, 30V. If USB 2A, not enough. Could be blocker.
+
+- OR-ing diodes: D1, D10, D14 B340A. B340A forward drop ~0.3-0.4. VBOOST_IN from USB 5V -> 4.6. OK. But if battery 4.2 -> 3.8. If boost min 4.4? issue.
+
+- Boost output +10V5: R80 75k/R81 10k, 1.229*(1+75/10)=1.229*8.5=10.4465. OK. But TPS61175? Need check feedback resistor max? Not given. R80 75k maybe high? Could be okay. Need not recall.
+
+- Boost frequency R82 80.6k ~1.2MHz. OK.
+
+- Boost compensation: R79 10k, C80 4.7n, C81 47p. zero 1/(2pi R C) = 1/(2pi*10k*4.7n)=3386 Hz. pole? C81 47p with R79? 1/(2pi*10k*47p)=338.6 kHz. They say zero 3.4 kHz, pole 340 kHz. OK. But type II? fine.
+
+- LDO +9V: R130 130k/R131 20k, 1.2*(1+130/20)=1.2*7.5=9.0. OK. ADP7142? Need check feedback resistor max? 130k maybe high? Not given. Dropout at 40mA <<1.45V headroom. Input +10V5 10.45, output 9, headroom 1.45. ADP7142 dropout? maybe 100mV? OK. Dissipation 1.45*25-40mA=36-58mW. OK.
+
+- Buck +5V: R1 680k/R2 130k, 0.8*(1+680/130)=0.8*6.2308=4.9846. OK. But TPS62160? Feedback resistor max? 680k maybe high? Not given. C4 22p feed-forward. OK.
+
+- Buck PG pull-up R3 100k to +5V. BUCK_PG unused elsewhere. OK.
+
+- 3.3V LDOs: U2, U14 fixed. TPS7A2033: EN tied to IN, 1uF in / 4.7uF out (C7/C8, C95/C96). Need check rail membership: +3V3_A pins include C8.1, C41.1, C42.1, C54.1, C55.1, C64.1, U2.5, U7.8, U9.1/8. +3V3_DC includes C44.1, C45.1, C56.1, C96.1, TP12.1, U7.13/14, U9.20, U14.5. Where are C7/C8/C95/C96? C7 is +5V? +5V list includes C7.1. C8 is +3V3_A. C95 +5V, C96 +3V3_DC. So U2 input C7 1uF? output C8 4.7uF? OK. U14 input C95, output C96. OK.
+
+- VREF: U3 TLE2426 rail splitter from +9V fixed 1/2 4.50V. +9V pins include U3.3. VREF pins include U3.1. TLE2426? Pin 1 OUT, pin 3 V+? Pin 2 NR? They say C9 1uF on NR pin, C10 47uF + C11 100nF on OUT. But rail membership VREF includes C10.1, C11.1, C105.2, C106.2, C107.2, C108.2, many R.x.2, U3.1. +9V includes U3.3. Where is C9? Not listed in VREF or +9V? C9 maybe NR pin? If C9 1uF on NR pin, NR pin should be mid? For TLE2426, NR pin is noise reduction, connected to output? Actually TLE2426 is rail splitter: pin 1 OUT, pin 2 NR, pin 3 V+, pin 4 GND? If NR pin should be connected to OUT? Or maybe NR is noise reduction pin, connect cap to GND? Need not recall IC pinouts. But packet says C9 1uF on NR pin. Rail membership doesn't list C9 anywhere. Could be missing? It says VREF (27 pins) includes C10.1, C11.1, ... U3.1. No C9. +9V includes U3.3. GND not listed. If C9 is on NR pin, where is NR pin? Not listed. Could be contradiction: C9 not in any rail membership. But maybe C9 is on NR pin which is not a supply rail? It should be connected to VREF? If NR pin is output? Need not recall. But packet says C9 1uF on NR pin, C10/C11 on OUT. If C9 not listed, maybe missing net? Could flag as inconsistency: C9 absent from rail membership despite being specified. But maybe C9 is on NR pin which is not a rail? It should be a net. Need concrete: section 10 says C9 1 uF on NR pin, but section 3 lists no C9 pin on VREF, +9V, or GND. That's a packet contradiction. Could be SHOULD FIX.
+
+- Mic bias filter: R67 100R, C66 100uF, fc=1/(2pi*100*100u)=15.9Hz. OK. Bias current: 1.9mA x4 max through 100R = 0.76V drop worst case. Wait 1.9mA x4 = 7.6mA, through 100R = 0.76V. OK. But electret bias current row: R6-R9 4.7k, (9 - Vcap)/4.7k ~0.5-0.9mA. If Vcap ~? 9-? If 4.7k from +9V_MIC to capsule. If capsule FET typical 0.5mA, voltage drop 2.35V, Vcap ~6.65. Current 0.5. OK. But +9V_MIC rail membership: C66.1, R6.1, R7.1, R8.1, R9.1, R67.2, R104.1. R67.2 is +9V_MIC? R67 100R from Q6/Q8 to C66? If R67.2 is +9V_MIC, R67.1 likely Q6/Q8? OK. R104 100k bleed to +9V_MIC? It says R104 100k bleed. If R104.1 +9V_MIC, other to GND? OK.
+
+- Mic bias bleed: R104 100k, C66 100uF tau=10s. Bias falls to 1V in ~22s after switching off. Let's check: tau=RC=100k*100u=10s. From 9V to 1V: V=9e^{-t/10}; t=-10 ln(1/9)=21.97s. OK.
+
+- VBUS sense: R77 100k, R78 47k, 5*47/147=1.60V. OK. But VBUS rail membership includes R77.1. R78? Not listed? Probably to GND. OK. Teensy ADC 3.3 max, 1.6 OK.
+
+- Battery sense: R89 1M, R90 1M, C89 100n, 4.2/2=2.10V. OK. RC 1M*100n=0.1s? Wait 1M * 100n = 0.1 s, not 0.05 s. They say RC 0.05 s. If two 1M in series? The sense node between R89/R90, C89

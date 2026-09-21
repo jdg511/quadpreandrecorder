@@ -1,0 +1,80 @@
+﻿
+34 connections to close
+[ok]   BRU_CFB      (73.80,61.66)->(74.67,86.08) 18 seg 4 via, 0s, margin 9
+[ok]   HP_ENABLE    (75.24,4.08)->(78.10,9.48) 15 seg 0 via, 0s, margin 5
+   (verify failed on a segment at (80.74,44.43); retrying with a larger box)
+   (verify failed on a segment at (80.74,44.43); retrying with a larger box)
+   (verify failed on a segment at (80.74,44.43); retrying with a larger box)
+[FAIL] I2C_SDA      (75.24,42.18)->(81.00,44.17)  PTH pad 18 [I2C_SDA] of U8 | Track [I2C_SDA] on F.Cu, length 2.1937 
+mm
+[ok]   I2C_SCL      (75.24,44.72)->(74.83,43.52) 6 seg 0 via, 0s, margin 5
+[ok]   I2C_SCL      (75.24,44.72)->(80.43,43.82) 8 seg 0 via, 0s, margin 5
+[ok]   +3V3_D       (76.62,5.24)->(90.92,17.22) 8 seg 1 via, 0s, margin 5
+[FAIL] +3V3_D       (95.17,40.00)->(75.24,57.42)  Track [+3V3_D] on B.Cu, length 1.0362 mm | PTH pad 3V3B [+3V3_D] of 
+U8
+[ok]   CHG_STAT_N   (75.24,39.64)->(82.40,42.18) 12 seg 0 via, 0s, margin 5
+[ok]   COLD_CTRL    (76.63,30.63)->(75.24,24.40) 4 seg 1 via, 0s, margin 5
+[ok]   VBUS_SENSE   (75.24,34.56)->(79.54,18.05) 20 seg 1 via, 0s, margin 5
+[FAIL] SPI_SCK      (76.40,33.40)->(75.24,29.48)  Track [SPI_SCK] on F.Cu, length 25.6729 mm | PTH pad 13 [SPI_SCK] of 
+U8
+[ok]   CTP_RST      (72.66,38.70)->(75.24,32.02) 15 seg 1 via, 0s, margin 5
+[ok]   TOUCH_IRQ    (75.24,52.34)->(68.84,45.94) 2 seg 0 via, 0s, margin 5
+[ok]   NAV_PUSH     (79.60,28.76)->(75.24,21.86) 9 seg 2 via, 0s, margin 5
+[FAIL] NAV_ENC_A    (60.00,19.32)->(74.51,38.27)  PTH pad 26 [NAV_ENC_A] of U8 | Track [NAV_ENC_A] on F.Cu, length 
+17.7636 mm
+[FAIL] NAV_ENC_A    (74.51,38.27)->(75.02,66.96)  Track [NAV_ENC_A] on F.Cu, length 17.7636 mm | Track [NAV_ENC_A] on 
+B.Cu, length 11.3734 mm
+[ok]   NAV_DOWN     (78.04,19.58)->(75.24,14.24) 10 seg 1 via, 0s, margin 5
+   (verify failed on a segment at (95.81,26.46); retrying with a larger box)
+   (verify failed on a segment at (95.81,26.46); retrying with a larger box)
+   (verify failed on a segment at (95.81,26.46); retrying with a larger box)
+[FAIL] NAV_DOWN     (95.81,26.46)->(76.08,65.67)  Track [NAV_DOWN] on B.Cu, length 9.4780 mm | Track [NAV_DOWN] on 
+B.Cu, length 7.9930 mm
+   (verify failed on a segment at (80.16,26.78); retrying with a larger box)
+   (verify failed on a segment at (80.16,26.78); retrying with a larger box)
+   (verify failed on a segment at (80.16,26.78); retrying with a larger box)
+[FAIL] NAV_RIGHT    (80.16,26.78)->(75.24,19.32)  Track [NAV_RIGHT] on F.Cu, length 34.6681 mm | PTH pad 39 
+[NAV_RIGHT] of U8
+[ok]   NAV_UP       (80.73,17.37)->(75.24,11.70) 13 seg 2 via, 0s, margin 5
+[ok]   NAV_UP       (90.46,63.66)->(95.36,32.00) 34 seg 1 via, 2s, margin 14
+[ok]   NAV_LEFT     (78.76,30.95)->(75.24,16.78) 25 seg 4 via, 0s, margin 5
+   (verify failed on a segment at (79.39,63.39); retrying with a larger box)
+   (verify failed on a segment at (79.39,63.39); retrying with a larger box)
+   (verify failed on a segment at (79.39,63.39); retrying with a larger box)
+[FAIL] NAV_LEFT     (79.39,63.39)->(78.76,30.95)  Track [NAV_LEFT] on B.Cu, length 4.7996 mm | Track [NAV_LEFT] on 
+F.Cu, length 29.8654 mm
+[FAIL] BRU_PRE      (73.14,61.51)->(74.32,97.79)  Track [BRU_PRE] on B.Cu, length 3.5077 mm | Track [BRU_PRE] on B.Cu, 
+length 0.2417 mm
+[ok]   GAIN_SW      (81.99,17.71)->(75.72,66.24) 21 seg 3 via, 1s, margin 5
+[ok]   BAT_SENSE    (75.24,37.10)->(78.14,39.28) 6 seg 1 via, 0s, margin 5
+[FAIL] REC_LED      (75.24,9.16)->(75.37,66.81)  PTH pad 35 [REC_LED] of U8 | Track [REC_LED] on B.Cu, length 9.5683 mm
+[FAIL] ADC_DOUT2    (76.93,33.40)->(72.31,38.02)  Track [ADC_DOUT2] on F.Cu, length 20.5718 mm | Track [ADC_DOUT2] on 
+F.Cu, length 6.2480 mm
+   (verify failed on a segment at (79.74,42.05); retrying with a larger box)
+   (verify failed on a segment at (79.74,42.05); retrying with a larger box)
+   (verify failed on a segment at (79.74,42.05); retrying with a larger box)
+[FAIL] ADC_BCLK     (75.24,49.80)->(79.95,41.70)  PTH pad 21 [ADC_BCLK] of U8 | Track [ADC_BCLK] on B.Cu, length 
+4.6371 mm
+   (verify failed on a segment at (80.30,41.85); retrying with a larger box)
+   (verify failed on a segment at (80.30,41.85); retrying with a larger box)
+   (verify failed on a segment at (80.30,41.85); retrying with a larger box)
+[FAIL] ADC_MCLK     (80.30,41.85)->(75.24,54.88)  Track [ADC_MCLK] on B.Cu, length 5.4190 mm | PTH pad 23 [ADC_MCLK] 
+of U8
+[ok]   TEENSY_VIN   (74.58,65.70)->(75.24,62.50) 4 seg 0 via, 0s, margin 5
+[FAIL] ADC_TDM      (72.22,39.64)->(75.96,35.90)  Track [ADC_TDM] on F.Cu, length 12.2163 mm | Track [ADC_TDM] on 
+F.Cu, length 17.4326 mm
+[ok]   DAC_MUTE     (82.00,11.70)->(75.24,6.62) 16 seg 4 via, 0s, margin 5
+[FAIL] ADC_LRCLK    (79.59,40.55)->(75.24,47.26)  Track [ADC_LRCLK] on B.Cu, length 4.6371 mm | PTH pad 20 [ADC_LRCLK] 
+of U8
+done 19/34, board saved
+
+
+
+zones refilled: 20
+
+
+Found 2 violations
+Found 15 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-teensyfix3.json
+ASTAR DONE

@@ -1,0 +1,73 @@
+The user wants a review of a KiCad design packet containing three components: U2 (TPS7A2033PDBV), U14 (TPS7A2033PDBV), and U3 (TLE2426ID).
+
+**Constraints:**
+1.  Role: Senior mixed-signal hardware reviewer.
+2.  Task: Find real errors (wrong values, pins, rails, unsafe conditions, datasheet violations, layout risks).
+3.  Rules:
+    *   Concrete citations (row, part, pin, net).
+    *   No restating design.
+    *   No generic advice.
+    *   If fine, say so in one line.
+    *   Rank: BLOCKER / SHOULD FIX / NOTE.
+    *   Check arithmetic.
+    *   Plain text, no markdown tables.
+    *   No em dashes.
+    *   Do not recall IC pinouts from memory; rely on the provided tables. Only flag pins if the packet contains a contradiction (e.g., pin function doesn't fit net, or two rows disagree).
+    *   Focus on values, rails, polarities, missing parts, arithmetic, layout.
+    *   Max 8 items.
+    *   1-3 lines per item.
+    *   If relying on uncertain datasheet limit, write VERIFY.
+
+**Analysis of U2 (TPS7A2033PDBV):**
+*   Part: 3.3V LDO.
+*   Pin 1 (IN): +5V.
+*   Pin 2 (GND): GND.
+*   Pin 3 (EN): +5V. (Tied to IN, acceptable per datasheet note in packet).
+*   Pin 4 (NC): NO_CONNECT.
+*   Pin 5 (OUT): +3V3_A.
+*   Caps: C7 (1uF) on IN, C8 (4.7uF) on OUT.
+*   Check: TPS7A2033 is a 3.3V fixed output LDO. Input 5V is within range (max 6.5V typically, min 3.6V). Output 3.3V is correct.
+*   Potential Issue: The packet says "1 uF in (C7), 4.7 uF out (C8)".
+    *   TI TPS7A2033 datasheet typically requires a 1uF or larger ceramic cap on the output for stability. 4.7uF is fine.
+    *   Input cap 1uF is fine.
+    *   Wait, let's look at the "Other ends of that net" for Pin 1 (IN) and Pin 3 (EN).
+    *   Pin 1 (IN) net +5V includes: C4.1, C5.1, C6.1, C7.1, C61.1, C65.1, C95.1, D3.2 (A), D13.1 (K), J3.1 (Pin_1), K1.1, L1.2, Q8.2 (S), R1.1...
+    *   Pin 3 (EN) net +5V includes the exact same list. This is consistent with EN tied to IN.
+    *   Is there a problem with the input rail? +5V is the input.
+    *   Is there a problem with the output rail? +3V3_A.
+    *   Let's check the caps. C7 is on IN. C8 is on OUT.
+    *   The packet states: "Matches; 1 uF in (C7), 4.7 uF out (C8)."
+    *   Wait, look at the "Other ends" for Pin 5 (OUT) +3V3_A: C8.1, C41.1, C42.1, C54.1, C55.1, C64.1, U7.8 (AVDD), U9.1 (CPVDD), U9.8 (AVDD).
+    *   C8 is listed as C8.1. This implies C8 is a 2-pin cap, pin 1 connected to OUT. Pin 2 should be GND.
+    *   Let's check C8 in the GND net (Pin 2).
+    *   Pin 2 (GND) net GND includes: C1.2, C2.2, C3.2, C5.2, C6.2, C7.2, C8.2, C9.2...
+    *   So C8.2 is on GND. This is correct polarity for a cap (assuming C8.1 is positive/anode side or just pin 1).
+    *   However, C7 is on IN (+5V). Pin 1 net +5V includes C7.1.
+    *   Pin 2 net GND includes C7.2.
+    *   So C7 is between +5V and GND. Correct.
+    *   C8 is between +3V3_A and GND. Correct.
+    *   Are there any contradictions?
+    *   U2 Pin 1 (IN) is +5V. U2 Pin 3 (EN) is +5V.
+    *   U14 Pin 1 (IN) is +5V. U14 Pin 3 (EN) is +5V.
+    *   U3 Pin 3 (IN) is +9V.
+    *   Let's look at U3 (TLE2426ID).
+    *   TLE2426 is a rail splitter. It takes a single supply (IN) and creates a virtual ground (COMMON) and a positive rail (OUT) relative to that virtual ground? Or does it split a dual supply?
+    *   TLE2426 datasheet: "The TLE2426 is a rail splitter... It allows a single supply to be used to power circuits that require a dual supply."
+    *   Pin 3 is IN (Input Supply). Pin 2 is COMMON (Virtual Ground). Pin 1 is OUT (Positive Output).
+    *   Wait, the TLE2426 typically has an input range of 3.6V to 12V (or similar).
+    *   The packet says: "TLE2426ID rail splitter. Datasheet: 1 OUT, 2 COMMON, 3 IN, 4-7 NC, 8 NR (noise-reduction cap C9 1 uF). Matches."
+    *   Pin 3 (IN) is connected to +9V.
+    *   Pin 2 (COMMON) is connected to GND.
+    *   Pin 1 (OUT) is connected to VREF.
+    *   Pin 8 (NR) is connected to VREF_NR (C9.1).
+    *   Let's check the function. If IN is +9V and COMMON is GND, then OUT should be +4.5V (half of 9V).
+    *   The net name is "VREF". This suggests it's a reference voltage.
+    *   Is it okay to connect COMMON to GND? Yes, that's how you use it to generate a mid-rail from a single supply.
+    *   However, the TLE2426 has a specific requirement for the NR pin. The NR pin is for a capacitor to the COMMON pin? Or to GND?
+    *   TI TLE2426 datasheet: "Pin 8 (NR) is the noise reduction pin. A capacitor should be connected from this pin to the COMMON pin (Pin 2) to reduce noise."
+    *   Let's check the packet for U3 Pin 8.
+    *   Pin 8 (NOISE_REDUCTION) net is VREF_NR.
+    *   Other ends of VREF_NR: C9.1.
+    *   Where is C9.2?
+    *   Look at U3 Pin 2 (COMMON) net GND.
+    *  

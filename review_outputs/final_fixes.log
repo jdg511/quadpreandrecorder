@@ -1,0 +1,98 @@
+﻿=== inner layers typed as power planes ===
+(4 "In1.Cu" signal)
+(6 "In2.Cu" signal)
+=== +3V3_A: run the C42.1 entry to the pad centre ===
+ok  seg B.Cu (85.62,48.27)-(85.62,47.40) 0.9 mm
++3V3_A: 1 segments, 0 vias added
+=== CHASSIS: re-seat the F.Cu link on the exact stub end ===
+CHASSIS items removed in box: 1
+ok  seg F.Cu (38.41,103.22)-(38.54,103.35) 0.2 mm
+CHASSIS: 1 segments, 0 vias added
+=== thermal vias: U13 EP (5) and U11 EP (5) ===
+python.exe : via GND at (129.50,16.50) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (129.50,16.50) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (129.00,16.00) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (129.00,16.00) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (130.00,16.00) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (130.00,16.00) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (129.00,17.00) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (129.00,17.00) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (130.00,17.00) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (130.00,17.00) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (8.50,29.55) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (8.50,29.55) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (9.50,29.55) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (9.50,29.55) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (10.50,29.55) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (10.50,29.55) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (8.50,33.45) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (8.50,33.45) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+python.exe : via GND at (9.90,33.45) not legal
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\final_check_fixes.ps1:18 char:3
++   & $py tools\add_via.py GND $xy[0] $xy[1] 2>&1 | Out-File -Encoding  ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (via GND at (9.90,33.45) not legal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+=== refill zones ===
+zones refilled: 20
+=== GND clusters ===
+GND pad clusters: 1
+   MAIN     184 pads
+
+KiCad unconnected count on the whole board: 0
+CHASSIS: 1 clusters
++3V3_A: 1 clusters
+=== DRC ===
+
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+
+
+DONE

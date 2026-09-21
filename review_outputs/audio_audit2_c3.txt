@@ -1,0 +1,82 @@
+﻿==========================================================================
+STACKUP
+==========================================================================
+  (stackup query failed: 'SwigPyObject' object has no attribute 'GetList')
+
+==========================================================================
+EXACT PAD COORDINATES - audio ICs (mm)
+==========================================================================
+
+U7  side=TOP  origin=(83.50, 49.50)  rot=0
+   pin 7    ( 80.638,  49.000)  GND
+   pin 8    ( 80.638,  49.500)  +3V3_A
+   pin 11   ( 80.638,  51.000)  ADC_LDO
+   pin 12   ( 80.638,  51.500)  GND
+   pin 13   ( 80.638,  52.000)  +3V3_DC
+   pin 14   ( 80.638,  52.500)  +3V3_DC
+   pin 25   ( 86.362,  48.500)  GND
+   pin 26   ( 86.362,  48.000)  GND
+
+U9  side=TOP  origin=(100.00, 50.00)  rot=0
+   pin 1    ( 97.138,  47.075)  +3V3_A
+   pin 3    ( 97.138,  48.375)  GND
+   pin 8    ( 97.138,  51.625)  +3V3_A
+   pin 9    ( 97.138,  52.275)  GND
+   pin 10   ( 97.138,  52.925)  GND
+   pin 11   (102.862,  52.925)  GND
+   pin 12   (102.862,  52.275)  GND
+   pin 16   (102.862,  49.675)  GND
+   pin 18   (102.862,  48.375)  DAC_LDO
+   pin 19   (102.862,  47.725)  GND
+   pin 20   (102.862,  47.075)  +3V3_DC
+
+U10  side=TOP  origin=(112.00, 56.00)  rot=0
+   pin 3    (110.037,  56.000)  GND
+   pin 9    (112.500,  57.962)  GND
+   pin 10   (113.000,  57.962)  GND
+   pin 12   (113.963,  56.500)  +5V
+   pin 13   (113.963,  56.000)  GND
+   pin 19   (111.500,  54.038)  GND
+   pin 20   (111.000,  54.038)  +5V
+   pin 21   (112.000,  56.000)  GND
+
+==========================================================================
+U10 EXPOSED PAD (pin 21) - vias inside it?
+==========================================================================
+  EP centre (112.000, 56.000)  size 2.70 x 2.70 mm
+    via inside EP at (111.100, 56.000) net=GND
+    via inside EP at (112.900, 55.100) net=GND
+    via inside EP at (112.900, 56.000) net=GND
+    via inside EP at (112.000, 56.000) net=GND
+    via inside EP at (112.000, 55.100) net=GND
+    via inside EP at (112.900, 56.900) net=GND
+    via inside EP at (111.100, 56.900) net=GND
+    via inside EP at (112.000, 56.900) net=GND
+    via inside EP at (111.100, 55.100) net=GND
+  vias inside the exposed pad: 9
+  TI datasheet asks for a via array in this pad (it is the amp's
+  ground return AND its only heat path).
+
+==========================================================================
+CROSSTALK - PARALLEL RUNS ONLY (crossings at an angle are benign)
+==========================================================================
+
+  par_mm    gap_mm  clock net      analog net     mode
+  11.33     0.171   ADC_BCLK       BRU_ADC        same-layer
+  9.50      0.899   ADC_BCLK       HP_INP_L       same-layer
+  6.11      0.522   ADC_BCLK       FLU_ADC        same-layer
+  5.59      0.241   DAC_BCLK       BRU_ADC        same-layer
+  5.42      0.592   DAC_DIN        BRU_ADC        same-layer
+  5.28      0.954   DAC_DIN        FLU_ADC        same-layer
+  5.28      0.602   DAC_BCLK       FLU_ADC        same-layer
+  4.87      0.860   ADC_MCLK_IC    DAC_L          same-layer
+  4.02      0.472   I2C_SCL        FRD_ADC        same-layer
+  2.01      0.679   ADC_MCLK_IC    BRU_ADC        same-layer
+  1.64      0.855   DAC_DIN        BLD_PRE        same-layer
+  1.64      0.503   DAC_DIN        BRU_PRE        same-layer
+  1.09      0.958   ADC_LRCLK      ADC_MICBIAS    same-layer
+  0.79      0.495   DAC_BCLK       FRD_ADC        same-layer
+
+  14 parallel clock/analog pairs total
+  total parallel length, broadside In2/B : 0.0 mm
+  total parallel length, same layer      : 64.6 mm

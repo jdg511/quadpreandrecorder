@@ -1,0 +1,23 @@
+=== freerouting start 13:37:14 ===
+2026-09-08 13:37:14.510 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 13:37:14.558 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 13:37:15.908 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-08 13:37:16.098 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 13:37:37.885 [Thread-29] INFO  Starting auto-routing...
+2026-09-08 13:41:58.112 [Thread-29] INFO  Auto-routing was completed in 4 minute(s) 20.23 seconds.
+2026-09-08 13:41:58.215 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-08 13:42:47.332 [Thread-29] INFO  Route optimization was completed in 49.12 seconds.
+2026-09-08 13:42:47.348 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+=== freerouting done 13:42:47 ===
+=== import_route ===
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+Tracks/vias: 3063; zones: 21
+=== cleanup_board (fills zones) ===
+C:\Users\Jason\Documents\quadpreandrecorder\hardware\QuadPreRecorder.kicad_pcb
+=== DRC ===
+Found 7 violations
+Found 42 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/QuadPreRecorder-drc.rpt
+DRC exit: 0
+=== ALL DONE 13:42:58 ===

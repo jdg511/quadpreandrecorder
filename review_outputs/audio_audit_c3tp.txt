@@ -1,0 +1,140 @@
+﻿tracks=3050 vias=523 pads=924
+
+==========================================================================
+CHECK 1 - AGND/DGND pin ties and plane access
+==========================================================================
+
+U10  TPA6130A2   headphone amp   6 ground pads, all on net GND
+     U10.3    nearest GND via  1.06 mm
+     U10.9    nearest GND via  0.73 mm
+     U10.10   nearest GND via  0.63 mm
+     U10.13   nearest GND via  1.06 mm
+     U10.19   nearest GND via  0.73 mm
+     U10.21   nearest GND via  0.00 mm
+     worst pad-to-via on U10: 1.06 mm
+
+U2   TPS7A2033   +3V3_A LDO      1 ground pads, all on net GND
+     U2.2     nearest GND via  0.88 mm
+     worst pad-to-via on U2: 0.88 mm
+
+U3   TLE2426     VREF splitter   1 ground pads, all on net GND
+     U3.2     nearest GND via  1.20 mm
+     worst pad-to-via on U3: 1.20 mm
+
+U7   PCM1864DBT  4ch ADC         4 ground pads, all on net GND
+     U7.7     nearest GND via  1.16 mm
+     U7.12    nearest GND via  1.16 mm
+     U7.25    nearest GND via  1.16 mm
+     U7.26    nearest GND via  1.26 mm
+     worst pad-to-via on U7: 1.26 mm
+
+U9   PCM5102A    stereo DAC      7 ground pads, all on net GND
+     U9.3     nearest GND via  0.96 mm
+     U9.9     nearest GND via  0.96 mm
+     U9.10    nearest GND via  0.96 mm
+     U9.11    nearest GND via  0.96 mm
+     U9.12    nearest GND via  0.96 mm
+     U9.16    nearest GND via  0.96 mm
+     U9.19    nearest GND via  1.06 mm
+     worst pad-to-via on U9: 1.06 mm
+
+==========================================================================
+CHECK 2 - clock / serial-audio to analog-signal separation
+==========================================================================
+clock segments=318   analog segments=555
+
+201 segment pairs closer than 2.00 mm (edge to edge):
+
+  gap_mm  clock net      analog net     layer      mode             near xy
+  0.163   I2C_SDA        FLU_PAD        F.Cu       same-layer       43.3,40.9
+  0.289   ADC_TDM_IC     FRD_ADC        B.Cu       same-layer       82.7,64.1
+  0.437   ADC_MCLK       BLD_ADC        B.Cu       same-layer       77.8,52.3
+  0.452   ADC_TDM_IC     BRU_ADC        F.Cu       same-layer       83.3,60.4
+  0.452   DAC_DIN        BLD_ADC        F.Cu       same-layer       78.5,46.3
+  0.452   I2C_SCL        BLD_PRE        F.Cu       same-layer       58.1,52.9
+  0.470   ADC_MCLK       FRD_ADC        B.Cu       same-layer       77.8,52.3
+  0.483   I2C_SCL        FRD_AC         F.Cu       same-layer       33.7,48.5
+  0.495   ADC_LRCLK_IC   DAC_L          F.Cu       same-layer       91.7,48.3
+  0.503   I2C_SCL        BLD_PAD        F.Cu       same-layer       52.5,53.3
+  0.514   DAC_LRCLK_IC   DAC_R          F.Cu       same-layer       101.1,50.3
+  0.522   I2C_SCL        LINE_R         F.Cu       same-layer       106.6,61.9
+  0.640   ADC_TDM_IC     BLD_ADC        B.Cu       same-layer       82.7,64.1
+  0.640   ADC_MCLK_IC    FRD_ADC        B.Cu       same-layer       82.9,62.7
+  0.661   DAC_DIN        FLU_ADC        F.Cu       same-layer       76.4,50.6
+  0.661   I2C_SDA        FRD_AC         F.Cu       same-layer       43.3,40.9
+  0.775   I2C_SDA        HP_IN_R        F.Cu       same-layer       106.2,58.6
+  0.856   I2C_SCL        BLD_ADC        B.Cu       same-layer       77.8,46.4
+  0.859   DAC_LRCLK      BLD_ADC        F.Cu       same-layer       79.3,44.9
+  0.928   DAC_LRCLK_IC   DAC_R          B.Cu       same-layer       99.3,48.5
+  0.928   DAC_BCLK_IC    DAC_R          B.Cu       same-layer       100.6,49.5
+  0.930   DAC_BCLK_IC    DAC_R          F.Cu       same-layer       101.7,51.5
+  0.951   DAC_LRCLK_IC   DAC_L          F.Cu       same-layer       101.1,50.3
+  0.992   ADC_MCLK_IC    BLD_ADC        B.Cu       same-layer       82.9,62.7
+  1.075   I2C_SDA        LINE_R         F.Cu       same-layer       107.9,61.8
+  1.123   I2C_SCL        BRU_PAD        F.Cu       same-layer       45.0,51.0
+  1.149   DAC_BCLK       BRU_PRE        F.Cu       same-layer       64.2,49.8
+  1.167   ADC_BCLK_IC    DAC_L          F.Cu       same-layer       91.9,46.9
+  1.171   I2C_SDA        HP_INP_R       F.Cu       same-layer       106.2,58.6
+  1.239   I2C_SCL        FRD_PRE        F.Cu       same-layer       49.9,53.4
+  1.295   ADC_TDM_IC     BRU_ADC        B.Cu       same-layer       82.7,64.1
+  1.307   SPI_MOSI       VREF           F.Cu       same-layer       42.5,32.5
+  1.307   SPI_MOSI       VREF_NR        F.Cu       same-layer       42.5,32.5
+  1.311   I2C_SDA        FRD_PAD        F.Cu       same-layer       43.3,40.9
+  1.429   ADC_MCLK       ADC_VREF       B.Cu       same-layer       80.4,45.7
+  1.472   DAC_DIN        BRU_ADC        F.Cu       same-layer       78.5,46.3
+  1.536   I2C_SDA        HP_INP_L       F.Cu       same-layer       106.2,58.6
+  1.647   ADC_MCLK_IC    BRU_ADC        B.Cu       same-layer       82.9,62.7
+  1.683   DAC_DIN        FRD_ADC        F.Cu       same-layer       78.5,46.3
+  1.688   DAC_LRCLK      FLU_ADC        F.Cu       same-layer       79.3,44.9
+  1.690   I2C_SCL        HP_IN_R        F.Cu       same-layer       110.3,60.5
+  1.718   ADC_MCLK_IC    BRU_ADC        F.Cu       same-layer       80.6,53.4
+  1.726   ADC_MCLK_IC    FRD_ADC        F.Cu       same-layer       80.6,53.4
+  1.773   ADC_DOUT2_IC   DAC_L          F.Cu       same-layer       91.8,46.1
+  1.879   DAC_LRCLK      BRU_ADC        F.Cu       same-layer       79.3,44.9
+  1.981   ADC_MCLK_IC    DAC_R          B.Cu       same-layer       100.0,58.8
+  1.986   I2C_SCL        HP_OUT_R       F.Cu       same-layer       112.0,58.4
+
+(worst pair per net combination shown; 47 unique combinations)
+
+--- clock tracks passing near analog pads ---
+  0.032 mm  I2C_SCL        -> pad C57.2      (HP_IN_L) on B.Cu
+  0.167 mm  ADC_MCLK       -> pad U7.1       (BLD_ADC) on B.Cu
+  0.167 mm  ADC_MCLK       -> pad U7.2       (BRU_ADC) on B.Cu
+  0.167 mm  ADC_MCLK       -> pad U7.3       (FLU_ADC) on B.Cu
+  0.167 mm  ADC_MCLK       -> pad U7.4       (FRD_ADC) on B.Cu
+  0.167 mm  ADC_MCLK       -> pad U7.6       (ADC_VREF) on B.Cu
+  0.304 mm  I2C_SCL        -> pad C57.2      (HP_IN_L) on B.Cu
+  0.333 mm  ADC_TDM_IC     -> pad C58.1      (LINE_R) on B.Cu
+  0.436 mm  ADC_MCLK_IC    -> pad C57.1      (LINE_L) on B.Cu
+  0.582 mm  I2C_SDA        -> pad C57.1      (LINE_L) on B.Cu
+  0.743 mm  ADC_MCLK_IC    -> pad C86.1      (HP_INP_L) on B.Cu
+  0.761 mm  I2C_SDA        -> pad U4.1       (FRD_AC) on F.Cu
+  0.875 mm  I2C_SDA        -> pad C58.2      (HP_IN_R) on F.Cu
+  0.987 mm  I2C_SCL        -> pad C58.2      (HP_IN_R) on B.Cu
+  1.037 mm  ADC_MCLK_IC    -> pad C57.1      (LINE_L) on B.Cu
+  1.120 mm  I2C_SCL        -> pad U6.8       (BLD_PRE) on F.Cu
+  1.178 mm  ADC_MCLK       -> pad U7.6       (ADC_VREF) on B.Cu
+  1.206 mm  ADC_TDM_IC     -> pad C57.1      (LINE_L) on B.Cu
+  1.218 mm  DAC_DIN        -> pad U7.1       (BLD_ADC) on F.Cu
+  1.228 mm  I2C_SDA        -> pad C58.2      (HP_IN_R) on F.Cu
+
+==========================================================================
+CHECK 3 - supply pin to its nearest same-net decoupling capacitor
+==========================================================================
+  U7.8     +3V3_A   PCM1864 AVDD           nearest C41 at  1.40 mm
+  U7.13    +3V3_DC  PCM1864 DVDD           nearest C44 at  1.47 mm
+  U7.14    +3V3_DC  PCM1864 DVDD/IOVDD     nearest C44 at  1.39 mm
+  U7.11    ADC_LDO  PCM1864 LDO out        nearest C43 at  1.39 mm
+  U7.6     ADC_VREF PCM1864 VREF           nearest C40 at  1.60 mm
+  U9.1     +3V3_A   PCM5102A AVDD          nearest C54 at  1.34 mm
+  U9.8     +3V3_A   PCM5102A AVDD          nearest C64 at  1.34 mm
+  U9.20    +3V3_DC  PCM5102A DVDD          nearest C56 at  1.34 mm
+  U9.2     DAC_CAPP PCM5102A CAPP (flying cap) nearest C51 at  2.45 mm  <-- marginal
+  U9.5     DAC_VNEG PCM5102A VNEG          nearest C52 at  2.75 mm  <-- marginal
+  U10.18   HP_CPP   TPA6130A2 CPP (flying cap) nearest C59 at  1.84 mm
+  U10.15   HP_VSS   TPA6130A2 CPVSS        nearest C60 at  1.56 mm
+  U14.5    +3V3_DC  TPS7A2033 (digital) OUT nearest C96 at  3.30 mm  <-- too far
+  U14.1    +5V      TPS7A2033 (digital) IN nearest C95 at  5.34 mm  <-- too far
+  U9.18    DAC_LDO  PCM5102A LDO out       nearest C53 at  1.34 mm
+  U10.12   +5V      TPA6130A2 VDD          nearest C65 at  1.54 mm
+  U10.20   +5V      TPA6130A2 VDD          nearest C61 at  1.67 mm

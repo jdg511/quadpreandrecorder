@@ -1,0 +1,174 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-15T15:15:48",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error"
+    ],
+    "kicad_version": "10.0.4",
+    "schematic_parity": [],
+    "source": "QuadPreRecorder.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [LINE_MUTE] on B.Cu, length 1.6012 mm",
+                    "pos": {
+                        "x": 72.4694,
+                        "y": 61.3306
+                    },
+                    "uuid": "79b47be6-af56-4cab-9449-78409473ec93"
+                },
+                {
+                    "description": "Track [LINE_MUTE] on F.Cu, length 18.7142 mm",
+                    "pos": {
+                        "x": 97.5181,
+                        "y": 102.343
+                    },
+                    "uuid": "fc00723d-2d70-4597-9074-30fa74ec8ec2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [NAV_ENC_A] on F.Cu, length 17.7636 mm",
+                    "pos": {
+                        "x": 92.2689,
+                        "y": 38.2725
+                    },
+                    "uuid": "6ee549cb-fc5c-43a1-9830-54b62c7b8611"
+                },
+                {
+                    "description": "Track [NAV_ENC_A] on B.Cu, length 11.3734 mm",
+                    "pos": {
+                        "x": 83.0634,
+                        "y": 75.0001
+                    },
+                    "uuid": "75781fe3-a935-41f6-8411-d67879b6fead"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad D [NAV_LEFT] of SW4",
+                    "pos": {
+                        "x": 83.1999,
+                        "y": 72.0001
+                    },
+                    "uuid": "a8901fad-c9e0-484e-a3f1-441da0c9d52e"
+                },
+                {
+                    "description": "Track [NAV_LEFT] on F.Cu, length 28.9956 mm",
+                    "pos": {
+                        "x": 108.629,
+                        "y": 30.9477
+                    },
+                    "uuid": "c319f0be-5f8c-4f02-913e-b0bbd16cf077"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [GAIN_SW] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 81.9888,
+                        "y": 17.7113
+                    },
+                    "uuid": "76c4c93d-4237-4071-b96a-e4b7121cc874"
+                },
+                {
+                    "description": "Track [GAIN_SW] on B.Cu, length 6.3147 mm",
+                    "pos": {
+                        "x": 80.1898,
+                        "y": 70.7077
+                    },
+                    "uuid": "aaf10338-f5e9-4cd4-b713-6b21f6f3a613"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 16 [BAT_SENSE] of U8",
+                    "pos": {
+                        "x": 75.24,
+                        "y": 37.1
+                    },
+                    "uuid": "65900ab6-aee1-4387-9ac5-52b3a04b573e"
+                },
+                {
+                    "description": "Track [BAT_SENSE] on F.Cu, length 14.9645 mm",
+                    "pos": {
+                        "x": 78.1423,
+                        "y": 39.2777
+                    },
+                    "uuid": "5d9b0393-80ea-46ad-8cba-0b433766c9be"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 35 [REC_LED] of U8",
+                    "pos": {
+                        "x": 75.24,
+                        "y": 9.16
+                    },
+                    "uuid": "f1fb1cdc-d172-4e12-9feb-c626b5f4c5ba"
+                },
+                {
+                    "description": "Track [REC_LED] on B.Cu, length 9.5683 mm",
+                    "pos": {
+                        "x": 82.1387,
+                        "y": 73.5781
+                    },
+                    "uuid": "d5a1f855-1c56-4d2c-b0b9-ad2d8a9e531e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": []
+}

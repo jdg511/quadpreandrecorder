@@ -1,7 +1,15 @@
 param(
-    [string]$FreeroutingJar = "$PSScriptRoot\cache\freerouting-2.2.4.jar",
-    [int]$Passes = 40,
-    [int]$Threads = 12
+    # 2026-09-06: switched to Freerouting 1.9.0. Freerouting 2.2.4 reports the
+    # Rev B board routed but its .ses silently omits several nets' wires
+    # (ADC_LRCLK_IC, ADC_MICBIAS, DAC_BCLK_IC, HP_OUT_R + partial drops), which
+    # KiCad then reports as ~19 unconnected pads. 1.9.0 exports every net.
+    # 1.9.0 must run single-threaded (-mt 1): its multi-threaded optimizer is
+    # documented to create clearance violations. -oit 2.0 stops the (slow,
+    # single-threaded) optimizer once a pass improves the design by <2%.
+    [string]$FreeroutingJar = "$PSScriptRoot\cache\freerouting19.jar",
+    [int]$Passes = 100,
+    [int]$Threads = 1,
+    [double]$OptimizationThreshold = 2.0
 )
 
 $ErrorActionPreference = "Stop"
@@ -31,10 +39,10 @@ try {
     & $kicadPython tools\generate_footprints.py
     & $kicadCli sch export netlist -o $netlist hardware\QuadPreRecorder.kicad_sch
     & $kicadPython tools\generate_pcb.py
+    & python tools\check_panel_orientation.py
     & java -jar $FreeroutingJar `
         -de $dsn -do $ses `
-        --gui.enabled=false -mp $Passes -mt $Threads -da `
-        --logging.console.level=INFO --logging.file.enabled=false
+        -mp $Passes -mt $Threads -oit $OptimizationThreshold
     & $kicadPython tools\import_route.py
     & $kicadPython tools\cleanup_board.py
     & $kicadCli pcb drc --all-track-errors --schematic-parity --severity-error `

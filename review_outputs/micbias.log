@@ -1,0 +1,14 @@
+﻿U7.5 net cleared
+python.exe : Traceback (most recent call last):
+At C:\Users\Jason\Documents\quadpreandrecorder\tools\run_micbias.ps1:3 char:1
++ & $py tools\patch_c3_micbias.py 2>&1 | Out-File -Encoding utf8 review ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Jason\Documents\quadpreandrecorder\tools\patch_c3_micbias.py", line 29, in <module>
+swig/python detected a memory leak of type 'PCB_TRACK *', no destructor found.
+    if math.hypot(mm(s.x) - gx, mm(s.y) - gy) < 0.05 or math.hypot(mm(e.x) - gx, mm(e.y) - gy) < 0.05 or 
+t.GetNetname() == "ADC_MICBIAS":
+                     ^^^
+AttributeError: 'SwigPyObject' object has no attribute 'x'

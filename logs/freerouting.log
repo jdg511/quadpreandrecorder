@@ -1,0 +1,1851 @@
+2026-09-05 21:51:41.842 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 21:51:43.113 [main] INFO  Opening 'hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-05 21:51:43.405 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 21:52:04.065 [main] WARN  Multi-threaded route optimization is broken and it is known to generate clearance violations. It is highly recommended to use the single-threaded route optimization instead by setting the number of threads to 1 with the '-mt 1' command line argument.
+2026-09-05 21:52:04.068 [Thread-22] INFO  Starting auto-routing...
+2026-09-05 21:52:15.071 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 21:52:15.107 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 21:52:16.342 [main] INFO  Opening 'hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-05 21:52:16.524 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 21:52:37.239 [Thread-22] INFO  Starting auto-routing...
+2026-09-05 21:56:36.829 [Thread-22] INFO  Auto-routing was completed in 3 minute(s) 59.59 seconds.
+2026-09-05 21:56:36.931 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-05 22:16:08.617 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:23:27.416 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 22:23:27.459 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 22:23:28.725 [main] INFO  Opening 'hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-05 22:23:29.023 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 22:23:49.770 [Thread-22] INFO  Starting auto-routing...
+2026-09-05 22:27:22.681 [Thread-22] INFO  Auto-routing was completed in 3 minute(s) 32.91 seconds.
+2026-09-05 22:27:22.782 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-05 22:38:52.491 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:38:59.406 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:00.126 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:00.525 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:00.526 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:00.535 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:02.312 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:03.175 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:04.513 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:05.379 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:09.467 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:10.914 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:10.916 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:11.660 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:11.788 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:11.870 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:32.020 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:32.043 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:33.368 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:33.870 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:33.871 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:34.014 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:34.954 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:34.955 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:35.034 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:36.675 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:39:36.703 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:40:48.461 [Thread-22] INFO  Route optimization was completed in 13 minute(s) 25.68 seconds and it improved the design by ~51.66%.
+2026-09-05 22:40:48.480 [Thread-22] INFO  Saving 'hardware\review_outputs\QuadPreRecorder-routed-fr19b.ses'...
+2026-09-05 22:47:21.598 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 22:47:21.636 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 22:47:22.875 [main] INFO  Opening 'hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-05 22:47:23.139 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 22:47:32.025 [Thread-23] INFO  Starting auto-routing...
+2026-09-05 22:50:50.645 [Thread-23] INFO  Auto-routing was completed in 3 minute(s) 18.62 seconds.
+2026-09-05 22:50:50.747 [Thread-23] INFO  Starting route optimization on 1 thread...
+2026-09-05 22:51:22.983 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:27.571 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:28.519 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:29.466 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:31.469 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:31.484 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:36.031 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:36.047 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:37.620 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:37.622 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:38.537 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:38.538 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:51:43.124 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:55:13.596 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:55:14.866 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:55:42.211 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:55:43.040 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:55:43.410 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:55.243 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:55.244 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:55.245 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:55.248 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:55.265 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:57.393 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:57.394 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:57.395 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:57.398 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:57.412 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:59.277 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:56:59.395 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:00.974 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:01.052 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:51.740 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:52.014 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:52.015 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:52.017 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:52.512 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:52.924 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:52.925 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:52.927 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.339 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.340 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.343 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.683 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.684 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.687 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.788 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.788 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.790 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:53.791 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:56.566 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:59.061 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:59.600 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:59.602 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:59.605 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:57:59.622 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:00.794 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.031 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.032 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.035 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.467 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.469 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.530 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.532 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:01.534 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:02.263 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:02.264 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:02.265 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:02.266 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:02.268 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.303 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.303 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.305 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.305 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.307 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.470 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.472 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:03.475 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:04.343 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:04.847 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:05.200 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:05.202 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:05.205 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:05.751 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:05.752 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:05.755 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:08.441 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:08.443 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:08.446 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:11.187 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:14.351 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:14.352 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:14.355 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:15.121 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:15.123 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:15.126 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:29.450 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:29.452 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:29.456 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:31.811 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:31.814 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:31.820 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:31.877 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:32.743 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:32.745 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:32.751 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:34.491 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:34.494 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:34.496 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:34.670 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:35.820 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:35.822 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:35.824 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:38.907 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:38.908 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:38.913 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:40.710 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:42.191 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:42.192 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:42.196 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:44.861 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:44.863 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:44.868 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:46.058 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:46.060 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:46.061 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:47.793 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:47.795 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:47.800 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:47.994 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:47.995 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:47.998 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:52.563 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:52.564 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:52.566 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:56.883 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:56.884 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:56.884 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:56.889 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:56.892 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:59.186 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:59.188 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:58:59.193 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.544 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.546 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.550 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.877 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.878 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.879 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.882 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:00.884 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:03.617 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:03.618 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:03.619 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:03.624 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:03.626 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:05.496 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:05.498 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:05.499 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:06.218 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:06.221 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:06.225 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:07.414 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:07.416 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:07.421 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:08.011 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:08.013 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:08.018 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:08.519 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:08.521 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:08.528 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:09.630 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:09.632 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:09.638 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:10.269 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:10.271 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:10.279 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:20.189 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:21.654 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:27.800 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:37.545 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:40.123 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:40.702 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:40.985 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:41.256 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:41.507 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:41.757 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:42.000 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:55.261 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:55.446 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:55.891 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:56.069 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:56.508 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:56.616 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:57.857 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:57.860 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 22:59:59.909 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:00.592 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:01.420 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:02.328 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:02.893 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:04.757 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:06.491 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:11.378 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:14.627 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:18.210 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:18.210 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:18.210 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:18.211 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:18.211 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:18.212 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:19.248 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:19.253 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:19.254 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:19.261 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:22.561 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:23.147 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:23.688 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:24.210 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:24.748 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:25.548 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:29.698 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:29.699 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:29.700 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:29.700 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:29.701 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.599 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.600 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.600 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.600 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.601 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.601 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.899 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.900 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.900 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.900 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:30.901 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.157 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.157 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.158 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.158 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.159 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.159 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.950 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.950 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.951 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.951 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:31.952 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:33.139 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:33.141 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:33.142 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:33.143 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:35.147 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:35.766 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:37.929 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:39.125 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:42.184 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:44.753 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:44.753 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:44.754 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:44.755 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:44.905 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.143 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.144 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.177 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.178 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.327 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.393 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.397 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.398 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:46.427 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:47.684 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:48.022 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:48.023 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:48.235 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:48.885 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:49.372 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:49.373 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:50.532 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:52.407 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:55.977 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:55.979 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:55.981 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:56.476 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:56.900 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:56.901 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:56.902 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:57.229 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:57.229 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:57.230 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:57.515 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:57.515 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:57.515 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:58.350 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:58.351 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:00:58.352 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:05.207 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:05.235 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:06.262 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:09.585 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:11.427 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:11.647 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:12.433 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:13.651 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:14.043 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:14.492 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:15.834 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:16.083 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:17.253 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:17.877 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:19.151 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:21.449 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:21.900 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:22.712 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:23.810 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:24.471 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:27.223 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:27.955 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:29.545 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:29.802 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:30.894 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:33.818 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:41.467 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:42.869 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:43.184 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:43.827 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:44.839 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:45.300 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:46.598 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:47.000 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:47.315 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:52.969 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:01:53.353 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:03.067 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:08.412 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:11.161 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:17.258 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:18.236 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:24.422 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:24.452 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:26.013 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:26.038 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:26.386 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:26.418 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:26.784 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:27.216 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:28.679 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:28.721 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:28.763 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:34.590 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:41.117 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:41.550 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:42.107 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:02:50.615 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:23.074 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:23.692 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:24.093 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:25.481 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:38.461 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:38.722 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:39.120 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:40.732 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:41.314 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:41.693 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:43.311 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:43.502 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:44.183 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:44.419 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:44.962 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:49.578 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:51.001 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:56.256 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.051 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.551 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.554 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.555 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.558 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.722 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.726 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.727 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.728 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.843 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.844 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:03:59.845 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.117 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.120 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.120 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.121 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.227 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.228 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.228 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.281 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.284 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.285 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:00.285 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:02.742 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:03.427 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:03.431 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:03.433 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:03.433 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:03.843 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:04.430 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:04.895 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:04.896 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:04.897 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:05.446 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.154 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.155 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.155 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.156 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.158 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.648 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.683 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.873 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.878 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.878 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.879 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.996 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.997 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:06.998 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.052 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.056 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.056 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.056 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.171 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.172 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.173 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.222 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.226 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.226 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.226 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.340 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.341 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.342 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.390 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.393 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.394 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.394 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.506 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.508 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.508 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.556 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.560 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.560 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.560 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.672 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.674 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.674 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.723 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.727 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.728 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.728 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.840 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.841 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:07.842 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:08.895 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:08.897 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:08.905 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:10.407 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:10.788 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:14.826 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:14.977 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:15.021 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:15.021 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:15.022 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:15.461 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:16.341 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:18.594 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:18.608 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:18.637 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:18.875 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:19.010 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:19.904 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:25.071 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.383 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.385 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.386 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.390 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.501 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.502 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.503 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.553 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.555 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.556 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.560 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.668 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.668 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.669 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.713 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.716 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.716 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.720 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.833 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.834 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.834 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.879 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.881 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.882 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.886 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.997 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.997 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:29.998 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.043 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.045 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.046 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.050 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.161 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.162 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.162 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.208 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.210 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.211 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.215 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.328 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.329 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.329 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.948 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.949 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.951 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:30.952 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:31.129 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:33.195 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:36.296 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:37.119 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:37.141 [AWT-EventQueue-0] INFO  The smallest clearance on the board is 0.1490 mm.
+2026-09-05 23:04:37.600 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:37.602 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:39.796 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:40.075 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:40.677 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:41.772 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:43.137 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:43.151 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:44.978 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:45.193 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:46.149 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:48.795 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:49.263 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:50.138 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:50.670 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:51.860 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:52.410 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:54.896 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:54.898 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:54.908 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:56.366 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:04:58.939 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:00.462 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:02.365 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:02.467 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:02.649 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:03.469 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:03.566 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:03.743 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:06.377 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:15.670 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:16.287 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:16.299 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:19.192 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:22.691 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:22.692 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:22.693 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:22.784 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:24.296 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:24.947 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:26.457 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:28.223 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:28.224 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:30.456 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:30.457 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:30.458 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:05:41.808 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:02.420 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:02.422 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:02.423 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:09.155 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:09.556 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:10.279 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:22.829 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:26.666 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:27.345 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:41.338 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:42.147 [AWT-EventQueue-0] ERROR Cannot invoke "app.freerouting.geometry.planar.FloatPoint.rotate(double, app.freerouting.geometry.planar.FloatPoint)" because "p_point" is null
+java.lang.NullPointerException: Cannot invoke "app.freerouting.geometry.planar.FloatPoint.rotate(double, app.freerouting.geometry.planar.FloatPoint)" because "p_point" is null
+	at app.freerouting.boardgraphics.CoordinateTransform.board_to_screen(CoordinateTransform.java:82) ~[freerouting19.jar:unspecified]
+	at app.freerouting.interactive.InteractiveState.mouse_wheel_moved(InteractiveState.java:90) ~[freerouting19.jar:unspecified]
+	at app.freerouting.interactive.BoardHandling.mouse_wheel_moved(BoardHandling.java:721) ~[freerouting19.jar:unspecified]
+	at app.freerouting.gui.BoardPanel.lambda$default_init$0(BoardPanel.java:123) ~[freerouting19.jar:unspecified]
+	at java.awt.Component.processMouseWheelEvent(Unknown Source) ~[?:?]
+	at java.awt.Component.processEvent(Unknown Source) ~[?:?]
+	at java.awt.Container.processEvent(Unknown Source) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Component.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Component.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.run(Unknown Source) [?:?]
+2026-09-05 23:06:49.950 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:50.164 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:50.559 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:50.831 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:51.307 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:51.530 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:52.046 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:53.375 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:54.329 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:06:55.442 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:05.010 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:06.326 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:07.118 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:07.119 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:07.120 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:07.123 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:08.267 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:12.119 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:12.158 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:19.204 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:19.206 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:19.207 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:21.875 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:21.919 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:30.878 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:30.970 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:31.385 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:32.009 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:34.245 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:34.276 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:35.923 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:35.923 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:36.664 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:38.360 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:38.379 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:38.439 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:39.088 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:40.802 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:42.539 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:49.808 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:49.808 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:49.809 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:49.810 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:50.593 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:53.571 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:54.650 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:57.274 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:57.277 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:58.164 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:58.837 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:07:59.933 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:00.724 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:01.709 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:02.089 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:02.099 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:02.215 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:02.232 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:03.506 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:03.507 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:03.508 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:03.515 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:04.062 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:04.063 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:08:04.064 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:18.686 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:18.899 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:19.050 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:21.622 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:21.624 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:28.629 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:28.770 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:31.591 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:35.116 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:39.056 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:44.996 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:44.998 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:45.408 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:45.411 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:48.957 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:50.388 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:56.908 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:57.861 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:57.863 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:11:58.985 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:04.883 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:14.676 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:18.118 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:18.119 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:20.348 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:21.474 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:24.895 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:28.349 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:28.736 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:29.170 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:12:40.766 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:13.781 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:21.899 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:25.347 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:25.348 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:29.823 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:29.824 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:31.342 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:31.344 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:32.211 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:32.212 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:33.239 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:34.336 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:34.934 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:38.354 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:38.355 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:42.115 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:42.116 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:42.812 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:43.185 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:43.654 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:43.655 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:45.180 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:45.182 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:46.301 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:46.566 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:47.702 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:49.396 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:51.041 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:13:52.566 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:04.219 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:05.511 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.178 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.179 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.181 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.182 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.220 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.222 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.223 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.225 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.226 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.231 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.232 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:07.639 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:09.447 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:10.083 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:10.808 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:19.540 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:20.621 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:20.622 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:21.941 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:24.084 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:24.847 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:25.721 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:26.853 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:28.678 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:28.689 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:28.702 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.087 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.088 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.089 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.090 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.467 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.468 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.468 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.471 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:43.476 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.150 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.152 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.153 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.154 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.527 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.528 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.529 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.531 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:44.537 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.097 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.098 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.099 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.223 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.225 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.225 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.227 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.233 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.751 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.753 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.756 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:45.804 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:46.030 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:46.031 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:46.033 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:46.080 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:47.728 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:47.730 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:47.731 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:49.672 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:49.682 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:49.994 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:49.997 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:49.997 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:50.005 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:51.511 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:51.512 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:51.841 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:51.842 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:51.844 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:51.889 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:52.152 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:52.155 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:52.155 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:52.163 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:52.538 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:53.959 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:53.960 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:55.195 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:55.196 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:55.198 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:55.212 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:57.097 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:57.552 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:57.847 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:59.065 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:14:59.065 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.594 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.595 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.596 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.626 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.627 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.629 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.725 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.725 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.726 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.759 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.759 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.761 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.920 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.922 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:00.923 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:02.598 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:02.599 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:02.600 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:02.638 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:02.723 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:02.989 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:03.042 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:03.965 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:04.125 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:04.959 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:05.497 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:05.712 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:06.168 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:06.390 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:07.644 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:07.811 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:08.098 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:08.100 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:08.100 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:08.101 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:08.102 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:08.103 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.242 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.415 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.672 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.673 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.674 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.674 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.675 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:09.676 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:10.805 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:10.997 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:11.238 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:11.239 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:11.240 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:11.241 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:11.242 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:11.243 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:12.250 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:12.251 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:12.563 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:12.624 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:13.347 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:13.546 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:13.856 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:13.889 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:14.266 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:14.589 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:14.986 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:14.999 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:15.985 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:15.987 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:15.988 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:16.332 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:18.117 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:18.813 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.036 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.038 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.039 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.626 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.626 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.628 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.677 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:19.677 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:20.203 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:20.205 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:20.206 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:20.794 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:20.795 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:20.796 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.038 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.040 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.048 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.094 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.420 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.421 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.430 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:24.477 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:26.855 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:29.674 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:29.674 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:29.893 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:29.896 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:29.898 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:29.914 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:33.075 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:33.079 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:33.081 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:33.101 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:34.920 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:34.921 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:34.923 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:37.607 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:37.610 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:37.611 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:37.626 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.575 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.578 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.579 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.586 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.802 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.804 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.805 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:39.817 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:41.226 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:41.227 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:41.478 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:41.481 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:41.482 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:41.498 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:44.692 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:44.696 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:44.698 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:44.713 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:49.315 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:49.318 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:49.321 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:51.444 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:51.445 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:53.130 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:53.133 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:53.134 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:53.149 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:56.472 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:56.473 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:58.223 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:58.226 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:58.227 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:15:58.242 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:00.295 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:01.324 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:01.328 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:01.330 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:01.880 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:01.883 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:01.885 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:01.898 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:02.475 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:02.478 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:02.480 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:02.493 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:03.545 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:03.548 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:03.550 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:03.569 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.086 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.090 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.091 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.108 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.893 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.896 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.898 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:04.917 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:47.477 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:47.499 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:55.933 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:56.588 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:58.387 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:16:59.986 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:02.876 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:02.877 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:02.878 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:02.879 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:02.879 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:02.880 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:03.425 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:04.378 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:05.130 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:05.770 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:05.770 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:06.373 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:08.088 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:08.733 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:10.560 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:13.601 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:13.603 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:13.603 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:13.604 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:13.605 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:13.606 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:14.643 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:14.771 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:15.639 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:15.644 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:15.763 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:16.041 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:17.206 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:17.212 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:17.334 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.320 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.321 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.328 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.653 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.658 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.779 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.842 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.845 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:18.933 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:19.087 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.857 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.857 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.869 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.870 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.871 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.895 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.895 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:31.896 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:32.210 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:32.212 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:32.216 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:32.239 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:33.567 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:33.967 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:34.530 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:41.633 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:41.634 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:41.637 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:41.655 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:41.955 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:42.530 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:42.531 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:42.539 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:42.765 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:42.765 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:42.771 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:43.885 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:43.932 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:45.367 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:45.368 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:45.372 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:45.397 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:46.302 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:46.316 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:47.347 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:47.348 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:47.352 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:49.070 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:49.079 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:49.312 [AWT-EventQueue-0] ERROR class app.freerouting.gui.WindowUnconnectedRoute$UnconnectedRouteInfo cannot be cast to class app.freerouting.board.ObjectInfoPanel$Printable (app.freerouting.gui.WindowUnconnectedRoute$UnconnectedRouteInfo and app.freerouting.board.ObjectInfoPanel$Printable are in unnamed module of loader 'app')
+java.lang.ClassCastException: class app.freerouting.gui.WindowUnconnectedRoute$UnconnectedRouteInfo cannot be cast to class app.freerouting.board.ObjectInfoPanel$Printable (app.freerouting.gui.WindowUnconnectedRoute$UnconnectedRouteInfo and app.freerouting.board.ObjectInfoPanel$Printable are in unnamed module of loader 'app')
+	at app.freerouting.gui.WindowObjectList$ShowListener.actionPerformed(WindowObjectList.java:216) ~[freerouting19.jar:unspecified]
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source) ~[?:?]
+	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source) ~[?:?]
+	at java.awt.Component.processMouseEvent(Unknown Source) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(Unknown Source) ~[?:?]
+	at java.awt.Component.processEvent(Unknown Source) ~[?:?]
+	at java.awt.Container.processEvent(Unknown Source) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Component.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.Component.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(Unknown Source) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [?:?]
+	at java.awt.EventDispatchThread.run(Unknown Source) [?:?]
+2026-09-05 23:17:50.131 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:54.663 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:54.664 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:54.665 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:54.665 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:54.667 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:54.674 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:56.752 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:57.272 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.215 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.217 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.218 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.594 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.595 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.595 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.597 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.604 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.936 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.938 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:58.938 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.305 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.306 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.306 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.309 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.315 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.542 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.542 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.544 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.835 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.899 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.900 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.900 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.903 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:17:59.910 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.495 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.496 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.496 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.497 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.862 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.863 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.870 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:00.903 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:01.211 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:01.212 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:01.213 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:01.215 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:01.221 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:02.327 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:02.328 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:03.621 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:03.635 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:04.386 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:04.387 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:04.400 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:04.787 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:04.788 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:05.932 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:05.955 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:06.486 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:07.201 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:08.201 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:10.318 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:10.320 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:10.325 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:10.356 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:10.944 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:10.946 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:10.958 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:12.208 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:12.208 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:12.622 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:12.623 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:13.894 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:13.895 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:13.913 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:14.646 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:15.301 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:16.299 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:16.300 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:16.728 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:16.729 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:17.558 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:17.559 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.218 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.220 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.220 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.253 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.253 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.256 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.360 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.362 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.362 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.396 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.397 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.399 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.577 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:18.578 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:19.511 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:19.513 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:19.518 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:19.547 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:22.710 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:22.711 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:22.711 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:22.712 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:22.713 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:22.714 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:23.205 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:24.143 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:24.936 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:25.971 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:26.592 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:26.605 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:29.201 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:29.202 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.218 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.219 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.220 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.221 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.221 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.223 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.842 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.843 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.844 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.845 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.845 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:30.846 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:31.368 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:31.369 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:31.369 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:31.370 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:31.371 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:31.372 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:31.878 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:36.923 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:36.924 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:37.512 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:37.513 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:38.214 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:38.215 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:42.131 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.255 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.256 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.256 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.257 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.683 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.684 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.684 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:44.685 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:46.372 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:46.384 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:47.038 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:49.079 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:49.082 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:49.084 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:49.166 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:49.167 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:49.191 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:53.086 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:53.087 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:53.115 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:54.530 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:54.531 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:56.204 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:56.206 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:56.230 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:58.021 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:58.024 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:58.103 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:58.104 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:18:58.128 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:01.392 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:01.393 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:01.417 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:07.719 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:07.721 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:07.724 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:07.726 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:07.727 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:07.731 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:08.342 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:08.354 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:10.099 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:10.100 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:10.124 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:12.740 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:13.299 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:13.301 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:13.303 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:14.489 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:14.490 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:14.515 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:14.642 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:14.643 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:15.782 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:15.796 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:16.242 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:16.243 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:16.857 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:16.859 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:16.883 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:17.389 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:17.391 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:17.414 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:18.557 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:18.558 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:18.587 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:18.942 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:18.943 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:18.971 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:19.788 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:19.790 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:19.819 [Thread-23] WARN  CalcFromSide: start corner was not found
+2026-09-05 23:19:21.616 [Thread-23] INFO  Route optimization was completed in 28 minute(s) 30.87 seconds and it improved the design by ~51.09%.
+2026-09-05 23:19:21.626 [Thread-23] INFO  Saving 'hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-08 02:44:28.064 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 02:44:28.123 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 02:44:29.500 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-08 02:44:29.822 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 02:44:40.871 [Thread-23] INFO  Starting auto-routing...
+2026-09-08 02:45:05.749 [Thread-23] WARN  border_intersections: intersection_count (2) is too big!
+2026-09-08 02:50:12.800 [Thread-23] WARN  There were only 16.55 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 02:51:59.800 [Thread-23] WARN  There were only 8.62 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 02:53:47.736 [Thread-23] WARN  There were only 5.47 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 02:55:36.670 [Thread-23] WARN  There were only 4.76 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 02:55:46.872 [Thread-23] INFO  Auto-routing was completed in 11 minute(s) 6.00 seconds.
+2026-09-08 02:55:46.974 [Thread-23] INFO  Starting route optimization on 1 thread...
+2026-09-08 02:56:22.843 [Thread-23] INFO  Route optimization was completed in 35.87 seconds.
+2026-09-08 02:56:22.854 [Thread-23] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-08 02:58:31.489 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 02:58:31.533 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 02:58:32.895 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-08 02:58:33.207 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 02:58:55.076 [Thread-22] INFO  Starting auto-routing...
+2026-09-08 03:00:48.998 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:02:45.637 [Thread-22] WARN  There were only 17.50 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 03:02:47.278 [Thread-22] WARN  There were only 12.00 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 03:02:48.936 [Thread-22] WARN  There were only 12.00 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 03:02:50.294 [Thread-22] INFO  Auto-routing was completed in 3 minute(s) 55.22 seconds.
+2026-09-08 03:02:50.396 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-08 03:03:25.805 [Thread-22] INFO  Route optimization was completed in 35.41 seconds.
+2026-09-08 03:03:25.817 [Thread-22] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-08 03:12:42.998 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 03:12:43.043 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 03:12:44.396 [main] INFO  Opening 'hardware\review_outputs\QuadPreRecorder-partial2.dsn'...
+2026-09-08 03:12:44.678 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 03:13:06.147 [Thread-23] INFO  Starting auto-routing...
+2026-09-08 03:13:07.942 [Thread-23] WARN  There were only 3.00 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 03:13:08.692 [Thread-23] INFO  Auto-routing was completed in 2.54 seconds.
+2026-09-08 03:13:08.795 [Thread-23] INFO  Starting route optimization on 1 thread...
+2026-09-08 03:13:09.723 [Thread-23] INFO  Route optimization was completed in 0.93 seconds.
+2026-09-08 03:13:09.737 [Thread-23] INFO  Saving 'hardware\review_outputs\QuadPreRecorder-partial2.ses'...
+2026-09-08 03:16:30.520 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 03:16:30.567 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 03:16:31.919 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-08 03:16:32.187 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 03:16:54.544 [Thread-22] INFO  Starting auto-routing...
+2026-09-08 03:16:59.026 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:17:00.757 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:17:00.817 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:17:00.887 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:17:01.403 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:17:01.638 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:20:42.679 [Thread-22] INFO  Auto-routing was completed in 3 minute(s) 48.13 seconds.
+2026-09-08 03:20:42.780 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-08 03:37:35.522 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 03:57:01.206 [Thread-22] INFO  Route optimization was completed in 36 minute(s) 18.42 seconds and it improved the design by ~51.32%.
+2026-09-08 03:57:01.234 [Thread-22] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-08 04:56:22.937 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 04:56:22.984 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 04:56:24.400 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-08 04:56:24.775 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 04:56:46.986 [Thread-22] INFO  Starting auto-routing...
+2026-09-08 05:04:29.082 [Thread-22] WARN  There were only 19.00 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-08 05:05:20.362 [Thread-22] INFO  Auto-routing was completed in 8 minute(s) 33.37 seconds.
+2026-09-08 05:05:20.464 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-08 05:40:01.668 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 05:40:07.165 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 05:40:10.009 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 05:40:10.319 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 05:40:14.593 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 05:40:17.143 [Thread-22] WARN  CalcFromSide: start corner was not found
+2026-09-08 13:06:17.606 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 13:06:17.652 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 13:06:19.007 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted.dsn'...
+2026-09-08 13:06:19.234 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 13:06:41.427 [Thread-28] INFO  Starting auto-routing...
+2026-09-08 13:27:40.479 [Thread-28] WARN  CalcFromSide: start corner was not found
+2026-09-08 13:37:14.510 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-08 13:37:14.558 [main] INFO  Settings were loaded from freerouting.json
+2026-09-08 13:37:15.908 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-08 13:37:16.098 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-08 13:37:37.885 [Thread-29] INFO  Starting auto-routing...
+2026-09-08 13:41:58.112 [Thread-29] INFO  Auto-routing was completed in 4 minute(s) 20.23 seconds.
+2026-09-08 13:41:58.215 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-08 13:42:47.332 [Thread-29] INFO  Route optimization was completed in 49.12 seconds.
+2026-09-08 13:42:47.348 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 03:56:07.796 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 03:56:07.842 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 03:56:09.249 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-11 03:56:09.550 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 03:56:31.205 [Thread-28] INFO  Starting auto-routing...
+2026-09-11 03:57:23.941 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.942 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.943 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.943 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.944 [Thread-28] WARN  IntPoint: p_y is out of range
+2026-09-11 03:57:23.944 [Thread-28] WARN  IntPoint: p_y is out of range
+2026-09-11 03:57:23.945 [Thread-28] WARN  ShapeSearchTree.overlaps_with_clearance: p_shape is not bounded
+2026-09-11 03:57:23.948 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.948 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.949 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.949 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.950 [Thread-28] WARN  IntPoint: p_y is out of range
+2026-09-11 03:57:23.950 [Thread-28] WARN  IntPoint: p_y is out of range
+2026-09-11 03:57:23.952 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.952 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.953 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.953 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.954 [Thread-28] WARN  IntPoint: p_y is out of range
+2026-09-11 03:57:23.954 [Thread-28] WARN  IntPoint: p_y is out of range
+2026-09-11 03:57:23.955 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-11 03:57:23.955 [Thread-28] WARN  IntPoint: p_y is out of range
+2026-09-11 04:01:56.531 [Thread-28] INFO  Auto-routing was completed in 5 minute(s) 25.32 seconds.
+2026-09-11 04:01:56.635 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-11 04:03:42.132 [Thread-28] INFO  Route optimization was completed in 1 minute(s) 45.49 seconds.
+2026-09-11 04:03:42.164 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 07:42:19.323 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 07:42:19.359 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 07:42:20.662 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-11 07:42:20.933 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 07:42:25.369 [Thread-29] INFO  Starting auto-routing...
+2026-09-11 07:49:27.167 [Thread-29] WARN  There were only 19.70 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 07:49:31.923 [Thread-29] WARN  There were only 17.80 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 07:49:35.025 [Thread-29] INFO  Auto-routing was completed in 7 minute(s) 9.65 seconds.
+2026-09-11 07:49:35.126 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-11 07:50:31.321 [Thread-29] INFO  Route optimization was completed in 56.19 seconds.
+2026-09-11 07:50:31.340 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 08:01:54.229 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 08:01:54.267 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 08:01:55.523 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-11 08:01:55.793 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 08:02:17.594 [Thread-28] INFO  Starting auto-routing...
+2026-09-11 08:02:18.094 [Thread-28] INFO  Auto-routing was completed in 0.50 seconds.
+2026-09-11 08:02:18.196 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-11 08:07:24.381 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 08:07:24.418 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 08:07:25.671 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-11 08:07:26.003 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 08:07:35.301 [Thread-29] INFO  Starting auto-routing...
+2026-09-11 08:07:35.760 [Thread-29] INFO  Auto-routing was completed in 0.46 seconds.
+2026-09-11 08:07:35.862 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-11 08:07:39.568 [Thread-29] INFO  Route optimization was completed in 3.70 seconds.
+2026-09-11 08:07:39.595 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 11:55:26.448 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 11:55:26.484 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 11:55:27.736 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-11 11:55:28.053 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 11:55:34.278 [Thread-29] INFO  Starting auto-routing...
+2026-09-11 11:58:33.544 [Thread-29] WARN  RoutingBoard.insert_forced_trace_polyline: shove trace failed
+2026-09-11 12:00:05.378 [Thread-29] WARN  There were only 16.50 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:00:58.108 [Thread-29] WARN  There were only 12.22 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:01:53.380 [Thread-29] WARN  There were only 11.00 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:02:42.161 [Thread-29] WARN  There were only 10.38 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:02:51.730 [Thread-29] INFO  Auto-routing was completed in 7 minute(s) 17.45 seconds.
+2026-09-11 12:02:51.831 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-11 12:03:39.886 [Thread-29] INFO  Route optimization was completed in 48.05 seconds.
+2026-09-11 12:03:39.905 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 12:06:47.338 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 12:06:47.375 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 12:06:48.662 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-11 12:06:48.890 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 12:07:10.318 [Thread-28] INFO  Starting auto-routing...
+2026-09-11 12:11:36.746 [Thread-28] WARN  There were only 19.10 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:11:39.242 [Thread-28] WARN  There were only 13.18 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:11:41.717 [Thread-28] WARN  There were only 11.27 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:11:44.194 [Thread-28] WARN  There were only 10.25 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:11:44.673 [Thread-28] INFO  Auto-routing was completed in 4 minute(s) 34.35 seconds.
+2026-09-11 12:11:44.775 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-11 12:12:36.005 [Thread-28] INFO  Route optimization was completed in 51.23 seconds.
+2026-09-11 12:12:36.024 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 12:13:19.489 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 12:13:19.527 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 12:13:20.780 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-11 12:13:21.043 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 12:13:42.939 [Thread-28] INFO  Starting auto-routing...
+2026-09-11 12:13:44.848 [Thread-28] WARN  There were only 2.00 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 12:13:45.443 [Thread-28] INFO  Auto-routing was completed in 2.50 seconds.
+2026-09-11 12:13:45.544 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-11 12:13:47.674 [Thread-28] INFO  Route optimization was completed in 2.13 seconds.
+2026-09-11 12:13:47.697 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 21:55:45.814 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 21:55:45.860 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 21:55:47.281 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-11 21:55:47.611 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 21:56:11.244 [Thread-29] INFO  Starting auto-routing...
+2026-09-11 21:56:11.512 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-11 21:59:08.525 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 21:59:08.571 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 21:59:09.965 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-11 21:59:10.282 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 21:59:33.921 [Thread-28] INFO  Starting auto-routing...
+2026-09-11 21:59:34.195 [Thread-28] WARN  FloatLine: Parameter is null
+2026-09-11 22:18:34.889 [Thread-28] WARN  There were only 19.90 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-11 22:18:34.899 [Thread-28] INFO  Auto-routing was completed in 19 minute(s) 0.97 seconds.
+2026-09-11 22:18:35.001 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-11 22:19:30.301 [Thread-28] INFO  Route optimization was completed in 55.30 seconds.
+2026-09-11 22:19:30.329 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-11 22:20:21.732 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 22:20:21.778 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 22:20:23.158 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-11 22:20:23.361 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 22:20:25.137 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-11 22:20:25.146 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-11 23:08:27.272 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-11 23:08:27.321 [main] INFO  Settings were loaded from freerouting.json
+2026-09-11 23:08:28.688 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-11 23:08:28.950 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-11 23:08:30.696 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-11 23:08:30.703 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 03:33:06.618 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 03:33:06.660 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 03:33:07.983 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 03:33:08.270 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 03:33:25.306 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 03:33:25.517 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 03:38:43.112 [Thread-29] WARN  There were only 19.90 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 03:40:16.046 [Thread-29] WARN  There were only 19.00 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 03:41:39.928 [Thread-29] INFO  Auto-routing was completed in 8 minute(s) 14.62 seconds.
+2026-09-12 03:41:40.033 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 03:42:42.258 [Thread-29] INFO  Route optimization was completed in 1 minute(s) 2.22 seconds.
+2026-09-12 03:42:42.287 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 03:43:39.392 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 03:43:39.439 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 03:43:40.751 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 03:43:41.068 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 03:43:42.778 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 03:43:42.788 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 03:53:01.102 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 03:53:04.261 [Thread-29] INFO  Auto-routing was completed in 3.16 seconds.
+2026-09-12 03:53:04.363 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 03:53:06.880 [Thread-29] INFO  Route optimization was completed in 2.52 seconds.
+2026-09-12 03:53:06.912 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 03:58:54.805 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 03:58:54.849 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 03:58:56.165 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 03:58:56.458 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 03:59:17.833 [Thread-28] INFO  Starting auto-routing...
+2026-09-12 03:59:18.041 [Thread-28] WARN  FloatLine: Parameter is null
+2026-09-12 04:01:44.052 [Thread-28] WARN  There were only 15.70 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 04:02:58.399 [Thread-28] WARN  There were only 10.78 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 04:04:15.585 [Thread-28] WARN  There were only 10.00 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 04:05:31.433 [Thread-28] WARN  There were only 10.00 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 04:05:59.653 [Thread-28] INFO  Auto-routing was completed in 6 minute(s) 41.82 seconds.
+2026-09-12 04:05:59.754 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-12 04:06:37.844 [Thread-28] INFO  Route optimization was completed in 38.09 seconds.
+2026-09-12 04:06:37.861 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 04:07:23.966 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 04:07:24.009 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 04:07:25.326 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 04:07:25.603 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 04:07:27.112 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 04:07:27.119 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 04:16:23.890 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 04:16:23.933 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 04:16:25.256 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 04:16:25.469 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 04:16:47.046 [Thread-28] INFO  Starting auto-routing...
+2026-09-12 04:16:47.258 [Thread-28] WARN  FloatLine: Parameter is null
+2026-09-12 04:17:35.243 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-12 04:17:35.244 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-12 04:17:35.244 [Thread-28] WARN  ShapeSearchTree.overlaps_with_clearance: p_shape is not bounded
+2026-09-12 04:17:35.247 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-12 04:17:35.247 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-12 04:17:35.249 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-12 04:17:35.250 [Thread-28] WARN  IntPoint: p_x is out of range
+2026-09-12 04:18:38.798 [Thread-28] INFO  Auto-routing was completed in 1 minute(s) 51.75 seconds.
+2026-09-12 04:18:38.900 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-12 04:19:16.042 [Thread-28] INFO  Route optimization was completed in 37.14 seconds.
+2026-09-12 04:19:16.058 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 04:20:09.120 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 04:20:09.162 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 04:20:10.470 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 04:20:10.736 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 04:20:12.280 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 04:20:12.288 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 04:20:36.975 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 04:20:37.423 [Thread-29] INFO  Auto-routing was completed in 0.45 seconds.
+2026-09-12 04:20:37.526 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 04:20:39.401 [Thread-29] INFO  Route optimization was completed in 1.87 seconds.
+2026-09-12 04:20:39.422 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 08:16:50.768 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 08:16:50.806 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 08:16:52.057 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 08:16:52.373 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 08:17:13.299 [Thread-28] INFO  Starting auto-routing...
+2026-09-12 08:17:13.531 [Thread-28] WARN  FloatLine: Parameter is null
+2026-09-12 08:20:19.305 [Thread-28] WARN  CalcFromSide: start corner was not found
+2026-09-12 08:20:19.323 [Thread-28] WARN  CalcFromSide: start corner was not found
+2026-09-12 08:20:22.908 [Thread-28] WARN  CalcFromSide: start corner was not found
+2026-09-12 08:35:08.356 [Thread-28] INFO  Auto-routing was completed in 17 minute(s) 55.06 seconds.
+2026-09-12 08:35:08.458 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-12 08:36:46.844 [Thread-28] INFO  Route optimization was completed in 1 minute(s) 38.39 seconds.
+2026-09-12 08:36:46.873 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 08:37:33.031 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 08:37:33.070 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 08:37:34.315 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 08:37:34.570 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 08:37:35.330 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 08:37:35.338 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 09:11:15.855 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 09:11:15.892 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 09:11:17.130 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 09:11:17.378 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 09:11:38.412 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 09:11:38.634 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 09:11:38.647 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 09:11:38.650 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 09:11:40.903 [Thread-29] WARN  CalcFromSide: start corner was not found
+2026-09-12 09:13:24.709 [Thread-29] WARN  There were only 19.65 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 09:14:11.050 [Thread-29] WARN  There were only 15.18 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 09:15:23.771 [Thread-29] WARN  There were only 14.38 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 09:16:47.644 [Thread-29] WARN  There were only 13.96 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 09:17:12.165 [Thread-29] INFO  Auto-routing was completed in 5 minute(s) 33.75 seconds.
+2026-09-12 09:17:12.266 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 09:18:08.946 [Thread-29] INFO  Route optimization was completed in 56.68 seconds.
+2026-09-12 09:18:08.964 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 09:18:55.324 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 09:18:55.362 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 09:18:56.604 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 09:18:56.864 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 09:18:57.590 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 09:18:57.597 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 09:19:09.248 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 09:19:12.982 [Thread-29] INFO  Auto-routing was completed in 3.73 seconds.
+2026-09-12 09:19:13.084 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 09:19:15.194 [Thread-29] INFO  Route optimization was completed in 2.11 seconds.
+2026-09-12 09:19:15.219 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 10:40:57.770 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 10:40:57.807 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 10:40:59.075 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 10:40:59.363 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 10:41:02.986 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 10:41:03.207 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 10:41:03.226 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 10:41:03.230 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 10:42:50.759 [Thread-29] WARN  Polyline: must contain at least 2 different points
+2026-09-12 10:45:11.193 [Thread-29] WARN  There were only 18.75 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 10:45:15.030 [Thread-29] INFO  Auto-routing was completed in 4 minute(s) 12.04 seconds.
+2026-09-12 10:45:15.131 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 10:47:06.997 [Thread-29] INFO  Route optimization was completed in 1 minute(s) 51.86 seconds.
+2026-09-12 10:47:07.025 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 10:48:22.015 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 10:48:22.054 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 10:48:23.289 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 10:48:23.553 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 10:48:24.304 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 10:48:24.313 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 10:48:57.925 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 10:48:58.307 [Thread-29] INFO  Auto-routing was completed in 0.38 seconds.
+2026-09-12 10:48:58.409 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 10:49:01.650 [Thread-29] INFO  Route optimization was completed in 3.24 seconds.
+2026-09-12 10:49:01.677 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 11:00:11.515 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 11:00:11.552 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 11:00:12.802 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 11:00:13.063 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 11:00:34.097 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 11:00:34.428 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 11:00:34.436 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 11:00:34.443 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 11:03:22.877 [Thread-29] WARN  There were only 18.90 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 11:03:27.597 [Thread-29] WARN  There were only 11.12 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 11:03:32.265 [Thread-29] WARN  There were only 8.12 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 11:03:36.915 [Thread-29] WARN  There were only 7.06 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 11:03:38.713 [Thread-29] INFO  Auto-routing was completed in 3 minute(s) 4.61 seconds.
+2026-09-12 11:03:38.815 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 11:05:16.795 [Thread-29] INFO  Route optimization was completed in 1 minute(s) 37.98 seconds.
+2026-09-12 11:05:16.826 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 11:05:59.002 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 11:05:59.039 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 11:06:00.274 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 11:06:00.532 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 11:06:01.266 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 11:06:01.276 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 13:59:24.076 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 13:59:24.115 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 13:59:25.369 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 13:59:25.707 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 13:59:29.785 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 13:59:30.001 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 13:59:30.006 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 13:59:30.016 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-12 13:59:49.303 [Thread-29] WARN  RoutingBoard.insert_forced_trace_polyline: shove trace failed
+2026-09-12 14:01:38.450 [Thread-29] WARN  There were only 18.20 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:02:16.099 [Thread-29] WARN  There were only 15.40 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:03:58.737 [Thread-29] WARN  There were only 15.27 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:05:59.471 [Thread-29] INFO  Auto-routing was completed in 6 minute(s) 29.68 seconds.
+2026-09-12 14:05:59.573 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 14:07:43.798 [Thread-29] INFO  Route optimization was completed in 1 minute(s) 44.22 seconds.
+2026-09-12 14:07:43.826 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 14:08:30.482 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 14:08:30.521 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 14:08:31.759 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 14:08:32.035 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 14:08:32.792 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 14:08:32.801 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 14:19:45.747 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 14:19:45.786 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 14:19:47.045 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-12 14:19:47.302 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 14:20:08.344 [Thread-28] INFO  Starting auto-routing...
+2026-09-12 14:20:08.618 [Thread-28] WARN  FloatLine: Parameter is null
+2026-09-12 14:20:08.622 [Thread-28] WARN  FloatLine: Parameter is null
+2026-09-12 14:20:08.645 [Thread-28] WARN  FloatLine: Parameter is null
+2026-09-12 14:21:30.573 [Thread-28] WARN  There were only 18.50 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:21:34.074 [Thread-28] WARN  There were only 9.80 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:21:37.566 [Thread-28] WARN  There were only 8.90 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:21:41.086 [Thread-28] WARN  There were only 8.00 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:21:42.930 [Thread-28] INFO  Auto-routing was completed in 1 minute(s) 34.58 seconds.
+2026-09-12 14:21:43.032 [Thread-28] INFO  Starting route optimization on 1 thread...
+2026-09-12 14:22:46.133 [Thread-28] INFO  Route optimization was completed in 1 minute(s) 3.10 seconds.
+2026-09-12 14:22:46.152 [Thread-28] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-12 14:23:34.874 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-12 14:23:34.911 [main] INFO  Settings were loaded from freerouting.json
+2026-09-12 14:23:36.154 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-12 14:23:36.441 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-12 14:23:37.122 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-12 14:23:37.131 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-12 14:24:21.085 [Thread-29] INFO  Starting auto-routing...
+2026-09-12 14:24:23.093 [Thread-29] WARN  There were only 4.00 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-12 14:24:23.716 [Thread-29] INFO  Auto-routing was completed in 2.63 seconds.
+2026-09-12 14:24:23.818 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-12 14:24:25.770 [Thread-29] INFO  Route optimization was completed in 1.95 seconds.
+2026-09-12 14:24:25.794 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-15 15:10:12.591 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-15 15:10:12.631 [main] INFO  Settings were loaded from freerouting.json
+2026-09-15 15:10:14.171 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix-plane.dsn'...
+2026-09-15 15:10:14.488 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-15 15:10:15.735 [main] WARN  The normalization of net 'BUCK_PG' failed.
+2026-09-15 15:10:15.746 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-15 15:10:15.754 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-15 15:10:24.190 [Thread-29] INFO  Starting auto-routing...
+2026-09-15 15:13:04.852 [Thread-29] INFO  Auto-routing was completed in 2 minute(s) 40.66 seconds.
+2026-09-15 15:13:04.953 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-15 15:13:09.787 [Thread-29] INFO  Route optimization was completed in 4.83 seconds and it improved the design by ~0.02%.
+2026-09-15 15:13:09.813 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix.ses'...
+2026-09-15 15:18:15.696 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-15 15:18:15.733 [main] INFO  Settings were loaded from freerouting.json
+2026-09-15 15:18:17.068 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix2-plane.dsn'...
+2026-09-15 15:18:17.359 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-15 15:18:18.623 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-15 15:18:18.630 [main] WARN  The normalization of net 'DAC_LDO' failed.
+2026-09-15 15:18:23.706 [Thread-29] INFO  Starting auto-routing...
+2026-09-15 15:19:50.406 [Thread-29] WARN  There were only 10.00 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:21:10.254 [Thread-29] WARN  There were only 10.00 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:22:30.166 [Thread-29] WARN  There were only 10.00 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:23:54.364 [Thread-29] WARN  There were only 10.00 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:25:20.980 [Thread-29] WARN  There were only 10.00 changes in the last 100 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:26:45.434 [Thread-29] WARN  There were only 10.00 changes in the last 120 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:28:13.340 [Thread-29] WARN  There were only 10.00 changes in the last 140 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:28:25.867 [Thread-29] INFO  Auto-routing was completed in 10 minute(s) 2.16 seconds.
+2026-09-15 15:28:25.968 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-15 15:28:27.320 [Thread-29] INFO  Route optimization was completed in 1.35 seconds and it improved the design by ~0.00%.
+2026-09-15 15:28:27.348 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-teensyfix2.ses'...
+2026-09-15 15:45:31.748 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-15 15:45:31.789 [main] INFO  Settings were loaded from freerouting.json
+2026-09-15 15:45:33.117 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-unrouted-plane.dsn'...
+2026-09-15 15:45:33.391 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-15 15:45:43.890 [Thread-29] INFO  Starting auto-routing...
+2026-09-15 15:45:44.116 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-15 15:45:44.185 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-15 15:45:44.194 [Thread-29] WARN  FloatLine: Parameter is null
+2026-09-15 15:48:24.566 [Thread-29] WARN  There were only 16.00 changes in the last 20 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:48:28.135 [Thread-29] WARN  There were only 9.03 changes in the last 40 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:48:31.582 [Thread-29] WARN  There were only 7.87 changes in the last 60 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:48:35.238 [Thread-29] WARN  There were only 7.29 changes in the last 80 passes, so it's very likely that autorouter can't improve the result much further. It is recommended to stop it and finish the board manually.
+2026-09-15 15:48:36.449 [Thread-29] INFO  Auto-routing was completed in 2 minute(s) 52.55 seconds.
+2026-09-15 15:48:36.551 [Thread-29] INFO  Starting route optimization on 1 thread...
+2026-09-15 15:49:48.690 [Thread-29] INFO  Route optimization was completed in 1 minute(s) 12.14 seconds.
+2026-09-15 15:49:48.706 [Thread-29] INFO  Saving 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-routed.ses'...
+2026-09-15 15:50:31.862 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-15 15:50:31.899 [main] INFO  Settings were loaded from freerouting.json
+2026-09-15 15:50:33.231 [main] INFO  Opening 'C:\Users\Jason\Documents\quadpreandrecorder\hardware\review_outputs\QuadPreRecorder-finish-plane.dsn'...
+2026-09-15 15:50:33.799 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-15 15:50:34.968 [main] WARN  The normalization of net '+3V3_DC' failed.
+2026-09-15 15:50:34.986 [main] WARN  The normalization of net 'DAC_LDO' failed.

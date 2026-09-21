@@ -1,0 +1,22 @@
+﻿=== VREF: F.Cu lane east of the ATT/AC verticals, via at the BRU row ===
+ok  seg F.Cu (57.07,84.48)-(57.20,84.62) 0.2 mm
+ok  seg F.Cu (57.20,84.62)-(57.20,102.85) 18.2 mm
+ok  seg F.Cu (57.20,102.85)-(57.25,102.85) 0.0 mm
+ok  seg B.Cu (57.25,102.85)-(56.00,102.85) 1.2 mm
+ok  via (57.25,102.85)
+VREF: 4 segments, 1 vias added
+=== refill zones ===
+zones refilled: 20
+=== GND clusters ===
+GND pad clusters: 1
+   MAIN     187 pads
+
+KiCad unconnected count on the whole board: 0
+=== DRC ===
+
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+
+
+DONE

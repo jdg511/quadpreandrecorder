@@ -1,0 +1,54 @@
+﻿======================================================================
+TRACK LENGTH PER LAYER
+======================================================================
+  F.Cu         5313.3 mm    50.3%
+  B.Cu         5241.0 mm    49.7%
+  TOTAL       10554.3 mm
+  vias: 523
+
+======================================================================
+WHERE THINGS ARE (mm)
+======================================================================
+  U6    (  52.0,   50.0)  TOP  OPA1654
+  U4    (  40.0,   44.0)  TOP  CD4053BPW
+  U5    (  40.0,   56.0)  TOP  CD4053BPW
+  U7    (  83.5,   49.5)  TOP  PCM1864DBT
+  U8    (  60.0,   62.5)  BOT  Teensy 4.1
+  U9    ( 100.0,   50.0)  TOP  PCM5102A
+  U10   ( 112.0,   56.0)  TOP  TPA6130A2RTJ
+  J1    (  17.5,    8.2)  TOP  9V DC IN
+  J2    (   4.0,   74.0)  TOP  AMBISONIC MIC RJ45
+  J3    (  25.0,   19.2)  TOP  MSP3526 TFT 3.5IN 14PIN SOCKET
+  U14   (  88.0,   59.5)  BOT  TPS7A2033PDBV
+
+======================================================================
+COPPER FOOTPRINT OF EACH GROUP
+======================================================================
+  ANALOG      x    1.2..  86.0   y   41.2.. 107.4   total  1766.4 mm
+  CLOCK/DATA  x   23.9.. 120.8   y   29.5..  64.4   total  1141.3 mm
+
+  longest individual clock nets:
+    I2C_SCL         182.6 mm
+    I2C_SDA         144.6 mm
+    ADC_DOUT2        69.9 mm
+    ADC_TDM          65.1 mm
+    ADC_TDM_IC       62.4 mm
+    ADC_MCLK_IC      60.5 mm
+    ADC_BCLK         57.0 mm
+    SPI_SCK          52.3 mm
+    ADC_LRCLK        47.1 mm
+    SPI_MISO         46.0 mm
+
+  longest individual analog nets:
+    BRU_ATT          93.3 mm
+    BRU_AC           91.8 mm
+    FRD_FB           82.7 mm
+    BRU_PRE          82.1 mm
+    BLD_FB           77.9 mm
+    FRD_AC           77.5 mm
+    BRU_FB           76.7 mm
+    FRD_ATT          76.6 mm
+    FRD_PRE          73.9 mm
+    BRU_ADC          73.1 mm
+
+  board outline: 138.2 x 114.2 mm

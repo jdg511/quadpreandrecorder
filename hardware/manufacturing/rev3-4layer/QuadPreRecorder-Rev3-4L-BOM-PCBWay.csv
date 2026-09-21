@@ -1,28 +1,28 @@
-Item,Designator,Qty,Manufacturer Part Number,Manufacturer,Description / Required Spec,Package,Type,Substitution
-1,C1,1,,Panasonic,"Aluminium electrolytic 100uF 25V, LOW-ESR (Panasonic EEE-FK or equiv), CP_Elec_6.3x5.8",CP_Elec_6.3x5.8,SMD,EQUIVALENT OK - must meet spec
-2,C2,1,,Murata,"MLCC 100nF 25V, X7R, 25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
-3,C3,1,,Murata,"MLCC 10uF 25V, X7R, 25V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
-4,"C4,C21,C22,C23,C24",5,,Murata,"MLCC 22pF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-5,"C5,C6",2,,Murata,"MLCC 22uF 10V, X7R, 10V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
-6,"C7,C9",2,,Murata,"MLCC 1uF 10V, X7R, 10V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
-7,C8,1,,Murata,"MLCC 4.7uF 10V, X7R, 10V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
-8,C10,1,,Murata,"MLCC 47uF 10V, X7R, 10V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
-9,"C11,C33,C34,C35,C36,C40,C41,C43,C44,C47,C50,C54,C56,C63,C64,C69,C70,C71,C72,C73",20,,Murata,"MLCC 100nF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-10,C12,1,,Murata,"MLCC 1nF 1kV, C0G/NP0, >=25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
-11,"C13,C14,C15,C16",4,,Murata,"MLCC 100pF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-12,"C17,C18,C19,C20,C25,C26,C27,C28",8,,Murata,"MLCC 4.7uF 16V, X7R, 16V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
-13,"C29,C30,C31,C32",4,,Murata,"MLCC 10nF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-14,C37,1,,Murata,"MLCC 10uF 16V, X7R, 16V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
-15,"C38,C39,C53",3,,Murata,"MLCC 1uF, X7R, >=25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
-16,"C42,C45,C46,C55,C62",5,,Murata,"MLCC 10uF, X7R, >=25V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
-17,"C48,C49",2,,Murata,"MLCC 10nF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-18,"C51,C52",2,,Murata,"MLCC 2.2uF, X7R, >=25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
-19,C57,1,,Murata,"MLCC 680nF, X7R, >=25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
-20,C58,1,,Murata,"MLCC 680nF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-21,C59,1,,Murata,"MLCC 1uF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-22,"C60,C61,C65",3,,Murata,"MLCC 2.2uF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-23,C66,1,,Panasonic,"Aluminium electrolytic 100uF 16V, LOW-ESR (Panasonic EEE-FK or equiv), CP_Elec_6.3x5.8",CP_Elec_6.3x5.8,SMD,EQUIVALENT OK - must meet spec
-24,"C67,C68",2,,Murata,"MLCC 2.2nF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+﻿Item,Designator,Qty,Manufacturer Part Number,Manufacturer,Description / Required Spec,Package,Type,Substitution
+1,C1,1,EEE-FK1E101P,Panasonic,"Aluminium electrolytic 100uF 25V, LOW-ESR (Panasonic EEE-FK or equiv), CP_Elec_6.3x5.8",CP_Elec_6.3x5.8,SMD,EQUIVALENT OK - must meet spec
+2,C2,1,CL21B104KACNNNC,Samsung Electro-Mechanics,"MLCC 100nF 25V, X7R, 25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
+3,C3,1,CL31B106KAHNNNE,Samsung Electro-Mechanics,"MLCC 10uF 25V, X7R, 25V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
+4,"C4,C21,C22,C23,C24",5,CL10C220JB8NNNC,Samsung Electro-Mechanics,"MLCC 22pF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+5,"C5,C6",2,CL31B226KPHNNNE,Samsung Electro-Mechanics,"MLCC 22uF 10V, X7R, 10V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
+6,"C7,C9",2,CL21B105KAFNNNE,Samsung Electro-Mechanics,"MLCC 1uF 10V, X7R, 10V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
+7,C8,1,CL21B475KAFNNNE,Samsung Electro-Mechanics,"MLCC 4.7uF 10V, X7R, 10V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
+8,C10,1,CL31A476MPHNNNE,Samsung Electro-Mechanics,MLCC 47uF 10V X5R 1206 - NOTE: X7R is not manufactured at 47uF/1206; X5R is standard for bulk rail decoupling.,C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
+9,"C11,C33,C34,C35,C36,C40,C41,C43,C44,C47,C50,C54,C56,C63,C64,C69,C70,C71,C72,C73",20,CL10B104KB8NNNC,Samsung Electro-Mechanics,"MLCC 100nF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+10,C12,1,C0805C102KDRACTU,KEMET,"MLCC 1nF 1kV X7R 0805 - NOTE: 1kV rating in C0G is not manufactured in 0805; X7R is the industry standard at this voltage. EMI/chassis cap, not in the audio path.",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
+11,"C13,C14,C15,C16",4,CL10C101JB8NNNC,Samsung Electro-Mechanics,"MLCC 100pF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+12,"C17,C18,C19,C20,C25,C26,C27,C28",8,CL31B475KBHNNNE,Samsung Electro-Mechanics,"MLCC 4.7uF 16V, X7R, 16V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
+13,"C29,C30,C31,C32",4,GRM1885C1H103JA01D,Murata,"MLCC 10nF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+14,C37,1,CL31B106KAHNNNE,Samsung Electro-Mechanics,"MLCC 10uF 16V, X7R, 16V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
+15,"C38,C39,C53",3,CL21B105KAFNNNE,Samsung Electro-Mechanics,"MLCC 1uF, X7R, >=25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
+16,"C42,C45,C46,C55,C62",5,CL31B106KAHNNNE,Samsung Electro-Mechanics,"MLCC 10uF, X7R, >=25V, C_1206_3216Metric",C_1206_3216Metric,SMD,EQUIVALENT OK - must meet spec
+17,"C48,C49",2,CL10B103KB8NNNC,Samsung Electro-Mechanics,"MLCC 10nF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+18,"C51,C52",2,CL21B225KAFNNNE,Samsung Electro-Mechanics,"MLCC 2.2uF, X7R, >=25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
+19,C57,1,C2012X7R1H684K125AB,TDK,"MLCC 680nF, X7R, >=25V, C_0805_2012Metric",C_0805_2012Metric,SMD,EQUIVALENT OK - must meet spec
+20,C58,1,CC0603KRX7R8BB684,YAGEO,"MLCC 680nF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+21,C59,1,CL10B105KA8NNNC,Samsung Electro-Mechanics,"MLCC 1uF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+22,"C60,C61,C65",3,GRM188Z71E225KE43D,Murata,"MLCC 2.2uF, X7R, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+23,C66,1,EEE-FK1C101P,Panasonic,"Aluminium electrolytic 100uF 16V, LOW-ESR (Panasonic EEE-FK or equiv), CP_Elec_6.3x5.8",CP_Elec_6.3x5.8,SMD,EQUIVALENT OK - must meet spec
+24,"C67,C68",2,CL10C222JB8NNNC,Samsung Electro-Mechanics,"MLCC 2.2nF, C0G/NP0, >=25V, C_0603_1608Metric",C_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
 25,"D1,D3",2,SS14-13-F,Diodes Incorporated,SS14,D_SMA,SMD,EXACT PART - do not substitute
 26,D2,1,SMBJ12A,Littelfuse,SMBJ12A,D_SMB,SMD,EXACT PART - do not substitute
 27,D4,1,LTST-C190TBKT,Lite-On,POWER BLUE,LED_0603_1608Metric,SMD,EXACT PART - do not substitute
@@ -34,42 +34,43 @@ Item,Designator,Qty,Manufacturer Part Number,Manufacturer,Description / Required
 33,J3,1,PRPC014SAAN-RC,Sullins Connector Solutions,14-pin 2.54 mm header for LCDWiki MSP3520 ILI9488/XPT2046 3.5in resistive-touch TFT module,PinHeader_1x14_P2.54mm_Vertical,THT,EXACT PART - do not substitute
 34,J4,1,NRJ6HF,Neutrik,1/4in BINAURAL LINE OUT,Jack_6.35mm_Neutrik_NRJ6HF_Horizontal,THT,EXACT PART - do not substitute
 35,J5,1,SJ1-3533NG,CUI Devices,1/8in BINAURAL HEADPHONE OUT,Jack_3.5mm_CUI_SJ1-3533NG_Horizontal,THT,EXACT PART - do not substitute
-36,J6,1,,Generic,"2x13 (26 pin) 2.54mm pitch through-hole pin header, PinHeader_2x13_P2.54mm_Vertical",PinHeader_2x13_P2.54mm_Vertical,THT,EQUIVALENT OK - must meet spec
-37,J7,1,,Generic,"2x13 (26 pin) 2.54mm pitch through-hole pin header, PinHeader_2x13_P2.54mm_Vertical",PinHeader_2x13_P2.54mm_Vertical,THT,EQUIVALENT OK - must meet spec
+36,J6,1,PRPC013DAAN-RC,Sullins Connector Solutions,"2x13 (26 pin) 2.54mm pitch through-hole pin header, PinHeader_2x13_P2.54mm_Vertical",PinHeader_2x13_P2.54mm_Vertical,THT,EQUIVALENT OK - must meet spec
+37,J7,1,PRPC013DAAN-RC,Sullins Connector Solutions,"2x13 (26 pin) 2.54mm pitch through-hole pin header, PinHeader_2x13_P2.54mm_Vertical",PinHeader_2x13_P2.54mm_Vertical,THT,EQUIVALENT OK - must meet spec
 38,L1,1,ASPIAIG-F4020-2R2M-T,Abracon,2.2uH 1.5A,L_Abracon_ASPIAIG-F4020,SMD,EXACT PART - do not substitute
-39,R1,1,,Yageo,"Thick-film resistor 680k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-40,R2,1,,Yageo,"Thick-film resistor 130k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-41,"R3,R38,R39,R40,R41,R42,R64",7,,Yageo,"Thick-film resistor 100k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-42,"R4,R14,R15,R16,R17",5,,Yageo,"Thick-film resistor 1M, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-43,R5,1,,Yageo,"Thick-film resistor 0R CHASSIS LINK, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-44,"R6,R7,R8,R9",4,,Yageo,"Thick-film resistor 4.7k ELECTRET BIAS, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-45,"R10,R11,R12,R13",4,,Yageo,"Thick-film resistor 100R RF, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-46,"R18,R20,R22,R24",4,,Vishay,"Thin-film resistor 68k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-47,"R19,R21,R23,R25",4,,Vishay,"Thin-film resistor 33k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-48,"R26,R27,R28,R29",4,,Vishay,"Thin-film resistor 10k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-49,"R30,R31,R32,R33",4,,Vishay,"Thin-film resistor 90.9k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-50,"R34,R35,R36,R37,R61",5,,Yageo,"Thick-film resistor 100R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-51,R43,1,,Yageo,"Thick-film resistor 47k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-52,"R44,R45",2,,Yageo,"Thick-film resistor 4.7k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-53,"R46,R47,R48,R49,R57,R58,R59,R69",8,,Yageo,"Thick-film resistor 33R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-54,"R50,R51,R52,R53,R60,R70,R71,R72,R73,R74",10,,Yageo,"Thick-film resistor 10k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-55,R54,1,,Yageo,"Thick-film resistor 2.2k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-56,"R55,R68",2,,Yageo,"Thick-film resistor 1k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-57,R56,1,RC0805FR-07100RL,Yageo,100R TFT BACKLIGHT,R_0805_2012Metric,SMD,EXACT PART - do not substitute
-58,"R62,R63",2,,Yageo,"Thick-film resistor 470R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-59,"R65,R66",2,,Yageo,"Thick-film resistor 10R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-60,R67,1,,Yageo,"Thick-film resistor 100R MIC BIAS FILTER, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
-61,RV1,1,RK0971221-F15-C0-A103,Alps Alpine,10kA HEADPHONE VOLUME,RK097_Dual_Horizontal_NoEdgeGuide,THT,EXACT PART - do not substitute
-62,SW1,1,100SP1T1B1M7REH,E-Switch,"Right-angle PCB toggle, 1/4-40 x 8.89mm threaded bushing through the left enclosure wall",SW_Toggle_ESwitch_100SP_M7,THT,EXACT PART - do not substitute
-63,SW2,1,B3F-5150,Omron,"12mm tactile switch, 17.5mm tall plunger to reach the 1590F lid",SW_PUSH-12mm,THT,EXACT PART - do not substitute
-64,SW3,1,EC11E15244G1,Alps Alpine,MASTER GAIN,RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm,THT,EXACT PART - do not substitute
-65,SW4,1,SKQUCAA010,Alps Alpine,"ALPS 4-directional + center push TACT switch, snap-in",SW_Nav_ALPS_SKQUCAA010,THT,EXACT PART - do not substitute
-66,U1,1,TPS62160DGKR,Texas Instruments,TPS62160DGK,VSSOP-8_3x3mm_P0.65mm,SMD,EXACT PART - do not substitute
-67,U2,1,TPS7A2033PDBVR,Texas Instruments,TPS7A2033PDBV,SOT-23-5,SMD,EXACT PART - do not substitute
-68,U3,1,TLE2426IDR,Texas Instruments,TLE2426ID,SOIC-8_3.9x4.9mm_P1.27mm,SMD,EXACT PART - do not substitute
-69,"U4,U5",2,CD4053BPWR,Texas Instruments,CD4053BPW,TSSOP-16_4.4x5mm_P0.65mm,SMD,EXACT PART - do not substitute
-70,U6,1,OPA1654AIPWR,Texas Instruments,Quad low-noise FET-input audio operational amplifier,TSSOP-14_4.4x5mm_P0.65mm,SMD,EXACT PART - do not substitute
-71,U7,1,PCM1864DBTR,Texas Instruments,Four-channel software-controlled 192 kHz audio ADC with matched PGA,TSSOP-30_4.4x7.8mm_P0.5mm,SMD,EXACT PART - do not substitute
-72,U8,1,TEENSY41,PJRC,600 MHz Cortex-M7 module with native 4-bit SDIO microSD,Teensy41_Socket,THT,EXACT PART - do not substitute
-73,U9,1,PCM5102APWR,Texas Instruments,PCM5102A,TSSOP-20_4.4x6.5mm_P0.65mm,SMD,EXACT PART - do not substitute
-74,U10,1,TPA6132A2RTER,Texas Instruments,TPA6132A2,WQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm,SMD,EXACT PART - do not substitute
+39,R1,1,RC0603FR-07680KL,YAGEO,"Thick-film resistor 680k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+40,R2,1,RC0603FR-07130KL,YAGEO,"Thick-film resistor 130k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+41,"R3,R42,R64",3,RC0603FR-07100KL,YAGEO,"Thick-film resistor 100k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+42,"R38,R39,R40,R41",4,RC0603FR-07100KL,YAGEO,"Thick-film resistor 100k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,DNP - DO NOT POPULATE
+43,"R4,R14,R15,R16,R17",5,RC0603FR-071ML,YAGEO,"Thick-film resistor 1M, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+44,R5,1,RC0603JR-070RL,YAGEO,"Thick-film resistor 0R CHASSIS LINK, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,"DNP - DO NOT POPULATE (chassis link, fitted at bring-up)"
+45,"R6,R7,R8,R9",4,RC0603FR-074K7L,YAGEO,"Thick-film resistor 4.7k ELECTRET BIAS, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+46,"R10,R11,R12,R13",4,RC0603FR-07100RL,YAGEO,"Thick-film resistor 100R RF, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+47,"R18,R20,R22,R24",4,TNPW060368K0BEEA,Vishay,"Thin-film resistor 68k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+48,"R19,R21,R23,R25",4,TNPW060333K0BEEA,Vishay,"Thin-film resistor 33k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+49,"R26,R27,R28,R29",4,TNPW060310K0BEEA,Vishay,"Thin-film resistor 10k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+50,"R30,R31,R32,R33",4,TNPW060390K9BEEA,Vishay,"Thin-film resistor 90.9k, 0.1% tol, 25ppm/C, R_0603_1608Metric -- PRECISION, tolerance is critical",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+51,"R34,R35,R36,R37,R61",5,RC0603FR-07100RL,YAGEO,"Thick-film resistor 100R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+52,R43,1,RC0603FR-0747KL,YAGEO,"Thick-film resistor 47k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+53,"R44,R45",2,RC0603FR-074K7L,YAGEO,"Thick-film resistor 4.7k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+54,"R46,R47,R48,R49,R57,R58,R59,R69",8,RC0603FR-0733RL,YAGEO,"Thick-film resistor 33R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+55,"R50,R51,R52,R53,R60,R70,R71,R72,R73,R74",10,RC0603FR-0710KL,YAGEO,"Thick-film resistor 10k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+56,R54,1,RC0603FR-072K2L,YAGEO,"Thick-film resistor 2.2k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+57,"R55,R68",2,RC0603FR-071KL,YAGEO,"Thick-film resistor 1k, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+58,R56,1,RC0805FR-07100RL,Yageo,100R TFT BACKLIGHT,R_0805_2012Metric,SMD,EXACT PART - do not substitute
+59,"R62,R63",2,RC0603FR-07470RL,YAGEO,"Thick-film resistor 470R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+60,"R65,R66",2,RC0603FR-0710RL,YAGEO,"Thick-film resistor 10R, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+61,R67,1,RC0603FR-07100RL,YAGEO,"Thick-film resistor 100R MIC BIAS FILTER, 1% tol, R_0603_1608Metric",R_0603_1608Metric,SMD,EQUIVALENT OK - must meet spec
+62,RV1,1,RK0971221-F15-C0-A103,Alps Alpine,10kA HEADPHONE VOLUME,RK097_Dual_Horizontal_NoEdgeGuide,THT,EXACT PART - do not substitute
+63,SW1,1,100SP1T1B1M7REH,E-Switch,"Right-angle PCB toggle, 1/4-40 x 8.89mm threaded bushing through the left enclosure wall",SW_Toggle_ESwitch_100SP_M7,THT,EXACT PART - do not substitute
+64,SW2,1,B3F-5150,Omron,"12mm tactile switch, 17.5mm tall plunger to reach the 1590F lid",SW_PUSH-12mm,THT,EXACT PART - do not substitute
+65,SW3,1,EC11E15244G1,Alps Alpine,MASTER GAIN,RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm,THT,EXACT PART - do not substitute
+66,SW4,1,SKQUCAA010,Alps Alpine,"ALPS 4-directional + center push TACT switch, snap-in",SW_Nav_ALPS_SKQUCAA010,THT,EXACT PART - do not substitute
+67,U1,1,TPS62160DGKR,Texas Instruments,TPS62160DGK,VSSOP-8_3x3mm_P0.65mm,SMD,EXACT PART - do not substitute
+68,U2,1,TPS7A2033PDBVR,Texas Instruments,TPS7A2033PDBV,SOT-23-5,SMD,EXACT PART - do not substitute
+69,U3,1,TLE2426IDR,Texas Instruments,TLE2426ID,SOIC-8_3.9x4.9mm_P1.27mm,SMD,EXACT PART - do not substitute
+70,"U4,U5",2,CD4053BPWR,Texas Instruments,CD4053BPW,TSSOP-16_4.4x5mm_P0.65mm,SMD,EXACT PART - do not substitute
+71,U6,1,OPA1654AIPWR,Texas Instruments,Quad low-noise FET-input audio operational amplifier,TSSOP-14_4.4x5mm_P0.65mm,SMD,EXACT PART - do not substitute
+72,U7,1,PCM1864DBTR,Texas Instruments,Four-channel software-controlled 192 kHz audio ADC with matched PGA,TSSOP-30_4.4x7.8mm_P0.5mm,SMD,EXACT PART - do not substitute
+73,U8,1,TEENSY41,PJRC,600 MHz Cortex-M7 module with native 4-bit SDIO microSD,Teensy41_Socket,THT,EXACT PART - do not substitute
+74,U9,1,PCM5102APWR,Texas Instruments,PCM5102A,TSSOP-20_4.4x6.5mm_P0.65mm,SMD,EXACT PART - do not substitute
+75,U10,1,TPA6132A2RTER,Texas Instruments,TPA6132A2,WQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm,SMD,EXACT PART - do not substitute

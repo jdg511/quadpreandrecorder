@@ -1,0 +1,40 @@
+﻿
+LINE_MUTE items removed in box: 6
+
+
+
+BRU_PRE items removed in box: 1
+
+
+
+Found 0 violations
+Found 11 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t7.json
+
+
+
+1 connections to close
+[ok]   BRU_PRE      (73.14,61.51)->(74.49,97.96) 19 seg 4 via, 1s, margin 9
+done 1/1, board saved
+
+
+
+1 connections to close
+[ok]   BRU_CFB      (73.80,61.66)->(74.67,86.08) 125 seg 6 via, 1s, margin 9
+done 1/1, board saved
+
+
+
+Found 179 violations
+Found 9 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t8.json
+
+
+
+9 connections to close
+   (verify failed on segment 1/72 at (72.47,61.33))
+   (verify failed on segment 1/72 at (72.47,61.33))
+
+

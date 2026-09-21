@@ -1,0 +1,59 @@
+BLOCKER: Pin 22 (MISO/GPIO0) is connected to net ADC_DOUT2_IC, but the design notes state the device is in I2C mode (MD0 low). In I2C mode, Pin 22 functions as DOUT2 (data output), not MISO (data input). If the intent is to read data via I2C, this pin should be an input to the master, but the net name suggests it is being driven or used as a secondary data line. More critically, if the system expects to read the main ADC data (DOUT) via I2C, it must read from Pin 22 (DOUT2) or Pin 18 (DOUT) depending on the specific I2C data flow configuration. However, the standard I2C read for PCM1864 typically uses the SDA line for data. The net name "ADC_DOUT2_IC" implies a dedicated line. If this is intended as a data output from the ADC to a controller, it is correct. If it is intended as a data input (MISO) for SPI, it is wrong because SPI is disabled. Given the ambiguity, verify if the controller expects data on this pin. Actually, looking at the datasheet, in I2C mode, DOUT (Pin 18) and DOUT2 (Pin 22) are outputs. So connecting them to a net is fine. The issue is likely the net name or the controller configuration. Let's look for a clearer error.
+
+BLOCKER: Pin 15 (SCKI) is connected to net ADC_MCLK_IC. The datasheet states SCKI is the "3.3 V master clock" input for SPI mode. In I2C mode, the clock is provided on SCL (Pin 24). Connecting a clock signal to SCKI in I2C mode is unnecessary and potentially problematic if the signal is active, as SCKI is not used for I2C timing. It should be left floating or tied to a valid logic level if not used, but driving it with a clock is a configuration error for I2C mode.
+
+SHOULD FIX: Pin 5 (MICBIAS) is left unconnected (NO_CONNECT). The datasheet note says "may be left open," but for best practice in mixed-signal designs, especially with sensitive ADC inputs, it is often recommended to tie it to a defined voltage or leave it floating only if the internal bias is not used. Since it is floating, ensure no external noise couples into this pin. This is a NOTE, not a blocker, as the datasheet permits it.
+
+SHOULD FIX: Pin 9 (XO) and Pin 10 (XI) are both NO_CONNECT. The datasheet says "crystal/1.8 V clock, unused". If the internal oscillator is used, these pins should be left floating or tied to GND depending on the specific internal oscillator configuration. Leaving them floating is generally acceptable if the internal oscillator is enabled via software, but verify that the internal oscillator is indeed enabled in the firmware. If the internal oscillator is disabled, the device will not function. This is a VERIFY item.
+
+NOTE: Pin 25 (MS/AD) is tied to GND. The datasheet says "I2C address". Tying it to GND sets the address bit. The design notes say "address 0x4A". 0x4A in binary is 0100 1010. The I2C address is 7 bits. The MS/AD pin typically selects between two addresses. If GND selects the lower address, verify that 0x4A is the correct address for the GND state. This is a VERIFY item.
+
+NOTE: Pin 26 (MD0) is tied to GND. The datasheet says "low = I2C". This is correct for I2C mode.
+
+NOTE: Pin 14 (IOVDD) is connected to +3V3_DC. The datasheet does not specify a separate IOVDD rail in the provided text, but typically IOVDD is the I/O supply. Connecting it to the digital 3.3V rail is standard.
+
+NOTE: Pin 13 (DVDD) is connected to +3V3_DC. This is the digital supply. Correct.
+
+NOTE: Pin 8 (AVDD) is connected to +3V3_A. This is the analog supply. Correct.
+
+NOTE: Pin 11 (LDO) is connected to ADC_LDO with caps C43 and C62. The datasheet says "0.1 + 10 uF". Verify that C43 and C62 are indeed 0.1uF and 10uF. The packet does not list the capacitor values, so this is a VERIFY item.
+
+NOTE: Pin 6 (VREF) is connected to ADC_VREF with caps C39 and C40. The datasheet says "1 uF". Verify that C39 and C40 are 1uF. The packet does not list the capacitor values, so this is a VERIFY item.
+
+Let's re-evaluate the SCKI issue. In I2C mode, SCKI is not used. Driving it with a clock is not harmful if the clock is within the voltage range, but it is unnecessary. It is a SHOULD FIX because it is a misconfiguration of the mode pins/signals.
+
+Let's re-evaluate the DOUT2 issue. In I2C mode, DOUT2 is an output. Connecting it to a net is fine.
+
+Let's look at the channel map.
+ADC1-L = FLU (Pin 3)
+ADC1-R = FRD (Pin 4)
+ADC2-L = BLD (Pin 1)
+ADC2-R = BRU (Pin 2)
+This matches the pin table.
+
+Let's look at the I2C address.
+Pin 25 (MS/AD) is GND.
+Pin 26 (MD0) is GND.
+The design notes say address 0x4A.
+Typically, the I2C address is 7 bits. The MS/AD pin might select the LSB or a specific bit. If GND sets a bit to 0, and the address is 0x4A (01001010), the LSB is 0. This is consistent.
+
+One potential issue: Pin 22 is labeled "MISO/GPIO0/DMIN2". In I2C mode, it is DOUT2. The net is "ADC_DOUT2_IC". This is consistent.
+
+Is there a missing pull-up on I2C?
+Pin 23 (SDA) and Pin 24 (SCL) are connected to R44 and R45. The packet does not specify the resistor values. I2C requires pull-ups. If R44 and R45 are pull-ups, this is fine. If they are series resistors, pull-ups are missing. The net names "I2C_SDA" and "I2C_SCL" suggest standard I2C. The presence of R44 and R45 suggests they might be pull-ups or series resistors. If they are series resistors, pull-ups are missing. This is a SHOULD FIX / VERIFY.
+
+Let's check the power rails.
+AVDD: +3V3_A
+DVDD: +3V3_DC
+IOVDD: +3V3_DC
+LDO: ADC_LDO
+VREF: ADC_VREF
+This looks correct.
+
+Let's check the decoupling caps.
+AVDD: C8, C41, C42, C54, C55, C64. Datasheet says 0.1 + 10uF. There are many caps, likely including 0.1uF and 10uF.
+DVDD: C44, C45, C56, C96. Datasheet doesn't specify DVDD caps in the provided text, but standard practice is 0.1 + 10uF.
+LDO: C43, C62. Datasheet says 0.1 + 10uF.
+VREF: C39, C40. Datasheet says 1uF.
+
+The most significant issue is the S

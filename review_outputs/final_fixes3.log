@@ -1,0 +1,40 @@
+﻿=== remove the 4 bad EP vias, the 2 pad-hole stitching vias, the HP_OUT_L sliver ===
+GND items removed in box: 1
+GND items removed in box: 2
+swig/python detected a memory leak of type 'VECTOR2< int > *', no destructor found.
+GND items removed in box: 1
+GND items removed in box: 1
+GND items removed in box: 1
+HP_OUT_L items removed in box: 1
+=== TP1/TP2 excluded from BOM on the board ===
+excluded from BOM: TP2
+excluded from BOM: TP1
+saved
+=== refill zones ===
+zones refilled: 20
+=== GND clusters ===
+GND pad clusters: 1
+   MAIN     184 pads
+
+KiCad unconnected count on the whole board: 0
+=== DRC (all severities) ===
+
+Found 220 violations
+Found 0 unconnected items
+Found 400 schematic parity issues
+
+
+17 x [silk_edge_clearance]
+105 x [silk_overlap]
+98 x [silk_over_copper]
+199 x [footprint_symbol_field_mismatch]
+199 x [net_conflict]
+2 x [footprint_symbol_mismatch]
+=== DRC (errors only, the fab gate) ===
+
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+
+
+DONE

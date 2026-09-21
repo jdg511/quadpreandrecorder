@@ -1,0 +1,49 @@
+[reasoning only, truncated]
+ D10.2 is anode? If D10.1 is cathode? Usually diode pin 1 cathode? B340A pin 1 cathode, pin 2 anode? If D10.1 on VBOOST_IN and D10.2 on VBUS_FUSED, then cathode VBOOST_IN, anode VBUS_FUSED. OK. D1.1 VBOOST_IN, D1.2? +9V_FUSED not listed? +9V_FUSED not in rail membership? It is not a rail listed? Maybe +9V_FUSED net not in section 3? It says every component pin that touches each supply rail. +9V_FUSED not listed. But D1.2 should be +9V_FUSED. Not listed because not a supply rail? OK.
+
+- VBAT membership: U13.2/3. BQ24074 battery pins? OK. R89.1 battery sense. R86/R87 soft power. Q3.2. C92.1. J10.1. OK.
+- BAT_SYS membership: C91.1,D14.2,U13.10/13? Wait U13.10/11? It says U13.10/11. BAT_SYS 4 pins: C91.1,D14.2,U13.10/11. OK.
+
+- CHASSIS: 21 pins. Includes R4.1,R5.1. R5 is DNP? DNP R5, R38-R41. R5.1 on CHASSIS? If DNP, maybe not connected? But rail membership includes R5.1. DNP line? Could be DNP but still footprint? If DNP, pin not populated, but net may exist. Not error. R4.1 CHASSIS, R5.1 CHASSIS. Maybe chassis resistors? OK.
+
+- GND: 183 pins on 137 components. But section 1 says GND: 184 pads, one cluster. Inconsistency: 184 pads vs 183 pins? Could be one pad not pin? Need flag? It says Checks: GND: 184 pads, one cluster. Section 3: GND: 183 pins on 137 components. Difference 1. Could be a pad vs pin mismatch. Real? Maybe one GND pad is via? But "pads" vs "pins" could differ. Need concrete: section 1 says 184 GND pads; section 3 says 183 GND pins. If all GND pads are component pins, mismatch. Could be NOTE. But user wants real errors. This is a packet internal contradiction. Rank NOTE or SHOULD FIX? It's a count mismatch, likely cosmetic. But could indicate missing GND pin. Need flag NOTE.
+
+- Assembly placements: 293 placements (180 top, 113 bottom). PCB footprints: 322 footprints (188 top / 134 bottom), 292 SMD + 12 THT. Assembly placements 293, BOM 95 lines. DNP R5,R38-R41 (5 DNP). 322 footprints - 5 DNP = 317, not 293. But some footprints may be multi-component? Or assembly placements count components not footprints? 312 components, 93 unique parts. Assembly 293 placements. DNP 5. 312-5=307, not 293. Difference 14. Could be some components not assembled? Maybe connectors? But not necessarily. Need check: 322 footprints (188 top/134 bottom), 292 SMD +12 THT. Assembly 293 placements (180 top,113 bottom). Top placements 180 vs top footprints 188: 8 missing. Bottom placements 113 vs bottom footprints 134: 21 missing. Total 293 vs 322: 29 missing. DNP only 5. Could be unpopulated connectors, test points, mounting holes? But "placements" likely assembly files. If 29 footprints not in assembly, maybe missing parts. But BOM 95 lines all with MPN, DNP 5. 312 components, 93 unique. 293 placements maybe components to place, 312 components includes 19 not placed? Could be DNP plus connectors? Need not overflag without evidence. But internal count mismatch could be NOTE.
+
+- 312 components, 93 unique parts, 213 nets, 1 DNP line, 0 missing MPN. BOM 95 lines. DNP R5,R38-R41 (5). If BOM 95 lines, 93 unique parts? BOM lines maybe 95 due to DNP? OK.
+
+- 4 layers: F.Cu signal / In1.Cu GND / In2.Cu GND / B.Cu signal. Two internal GND planes. OK. But 1.6mm FR-4, 4 layers. OK.
+
+- Power tree: +9V analog rail from U12 ADP7142 LDO. Feeds U6/U16 op-amps, U3 VREF, CD4053, Q6 9V mic bias, R106/R83 pull-ups. But +9V membership includes R98.1 not mentioned in feeds? R98 maybe? Not issue.
+
+- +9V feeds U3 VREF (4.5V). U3 TLE2426 rail splitter from +9V. OK.
+
+- +9V_MIC: Q6 (9V) or Q8+D24 (5V) into R67/C66. Q8 5V bias. D24? Not in membership? D24 likely diode from Q8 to +9V_MIC? Not listed. If Q8+D24 (5V) into R67, D24 should be between Q8 and +9V_MIC. Rail membership +9V_MIC doesn't include D24. +5V includes Q8.2. D24 not listed. Could be missing? But maybe D24 is not a supply rail pin? It connects Q8 to +9V_MIC, so one pin should be +9V_MIC. If D24.1 or D24.2 not in +9V_MIC membership, contradiction. Packet says +9V_MIC (7 pins): C66.1,R6.1,R7.1,R8.1,R9.1,R67.2,R104.1. No D24. But power tree says Q8+D24 (5V) into R67/C66. If D24 is in path, its cathode/anode should touch +9V_MIC or Q8. If not listed, either D24 not present or rail membership incomplete. But section 3 claims every component pin that touches each supply rail. Missing D24 pin on +9V_MIC is a contradiction. Need flag? But maybe D24 is a diode from +9V_MIC to Q8? If Q8 is 5V bias, D24 could be in series, one side +9V_MIC. Should be listed. This is a real missing part/rail membership error. Rank SHOULD FIX or BLOCKER? If D24 missing from netlist, 5V mic bias path broken. But packet says D24 in power tree, not in membership. Could be oversight. Need cite: power tree line "Q8+D24 (5V) into R67/C66" vs +9V_MIC membership lacks any D24 pin. Also +5V membership lacks D24. So D24 not connected to either rail. Flag BLOCKER? It's a missing connection in 5V mic bias path. But maybe D24 is not a supply rail but signal? It is in bias path. I'd rank BLOCKER if 5V bias cannot reach R67. But if D24 is just a diode from Q8 to +9V_MIC, one pin must be +9V_MIC. Missing.
+
+- Q6 9V mic bias: +9V membership includes Q6.2. +9V_MIC includes R67.2. Q6 likely transistor, pin 2 collector? OK. Q8 5V bias: +5V includes Q8.2. D24 missing.
+
+- +9V_MIC feeds R6-R9 4.7k electret bias per channel, R104 100k bleed. Membership +9V_MIC includes R6.1-R9.1, R104.1. OK.
+
+- +5V feeds J3 TFT VCC/backlight. +5V membership includes J3.1, R56.1. OK.
+
+- +5V feeds D3 -> Teensy VIN. D3.2 +5V, D3.1 TEENSY_VIN. OK.
+
+- +5V feeds U2,U14. +5V membership includes U2.1/3,U14.1/3. OK.
+
+- +5V feeds U10 headphone amp. +5V membership includes U10.20/12. OK.
+
+- +5V feeds K1 relay. K1.1 +5V. OK.
+
+- +5V feeds Q8 5V bias. Q8.2 +5V. OK.
+
+- +5V feeds R54 power LED. R54.1 +5V. OK.
+
+- +5V feeds R56 backlight. R56.1 +5V. OK.
+
+- +5V feeds R3 PG pull-up. R3.1 +5V. OK.
+
+- +5V feeds R101.1 not mentioned? Maybe.
+
+- +10V5 feeds U12 LDO input, U1 buck input. +10V5 membership includes U1.2/3,U12.1/3. OK.
+
+- +10V5 membership includes C

@@ -1,0 +1,25 @@
+﻿
+U8 3V3B was +3V3_D
+now '' saved
+
+
+
+Found 0 violations
+Found 7 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/fabrication/drc-t10.json
+
+
+
+7 connections to close
+   (pulled NAV_LEFT end back 1.5 mm to (80.45,69.25))
+   (pulled NAV_LEFT end back 1.5 mm to (81.51,70.31))
+   (dropped 2.39 mm stub of NAV_LEFT at (81.51,70.31))
+[FAIL] NAV_LEFT     from (83.20,72.00)  Track [NAV_LEFT] on B.Cu, length 5.3863 mm | Track [NAV_LEFT] on F.Cu, length 
+1.0000 mm
+[FAIL] REC_LED      from (75.24,9.16)  PTH pad 35 [REC_LED] of U8 | Track [REC_LED] on B.Cu, length 9.5683 mm
+[ok]   ADC_DOUT2    (66.06,38.02)->(66.06,38.66) 2 seg 0 via, 0s, margin 5
+[ok]   ADC_DOUT2    (66.06,38.02)->(76.93,33.40) 11 seg 3 via, 133s, margin 9
+[FAIL] ADC_MCLK     from (75.24,54.88)  Track [ADC_MCLK] on B.Cu, length 5.4190 mm | PTH pad 23 [ADC_MCLK] of U8
+
+

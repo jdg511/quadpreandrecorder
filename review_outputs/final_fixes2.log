@@ -1,0 +1,42 @@
+﻿=== EP vias U13 (5) + U11 (5), inner layers -> power ===
+GND via (129.50,16.50)
+GND via (129.00,16.00)
+GND via (130.00,16.00)
+GND via (129.00,17.00)
+GND via (130.00,17.00)
+GND via (8.50,29.55)
+GND via (9.50,29.55)
+GND via (10.50,29.55)
+GND via (8.50,33.45)
+GND via (9.90,33.45)
+layer In1.Cu -> power
+layer In2.Cu -> power
+saved
+(4 "In1.Cu" power)
+(6 "In2.Cu" power)
+=== refill zones ===
+zones refilled: 20
+=== GND clusters ===
+GND pad clusters: 1
+   MAIN     184 pads
+
+KiCad unconnected count on the whole board: 0
+=== DRC (all severities) ===
+
+Found 238 violations
+Found 0 unconnected items
+Found 400 schematic parity issues
+
+
+5 x [shorting_items]
+6 x [hole_clearance]
+2 x [clearance]
+1 x [track_dangling]
+17 x [silk_edge_clearance]
+4 x [hole_to_hole]
+105 x [silk_overlap]
+98 x [silk_over_copper]
+199 x [footprint_symbol_field_mismatch]
+199 x [net_conflict]
+2 x [footprint_symbol_mismatch]
+DONE

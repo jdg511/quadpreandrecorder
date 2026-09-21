@@ -1,0 +1,119 @@
+=============================================================
+PCBWAY ORDER - PASTE-READY NOTES  (Rev C3, Hammond 1590XX, 4-layer)
+Generated 2026-09-15 from the re-routed board (DRC 0/0/0, ERC 0/0; final
+pre-order check and the Teensy socket correction are in
+reviews/audio-rules-check-revC3-fixes.md Addenda 5 and 6, the full review
+in reviews/QuadPreRecorder-RevC3-review-dossier.md). Any package dated
+2026-09-13 or earlier is VOID: its Teensy socket footprint was wrong.
+The Gerber set has all FOUR copper layers (F, In1, In2, B).
+=============================================================
+
+Upload file:
+  hardware\manufacturing\QuadPreRecorder-RevC-PCBWay-handoff.zip
+  (or just QuadPreRecorder-RevC-Gerbers.zip for a bare-board quote)
+
+Use the "Quick Order (Upload files & checkout)" button on the PCB
+Instant Quote page. The zip auto-detects 4 layers and 138 x 114 mm.
+
+-------------------------------------------------------------
+AFTER UPLOAD, CHECK / CHANGE THESE
+-------------------------------------------------------------
+  Layers .................. 4  (F.Cu signal / In1 GND plane / In2 GND plane / B.Cu signal)
+  Stackup ................. PCBWay standard 4-layer 1.6 mm: 35 um Cu,
+                            ~0.21 mm prepreg / ~1.07 mm core / ~0.21 mm prepreg.
+                            No impedance control needed. The board file
+                            carries this stackup explicitly.
+  Size .................... 138 x 114 mm (12 mm chamfered corners)
+  Quantity ................ 5 (PCBWay minimum for assembly)
+  Material / thickness .... FR-4, 1.6 mm
+  Copper .................. 1 oz outer, 1 oz inner (planes)
+  Min track / spacing ..... 8 / 6 mil is plenty (board is 0.20 / 0.15 mm;
+                            supply rails 0.30 mm)
+  Min hole ................ 0.3 mm (185 vias are 0.60 mm pad / 0.30 mm drill:
+                            the decoupling, thermal and escape vias; the
+                            other 338 are 0.80/0.40)
+  Solder mask / silk ...... Green / white
+  Surface finish .......... HASL lead-free (defaults to leaded) or ENIG
+  Via process ............. Tenting vias (default). PLEASE keep the 0.3 mm
+                            vias inside the exposed pads of U10 (nine), U11
+                            (five) and U13 (two) tented on the BOTTOM side
+                            only (paste side open). A handful more 0.3 mm vias
+                            sit inside 0603 capacitor pads next to U7 and
+                            U9 (decoupling fanout): same treatment, bottom
+                            tented, no plugging needed.
+  Assembly Service ........ tick the checkbox
+     - Turnkey (PCBWay supplies parts by MPN)
+     - Board type: Single pieces
+     - Assembly side(s): BOTH SIDES   <- defaults to Top only!
+     - Quantity: 5
+     - "Accept alternatives/substitutes?" -> NO for the ICs
+       (U1, U4-U7, U9-U16) and the relay K1; generic R/C
+       substitutes are fine, EXCEPT the 0.1 % resistors (R18-R33,
+       R118-R125) which set the balanced-input CMRR
+
+-------------------------------------------------------------
+PASTE INTO "Detailed information of assembly"
+-------------------------------------------------------------
+Two-sided assembly, 293 placements (180 top, 113 bottom), mixed SMT
+and through-hole. BOM and centroid files: QuadPreRecorder-BOM.csv and
+QuadPreRecorder-CPL-PCBWay.csv (KiCad coordinate convention, Y negative
+= downward). DNP: R5, R38-R41 (listed in BOM as DNP, not in CPL).
+
+U8 (BOTTOM side) is a socketed sub-assembly - see
+QuadPreRecorder-BOM-extras.csv: solder TWO Samtec SLW-124-01-G-S
+low-profile 1x24 female socket strips into the U8 footprint (the two
+24-pin rows, 15.24 mm apart; corrected 2026-09-15, the earlier package had them 17.78 mm apart), then plug a PJRC TEENSY41_PINS (Teensy
+4.1 with pins pre-soldered) into the sockets with its microSD slot
+toward the board edge marked "SD CARD SLOT THIS EDGE". BEFORE plugging
+it in: (a) cut the small VIN-VUSB link pad on the Teensy's underside,
+(b) solder two ~20 mm wires from the Teensy's underside "USB Device"
+D+ and D- pads to the board's bottom-side pads TP1 (D+) and TP2 (D-)
+next to the socket. If you cannot source PJRC parts, quote the
+sockets only and we will supply and wire the Teensy ourselves.
+TEENSY41_NE_PINS (no Ethernet chip) is acceptable.
+
+J3 is a 1x14 2.54 mm FEMALE socket (Sullins PPTC141LFBN-RC) - do NOT
+solder a display to it. We would like you to quote and ship LOOSE
+(not fitted) the off-board items in QuadPreRecorder-BOM-extras.csv:
+LCDWiki MSP3526 3.5in CAPACITIVE-touch IPS TFT module (not the
+resistive MSP3520), 4x M3x11 standoffs + screws, a 9 VDC 1 A regulated
+adapter with 5.5x2.1 mm CENTER-POSITIVE plug (US), a USB-C cable, one
+push-on knob for a 6 mm 18-spline knurled shaft, and one Omron B32
+keycap for the B3F-5150. If any of these are unavailable, quote the
+rest and we will supply them.
+
+J9 is an HRO TYPE-C-31-M-12 USB-C receptacle (16-pin, through-hole
+shell tabs) - equivalent 16-pin TYPE-C-31-M-12 style parts are fine.
+K1 is an Omron G6K-2F-Y DC5 signal relay - please do not substitute a
+different pinout. J10 is a JST B2B-PH-K-S battery connector on the
+BOTTOM side; the LiPo battery itself is customer-supplied (do not
+fit). U13 (BQ24074) and U10 (TPA6130A2) have exposed pads - please reflow, not hand-solder; U10's pad has a 3x3 via array
+(tent the bottom). C17-C20, C25-C28, C101-C104 (Rubycon 35MU475KC44532) and C57/C58/C86/C87 (Rubycon 25MU225MB23225) are PMLCAP
+film chips, NOT ceramics: do not substitute MLCCs. They are cheapest from LCSC (C3778321 / C3778570); the 16 V siblings
+16MU475MC14532 / 16MU225MB23225 are acceptable alternates. Please do not
+substitute the electret ESD diodes with high-capacitance TVS parts,
+and do not substitute the Neutrik, Alps, CUI or Amphenol connectors/
+controls with look-alikes ("accept substitutes" = NO for those);
+generic R/C substitutes of equal value/package/rating are fine.
+Keep each four-resistor 0.1% set (matched channel resistors) from one
+lot. Verify pin-1 orientation of U1, U4-U7, U9-U12 and the relay K1
+polarity (coil pin 1 = +) against the assembly PDFs
+(QuadPreRecorder-assembly-top.pdf / -bottom.pdf).
+Fiducials: three 1 mm fiducials per side (not in BOM/CPL).
+
+Sourcing notes (checked 2026-09-12, see BOM-SOURCING-CHECK-20260912.md
+and QuadPreRecorder-best-source-20260912.csv for the cheapest in-stock
+source of every line): every MPN in this BOM was in stock at Mouser
+and/or LCSC on that date, none is a reel-only or end-of-life number.
+U12 is now the Analog Devices ADP7142AUJZ-R7 (TSOT-23-5; Mouser 11k,
+LCSC C514356) - the old TPS7A4701 is gone from this revision. Please buy
+the Rubycon PMLCAP film caps, the Yageo 0.1 % resistors and the
+TPS7A2033 / AO3401A / USB-C parts from LCSC (C3778321, C3778570, C705768,
+C2862740, C15127, C165948 etc.); the ICs U7, U9, U11, U13 and the OPA1654s
+are also cheaper at LCSC than at Mouser. For the C0G lines (C29-C32
+10 nF, C67/C68 2.2 nF, 22 pF lines) any substitute must also be C0G/NP0.
+D4/D5 (Kingbright 3 mm LEDs) may be swapped for any blue / red LED in
+the same footprint.
+
+REMINDERS: Assembly side(s) = BOTH SIDES (form defaults to Top only).
+Assembly minimum is 5 boards - the quote is for five populated units.

@@ -1,0 +1,17 @@
+BLOCKER: U13 BQ24074 pin 13 is listed on VBUS_FUSED, but pin 13 is the BAT (battery) input. The battery input should be on the VBAT net (which correctly lists U13.2/3). This creates a direct short between the USB VBUS rail and the LiPo battery, bypassing the charger's power path logic and potentially damaging the battery or USB port.
+
+BLOCKER: U11 TPS61175 pin 3 is listed on VBOOST_IN, but pin 3 is the OUT (output) pin. The output should be on the +10V5 net (which correctly lists U1.2/3 and U12.1/3 as inputs, but U11.3 is missing from +10V5 and present on VBOOST_IN). This implies the boost converter output is shorted to its input, preventing operation and causing a short circuit.
+
+SHOULD FIX: D14 B340A is listed on BAT_SYS (pin 2) and VBOOST_IN (pin 1). B340A is a Schottky diode with anode at pin 1 and cathode at pin 2. If pin 1 is VBOOST_IN (higher voltage) and pin 2 is BAT_SYS (lower voltage), the diode is reverse-biased and will not conduct. The intent is likely to OR the battery into the boost input, so the anode should be BAT_SYS and cathode VBOOST_IN. As drawn, the battery cannot power the boost converter.
+
+SHOULD FIX: D1 B340A is listed on +9V_FUSED (implied by tree) and VBOOST_IN (pin 1). The tree shows D1 cathode going to VBOOST_IN. If D1 anode is +9V_FUSED and cathode is VBOOST_IN, this is correct for OR-ing. However, the rail membership lists D1.1 on VBOOST_IN. If pin 1 is anode, it should be on +9V_FUSED. If pin 1 is cathode, it should be on VBOOST_IN. Standard B340A pinout: 1=Anode, 2=Cathode. If D1.1 (Anode) is on VBOOST_IN, the diode is reverse-biased. It should be D1.2 (Cathode) on VBOOST_IN. Check pin assignment.
+
+SHOULD FIX: D10 B340A is listed on VBUS_FUSED (pin 2) and VBOOST_IN (pin 1). Same issue as D14. If pin 1 is Anode and on VBOOST_IN, the diode is reverse-biased. It should be D10.2 (Cathode) on VBOOST_IN to allow VBUS_FUSED to feed VBOOST_IN.
+
+NOTE: U12 ADP7142 LDO is listed on +10V5 (pins 1/3) and +9V (pin 5). ADP7142 pin 1 is VIN, pin 3 is GND, pin 5 is VOUT. If U12.3 is GND, it should be on GND, not +10V5. The rail membership lists U12.1/3 on +10V5. This is a contradiction. Pin 3 must be GND.
+
+NOTE: U1 TPS62160 buck is listed on +10V5 (pins 2/3) and +5V (pin 6). TPS62160 pin 2 is VIN, pin 3 is GND, pin 6 is VOUT. If U1.3 is GND, it should be on GND, not +10V5. The rail membership lists U1.2/3 on +10V5. This is a contradiction. Pin 3 must be GND.
+
+NOTE: U2 TPS7A2033 is listed on +5V (pins 1/3) and +3V3_A (pin 5). TPS7A2033 pin 1 is VIN, pin 3 is GND, pin 5 is VOUT. If U2.3 is GND, it should be on GND, not +5V. The rail membership lists U2.1/3 on +5V. This is a contradiction. Pin 3 must be GND.
+
+NOTE: U14 TPS7A2033 is listed on +5V (pins 1/3) and +3V3_DC (pin 5). Same issue as U2. Pin 3 is GND and should be on GND, not +5V. The rail membership lists U14.1/3 on +5V. This is a contradiction.

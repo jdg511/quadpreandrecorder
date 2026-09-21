@@ -1,0 +1,17 @@
+BLOCKER: Pin 34 (DAC_MUTE) has a 10k pull-down to GND, but the description states "high = un-mute". If the PCM5102A XSMT pin is active-low (mute on low), the pull-down keeps it muted by default, which is safe. However, if the pin is active-high (mute on high), the pull-down keeps it un-muted by default, which is unsafe for a DAC output. VERIFY the PCM5102A XSMT polarity. If active-high, the pull-down should be a pull-up to ensure mute on boot.
+
+SHOULD FIX: Pin 15 (VBUS_SENSE) divider is 100k/47k. 5V * (47k / (100k + 47k)) = 1.598V. This is within the 3.3V ADC range, but the 100k top resistor is high. If the Teensy ADC input impedance is low, this is fine. However, if the source impedance of the USB VBUS is high, the divider may load it. More critically, the 100k resistor is high for a voltage divider; noise susceptibility is increased. Consider lower values (e.g., 10k/4.7k) for better noise performance, unless the source is very stiff.
+
+SHOULD FIX: Pin 16 (BAT_SENSE) divider is 1M/1M. 4.2V * (1M / (1M + 1M)) = 2.1V. This is within range. However, 1M ohm resistors are very high. If the battery source has any internal resistance or if the ADC input impedance is not infinite, the reading will be inaccurate. Also, 1M resistors are susceptible to leakage currents and noise. Consider lower values (e.g., 100k/100k) for better accuracy and noise performance.
+
+NOTE: Pin 24 (KEEP_ON) holds BOOST_EN through D15. This is a soft-power latch. Ensure that the firmware correctly manages this to avoid unintended power-on/off cycles.
+
+NOTE: Pin 32 (PAD_CTRL) is active-high for -9.7 dB pad. Firmware must keep it LOW in dynamic-mic mode. This is a software constraint, not a hardware error, but it is critical to document in the firmware requirements.
+
+NOTE: Pin 41 (COLD_CTRL) is active-high for cold legs released. Low/boot = electret mode. This is a mode selection pin. Ensure that the firmware correctly initializes this pin to the desired mode on boot.
+
+NOTE: Pin 33 (HP_ENABLE) is active-high for TPA6130A2 /SD. High = headphone amp on. The 100k pull-down ensures the amp is off by default, which is safe.
+
+NOTE: Pin 17 (CHG_STAT_N) is open-drain with a 100k pull-up. Low = charging. This is a standard open-drain configuration. Ensure that the firmware correctly polls this pin to determine charging status.
+
+NOTE: Pin 25 (PGOOD_N) is open-drain with a 100k pull-up. Low = USB power good. This is a standard open-drain configuration. Ensure that the firmware correctly polls this pin to determine power status.
