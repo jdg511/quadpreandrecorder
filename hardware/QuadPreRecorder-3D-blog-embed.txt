@@ -1,38 +1,40 @@
-HOW TO PUT THE 3D MODELS IN A BLOG POST ON ILLICITAPOTHECARY.COM
-=================================================================
+PUTTING THE 3D MODEL IN A BLOG POST ON ILLICITAPOTHECARY.COM
+=============================================================
 
-Squarespace does not host .html files itself, so it is a two step process:
-put the file at a URL, then embed that URL in the post.
+Your quadpreandrecorder repo is PRIVATE, and GitHub Pages on a free plan only
+works on public repos (and you would not want the whole hardware design public
+anyway). So the play is: one tiny PUBLIC repo that holds only the viewer file.
 
-STEP 1: Host the two HTML files somewhere that serves web pages.
-  The easiest free option is GitHub Pages (you already use GitHub):
-    1. Make a new public repository, for example "qpr-3d".
-    2. Upload QuadPreRecorder-enclosure-3D-labeled.html and
-       QuadPreRecorder-1590F-concept-3D.html to it (drag and drop on github.com).
-    3. In the repo: Settings > Pages > Source: "main" branch > Save.
-    4. After a minute the files are live at:
-       https://YOURUSERNAME.github.io/qpr-3d/QuadPreRecorder-enclosure-3D-labeled.html
-       https://YOURUSERNAME.github.io/qpr-3d/QuadPreRecorder-1590F-concept-3D.html
+PART 1: Host the file (about 3 minutes, once)
+  1. Go to github.com, click the + in the top right, "New repository".
+  2. Name it: qpr-3d   Visibility: Public.   Click "Create repository".
+  3. On the new empty repo page click "uploading an existing file".
+  4. Drag in QuadPreRecorder-enclosure-3D-labeled.html from
+     Documents\quadpreandrecorder\hardware (add the 1590F concept file too if
+     you ever want it in a post). Click "Commit changes".
+  5. In the repo: Settings > Pages (left sidebar) > under "Branch" pick
+     "main" and "/ (root)" > Save.
+  6. Wait about a minute, refresh the Pages screen, and it shows your live
+     URL. The model is then at:
+     https://jdg511.github.io/qpr-3d/QuadPreRecorder-enclosure-3D-labeled.html
+     Open that in a browser to confirm it spins.
 
-STEP 2: In the Squarespace blog post editor, add a CODE block
-  (Add block > Code, leave it on HTML) and paste this in, with your real URL:
+PART 2: Embed it in the Squarespace post (per post)
+  1. Edit the blog post, click an insert point, and add a CODE block
+     (Add block > Code). Leave its type on HTML, "Display Source" OFF.
+  2. Paste this in:
 
-<iframe src="https://YOURUSERNAME.github.io/qpr-3d/QuadPreRecorder-enclosure-3D-labeled.html"
+<iframe src="https://jdg511.github.io/qpr-3d/QuadPreRecorder-enclosure-3D-labeled.html"
         width="100%" height="640"
         style="border:0;border-radius:10px;overflow:hidden"
         loading="lazy" title="QuadPreRecorder 3D model"></iframe>
 
-  And for the 1590F concept, the same thing with the other file name:
+  3. Save the post. Code blocks work on your Business plan. Note: Squarespace
+     only renders the iframe on the real published page, not always inside
+     the editor preview, so check the live post.
 
-<iframe src="https://YOURUSERNAME.github.io/qpr-3d/QuadPreRecorder-1590F-concept-3D.html"
-        width="100%" height="640"
-        style="border:0;border-radius:10px;overflow:hidden"
-        loading="lazy" title="QuadPreRecorder 1590F concept 3D model"></iframe>
+Updating the model later: replace the file in the qpr-3d repo (upload with the
+same name, commit) and every post that embeds it updates by itself.
 
-Notes:
-- Code blocks work on your Business plan.
-- Readers drag inside the frame to rotate, scroll to zoom, and get the
-  view buttons and label toggle, exactly like the local file.
-- height="640" is a good desktop size; make it 480 if you want it shorter.
-- If you ever update a model, just replace the file in the GitHub repo and
-  every post embedding it updates automatically.
+Height 640 is a good desktop size; 480 if you want it shorter. Readers drag to
+rotate, scroll to zoom, and get the view buttons and label toggle.
